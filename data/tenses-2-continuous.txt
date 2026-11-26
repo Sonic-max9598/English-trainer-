@@ -1,0 +1,90 @@
+pc|+|Я сейчас читаю книгу.|Men hozir kitob o'qiyapman.|I am reading a book now.|Now I am reading a book;I am reading a book right now;I am reading a book at the moment|read · now
+pc|+|Мама готовит ужин на кухне.|Oyim oshxonada kechki ovqat tayyorlayapti.|Mom is cooking dinner in the kitchen.|My mom is cooking dinner in the kitchen;Mum is cooking dinner in the kitchen;My mother is cooking dinner in the kitchen;Mom is making dinner in the kitchen;My mom is making dinner in the kitchen|cook · dinner · kitchen
+pc|+|Дети играют во дворе.|Bolalar hovlida o'ynayapti.|The children are playing in the yard.|Children are playing in the yard;The kids are playing in the yard;The children are playing in the courtyard;The kids are playing in the courtyard|play · yard
+pc|+|Акмал разговаривает по телефону.|Akmal telefonda gaplashyapti.|Akmal is talking on the phone.|Akmal is speaking on the phone|talk · on the phone
+pc|+|Сейчас идёт дождь.|Hozir yomg'ir yog'yapti.|It is raining now.|It is raining right now;Now it is raining;It is raining at the moment|rain · now
+pc|+|Я жду тебя у метро.|Men seni metro yonida kutyapman.|I am waiting for you near the metro.|I am waiting for you at the metro;I am waiting for you by the metro;I am waiting for you near the metro station;I am waiting for you at the metro station|wait for · metro
+pc|+|Мы ищем новую квартиру.|Biz yangi kvartira qidiryapmiz.|We are looking for a new flat.|We are looking for a new apartment;We are searching for a new flat;We are searching for a new apartment|look for · flat
+pc|+|В этом году Малика учит английский.|Malika bu yil ingliz tilini o'rganyapti.|Malika is learning English this year.|This year Malika is learning English;Malika is studying English this year;This year Malika is studying English|learn · this year
+pc|+|Папа сейчас за рулём.|Dadam hozir mashina haydayapti.|Dad is driving now.|My dad is driving now;Dad is driving right now;My dad is driving right now;My father is driving now;Dad is driving at the moment|drive · now
+pc|+|Цены растут.|Narxlar oshyapti.|Prices are going up.|Prices are rising;The prices are going up;The prices are rising;Prices are increasing|go up · prices
+pc|-|Я сейчас не смотрю телевизор.|Men hozir televizor ko'rmayapman.|I am not watching TV now.|I am not watching TV right now;I am not watching television now;I am not watching TV at the moment|watch TV · now
+pc|-|Акмал не спит.|Akmal uxlamayapti.|Akmal is not sleeping.|Akmal is not asleep|sleep
+pc|-|Сегодня мы не работаем.|Biz bugun ishlamayapmiz.|We are not working today.|Today we are not working|work · today
+pc|-|Телефон не заряжается.|Telefon zaryadlanmayapti.|The phone is not charging.|My phone is not charging|charge · phone
+pc|-|Дети не слушают учителя.|Bolalar o'qituvchini tinglamayapti.|The children are not listening to the teacher.|Children are not listening to the teacher;The kids are not listening to the teacher|listen to · teacher
+pc|-|Я не шучу.|Men hazillashmayapman.|I am not joking.|I am not kidding|joke
+pc|-|Малика сейчас не учится.|Malika hozir o'qimayapti.|Malika is not studying now.|Malika is not studying at the moment;Malika is not studying right now|study · now
+pc|-|Сегодня не идёт снег.|Bugun qor yog'mayapti.|It is not snowing today.|Today it is not snowing|snow · today
+pc|-|Ты меня не слушаешь.|Sen meni tinglamayapsan.|You are not listening to me.||listen to
+pc|-|Лифт не работает.|Lift ishlamayapti.|The lift is not working.|The elevator is not working|lift · work
+pc|?|Что ты делаешь?|Nima qilyapsan?|What are you doing?|What are you doing now|what · do
+pc|?|Ты слушаешь?|Tinglayapsanmi?|Are you listening?|Are you listening to me|listen
+pc|?|Куда ты идёшь?|Qayerga ketyapsan?|Where are you going?||where · go
+pc|?|Идёт дождь?|Yomg'ir yog'yaptimi?|Is it raining?||rain
+pc|?|Акмал сейчас работает?|Akmal hozir ishlayaptimi?|Is Akmal working now?|Is Akmal working right now;Is Akmal working at the moment|work · now
+pc|?|Почему ты смеёшься?|Nega kulyapsan?|Why are you laughing?||why · laugh
+pc|?|Ты кого-то ждёшь?|Kimnidir kutyapsanmi?|Are you waiting for someone?|Are you waiting for somebody;Are you waiting for anyone;Are you waiting for anybody|wait for · someone
+pc|?|Дети спят?|Bolalar uxlayaptimi?|Are the children sleeping?|Are the kids sleeping;Are the children asleep;Are the kids asleep|children · sleep
+pc|?|Вы ещё ищете работу?|Hali ham ish qidiryapsizmi?|Are you still looking for a job?|Are you still looking for work;Are you still searching for a job|still · look for · job
+pc|?|Что готовит Малика?|Malika nima pishiryapti?|What is Malika cooking?|What is Malika making|what · cook
+pac|+|Вчера в восемь я ужинал.|Kecha soat sakkizda kechki ovqat qilayotgan edim.|I was having dinner at eight yesterday.|Yesterday at eight I was having dinner;At eight yesterday I was having dinner;I was eating dinner at eight yesterday|have dinner · at eight
+pac|+|Когда ты позвонил, я спал.|Sen qo'ng'iroq qilganingda men uxlayotgan edim.|I was sleeping when you called.|When you called I was sleeping;I was asleep when you called;When you called I was asleep|sleep · when you called
+pac|+|Весь вечер шёл дождь.|Kechqurun bo'yi yomg'ir yog'ayotgan edi.|It was raining all evening.|It was raining the whole evening|rain · all evening
+pac|+|Мама готовила, а папа читал газету.|Oyim ovqat pishirayotgan edi, dadam esa gazeta o'qiyotgan edi.|Mom was cooking and Dad was reading the newspaper.|Mom was cooking and Dad was reading a newspaper;Mom was cooking while Dad was reading the newspaper;My mom was cooking and my dad was reading the newspaper;Mum was cooking and Dad was reading the newspaper;Mom was cooking and Dad was reading the paper|cook · read · newspaper
+pac|+|В это время мы ехали домой.|O'sha paytda biz uyga ketayotgan edik.|We were driving home at that time.|At that time we were driving home;We were going home at that time;At that time we were going home|drive home · at that time
+pac|+|Акмал ждал меня у входа.|Akmal meni kirish yonida kutayotgan edi.|Akmal was waiting for me at the entrance.|Akmal was waiting for me near the entrance;Akmal was waiting for me by the entrance|wait for · entrance
+pac|+|Когда я пришёл, дети смотрели мультфильм.|Men kelganimda bolalar multfilm ko'rayotgan edi.|The children were watching a cartoon when I came.|When I came the children were watching a cartoon;The kids were watching a cartoon when I came;The children were watching cartoons when I came;The children were watching a cartoon when I arrived;When I arrived the children were watching a cartoon|watch · cartoon · when I came
+pac|+|Вчера в это время я летел в Москву.|Kecha shu vaqtda men Moskvaga uchayotgan edim.|I was flying to Moscow at this time yesterday.|At this time yesterday I was flying to Moscow;Yesterday at this time I was flying to Moscow;I was flying to Moscow this time yesterday;This time yesterday I was flying to Moscow|fly · at this time yesterday
+pac|+|Малика улыбалась весь день.|Malika kun bo'yi jilmayib yurdi.|Malika was smiling all day.|Malika was smiling the whole day|smile · all day
+pac|+|Мы гуляли в парке, когда пошёл снег.|Qor yog'a boshlaganda biz parkda sayr qilayotgan edik.|We were walking in the park when it started to snow.|We were walking in the park when it started snowing;We were walking in the park when it began to snow;We were walking in the park when it began snowing;When it started to snow we were walking in the park|walk · park · start to snow
+pac|-|Когда ты позвонил, я не спал.|Sen qo'ng'iroq qilganingda men uxlamayotgan edim.|I was not sleeping when you called.|When you called I was not sleeping;I was not asleep when you called|sleep · when you called
+pac|-|В тот момент мы не смотрели телевизор.|O'sha paytda biz televizor ko'rmayotgan edik.|We were not watching TV at that moment.|At that moment we were not watching TV;We were not watching TV at that time;We were not watching television at that moment|watch TV · at that moment
+pac|-|Акмал не слушал учителя.|Akmal o'qituvchini tinglamayotgan edi.|Akmal was not listening to the teacher.||listen to · teacher
+pac|-|Вчера в шесть дождя не было.|Kecha soat oltida yomg'ir yog'mayotgan edi.|It was not raining at six yesterday.|Yesterday at six it was not raining;At six yesterday it was not raining|rain · at six
+pac|-|Я не ехал быстро.|Men tez haydamayotgan edim.|I was not driving fast.|I was not driving quickly|drive · fast
+pac|-|В полночь дети не спали.|Yarim tunda bolalar uxlamayotgan edi.|The children were not sleeping at midnight.|At midnight the children were not sleeping;The kids were not sleeping at midnight;The children were not asleep at midnight|sleep · at midnight
+pac|-|В то время Малика не работала.|Malika o'sha paytda ishlamayotgan edi.|Malika was not working at that time.|At that time Malika was not working|work · at that time
+pac|-|Мы не ждали гостей.|Biz mehmon kutmayotgan edik.|We were not expecting guests.|We were not expecting any guests;We were not waiting for guests|expect · guests
+pac|-|Всё утро телефон не работал.|Telefon ertalab bo'yi ishlamayotgan edi.|The phone was not working all morning.|My phone was not working all morning;The phone was not working the whole morning|work · all morning
+pac|-|Ты меня не слушал!|Sen meni tinglamayotgan eding!|You were not listening to me!||listen to
+pac|?|Что ты делал вчера в семь?|Kecha soat yettida nima qilayotgan eding?|What were you doing at seven yesterday?|What were you doing yesterday at seven|what · do · at seven
+pac|?|Ты спал, когда я позвонил?|Men qo'ng'iroq qilganimda uxlayotgan edingmi?|Were you sleeping when I called?|Were you asleep when I called|sleep · when I called
+pac|?|Шёл дождь, когда вы вышли?|Siz chiqqaningizda yomg'ir yog'ayotgan edimi?|Was it raining when you went out?|Was it raining when you left|rain · go out
+pac|?|С кем ты разговаривал?|Kim bilan gaplashayotgan eding?|Who were you talking to?|Who were you talking with;Who were you speaking to;Who were you speaking with|who · talk to
+pac|?|Куда вы ехали?|Qayerga ketayotgan edingiz?|Where were you going?|Where were you driving|where · go
+pac|?|Акмал тебя ждал?|Akmal seni kutayotgan edimi?|Was Akmal waiting for you?||wait for
+pac|?|Дети играли во дворе?|Bolalar hovlida o'ynayotgan edimi?|Were the children playing in the yard?|Were the kids playing in the yard|play · yard
+pac|?|Почему ты плакала?|Nega yig'layotgan eding?|Why were you crying?||why · cry
+pac|?|Малика готовила, когда ты пришёл?|Sen kelganingda Malika ovqat pishirayotgan edimi?|Was Malika cooking when you came?|Was Malika cooking when you arrived|cook · when you came
+pac|?|Ты смотрел футбол в девять вечера?|Kechqurun soat to'qqizda futbol ko'rayotgan edingmi?|Were you watching football at nine in the evening?|Were you watching football at nine pm;Were you watching soccer at nine in the evening|watch · football · at nine
+fc|+|Завтра в десять я буду работать.|Ertaga soat o'nda men ishlayotgan bo'laman.|I will be working at ten tomorrow.|Tomorrow at ten I will be working;At ten tomorrow I will be working|work · at ten tomorrow
+fc|+|Завтра в это время мы будем лететь в Стамбул.|Ertaga shu vaqtda biz Istanbulga uchayotgan bo'lamiz.|We will be flying to Istanbul at this time tomorrow.|This time tomorrow we will be flying to Istanbul;At this time tomorrow we will be flying to Istanbul;We will be flying to Istanbul this time tomorrow|fly · this time tomorrow
+fc|+|Я буду ждать тебя у входа.|Men seni kirish yonida kutib turaman.|I will be waiting for you at the entrance.|I will be waiting for you near the entrance;I will be waiting for you by the entrance|wait for · entrance
+fc|+|Вечером мама будет готовить плов.|Kechqurun oyim palov pishirayotgan bo'ladi.|Mom will be cooking plov in the evening.|In the evening Mom will be cooking plov;My mom will be cooking plov in the evening;Mum will be cooking plov in the evening;My mother will be cooking plov in the evening;Mom will be making plov in the evening|cook · in the evening
+fc|+|Летом Малика будет учиться в Англии.|Yozda Malika Angliyada o'qiyotgan bo'ladi.|Malika will be studying in England in summer.|Malika will be studying in England in the summer;In summer Malika will be studying in England;In the summer Malika will be studying in England|study · in summer
+fc|+|Весь день будет идти снег.|Kun bo'yi qor yog'ib turadi.|It will be snowing all day.|It will be snowing the whole day|snow · all day
+fc|+|В восемь дети будут спать.|Soat sakkizda bolalar uxlayotgan bo'ladi.|The children will be sleeping at eight.|At eight the children will be sleeping;The kids will be sleeping at eight;The children will be asleep at eight|sleep · at eight
+fc|+|Я буду думать о тебе.|Men sen haqingda o'ylab yuraman.|I will be thinking about you.|I will be thinking of you|think about
+fc|+|Завтра в обед Акмал будет играть в футбол.|Ertaga tushlik paytida Akmal futbol o'ynayotgan bo'ladi.|Akmal will be playing football at lunchtime tomorrow.|Tomorrow at lunchtime Akmal will be playing football;Akmal will be playing football at lunch tomorrow;Akmal will be playing soccer at lunchtime tomorrow|play football · at lunchtime
+fc|+|Мы будем ехать всю ночь.|Biz tun bo'yi yo'l yuramiz.|We will be driving all night.|We will be driving the whole night;We will be travelling all night;We will be traveling all night|drive · all night
+fc|-|Завтра в девять я не буду работать.|Ertaga soat to'qqizda men ishlamayotgan bo'laman.|I will not be working at nine tomorrow.|Tomorrow at nine I will not be working|work · at nine
+fc|-|В выходные мы не будем работать.|Dam olish kunlari biz ishlamayotgan bo'lamiz.|We will not be working at the weekend.|We will not be working on the weekend;We will not be working this weekend|work · at the weekend
+fc|-|Акмал не будет нас ждать.|Akmal bizni kutib turmaydi.|Akmal will not be waiting for us.||wait for
+fc|-|Завтра не будет идти дождь.|Ertaga yomg'ir yog'ib turmaydi.|It will not be raining tomorrow.|Tomorrow it will not be raining|rain · tomorrow
+fc|-|Сегодня вечером я не буду пользоваться машиной.|Bugun kechqurun mashinadan foydalanmayman.|I will not be using the car tonight.|I will not be using the car this evening|use · car · tonight
+fc|-|В это время дети не будут спать.|Bu paytda bolalar uxlamayotgan bo'ladi.|The children will not be sleeping at this time.|At this time the children will not be sleeping;The kids will not be sleeping at this time|sleep · at this time
+fc|-|Летом Малика не будет работать.|Malika yozda ishlamayotgan bo'ladi.|Malika will not be working in summer.|Malika will not be working in the summer;In summer Malika will not be working|work · in summer
+fc|-|Мы не будем смотреть матч.|Biz o'yinni ko'rmayotgan bo'lamiz.|We will not be watching the match.|We will not be watching the game|watch · match
+fc|-|Через год я уже не буду здесь жить.|Bir yildan keyin men bu yerda yashamayotgan bo'laman.|I will not be living here in a year.|In a year I will not be living here;I will not be living here in a year's time|live · in a year
+fc|-|Завтра папа не будет за рулём.|Ertaga dadam mashina haydamayotgan bo'ladi.|Dad will not be driving tomorrow.|My dad will not be driving tomorrow;Tomorrow Dad will not be driving;My father will not be driving tomorrow|drive · tomorrow
+fc|?|Ты будешь работать завтра в пять?|Ertaga soat beshda ishlayotgan bo'lasanmi?|Will you be working at five tomorrow?|Will you be working tomorrow at five|work · at five
+fc|?|Что ты будешь делать завтра в это время?|Ertaga shu vaqtda nima qilayotgan bo'lasan?|What will you be doing at this time tomorrow?|What will you be doing this time tomorrow|what · do · this time tomorrow
+fc|?|Ты будешь пользоваться компьютером вечером?|Kechqurun kompyuterdan foydalanasanmi?|Will you be using the computer in the evening?|Will you be using the computer this evening;Will you be using the computer tonight|use · computer
+fc|?|Акмал будет ждать нас в аэропорту?|Akmal bizni aeroportda kutib turadimi?|Will Akmal be waiting for us at the airport?||wait for · airport
+fc|?|Вы будете проходить мимо магазина?|Do'kon yonidan o'tasizmi?|Will you be passing the shop?|Will you be passing by the shop;Will you be passing the store;Will you be going past the shop|pass · shop
+fc|?|Завтра утром будет идти снег?|Ertaga ertalab qor yog'ib turadimi?|Will it be snowing tomorrow morning?||snow · tomorrow morning
+fc|?|Дети будут спать, когда мы придём?|Biz kelganimizda bolalar uxlayotgan bo'ladimi?|Will the children be sleeping when we come?|Will the kids be sleeping when we come;Will the children be sleeping when we arrive;Will the children be asleep when we come|sleep · when we come
+fc|?|Где вы будете жить летом?|Yozda qayerda yashayotgan bo'lasiz?|Where will you be living in summer?|Where will you be living in the summer;Where will you be staying in summer;Where will you be staying in the summer|where · live · in summer
+fc|?|Малика будет выступать на концерте?|Malika konsertda chiqish qiladimi?|Will Malika be performing at the concert?|Will Malika be singing at the concert|perform · concert
+fc|?|Вы будете ужинать дома сегодня вечером?|Bugun kechqurun uyda kechki ovqat qilasizmi?|Will you be having dinner at home tonight?|Will you be having dinner at home this evening;Will you be eating dinner at home tonight|have dinner · at home · tonight

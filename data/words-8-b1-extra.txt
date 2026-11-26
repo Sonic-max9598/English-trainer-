@@ -1,0 +1,162 @@
+@Intermediate|B1
+#Фразовые глаголы
+break down|ломаться|buzilib qolmoq|Our car broke down on the way.
+bring up|воспитывать; поднимать (тему)|tarbiyalamoq; ko'tarmoq|She was brought up by her grandma.
+call back|перезвонить|qayta qo'ng'iroq qilmoq|I'll call you back.
+carry on|продолжать|davom ettirmoq|Carry on, I'm listening.
+come across|наткнуться|duch kelmoq|I came across an old photo.
+come up with|придумать|o'ylab topmoq|She came up with a great idea.
+cut down on|сократить|kamaytirmoq|Cut down on sugar.
+drop off|подвезти, высадить|tushirib qo'ymoq|Drop me off at the station.
+end up|оказаться в итоге|oxir-oqibat ... bo'lmoq|We ended up in a small café.
+fall out|поссориться|urishib qolmoq|They fell out over money.
+figure out|разобраться|tushunib olmoq|I can't figure out this app.
+fill in|заполнить|to'ldirmoq|Fill in the form.
+get along|ладить|chiqishmoq|I get along with my boss.
+get over|оправиться|o'ziga kelmoq|She got over the flu.
+get rid of|избавиться|qutulmoq|Get rid of old clothes.
+give in|сдаться|taslim bo'lmoq|Don't give in.
+give up|бросить, сдаться|tashlamoq, voz kechmoq|He gave up smoking.
+go on|продолжаться|davom etmoq|What's going on?
+go out|выходить (гулять)|chiqmoq|Let's go out tonight.
+hang out|проводить время|vaqt o'tkazmoq|We hang out at the park.
+hold on|подождать|kutib turmoq|Hold on a second.
+keep up|не отставать|ortda qolmaslik|Keep up the good work!
+let down|подвести|umidini puchga chiqarmoq|Don't let me down.
+look forward to|с нетерпением ждать|intiqlik bilan kutmoq|I look forward to seeing you.
+look up|посмотреть (в словаре)|qidirib topmoq|Look up the word.
+make up|выдумать; помириться|to'qimoq; yarashmoq|They made up after the fight.
+pass away|скончаться|vafot etmoq|His grandfather passed away.
+pay back|вернуть долг|qarzni qaytarmoq|I'll pay you back tomorrow.
+put off|откладывать|kechiktirmoq|Don't put off your homework.
+put up with|терпеть|chidamoq|I can't put up with the noise.
+run out of|закончиться (о запасе)|tugab qolmoq|We ran out of milk.
+set up|основать; настроить|tashkil qilmoq; sozlamoq|He set up his own company.
+show off|хвастаться|maqtanmoq|Stop showing off.
+show up|появиться|kelmoq|He didn't show up.
+sort out|уладить|hal qilmoq|We'll sort it out.
+take after|быть похожим на (родственника)|o'xshamoq|She takes after her mother.
+take care of|заботиться о|g'amxo'rlik qilmoq|Take care of yourself.
+take up|начать заниматься|shug'ullana boshlamoq|I took up yoga.
+throw away|выбросить|tashlab yubormoq|Don't throw away the box.
+turn down|отклонить; убавить|rad etmoq; pasaytirmoq|Turn down the music.
+turn up|прибавить; появиться|balandlatmoq; kelmoq|Turn up the volume.
+work out|тренироваться; получиться|mashq qilmoq; hal bo'lmoq|I work out three times a week.
+#Работа и деньги
+ATM|банкомат|bankomat|Is there an ATM nearby?
+bonus|премия|mukofot puli|We got a bonus.
+cashier|кассир|kassir|Pay the cashier.
+client|клиент|mijoz|She met a new client.
+CV|резюме|rezyume|Send us your CV.
+director|директор|direktor|The director signed it.
+employer|работодатель|ish beruvchi|My employer is fair.
+expenses|расходы|xarajatlar|Travel expenses.
+freelancer|фрилансер|frilanser|He works as a freelancer.
+headquarters|штаб-квартира|bosh ofis|The headquarters is in Tashkent.
+intern|стажёр|stajyor|She's an intern here.
+invoice|счёт-фактура|hisob-faktura|Send the invoice.
+overtime|сверхурочные|ish vaqtidan tashqari|I worked overtime.
+pension|пенсия|nafaqa|My grandma gets a pension.
+promotion|повышение|lavozim ko'tarilishi|She got a promotion.
+savings|сбережения|jamg'arma|We spent our savings.
+shareholder|акционер|aksiyador|The shareholders met.
+strike|забастовка|ish tashlash|The workers went on strike.
+wage|зарплата (почасовая)|ish haqi|The minimum wage.
+workplace|рабочее место|ish joyi|A safe workplace.
+#Природа и экология
+climate change|изменение климата|iqlim o'zgarishi|Climate change is real.
+drought|засуха|qurg'oqchilik|The drought killed the crops.
+extinct|вымерший|qirilib ketgan|Dinosaurs are extinct.
+fog|туман|tuman|Thick fog this morning.
+global warming|глобальное потепление|global isish|Global warming melts ice.
+harvest|урожай|hosil|A good harvest.
+hill|холм|tepalik|We walked up the hill.
+lightning|молния|chaqmoq|Lightning hit the tree.
+mud|грязь|loy|My boots are covered in mud.
+ocean|океан|okean|The Pacific Ocean.
+plastic|пластик|plastik|Use less plastic.
+rainbow|радуга|kamalak|Look, a rainbow!
+recycling|переработка|qayta ishlash|Recycling saves energy.
+renewable|возобновляемый|qayta tiklanadigan|Renewable energy.
+soil|почва|tuproq|Rich soil.
+solar|солнечный|quyosh|Solar panels.
+thunder|гром|momaqaldiroq|I heard thunder.
+valley|долина|vodiy|The Fergana Valley.
+waterfall|водопад|sharshara|A beautiful waterfall.
+wildlife|дикая природа|yovvoyi tabiat|Protect wildlife.
+#Технологии и медиа
+blog|блог|blog|She writes a blog.
+browser|браузер|brauzer|Open your browser.
+cloud storage|облачное хранилище|bulutli xotira|Save it in cloud storage.
+cyber attack|кибератака|kiberhujum|A cyber attack on the bank.
+file|файл|fayl|Open the file.
+folder|папка|papka|Put it in a folder.
+hacker|хакер|xaker|A hacker stole the data.
+headphones|наушники|quloqchin|Where are my headphones?
+link|ссылка|havola|Send me the link.
+notification|уведомление|bildirishnoma|Turn off notifications.
+podcast|подкаст|podkast|I listen to podcasts.
+post|пост; почта|post; pochta|She shared a post.
+printer|принтер|printer|The printer is out of paper.
+profile|профиль|profil|Update your profile.
+screenshot|скриншот|skrinshot|Send a screenshot.
+smartphone|смартфон|smartfon|Everyone has a smartphone.
+social media|соцсети|ijtimoiy tarmoqlar|I'm not on social media.
+software|программное обеспечение|dasturiy ta'minot|Update the software.
+subscribe|подписаться|obuna bo'lmoq|Subscribe to the channel.
+update|обновление|yangilanish|Install the update.
+username|имя пользователя|foydalanuvchi nomi|Enter your username.
+Wi-Fi|вай-фай|Wi-Fi|What's the Wi-Fi password?
+#Дом и повседневность
+broom|веник|supurgi|Where's the broom?
+bucket|ведро|chelak|A bucket of water.
+cushion|диванная подушка|kichik yostiq|A soft cushion.
+drawer|ящик (стола)|tortma|It's in the top drawer.
+hammer|молоток|bolg'a|Pass me the hammer.
+ladder|лестница (переносная)|narvon|Hold the ladder.
+laundry|стирка|kir|I do the laundry on Sundays.
+lid|крышка|qopqoq|Put the lid on.
+plug|вилка; пробка|vilka; tiqin|Pull out the plug.
+rope|верёвка|arqon|Tie it with a rope.
+scissors|ножницы|qaychi|Where are the scissors?
+socket|розетка|rozetka|The socket doesn't work.
+stove|плита|plita|The soup is on the stove.
+tap|кран|jo'mrak|Turn off the tap.
+torch|фонарик|fonar|Take a torch.
+tray|поднос|patnis|Put the cups on the tray.
+vacuum cleaner|пылесос|changyutgich|The vacuum cleaner is loud.
+#Общество и город
+bazaar|базар|bozor|We shop at the bazaar.
+ceremony|церемония|marosim|The wedding ceremony.
+citizenship|гражданство|fuqarolik|He got citizenship.
+court|суд|sud|The case went to court.
+embassy|посольство|elchixona|Go to the embassy.
+fine|штраф|jarima|I got a parking fine.
+immigrant|иммигрант|immigrant|Many immigrants live here.
+judge|судья|sudya|The judge was fair.
+mahalla|махалля|mahalla|Our mahalla is friendly.
+minister|министр|vazir|The minister gave a speech.
+parliament|парламент|parlament|The parliament passed the law.
+president|президент|prezident|The president visited the city.
+prison|тюрьма|qamoqxona|He spent a year in prison.
+refugee|беженец|qochqin|Help the refugees.
+suburb|пригород|shahar chekkasi|They live in a suburb.
+thief|вор|o'g'ri|The thief ran away.
+#Чувства и отношения
+apology|извинение|uzr|Accept my apology.
+betray|предавать|xiyonat qilmoq|Don't betray your friends.
+compliment|комплимент|maqtov|Thanks for the compliment.
+courage|смелость|jasorat|It takes courage.
+envy|зависть|hasad|Envy is bad.
+forgiveness|прощение|kechirim|Ask for forgiveness.
+gratitude|благодарность|minnatdorchilik|I feel deep gratitude.
+guilt|вина|aybdorlik|A feeling of guilt.
+homesick|скучающий по дому|uyni sog'ingan|I feel homesick.
+jealousy|ревность|rashk|Jealousy ruins love.
+kindness|доброта|mehribonlik|Thank you for your kindness.
+loneliness|одиночество|yolg'izlik|Loneliness is hard.
+passion|страсть|ishtiyoq|Music is my passion.
+patience|терпение|sabr|Have patience.
+sympathy|сочувствие|hamdardlik|You have my sympathy.
+tears|слёзы|ko'z yoshlari|She was in tears.
+upbringing|воспитание|tarbiya|A strict upbringing.

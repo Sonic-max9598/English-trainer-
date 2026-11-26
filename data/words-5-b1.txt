@@ -1,0 +1,410 @@
+@Intermediate|B1
+#Глаголы B1
+adapt|приспосабливаться|moslashmoq|Kids adapt quickly.
+adjust|регулировать; привыкать|sozlamoq; ko'nikmoq|Adjust the seat.
+adopt|усыновлять; перенимать|asrab olmoq; qabul qilmoq|They adopted a baby girl.
+analyse|анализировать|tahlil qilmoq|Analyse the results.
+appreciate|ценить|qadrlamoq|I appreciate your help.
+approve|одобрять|ma'qullamoq|My parents approved of the plan.
+assist|помогать|yordamlashmoq|Can I assist you?
+attach|прикреплять|biriktirmoq|Attach the file to the email.
+bend|сгибать|egmoq|Bend your knees.
+breed|разводить|ko'paytirmoq|They breed horses.
+broadcast|транслировать|efirga uzatmoq|The match was broadcast live.
+capture|захватывать; запечатлевать|qo'lga olmoq|The photo captured the moment.
+combine|сочетать|birlashtirmoq|Combine work and study.
+commit|совершать; посвящать себя|sodir etmoq|He committed a crime.
+compete|соревноваться|bellashmoq|Ten teams will compete.
+concentrate|сосредотачиваться|diqqatni jamlamoq|I can't concentrate.
+confirm|подтверждать|tasdiqlamoq|Please confirm your booking.
+confuse|путать|chalkashtirmoq|Don't confuse these words.
+consist|состоять|iborat bo'lmoq|The team consists of five people.
+construct|строить|qurmoq|They constructed a new bridge.
+consume|потреблять|iste'mol qilmoq|We consume too much sugar.
+convert|превращать|aylantirmoq|Convert dollars into sums.
+debate|обсуждать|munozara qilmoq|We debated the topic.
+decrease|уменьшаться|kamaymoq|Crime has decreased.
+define|определять|ta'riflamoq|Define this word.
+delete|удалять|o'chirmoq|Delete that photo.
+deny|отрицать|inkor qilmoq|He denied everything.
+detect|обнаруживать|aniqlamoq|The test detected the virus.
+disagree|не соглашаться|rozi bo'lmaslik|I disagree with you.
+disappoint|разочаровывать|hafsalasini pir qilmoq|Don't disappoint me.
+distribute|распределять|tarqatmoq|They distributed food.
+disturb|беспокоить|bezovta qilmoq|Do not disturb.
+donate|жертвовать|xayriya qilmoq|We donated clothes.
+drag|тащить|sudramoq|Drag the file here.
+elect|избирать|saylamoq|They elected a new mayor.
+emerge|появляться|paydo bo'lmoq|New problems emerged.
+enable|давать возможность|imkon bermoq|The app enables you to pay online.
+engage|вовлекать|jalb qilmoq|Engage the students.
+entertain|развлекать|ko'ngil ochmoq|He entertained the guests.
+evaluate|оценивать|baholamoq|Evaluate the results.
+examine|осматривать|tekshirmoq|The doctor examined me.
+exchange|обменивать|almashtirmoq|Can I exchange this shirt?
+expand|расширять|kengaytirmoq|They expanded the business.
+experiment|экспериментировать|tajriba o'tkazmoq|Don't experiment with your health.
+export|экспортировать|eksport qilmoq|Uzbekistan exports cotton.
+extend|продлевать|uzaytirmoq|I extended my visa.
+fancy|хотеть (разг.)|xohlamoq|Fancy a cup of tea?
+flow|течь|oqmoq|The river flows to the sea.
+focus|сосредоточиться|e'tibor qaratmoq|Focus on your work.
+forecast|прогнозировать|bashorat qilmoq|They forecast rain.
+found|основывать|asos solmoq|He founded the company in 2010.
+frighten|пугать|qo'rqitmoq|Don't frighten the baby.
+gather|собирать(ся)|yig'ilmoq|People gathered in the square.
+generate|генерировать|ishlab chiqarmoq|Solar panels generate electricity.
+hire|нанимать; брать напрокат|yollamoq; ijaraga olmoq|We hired a car.
+import|импортировать|import qilmoq|We import cars from Korea.
+impress|производить впечатление|taassurot qoldirmoq|Her English impressed me.
+influence|влиять|ta'sir qilmoq|Friends influence our choices.
+inspire|вдохновлять|ilhomlantirmoq|My teacher inspired me.
+interrupt|перебивать|gapini bo'lmoq|Don't interrupt me.
+investigate|расследовать|tergov qilmoq|Police are investigating the case.
+invest|инвестировать|sarmoya kiritmoq|He invested in property.
+lack|не хватать|yetishmaslik|We lack time.
+last (continue)|длиться|davom etmoq|The film lasts two hours.
+locate|находить; располагать|joylashtirmoq|The hotel is located in the centre.
+manufacture|производить|ishlab chiqarmoq|They manufacture furniture.
+marry|жениться, выходить замуж|turmush qurmoq|He married his classmate.
+negotiate|вести переговоры|muzokara olib bormoq|We negotiated the price.
+observe|наблюдать|kuzatmoq|Observe the birds.
+occur|происходить|yuz bermoq|The accident occurred at night.
+operate|работать; оперировать|ishlamoq; operatsiya qilmoq|The machine operates day and night.
+oppose|выступать против|qarshi chiqmoq|Many people opposed the plan.
+participate|участвовать|qatnashmoq|Everyone can participate.
+perform|выступать; выполнять|ijro etmoq|She performed on stage.
+point out|указывать|ko'rsatib o'tmoq|He pointed out my mistake.
+pollute|загрязнять|ifloslantirmoq|Cars pollute the air.
+possess|обладать|ega bo'lmoq|He possesses great talent.
+present|представлять|taqdim etmoq|She presented her project.
+preserve|сохранять|saqlab qolmoq|We must preserve old buildings.
+pretend|притворяться|o'zini ...ga solmoq|He pretended to be ill.
+process|обрабатывать|qayta ishlamoq|They process your request.
+promote|продвигать; повышать|targ'ib qilmoq; lavozimini oshirmoq|She was promoted to manager.
+qualify|получать квалификацию|malaka olmoq|She qualified as a doctor.
+react|реагировать|munosabat bildirmoq|How did he react?
+recognise|узнавать|tanimoq|I recognised her voice.
+recycle|перерабатывать|qayta ishlamoq|We recycle paper.
+reflect|отражать|aks ettirmoq|The lake reflects the mountains.
+register|регистрировать(ся)|ro'yxatdan o'tmoq|Register on the website.
+reject|отклонять|rad etmoq|They rejected my application.
+release|выпускать|chiqarmoq|They released a new album.
+remain|оставаться|qolmoq|Please remain seated.
+rent out|сдавать в аренду|ijaraga bermoq|They rent out their flat.
+represent|представлять|vakillik qilmoq|He represents our company.
+request|просить|so'ramoq|I requested a refund.
+resign|увольняться|iste'foga chiqmoq|He resigned last month.
+resolve|разрешать (конфликт)|hal qilmoq|We resolved the problem.
+respond|отвечать|javob bermoq|Please respond by Friday.
+restore|восстанавливать|qayta tiklamoq|They restored the old mosque.
+reward|награждать|mukofotlamoq|They rewarded him for his work.
+ruin|портить|buzmoq|The rain ruined our picnic.
+select|выбирать|tanlamoq|Select a language.
+settle|поселяться; улаживать|o'rnashmoq|They settled in Tashkent.
+shrink|сжиматься|kirishmoq|My sweater shrank.
+sponsor|спонсировать|homiylik qilmoq|A bank sponsors the team.
+stare|пристально смотреть|tikilmoq|Don't stare at people.
+store|хранить|saqlamoq|Store it in a dry place.
+suffer|страдать|azob chekmoq|He suffers from headaches.
+suppose|предполагать|faraz qilmoq|I suppose you're right.
+surprise|удивлять|hayron qoldirmoq|Let's surprise Mom.
+swap|обменивать|almashmoq|Let's swap seats.
+tend|иметь тенденцию|moyil bo'lmoq|I tend to wake up early.
+transfer|переводить|o'tkazmoq|Transfer the money today.
+transform|преобразовывать|o'zgartirmoq|The city transformed completely.
+upgrade|улучшать|yangilamoq|Upgrade your phone.
+volunteer|быть волонтёром|ko'ngilli bo'lmoq|She volunteers at a hospital.
+#Существительные B1
+accommodation|жильё|turar joy|Accommodation is expensive here.
+account (story)|отчёт, рассказ|bayon|He gave an account of the trip.
+adventure|приключение|sarguzasht|Life is an adventure.
+agency|агентство|agentlik|A travel agency.
+aim|цель|maqsad|My aim is to pass the exam.
+alarm clock|будильник|budilnik|Set the alarm clock.
+alternative|альтернатива|muqobil|Is there an alternative?
+ambition|амбиция|intilish|His ambition is to be a pilot.
+anniversary|годовщина|yilligi|Our wedding anniversary is today.
+application|заявление; приложение|ariza; ilova|Fill in the application.
+architecture|архитектура|me'morchilik|I love old architecture.
+arrangement|договорённость|kelishuv|We have an arrangement.
+assignment|задание|topshiriq|Finish the assignment by Monday.
+atmosphere|атмосфера|muhit|The atmosphere was friendly.
+authority|власть|hokimiyat|The local authorities.
+award|награда|mukofot|She won an award.
+bargain|выгодная покупка|arzon xarid|This jacket was a bargain.
+barrier|барьер|to'siq|The language barrier.
+boundary|граница|chegara|The river is the boundary.
+branch|ветка; филиал|shox; filial|The bank has a new branch.
+brand|бренд|brend|What brand is your phone?
+campaign|кампания|kampaniya|An advertising campaign.
+candidate|кандидат|nomzod|There are five candidates.
+capacity|вместимость|sig'im|The stadium's capacity is 30,000.
+category|категория|toifa|Choose a category.
+champion|чемпион|chempion|He's the world champion.
+charity|благотворительность|xayriya|She works for a charity.
+childhood|детство|bolalik|I had a happy childhood.
+citizen|гражданин|fuqaro|He's an Uzbek citizen.
+comment|комментарий|izoh|Leave a comment.
+committee|комитет|qo'mita|The committee met today.
+community|сообщество|jamiyat, mahalla|Our community is friendly.
+complaint|жалоба|shikoyat|I want to make a complaint.
+confidence|уверенность|ishonch|She has a lot of confidence.
+conflict|конфликт|nizo|Avoid conflict.
+connection|связь|aloqa|The connection is bad.
+consumer|потребитель|iste'molchi|Consumers want low prices.
+content|содержание|mazmun|The content of the book.
+context|контекст|kontekst|Guess the word from context.
+convenience|удобство|qulaylik|For your convenience.
+crisis|кризис|inqiroz|An economic crisis.
+criticism|критика|tanqid|He can't take criticism.
+currency|валюта|valyuta|What's the local currency?
+custom|обычай|odat|It's an old custom.
+deadline|крайний срок|muddat|The deadline is Friday.
+demand|спрос; требование|talab|There's high demand for flats.
+democracy|демократия|demokratiya|Democracy needs free elections.
+deposit|залог; вклад|depozit|Pay a deposit.
+desire|желание|istak|A strong desire to win.
+destination|место назначения|manzil|What's your destination?
+development|развитие|rivojlanish|Child development.
+discussion|обсуждение|muhokama|We had a long discussion.
+document|документ|hujjat|Sign the document.
+duty|обязанность; пошлина|burch; boj|It's my duty.
+effort|усилие|harakat|Make an effort.
+engine|двигатель|dvigatel|The engine won't start.
+entertainment|развлечения|ko'ngilochar|What's the entertainment tonight?
+equality|равенство|tenglik|Gender equality.
+error|ошибка|xato|There's an error.
+essay|эссе|insho|Write an essay.
+expert|эксперт|mutaxassis|Ask an expert.
+facility|удобство; объект|qulaylik; ob'ekt|Sports facilities.
+failure|неудача|muvaffaqiyatsizlik|Failure is part of success.
+faith|вера|imon|Have faith.
+fame|слава|shuhrat|Fame changed him.
+finance|финансы|moliya|She works in finance.
+fitness|физическая форма|jismoniy tayyorgarlik|Fitness is important.
+freedom|свобода|erkinlik|Freedom of speech.
+friendship|дружба|do'stlik|Our friendship is strong.
+funeral|похороны|dafn marosimi|The funeral was sad.
+goods|товары|tovarlar|The goods arrived.
+guarantee|гарантия|kafolat|A two-year guarantee.
+headline|заголовок|sarlavha|Read the headlines.
+heritage|наследие|meros|Cultural heritage.
+household|домашнее хозяйство|xonadon|Household chores.
+identity|личность|shaxsiyat|An identity card.
+image|образ|tasvir|A clear image.
+impact|влияние|ta'sir|A big impact on our lives.
+improvement|улучшение|yaxshilanish|There's been an improvement.
+independence|независимость|mustaqillik|Independence Day is September 1.
+inflation|инфляция|inflyatsiya|Inflation is high.
+ingredient|ингредиент|tarkibiy qism|What are the ingredients?
+inhabitant|житель|aholi|The town has 5,000 inhabitants.
+instance|случай|misol|For instance.
+intelligence|интеллект|aql-zakovat|Artificial intelligence.
+investment|инвестиция|sarmoya|A good investment.
+journalism|журналистика|jurnalistika|She studies journalism.
+landscape|пейзаж|manzara|A beautiful landscape.
+lecture|лекция|ma'ruza|The lecture starts at nine.
+lifestyle|образ жизни|turmush tarzi|A healthy lifestyle.
+literature|литература|adabiyot|Uzbek literature.
+majority|большинство|ko'pchilik|The majority agreed.
+management|управление|boshqaruv|Good management.
+material|материал|material|What material is it?
+mayor|мэр|hokim|The mayor opened the park.
+media|СМИ|ommaviy axborot vositalari|The media love scandals.
+member|член, участник|a'zo|She's a member of the club.
+minority|меньшинство|ozchilik|A small minority.
+mood|настроение|kayfiyat|I'm in a good mood.
+motivation|мотивация|motivatsiya|I lack motivation.
+network|сеть|tarmoq|A social network.
+nutrition|питание|ovqatlanish|Good nutrition.
+obstacle|препятствие|to'siq|Overcome every obstacle.
+occasion|случай, событие|munosabat|A special occasion.
+option|вариант|variant|We have two options.
+organisation|организация|tashkilot|A charity organisation.
+owner|владелец|egasi|Who's the owner?
+participant|участник|ishtirokchi|All participants get a gift.
+partner|партнёр|sherik|My business partner.
+performance|выступление|chiqish|A great performance.
+personality|личность|shaxsiyat|She has a strong personality.
+phenomenon|явление|hodisa|A natural phenomenon.
+policy|политика (правила)|siyosat|Company policy.
+politics|политика|siyosat|I'm not interested in politics.
+portion|порция|porsiya|A big portion.
+poverty|бедность|qashshoqlik|Fight against poverty.
+presentation|презентация|taqdimot|Give a presentation.
+press|пресса|matbuot|Freedom of the press.
+privacy|частная жизнь|shaxsiy hayot|Respect my privacy.
+procedure|процедура|tartib|Follow the procedure.
+product|продукт|mahsulot|A new product.
+profession|профессия|kasb|Teaching is a noble profession.
+property|собственность|mulk|Private property.
+proposal|предложение|taklif|A marriage proposal.
+psychology|психология|psixologiya|She studies psychology.
+qualification|квалификация|malaka|What qualifications do you have?
+reaction|реакция|munosabat|What was his reaction?
+reality|реальность|haqiqat|Face reality.
+recording|запись|yozuv|Listen to the recording.
+reduction|сокращение|qisqarish|A price reduction.
+reference|ссылка; рекомендация|havola|A letter of reference.
+refund|возврат денег|pulni qaytarish|Can I get a refund?
+reputation|репутация|obro'|A good reputation.
+reservation|бронь|bron|I have a reservation.
+resident|житель|aholi|Local residents.
+review|обзор, отзыв|sharh|Read the reviews.
+revolution|революция|inqilob|The digital revolution.
+role|роль|rol|Play a role.
+routine|распорядок|kun tartibi|My daily routine.
+satisfaction|удовлетворение|qoniqish|Customer satisfaction.
+security|безопасность|xavfsizlik|Airport security.
+shift|смена|smena|A night shift.
+shortage|нехватка|tanqislik|A water shortage.
+signal|сигнал|signal|No signal here.
+soldier|солдат|askar|A brave soldier.
+species|вид (биол.)|tur|Endangered species.
+statement|заявление|bayonot|A public statement.
+status|статус|maqom|Social status.
+stranger|незнакомец|notanish|Don't talk to strangers.
+suggestion|предложение|taklif|Any suggestions?
+summary|резюме, краткое изложение|qisqacha mazmun|Write a summary.
+supporter|сторонник|tarafdor|A football supporter.
+surgery|операция; хирургия|jarrohlik|He needs surgery.
+target|цель|nishon|Hit the target.
+tax|налог|soliq|Pay your taxes.
+technique|техника, приём|usul|A new technique.
+term (word)|термин|atama|A medical term.
+traffic jam|пробка|tirbandlik|We were stuck in a traffic jam.
+treatment|лечение|davolash|The treatment worked.
+union|союз|ittifoq|The trade union.
+vehicle|транспортное средство|transport vositasi|Park your vehicle here.
+wealth|богатство|boylik|Health is wealth.
+witness|свидетель|guvoh|Was there a witness?
+#Прилагательные B1
+absolute|абсолютный|mutlaq|Absolute silence.
+academic|академический|akademik|Academic year.
+accessible|доступный|qulay|The building is accessible.
+additional|дополнительный|qo'shimcha|Additional costs.
+amused|развеселённый|kulgisi kelgan|He looked amused.
+apparent|очевидный|ravshan|For no apparent reason.
+artificial|искусственный|sun'iy|Artificial flowers.
+ashamed|пристыженный|uyalgan|I'm ashamed of myself.
+astonished|изумлённый|lol qolgan|I was astonished.
+automatic|автоматический|avtomatik|Automatic doors.
+brilliant|блестящий|ajoyib|A brilliant idea.
+capable|способный|qodir|She's capable of anything.
+cautious|осторожный|ehtiyotkor|Be cautious.
+challenging|сложный, требующий усилий|qiyin, sinovli|A challenging job.
+chemical|химический|kimyoviy|Chemical products.
+conscious|сознательный|ongli|He's conscious now.
+constant|постоянный|doimiy|Constant noise.
+convenient|удобный|qulay|A convenient time.
+critical|критический|tanqidiy|A critical moment.
+crucial|решающий|hal qiluvchi|A crucial decision.
+current|текущий|joriy|The current situation.
+decent|приличный|munosib|A decent salary.
+delicate|хрупкий|nozik|A delicate flower.
+desperate|отчаянный|umidsiz|A desperate situation.
+digital|цифровой|raqamli|Digital technology.
+dramatic|драматичный|keskin|A dramatic change.
+eager|жаждущий|ishtiyoqli|Eager to learn.
+economic|экономический|iqtisodiy|Economic growth.
+effective|эффективный|samarali|An effective method.
+elderly|пожилой|keksa|Elderly people.
+emotional|эмоциональный|hissiy|An emotional speech.
+enormous|огромный|ulkan|An enormous house.
+entire|целый|butun|The entire day.
+environmental|экологический|ekologik|Environmental problems.
+ethnic|этнический|etnik|Ethnic groups.
+exhausted|измученный|holdan toygan|I'm exhausted.
+experienced|опытный|tajribali|An experienced driver.
+fascinating|увлекательный|maroqli|A fascinating story.
+financial|финансовый|moliyaviy|Financial problems.
+fortunate|удачливый|baxtli|We're fortunate.
+fundamental|основной|asosiy|A fundamental right.
+historic|исторический|tarixiy|A historic day.
+honourable|почётный|sharafli|An honourable man.
+ideal|идеальный|ideal|An ideal place.
+impressive|впечатляющий|ta'sirli|An impressive result.
+incredible|невероятный|aql bovar qilmas|An incredible story.
+initial|начальный|boshlang'ich|The initial price.
+intense|интенсивный|kuchli|Intense heat.
+logical|логичный|mantiqiy|A logical answer.
+loyal|верный|sodiq|A loyal friend.
+massive|массивный|ulkan|A massive building.
+medical|медицинский|tibbiy|Medical help.
+minor|незначительный|kichik|A minor problem.
+moral|моральный|axloqiy|A moral duty.
+multiple|множественный|ko'p|Multiple choice.
+occasional|случайный, редкий|vaqti-vaqti bilan|An occasional visitor.
+ordinary|обычный|oddiy|An ordinary day.
+outstanding|выдающийся|ajoyib|An outstanding student.
+overweight|с лишним весом|ortiqcha vaznli|He's overweight.
+permanent|постоянный|doimiy|A permanent job.
+practical|практичный|amaliy|A practical solution.
+precious|драгоценный|qimmatbaho|Precious stones.
+pregnant|беременная|homilador|She's pregnant.
+present (current)|нынешний|hozirgi|The present situation.
+productive|продуктивный|samarali|A productive day.
+professional|профессиональный|professional|A professional photographer.
+reasonable|разумный|oqilona|A reasonable price.
+relevant|уместный|tegishli|Relevant information.
+remote|отдалённый; удалённый|uzoq; masofaviy|A remote village.
+romantic|романтичный|romantik|A romantic dinner.
+satisfied|удовлетворённый|mamnun|Are you satisfied?
+scientific|научный|ilmiy|Scientific research.
+shocked|потрясённый|hayratda qolgan|I was shocked.
+slight|небольшой|ozgina|A slight problem.
+social|социальный|ijtimoiy|Social media.
+solid|твёрдый, прочный|qattiq, mustahkam|Solid wood.
+spiritual|духовный|ma'naviy|Spiritual values.
+stable|стабильный|barqaror|A stable job.
+steady|устойчивый|barqaror|Steady progress.
+strict|строгий|qattiqqo'l|A strict teacher.
+stunning|потрясающий|hayratlanarli|A stunning view.
+temporary|временный|vaqtinchalik|A temporary job.
+tough|жёсткий, трудный|qattiq, qiyin|A tough decision.
+unemployed|безработный|ishsiz|He's unemployed.
+unique|уникальный|noyob|A unique chance.
+urgent|срочный|shoshilinch|An urgent message.
+valid|действительный|amal qiladigan|Your passport is not valid.
+variable|изменчивый|o'zgaruvchan|Variable weather.
+visual|визуальный|vizual|Visual memory.
+willing|готовый, желающий|tayyor|I'm willing to help.
+worldwide|всемирный|butun dunyo bo'ylab|Worldwide fame.
+#Связки и наречия B1
+according to|согласно|...ga ko'ra|According to the news, it will rain.
+accordingly|соответственно|shunga muvofiq|Act accordingly.
+additionally|кроме того|bundan tashqari|Additionally, we offer free Wi-Fi.
+afterward|потом|keyin|Afterward, we went home.
+alright|в порядке|yaxshi|Are you alright?
+altogether|в целом; полностью|jami; butunlay|That's 50 dollars altogether.
+anyhow|так или иначе|baribir|Anyhow, let's start.
+as long as|при условии что|...sa bo'ldi|You can go as long as you're back by ten.
+as soon as|как только|...shi bilanoq|Call me as soon as you arrive.
+as well|тоже|ham|I'll have tea as well.
+besides|кроме того|bundan tashqari|Besides, it's too late.
+briefly|кратко|qisqacha|Tell me briefly.
+due to|из-за|tufayli|The flight was delayed due to fog.
+even though|даже если|garchi|Even though it was late, we went out.
+except|кроме|...dan tashqari|Everyone came except Akmal.
+fortunately|к счастью|baxtga|Fortunately, nobody was hurt.
+gradually|постепенно|asta-sekin|Gradually, I got better.
+in case|на случай если|agar ... bo'lsa|Take an umbrella in case it rains.
+in fact|фактически|aslida|In fact, I love it.
+in order to|для того чтобы|...ish uchun|I came in order to help.
+instead of|вместо|o'rniga|Tea instead of coffee.
+largely|в значительной степени|asosan|It's largely my fault.
+no longer|больше не|endi ... emas|He no longer lives here.
+obviously|очевидно|ochiqchasiga|Obviously, I said yes.
+particularly|особенно|ayniqsa|I particularly liked the music.
+possibly|возможно|ehtimol|Possibly tomorrow.
+previously|ранее|ilgari|Previously, he worked in a bank.
+regularly|регулярно|muntazam|Exercise regularly.
+seldom|редко|kamdan-kam|I seldom eat meat.
+so that|чтобы|...ishi uchun|Speak louder so that everyone can hear.
+surely|наверняка|albatta|Surely you know him!
+thanks to|благодаря|tufayli|Thanks to you, I passed.
+throughout|на протяжении|davomida|Throughout the year.
+whatever|что бы ни|nima bo'lsa ham|Whatever happens, call me.
+whenever|когда бы ни|qachon bo'lsa ham|Come whenever you want.
+wherever|где бы ни|qayerda bo'lsa ham|I'll follow you wherever you go.

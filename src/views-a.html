@@ -1,0 +1,118 @@
+  <section class="view" id="v-train">
+    <div class="scroll-x" id="tsel" aria-label="Время"></div>
+    <div class="scroll-x" id="modes" aria-label="Режим"></div>
+
+    <div class="card big" id="startP" hidden>
+      <div class="num" id="startMin">3:00</div>
+      <p>Переведи как можно больше предложений.<br>Верный ответ — сразу следующее.</p>
+      <button class="main" id="startBtn" style="min-width:200px;min-height:54px">Старт</button>
+      <p id="startBest" style="margin-top:14px"></p>
+    </div>
+
+    <div class="card big" id="resP" hidden>
+      <p style="margin:0 0 6px">Время вышло</p>
+      <div class="num" id="rOk">0</div>
+      <p id="rMsg">верных ответов</p>
+      <div class="res">
+        <div><b id="rAcc">0%</b><span>точность</span></div>
+        <div><b id="rSpd">0</b><span>сек на ответ</span></div>
+        <div><b id="rBest">0</b><span>рекорд</span></div>
+      </div>
+      <button class="main" id="again">Ещё раз</button>
+      <button id="toFree">Без таймера</button>
+    </div>
+
+    <div class="card enter" id="card">
+      <div class="timer" id="timer" hidden><b id="tLeft">3:00</b><div class="bar"><i id="tBar"></i></div></div>
+      <div class="task" id="task"></div>
+      <p class="ru" id="ru"></p>
+      <p class="mk" id="mk"></p>
+      <div class="field" id="field">
+        <input type="text" id="ans" lang="en" enterkeyhint="go" placeholder="Перевод на английский…" autocomplete="off" autocapitalize="sentences" autocorrect="on" spellcheck="true">
+        <button id="mic" aria-label="Голосовой ввод" title="Голосовой ввод"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+      </div>
+      <div class="tiles" id="tiles" hidden><div class="tline" id="tLine"></div><div class="tpool" id="tPool"></div></div>
+      <div class="chopts" id="chOpts" hidden></div>
+      <p class="tip" id="tip">На iPhone: переключи клавиатуру на <b>English</b> и нажми микрофон <b>внизу клавиатуры</b> — продиктуй перевод.</p>
+      <div class="row">
+        <button class="main" id="go">Проверить</button>
+        <button id="hintBtn">Формула</button>
+        <button id="tClear" hidden>Сбросить</button>
+        <button id="skip">Пропустить</button>
+      </div>
+      <div class="hint" id="hint"></div>
+      <div class="fb" id="fb"></div>
+      <div class="stats">
+        <span>Верно <b id="sOk">0</b> из <b id="sAll">0</b></span>
+        <span>Серия <b id="sSt">0</b></span>
+        <span id="sBestW">Рекорд серии <b id="sBest">0</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-words" hidden>
+    <div class="scroll-x" id="wModes"></div>
+    <div class="daybar" id="wDay"></div>
+    <div class="flt" id="wWarn" hidden><span id="wWarnT"></span><span class="row" style="margin:0"><button id="wWarnB">10 новых в день</button><button id="wSkipRev">К новым словам</button></span></div>
+    <div class="flt" id="wFlt" hidden><span id="wFltT"></span><button id="wFltX">Все темы</button></div>
+    <div class="card" id="wcard">
+      <div class="task" id="wTask"></div>
+      <div class="wq" id="wQ"></div>
+      <p class="mk" id="wSub"></p>
+      <div id="wEx"></div>
+      <div class="wopts" id="wOpts"></div>
+      <div class="field" id="wField" hidden><input type="text" id="wIn" lang="en" enterkeyhint="go" placeholder="Слово по-английски…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+      <div class="row" id="wWriteRow" hidden><button class="main" id="wGo">Проверить</button><button id="wSkip">Не знаю</button></div>
+      <div class="fb" id="wFb"></div>
+      <div class="row"><button class="main" id="wNextB" hidden>Дальше</button></div>
+      <div class="stats">
+        <span>Верно <b id="wOk">0</b> из <b id="wAll">0</b></span>
+        <span>Выучено слов <b id="wLearned">0</b></span>
+      </div>
+    </div>
+    <div class="card big" id="wDoneP" hidden>
+      <div class="num">✓</div>
+      <p style="margin-bottom:6px"><b>План на сегодня выполнен!</b></p>
+      <p id="wDoneT"></p>
+      <div class="row" style="justify-content:center"><button class="main" id="wMore">Ещё 10 новых слов</button><button id="wFree">Свободная практика</button></div>
+    </div>
+    <p class="note">Каждый день сначала повторяем слова, которым пришло время, потом учим новые блоками по 10: знакомство → мини-тест. Ошибки возвращаются через 3–5 заданий и на следующий день. Слово выучено после 3–4 верных ответов подряд (4 зелёные точки).</p>
+  </section>
+
+  <section class="view" id="v-wlist" hidden>
+    <input type="search" id="wSearch" placeholder="Поиск: слово или перевод…" autocomplete="off">
+    <details class="own" id="ownBox"><summary>Добавить свои слова</summary>
+    <p class="note" style="margin-top:0">Вставь список, по одному слову на строку, в формате <b>word — перевод</b>. Например: <i>borrow — занимать</i>. Подойдут и разделители «-», «=», «:» или табуляция. Свои слова хранятся только на этом устройстве.</p>
+    <textarea id="ownTa" rows="6" placeholder="borrow — занимать&#10;improve — улучшать" autocapitalize="off" spellcheck="false"></textarea>
+    <div class="row"><button class="main" id="ownAdd">Добавить</button><button id="ownClear">Удалить мои слова</button></div>
+    <p class="note" id="ownMsg"></p>
+    </details>
+    <h2>Уровень</h2>
+    <div class="themes" id="wLevels"></div>
+    <h2 id="wThemesH" hidden>Темы</h2>
+    <div class="themes" id="wThemes" hidden></div>
+    <h2 id="wListH">Все слова</h2>
+    <div class="wsum" id="wSum"></div>
+    <div class="row" style="margin:8px 0 6px"><button class="main" id="wStudy">Учить</button></div>
+    <div id="wList"></div>
+  </section>
+
+  <section class="view" id="v-art" hidden>
+    <div class="flt" id="aFlt" hidden><span id="aFltT"></span><button id="aFltX">Все правила</button></div>
+    <div class="card" id="acard">
+      <div class="task" id="aTask"></div>
+      <p class="ru" id="aEn"></p>
+      <p class="mk" id="aTr"></p>
+      <div class="opts" id="aOpts">
+        <button data-a="a">a</button><button data-a="an">an</button><button data-a="the">the</button><button data-a="-">—<small>без артикля</small></button>
+      </div>
+      <div class="fb" id="aFb"></div>
+      <div class="row"><button class="main" id="aNextB" hidden>Дальше</button></div>
+      <div class="stats">
+        <span>Верно <b id="aOk">0</b> из <b id="aAll">0</b></span>
+        <span>Серия <b id="aSt">0</b></span>
+      </div>
+    </div>
+    <p class="note">Выбери, что стоит на месте пропуска. На компьютере можно жать клавиши 1–4 и Enter.</p>
+  </section>
+

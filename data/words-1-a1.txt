@@ -1,0 +1,271 @@
+@Beginner|A1
+#Базовые слова
+yes|да|ha|Yes, I'm ready.
+no|нет|yo'q|No, thank you.
+please|пожалуйста|iltimos|Two teas, please.
+thank you|спасибо|rahmat|Thank you for the gift.
+sorry|извините; жаль|kechirasiz|Sorry, I didn't hear you.
+hello|привет, здравствуйте|salom|Hello, how are you?
+goodbye|до свидания|xayr|Goodbye, see you soon!
+here|здесь|bu yerda|Sit here, please.
+there|там|u yerda|Put the box there.
+this|этот, это|bu|This is my brother.
+that|тот, то|u, ana u|That car is new.
+these|эти|bular|These apples are sweet.
+those|те|anavilar|Those shoes are mine.
+and|и|va|Tea and bread, please.
+or|или|yoki|Tea or coffee?
+with|с|bilan|Come with me.
+without|без|...siz|Tea without sugar, please.
+for|для|uchun|This is for you.
+from|из, от|...dan|I'm from Samarkand.
+to|к, в|...ga|I go to work by bus.
+in|в|...da, ichida|The keys are in my bag.
+on|на|ustida|The cup is on the table.
+under|под|ostida|The cat is under the bed.
+at|в, у (месте/времени)|...da|Meet me at six.
+about|о, про|haqida|Tell me about your city.
+before|до, перед|oldin|Wash your hands before lunch.
+after|после|keyin|Let's talk after dinner.
+up|вверх|yuqoriga|Go up the stairs.
+down|вниз|pastga|Sit down, please.
+out|наружу|tashqariga|Let's go out tonight.
+not|не|emas|I'm not hungry.
+too|тоже; слишком|ham; juda|It's too hot.
+more|больше|ko'proq|I need more time.
+less|меньше|kamroq|Eat less sugar.
+most|больше всего|eng ko'p|Most people agree.
+other|другой|boshqa|Where is the other shoe?
+another|ещё один|yana bir|Can I have another cup?
+something|что-то|nimadir|I want something sweet.
+nothing|ничего|hech narsa|There's nothing in the box.
+everything|всё|hamma narsa|Everything is fine.
+someone|кто-то|kimdir|Someone is at the door.
+everyone|все|hamma|Everyone is here.
+nobody|никто|hech kim|Nobody knows.
+here you are|вот, пожалуйста|mana, oling|Here you are, your tea.
+OK|хорошо, ладно|xo'p|OK, let's go.
+#Числа и время
+one|один|bir|I have one sister.
+two|два|ikki|Two coffees, please.
+three|три|uch|We have three kids.
+four|четыре|to'rt|The table has four legs.
+five|пять|besh|Give me five minutes.
+six|шесть|olti|I get up at six.
+seven|семь|yetti|A week has seven days.
+eight|восемь|sakkiz|Work starts at eight.
+nine|девять|to'qqiz|The shop opens at nine.
+ten|десять|o'n|I'll be back in ten minutes.
+eleven|одиннадцать|o'n bir|I go to bed at eleven.
+twelve|двенадцать|o'n ikki|Lunch is at twelve.
+twenty|двадцать|yigirma|She's twenty.
+thirty|тридцать|o'ttiz|He's thirty years old.
+hundred|сто|yuz|It costs a hundred dollars.
+thousand|тысяча|ming|A thousand thanks!
+first|первый|birinchi|This is my first time here.
+second|второй; секунда|ikkinchi; soniya|Wait a second.
+third|третий|uchinchi|We live on the third floor.
+half|половина|yarim|Half an hour, please.
+o'clock|час (о времени)|soat|It's three o'clock.
+Monday|понедельник|dushanba|See you on Monday.
+Tuesday|вторник|seshanba|I have English on Tuesday.
+Wednesday|среда|chorshanba|Wednesday is a busy day.
+Thursday|четверг|payshanba|The party is on Thursday.
+Friday|пятница|juma|Friday is my favourite day.
+Saturday|суббота|shanba|We rest on Saturday.
+Sunday|воскресенье|yakshanba|We visit Grandma on Sunday.
+January|январь|yanvar|It snows in January.
+June|июнь|iyun|School ends in June.
+date|дата; свидание|sana; uchrashuv|What's the date today?
+calendar|календарь|taqvim|Check the calendar.
+clock|часы (настенные)|devor soati|The clock is slow.
+noon|полдень|tush payti|Let's meet at noon.
+midnight|полночь|yarim tun|He came home after midnight.
+tonight|сегодня вечером|bugun kechqurun|Are you free tonight?
+later|позже|keyinroq|Call me later.
+#Дом и вещи
+home|дом (родной)|uy|I'm at home.
+lamp|лампа|chiroq|Turn on the lamp.
+shelf|полка|tokcha|The books are on the shelf.
+box|коробка|quti|Put it in the box.
+cup|чашка|piyola, chashka|A cup of tea, please.
+glass|стакан; стекло|stakan; shisha|A glass of water, please.
+plate|тарелка|likopcha|Wash the plates.
+spoon|ложка|qoshiq|I need a spoon.
+fork|вилка|sanchqi|Use a fork.
+knife|нож|pichoq|This knife is sharp.
+bottle|бутылка|shisha idish|A bottle of water.
+towel|полотенце|sochiq|Here is a clean towel.
+soap|мыло|sovun|Wash with soap.
+pen|ручка|ruchka|Can I borrow your pen?
+pencil|карандаш|qalam|Write in pencil.
+paper|бумага|qog'oz|I need a piece of paper.
+notebook|тетрадь|daftar|Open your notebooks.
+picture|картинка; фото|rasm|Look at the picture.
+television|телевизор|televizor|Turn off the television.
+radio|радио|radio|Dad listens to the radio.
+blanket|одеяло|ko'rpa|It's cold, take a blanket.
+pillow|подушка|yostiq|This pillow is soft.
+curtain|штора|parda|Close the curtains.
+garage|гараж|garaj|The car is in the garage.
+balcony|балкон|balkon|We drink tea on the balcony.
+gate|ворота, калитка|darvoza|Close the gate.
+toilet|туалет|hojatxona|Where is the toilet?
+shower|душ|dush|I take a shower every morning.
+oven|духовка|duxovka|The bread is in the oven.
+#Ещё еда
+banana|банан|banan|Bananas are good for breakfast.
+orange|апельсин; оранжевый|apelsin; to'q sariq|I'll have an orange juice.
+grape|виноград|uzum|These grapes are from Fergana.
+melon|дыня|qovun|Uzbek melons are famous.
+watermelon|арбуз|tarvuz|Let's buy a watermelon.
+lemon|лимон|limon|Tea with lemon, please.
+cucumber|огурец|bodring|Cut the cucumber for the salad.
+salad|салат|salat|I'll have a salad.
+cake|торт|tort|She made a chocolate cake.
+chocolate|шоколад|shokolad|Kids love chocolate.
+ice cream|мороженое|muzqaymoq|Let's get some ice cream.
+juice|сок|sharbat|Apple juice, please.
+beef|говядина|mol go'shti|Plov is often made with beef.
+lamb|баранина; ягнёнок|qo'y go'shti|Lamb shashlik is delicious.
+sausage|колбаса|kolbasa|I don't eat sausage.
+honey|мёд|asal|Tea with honey helps a cold.
+jam|варенье|murabbo|Grandma makes cherry jam.
+nut|орех|yong'oq|I'm allergic to nuts.
+pepper|перец|qalampir|Add some pepper.
+flour|мука|un|We need flour for bread.
+menu|меню|menyu|Can I see the menu?
+snack|перекус|yengil tamaddi|Let's have a snack.
+meal|приём пищи, еда|taom|Enjoy your meal!
+bowl|миска|kosa|A bowl of soup, please.
+thirsty|испытывающий жажду|chanqagan|I'm thirsty.
+#Одежда и цвета
+red|красный|qizil|She has a red car.
+blue|синий, голубой|ko'k|The sky is blue.
+green|зелёный|yashil|I like green tea.
+yellow|жёлтый|sariq|Yellow is a happy colour.
+black|чёрный|qora|He wears a black jacket.
+white|белый|oq|Snow is white.
+brown|коричневый|jigarrang|She has brown eyes.
+grey|серый|kulrang|It's a grey day.
+pink|розовый|pushti|My daughter loves pink.
+purple|фиолетовый|binafsha|A purple dress.
+skirt|юбка|yubka|She's wearing a long skirt.
+T-shirt|футболка|futbolka|It's hot, wear a T-shirt.
+jeans|джинсы|jinsi shim|These jeans are new.
+sweater|свитер|sviter|Put on a sweater.
+socks|носки|paypoq|I need warm socks.
+boots|сапоги, ботинки|etik|Wear boots, it's snowing.
+scarf|шарф|sharf|Don't forget your scarf.
+gloves|перчатки|qo'lqop|My gloves are in my pocket.
+glasses|очки|ko'zoynak|I can't read without glasses.
+umbrella|зонт|soyabon|Take an umbrella.
+pocket|карман|cho'ntak|The phone is in my pocket.
+ring|кольцо|uzuk|He gave her a ring.
+#Люди и профессии
+mom|мама|oyi, ona|Mom, I'm home!
+dad|папа|dada|Dad is in the garage.
+kid|ребёнок (разг.)|bola|The kids are asleep.
+cousin|двоюродный брат/сестра|amakivachcha, xolavachcha|My cousin lives in Seoul.
+person|человек|odam, inson|She's a nice person.
+worker|рабочий|ishchi|The workers start at seven.
+nurse|медсестра|hamshira|The nurse gave me an injection.
+police officer|полицейский|politsiyachi|Ask the police officer.
+farmer|фермер|fermer|The farmer grows cotton.
+waiter|официант|ofitsiant|The waiter brought the menu.
+shop assistant|продавец|sotuvchi|The shop assistant was helpful.
+engineer|инженер|muhandis|My brother is an engineer.
+builder|строитель|quruvchi|The builders are fast.
+singer|певец|qo'shiqchi|She's a famous singer.
+#Глаголы A1
+be|быть|bo'lmoq|I want to be a doctor.
+have|иметь|ega bo'lmoq|I have two brothers.
+get|получать; становиться|olmoq|I get up at seven.
+put|класть|qo'ymoq|Put your bag here.
+sing|петь|kuylamoq|She sings well.
+dance|танцевать|raqsga tushmoq|Let's dance!
+swim|плавать|suzmoq|Can you swim?
+jump|прыгать|sakramoq|The kids jump on the bed.
+draw|рисовать|chizmoq|My son draws cars.
+cut|резать|kesmoq|Cut the bread, please.
+cry|плакать|yig'lamoq|The baby is crying.
+laugh|смеяться|kulmoq|We laughed a lot.
+drive|водить машину|haydamoq|I drive to work.
+fly|летать|uchmoq|We fly to Istanbul tomorrow.
+ride|ездить (верхом, на велосипеде)|minmoq|I ride my bike to school.
+study|учиться, изучать|o'qimoq|I study English every day.
+teach|учить, преподавать|o'qitmoq|She teaches maths.
+visit|навещать, посещать|tashrif buyurmoq|We visit Grandma every Sunday.
+wake up|просыпаться|uyg'onmoq|I wake up at six.
+get up|вставать|turmoq|Get up, it's late!
+go to bed|ложиться спать|uxlashga yotmoq|I go to bed at eleven.
+sleep in|поспать подольше|uzoq uxlamoq|I sleep in on Sundays.
+stop|останавливаться|to'xtamoq|Stop the car!
+turn|поворачивать|burilmoq|Turn left here.
+push|толкать|itarmoq|Push the door.
+pull|тянуть|tortmoq|Pull, don't push.
+throw|бросать|otmoq|Throw me the ball.
+catch|ловить|ushlamoq|Catch the ball!
+answer the phone|ответить на звонок|telefonga javob bermoq|Can you answer the phone?
+count|считать|sanamoq|Count to ten.
+spell|писать по буквам|harflab aytmoq|How do you spell your name?
+repeat|повторять|takrorlamoq|Repeat after me.
+#Прилагательные A1
+nice|приятный, милый|yoqimli|What a nice day!
+great|отличный|ajoyib|That's a great idea.
+bad-tempered|раздражительный|jahldor|He's bad-tempered in the morning.
+little|маленький|kichkina|A little girl is crying.
+fat|толстый|semiz|The cat is very fat.
+thin|худой; тонкий|ozg'in; ingichka|He's tall and thin.
+pretty|красивая, милая|chiroyli|What a pretty dress.
+ugly|уродливый|xunuk|It's an ugly building.
+closed|закрытый|yopiq|The bank is closed today.
+wrong|неправильный|noto'g'ri|Sorry, wrong number.
+hard|твёрдый; трудный|qattiq; qiyin|The bread is hard.
+soft|мягкий|yumshoq|This bed is soft.
+wet|мокрый|ho'l|My shoes are wet.
+dry|сухой|quruq|The clothes are dry.
+cool|прохладный; классный|salqin; zo'r|It's cool in the evening.
+sick|больной|kasal|I feel sick.
+fine|хороший; в порядке|yaxshi|I'm fine, thanks.
+sure|уверенный|ishonchli, aniq|Are you sure?
+own|собственный|o'z|I have my own room.
+next|следующий|keyingi|See you next week.
+last|последний; прошлый|oxirgi; o'tgan|This is the last bus.
+#Места и транспорт
+home town|родной город|tug'ilgan shahar|My home town is Khiva.
+capital|столица|poytaxt|Tashkent is the capital.
+centre|центр|markaz|We live in the city centre.
+restaurant|ресторан|restoran|Let's eat at a restaurant.
+café|кафе|kafe|Meet me at the café.
+hotel|гостиница|mehmonxona|The hotel is near the sea.
+museum|музей|muzey|The museum is closed on Monday.
+library|библиотека|kutubxona|I study at the library.
+cinema|кинотеатр|kinoteatr|Let's go to the cinema.
+church|церковь|cherkov|There's an old church here.
+mosque|мечеть|masjid|The mosque is very beautiful.
+zoo|зоопарк|hayvonot bog'i|Kids love the zoo.
+beach|пляж|plyaj|We spent the day at the beach.
+bike|велосипед|velosiped|I ride my bike to work.
+metro|метро|metro|The metro is fast.
+#Тело и здоровье A1
+neck|шея|bo'yin|My neck hurts.
+shoulder|плечо|yelka|He has broad shoulders.
+finger|палец|barmoq|I cut my finger.
+foot|ступня|oyoq panjasi|My foot hurts.
+knee|колено|tizza|I hurt my knee.
+stomach|живот, желудок|qorin, oshqozon|My stomach hurts.
+skin|кожа|teri|She has soft skin.
+blood|кровь|qon|He lost a lot of blood.
+headache|головная боль|bosh og'rig'i|I have a headache.
+hurt|болеть; ранить|og'rimoq|My back hurts.
+#Природа и животные A1
+cow|корова|sigir|The cow gives milk.
+sheep|овца|qo'y|The sheep are in the field.
+goat|коза|echki|The goat ate my hat!
+camel|верблюд|tuya|Camels live in the desert.
+insect|насекомое|hasharot|What's this insect?
+star|звезда|yulduz|Look at the stars!
+moon|луна|oy|The moon is bright tonight.
+field|поле|dala|Cotton grows in the field.
+stone|камень|tosh|He threw a stone.

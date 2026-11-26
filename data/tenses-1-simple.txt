@@ -1,0 +1,90 @@
+past|+|Я вчера поздно лёг спать.|Men kecha kech yotdim.|I went to bed late yesterday.|Yesterday I went to bed late.|go to bed (went) · late
+past|+|Мы купили новую машину в прошлом месяце.|Biz o'tgan oy yangi mashina sotib oldik.|We bought a new car last month.||buy (bought) · last month
+past|+|Мама приготовила плов в воскресенье.|Oyim yakshanba kuni palov pishirdi.|Mom cooked plov on Sunday.|My mom cooked plov on Sunday;Mum cooked plov on Sunday;My mother cooked plov on Sunday;Mother cooked plov on Sunday;Mom made plov on Sunday;My mom made plov on Sunday|cook · plov · on Sunday
+past|+|Я забыл телефон дома.|Men telefonimni uyda unutdim.|I forgot my phone at home.|I left my phone at home|forget (forgot) · phone · at home
+past|+|Акмал позвонил мне вечером.|Akmal kechqurun menga qo'ng'iroq qildi.|Akmal called me in the evening.|Akmal called me last night|call · in the evening
+past|+|Мы опоздали на автобус.|Biz avtobusdan qolib ketdik.|We missed the bus.||miss the bus
+past|+|Малика нашла хорошую работу.|Malika yaxshi ish topdi.|Malika found a good job.||find (found) · job
+past|+|Я заплатил за ужин.|Men kechki ovqat uchun to'ladim.|I paid for dinner.|I paid for the dinner|pay (paid) · dinner
+past|+|Вчера весь день шёл дождь.|Kecha kun bo'yi yomg'ir yog'di.|It rained all day yesterday.|Yesterday it rained all day|rain · all day
+past|+|Мы встретились в кафе после работы.|Biz ishdan keyin kafeda uchrashdik.|We met at a cafe after work.|We met in a cafe after work;We met at a café after work|meet (met) · cafe · after work
+past|-|Я не завтракал сегодня утром.|Men bugun ertalab nonushta qilmadim.|I didn't have breakfast this morning.|I didn't eat breakfast this morning|have breakfast · this morning
+past|-|Акмал не ответил на моё сообщение.|Akmal xabarimga javob bermadi.|Akmal didn't answer my message.|Akmal didn't reply to my message;Akmal didn't respond to my message|answer / reply · message
+past|-|Мы не смотрели этот фильм.|Biz bu filmni ko'rmadik.|We didn't watch this movie.|We didn't watch this film;We didn't see this movie;We didn't see this film;We didn't watch that movie;We didn't watch that film|watch · movie
+past|-|Я не спал всю ночь.|Men tun bo'yi uxlamadim.|I didn't sleep all night.||sleep · all night
+past|-|Малика не пришла на свадьбу.|Malika to'yga kelmadi.|Malika didn't come to the wedding.||come · wedding
+past|-|Папа не нашёл ключи.|Dadam kalitlarni topmadi.|Dad didn't find the keys.|My dad didn't find the keys;Dad didn't find his keys;My dad didn't find his keys;My father didn't find the keys|find · keys
+past|-|Я не взял зонт.|Men soyabon olmadim.|I didn't take an umbrella.|I didn't take my umbrella;I didn't take the umbrella|take · umbrella
+past|-|Мы не успели на поезд.|Biz poyezdga ulgurmadik.|We didn't catch the train.|We didn't make the train|catch · train
+past|-|Я не понял вопрос.|Men savolni tushunmadim.|I didn't understand the question.||understand · question
+past|-|Они не заплатили за свет.|Ular elektr uchun to'lamadi.|They didn't pay for electricity.|They didn't pay for the electricity;They didn't pay the electricity bill|pay · electricity
+past|?|Ты закрыл дверь?|Eshikni yopdingmi?|Did you close the door?|Did you lock the door|close · door
+past|?|Ты поел?|Ovqatlandingmi?|Did you eat?|Have you eaten|eat
+past|?|Вы хорошо спали?|Yaxshi uxladingizmi?|Did you sleep well?||sleep · well
+past|?|Акмал звонил тебе вчера?|Akmal kecha senga qo'ng'iroq qildimi?|Did Akmal call you yesterday?||call · yesterday
+past|?|Ты купил хлеб?|Non sotib oldingmi?|Did you buy bread?|Did you buy the bread;Did you buy some bread;Did you get bread;Did you get the bread|buy · bread
+past|?|Вы видели мои ключи?|Kalitlarimni ko'rdingizmi?|Did you see my keys?||see · keys
+past|?|Мама приготовила ужин?|Oyim kechki ovqat tayyorladimi?|Did Mom cook dinner?|Did my mom cook dinner;Did Mum cook dinner;Did mother cook dinner;Did Mom make dinner;Did my mom make dinner|cook · dinner
+past|?|Ты сделал домашнее задание?|Uy vazifasini qildingmi?|Did you do your homework?|Did you do the homework;Did you do homework|do · homework
+past|?|Они приехали вовремя?|Ular o'z vaqtida keldimi?|Did they arrive on time?|Did they come on time|arrive · on time
+past|?|Ты получил моё сообщение?|Xabarimni oldingmi?|Did you get my message?|Did you receive my message|get · message
+pres|+|Я встаю в семь утра.|Men ertalab soat yettida turaman.|I get up at seven in the morning.|I get up at 7 in the morning;I get up at seven am;I get up at 7 am;I wake up at seven in the morning;I wake up at 7 in the morning;I get up at 7;I get up at seven|get up · seven
+pres|+|Папа работает в банке.|Dadam bankda ishlaydi.|My dad works at a bank.|Dad works at a bank;My dad works in a bank;Dad works in a bank;My father works at a bank;My father works in a bank|work · bank
+pres|+|Я пью кофе каждое утро.|Men har kuni ertalab qahva ichaman.|I drink coffee every morning.||drink · coffee · every morning
+pres|+|Малика живёт в Ташкенте.|Malika Toshkentda yashaydi.|Malika lives in Tashkent.||live · Tashkent
+pres|+|Мы ездим на работу на метро.|Biz ishga metroda boramiz.|We go to work by metro.|We go to work by subway;We take the metro to work;We get to work by metro|go to work · by metro
+pres|+|Мой брат играет в футбол по выходным.|Akam dam olish kunlari futbol o'ynaydi.|My brother plays football on weekends.|My brother plays football at weekends;My brother plays football on the weekends;My brother plays football at the weekend;My brother plays soccer on weekends|play football · on weekends
+pres|+|Магазин открывается в девять.|Do'kon soat to'qqizda ochiladi.|The shop opens at nine.|The shop opens at 9;The store opens at nine;The store opens at 9|open · nine
+pres|+|Дети ходят в школу пешком.|Bolalar maktabga piyoda boradi.|The children walk to school.|Children walk to school;The kids walk to school;Kids walk to school|walk · school
+pres|+|Мама звонит мне каждый вечер.|Oyim har kuni kechqurun menga qo'ng'iroq qiladi.|Mom calls me every evening.|My mom calls me every evening;Mum calls me every evening;My mother calls me every evening;Mom calls me every night;My mom calls me every night|call · every evening
+pres|+|Я люблю плов.|Men palovni yaxshi ko'raman.|I love plov.|I like plov|love / like · plov
+pres|-|Я не пью чай без сахара.|Men choyni shakarsiz ichmayman.|I don't drink tea without sugar.||drink · tea · without sugar
+pres|-|Акмал не курит.|Akmal chekmaydi.|Akmal doesn't smoke.||smoke
+pres|-|Мы не работаем по субботам.|Biz shanba kunlari ishlamaymiz.|We don't work on Saturdays.|We don't work on Saturday|work · on Saturdays
+pres|-|Бабушка не пользуется интернетом.|Buvim internetdan foydalanmaydi.|Grandma doesn't use the internet.|My grandma doesn't use the internet;My grandmother doesn't use the internet;Grandmother doesn't use the internet;Grandma doesn't use internet|use · internet
+pres|-|Я не люблю рано вставать.|Men erta turishni yoqtirmayman.|I don't like getting up early.|I don't like to get up early;I don't like waking up early;I don't like to wake up early|like · get up · early
+pres|-|Малика не ест мясо.|Malika go'sht yemaydi.|Malika doesn't eat meat.||eat · meat
+pres|-|Автобус здесь не останавливается.|Avtobus bu yerda to'xtamaydi.|The bus doesn't stop here.||bus · stop · here
+pres|-|Мои родители не говорят по-английски.|Ota-onam inglizcha gapirmaydi.|My parents don't speak English.||parents · speak English
+pres|-|Я не знаю его номер.|Men uning raqamini bilmayman.|I don't know his number.|I don't know her number;I don't know his phone number;I don't know her phone number|know · number
+pres|-|Мы не смотрим телевизор.|Biz televizor ko'rmaymiz.|We don't watch TV.|We don't watch television|watch TV
+pres|?|Ты говоришь по-английски?|Sen inglizcha gapirasanmi?|Do you speak English?||speak English
+pres|?|Где ты работаешь?|Qayerda ishlaysan?|Where do you work?||where · work
+pres|?|Ты любишь острую еду?|Achchiq ovqatni yaxshi ko'rasanmi?|Do you like spicy food?|Do you love spicy food|like · spicy food
+pres|?|Акмал живёт рядом?|Akmal yaqin joyda yashaydimi?|Does Akmal live nearby?|Does Akmal live near here;Does Akmal live close by;Does Akmal live close|live · nearby
+pres|?|Во сколько начинается урок?|Dars soat nechada boshlanadi?|What time does the lesson start?|What time does the class start;When does the lesson start;When does the class start;What time does the lesson begin|what time · lesson · start
+pres|?|Этот автобус идёт в центр?|Bu avtobus markazga boradimi?|Does this bus go to the center?|Does this bus go to the centre;Does this bus go to the city center;Does this bus go to the city centre;Does this bus go downtown|bus · go · center
+pres|?|Твоя мама работает?|Oying ishlaydimi?|Does your mom work?|Does your mother work;Does your mum work|mom · work
+pres|?|Вы принимаете карту?|Karta qabul qilasizmi?|Do you accept cards?|Do you accept card;Do you take cards;Do you take card;Do you accept credit cards|accept · card
+pres|?|Сколько это стоит?|Bu qancha turadi?|How much does it cost?|How much does this cost;How much does that cost|how much · cost
+pres|?|Ты часто ходишь в спортзал?|Sportzalga tez-tez borasanmi?|Do you often go to the gym?|Do you go to the gym often|often · go · gym
+fut|+|Я позвоню тебе завтра.|Men senga ertaga qo'ng'iroq qilaman.|I will call you tomorrow.|Tomorrow I will call you|call · tomorrow
+fut|+|Летом мы поедем в Самарканд.|Biz yozda Samarqandga boramiz.|We will go to Samarkand in summer.|We will go to Samarkand in the summer;In summer we will go to Samarkand;In the summer we will go to Samarkand;We will travel to Samarkand in summer|go · Samarkand · in summer
+fut|+|Я помогу тебе.|Men senga yordam beraman.|I will help you.||help
+fut|+|Акмал придёт в шесть.|Akmal soat oltida keladi.|Akmal will come at six.|Akmal will come at 6;Akmal will arrive at six;Akmal will arrive at 6|come · six
+fut|+|Я куплю продукты после работы.|Ishdan keyin oziq-ovqat sotib olaman.|I will buy groceries after work.|I will buy food after work;I will buy some groceries after work;After work I will buy groceries|buy · groceries · after work
+fut|+|Завтра будет холодно.|Ertaga sovuq bo'ladi.|It will be cold tomorrow.|Tomorrow it will be cold;Tomorrow will be cold|be · cold
+fut|+|Я отправлю тебе адрес.|Senga manzilni yuboraman.|I will send you the address.|I will send the address to you;I will send you my address|send · address
+fut|+|Мы встретим тебя в аэропорту.|Biz seni aeroportda kutib olamiz.|We will meet you at the airport.|We will pick you up at the airport|meet · airport
+fut|+|Малика завтра испечёт торт.|Malika ertaga tort pishiradi.|Malika will bake a cake tomorrow.|Tomorrow Malika will bake a cake;Malika will make a cake tomorrow|bake · cake
+fut|+|Я выучу английский за год.|Men ingliz tilini bir yilda o'rganib olaman.|I will learn English in a year.|I will learn English in one year|learn · English · in a year
+fut|-|Я не опоздаю.|Men kechikmayman.|I won't be late.||be late
+fut|-|В эти выходные мы не поедем в кишлак.|Bu dam olish kunlari qishloqqa bormaymiz.|We won't go to the village this weekend.|This weekend we won't go to the village|go · village · this weekend
+fut|-|Это не займёт много времени.|Bu ko'p vaqt olmaydi.|It won't take long.|This won't take long;It won't take much time;This won't take much time;It won't take a lot of time|take · long
+fut|-|Я больше так не буду.|Boshqa bunday qilmayman.|I won't do it again.|I won't do that again;I won't do this again|do · again
+fut|-|Акмал сегодня не придёт.|Akmal bugun kelmaydi.|Akmal won't come today.|Akmal will not come today|come · today
+fut|-|Завтра магазин не будет работать.|Do'kon ertaga ishlamaydi.|The shop won't be open tomorrow.|The store won't be open tomorrow;The shop won't work tomorrow;The store won't work tomorrow;Tomorrow the shop won't be open|shop · be open
+fut|-|Я никому не скажу.|Hech kimga aytmayman.|I won't tell anyone.|I won't tell anybody|tell · anyone
+fut|-|Мы не будем тебя ждать.|Biz seni kutmaymiz.|We won't wait for you.||wait for
+fut|-|Завтра не будет дождя.|Ertaga yomg'ir yog'maydi.|It won't rain tomorrow.|Tomorrow it won't rain|rain · tomorrow
+fut|-|Я не забуду твой день рождения.|Tug'ilgan kuningni unutmayman.|I won't forget your birthday.||forget · birthday
+fut|?|Ты придёшь на ужин?|Kechki ovqatga kelasanmi?|Will you come to dinner?|Will you come for dinner|come · dinner
+fut|?|Ты поможешь мне?|Menga yordam berasanmi?|Will you help me?||help
+fut|?|Вы позвоните мне завтра?|Ertaga menga qo'ng'iroq qilasizmi?|Will you call me tomorrow?||call · tomorrow
+fut|?|Акмал будет на свадьбе?|Akmal to'yda bo'ladimi?|Will Akmal be at the wedding?||be · wedding
+fut|?|Завтра будет жарко?|Ertaga issiq bo'ladimi?|Will it be hot tomorrow?||be · hot
+fut|?|Когда ты вернёшься?|Qachon qaytasan?|When will you come back?|When will you return;When will you be back|when · come back
+fut|?|Ты купишь молоко по дороге?|Yo'lda sut olasanmi?|Will you buy milk on the way?|Will you get milk on the way;Will you buy some milk on the way;Will you get some milk on the way|buy · milk · on the way
+fut|?|Мы успеем на самолёт?|Samolyotga ulguramizmi?|Will we catch the plane?|Will we catch the flight;Will we make the plane;Will we make the flight;Will we make it to the plane|catch · plane
+fut|?|Ты будешь работать в субботу?|Shanba kuni ishlaysanmi?|Will you work on Saturday?||work · on Saturday
+fut|?|Малика поедет с нами?|Malika biz bilan boradimi?|Will Malika go with us?|Will Malika come with us|go · with us
