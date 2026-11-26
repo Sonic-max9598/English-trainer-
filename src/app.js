@@ -1,11 +1,4 @@
-const T={
-  past:{n:'Past Simple',ru:'Прошедшее',mk:[['yesterday','вчера','kecha'],['last week','на прошлой неделе',"o'tgan hafta"],['two days ago','два дня назад','ikki kun oldin'],['last year','в прошлом году',"o'tgan yili"]],
-    f:{'+':'S + V2 (‑ed)','-':"S + didn't + V",'?':'Did + S + V ?'}},
-  pres:{n:'Present Simple',ru:'Настоящее',mk:[['every day','каждый день','har kuni'],['every week','каждую неделю','har hafta'],['on Sundays','по воскресеньям','yakshanba kunlari'],['every morning','каждое утро','har kuni ertalab']],
-    f:{'+':'S + V (he/she/it: +s)','-':"S + don't / doesn't + V",'?':'Do / Does + S + V ?'}},
-  fut:{n:'Future Simple',ru:'Будущее',mk:[['tomorrow','завтра','ertaga'],['next week','на следующей неделе','kelasi hafta'],['soon','скоро','tez orada'],['next year','в следующем году','kelasi yili']],
-    f:{'+':'S + will + V','-':"S + won't + V",'?':'Will + S + V ?'}}
-};
+/*@TENSES_META*/
 const F={'+':'Утверждение','-':'Отрицание','?':'Вопрос'};
 const FC={'+':'plus','-':'minus','?':'q'};
 const L={ru:'Русский',uz:"O'zbekcha",mix:'Вперемешку'};
@@ -23,13 +16,6 @@ function record(t,f,good){
   saveProg();
 }
 const acc=k=>{const c=prog.cells[k];return c&&c[1]?c[0]/c[1]:null};
-
-function norm(x){
-  return x.toLowerCase().replace(/[’`‘ʻʼ]/g,"'")
-   .replace(/\bdoesn't\b/g,'does not').replace(/\bdon't\b/g,'do not')
-   .replace(/\bdidn't\b/g,'did not').replace(/\bwon't\b/g,'will not')
-   .replace(/'ll\b/g,' will').replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim();
-}
 
 let on={t:{past:1,pres:1,fut:1},f:{'+':1,'-':1,'?':1},lang:'mix',voice:1,slow:0,theme:'auto',snd:1,vib:1};
 let best={streak:0,1:0,3:0,5:0};
@@ -58,60 +44,7 @@ function buzz(good){if(on.vib&&navigator.vibrate){try{navigator.vibrate(good?18:
 function feedback(el,good){fx(el,good);tone(good);buzz(good);topToday()}
 function topToday(){const d=prog.days[today()]||[0,0];$('topToday').textContent=d[0]}
 function applyTheme(){const t=on.theme||'auto';if(t==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t)}
-const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
-let cur=null,checked=false,auto=null;
-let st={ok:0,all:0,streak:0};
-let mode=0,run=null,tick=null;
-
-function stats(){
-  $('sOk').textContent=st.ok;$('sAll').textContent=st.all;$('sSt').textContent=st.streak;$('sBest').textContent=best.streak;
-  $('sBestW').hidden=!!run;
-}
-function next(){
-  clearTimeout(auto);stopSay();
-  const ts=Object.keys(on.t).filter(k=>on.t[k]),fs=Object.keys(on.f).filter(k=>on.f[k]);
-  let pool=BANK.filter(x=>on.t[x.t]&&on.f[x.f]);
-  const fresh=pool.filter(x=>!recent.includes(x.id));if(fresh.length)pool=fresh;
-  let it;
-  if(on.focus){
-    const w=pool.map(x=>{const c=prog.cells[x.t+x.f];return !c||c[1]<3?0.7:1.15-c[0]/c[1]});
-    let r=Math.random()*w.reduce((a,b)=>a+b,0);it=pool[pool.length-1];
-    for(let i=0;i<pool.length;i++){r-=w[i];if(r<=0){it=pool[i];break}}
-  }else it=pick(pool);recent.push(it.id);if(recent.length>Math.min(30,BANK.length-5))recent.shift();
-  const t=it.t,f=it.f;
-  const lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
-  cur={t,f,lang,a:it.en,all:it.all.map(norm)};checked=false;
-  $('task').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip t">${T[t].n}</span><span class="chip f ${FC[f]}">${f} ${F[f]}</span>`;
-  $('ru').textContent=lang==='ru'?it.ru:it.uz;
-  $('mk').textContent='Слова: '+it.h;
-  $('hint').className='hint';$('hint').textContent='Формула: '+T[t].f[f];
-  $('fb').className='fb';$('fb').innerHTML='';
-  $('go').textContent='Проверить';
-  const a=$('ans');a.value='';base='';a.focus({preventScroll:true});
-  enter($('card'));
-}
-function check(){
-  if(checked){next();return}
-  const u=$('ans').value.trim();if(!u){$('ans').focus();return}
-  if(listening&&dict)dict.stop().catch(()=>{});
-  checked=true;st.all++;
-  const good=cur.all.includes(norm(u));
-  record(cur.t,cur.f,good);feedback($('card'),good);
-  if(good){st.ok++;st.streak++;if(!run&&st.streak>best.streak){best.streak=st.streak;save()}}else st.streak=0;
-  const fb=$('fb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
-  const h=document.createElement('b');h.textContent=good?'Верно!':'Правильно так:';fb.appendChild(h);
-  const a=document.createElement('div');a.className='ans';a.textContent=cur.a;fb.appendChild(a);
-  const fm=document.createElement('code');fm.textContent=T[cur.t].f[cur.f];fb.appendChild(fm);
-  const sb=document.createElement('button');sb.className='say';sb.type='button';
-  sb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Послушать</span>';
-  sb.addEventListener('click',()=>{clearTimeout(auto);say(cur.a)});
-  const br=document.createElement('div');br.appendChild(sb);fb.appendChild(br);
-  $('go').textContent='Дальше';
-  stats();
-  const id=cur;
-  if(on.voice){const p=say(cur.a);if(good)p.then(()=>{if(checked&&cur===id)auto=setTimeout(()=>{if(checked&&cur===id)next()},250)})}
-  else if(good)auto=setTimeout(()=>{if(checked)next()},run?600:900);
-}
+/*@TENSE_TRAINER*/
 
 /* speech */
 let tts=null;
@@ -137,118 +70,6 @@ if(window.claude&&typeof window.claude.use==='function'){
   window.claude.use('tts').then(t=>{if(t)tts=t}).catch(()=>{});
 }
 try{if(window.speechSynthesis)speechSynthesis.getVoices()}catch(e){}
-
-/* timer */
-function show(p){$('startP').hidden=p!=='start';$('resP').hidden=p!=='res';$('card').hidden=p!=='card'}
-function renderModes(){
-  $('modes').innerHTML='<span>Режим</span>'+[0,1,3,5].map(n=>`<button class="tog" data-m="${n}" aria-pressed="${mode===n}">${n?n+' мин':'Без таймера'}</button>`).join('');
-}
-function setMode(n){
-  stopRun();mode=n;renderModes();
-  if(!n){$('timer').hidden=true;show('card');st={ok:0,all:0,streak:0};stats();next();return}
-  $('startMin').textContent=fmt(n*60);
-  $('startBest').textContent=best[n]?`Твой рекорд за ${n} мин: ${best[n]}`:'Рекорда пока нет — поставь первый!';
-  show('start');
-}
-function startRun(){
-  st={ok:0,all:0,streak:0};
-  run={end:Date.now()+mode*60000,t0:Date.now(),len:mode*60};
-  $('timer').hidden=false;show('card');stats();next();upd();
-  tick=setInterval(upd,250);
-}
-function upd(){
-  if(!run)return;
-  const left=Math.max(0,(run.end-Date.now())/1000);
-  $('tLeft').textContent=fmt(Math.ceil(left));
-  const b=$('tBar');b.style.width=(left/run.len*100)+'%';b.classList.toggle('low',left<=10);
-  if(left<=0)finish();
-}
-function stopRun(){clearInterval(tick);tick=null;run=null;clearTimeout(auto)}
-function finish(){
-  const len=run.len;stopRun();
-  if(listening&&dict)dict.stop().catch(()=>{});
-  const rec=st.ok>(best[mode]||0);if(rec){best[mode]=st.ok;save()}
-  $('rOk').textContent=st.ok;
-  $('rMsg').textContent=rec&&st.ok?'верных ответов — новый рекорд!':'верных ответов';
-  $('rAcc').textContent=(st.all?Math.round(st.ok/st.all*100):0)+'%';
-  $('rSpd').textContent=st.all?Math.round(len/st.all):'—';
-  $('rBest').textContent=best[mode];
-  show('res');
-}
-
-/* settings & sheet */
-function settings(){
-  $('setL').innerHTML=Object.keys(L).map(k=>`<button class="tog" data-k="lang" data-v="${k}" aria-pressed="${on.lang===k}">${L[k]}</button>`).join('');
-  $('setT').innerHTML=Object.keys(T).map(k=>`<button class="tog" data-k="t" data-v="${k}" aria-pressed="${!!on.t[k]}">${T[k].n}</button>`).join('');
-  const sw=(v,t,d)=>`<div class="set-row"><button class="switch" data-k="opt" data-v="${v}" aria-pressed="${!!on[v]}"><span>${t}<small>${d}</small></span><i></i></button></div>`;
-  $('setV').innerHTML=sw('voice','Читать ответ вслух','Озвучка английского ответа после проверки')+sw('slow','Медленная озвучка','Скорость 0,75')+sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
-  $('setTheme').innerHTML=[['auto','Как в системе'],['light','Светлая'],['dark','Тёмная']].map(([k,n])=>`<button class="tog" data-k="theme" data-v="${k}" aria-pressed="${(on.theme||'auto')===k}">${n}</button>`).join('');
-  $('setF').innerHTML=Object.keys(F).map(k=>`<button class="tog" data-k="f" data-v="${k}" aria-pressed="${!!on.f[k]}">${k} ${F[k]}</button>`).join('');
-}
-function renderProg(){
-  const ks=Object.keys(T),fs=Object.keys(F);
-  const cls=a=>a===null?'n':a>=.85?'g':a>=.6?'a':'r';
-  const cell=(ok,all,tot)=>{const a=all?ok/all:null;return `<td class="${cls(a)}${tot?' tot':''}">${a===null?'—':Math.round(a*100)+'%'}<small>${all||0}</small></td>`};
-  const sum=(arr)=>arr.reduce((s,k)=>{const c=prog.cells[k]||[0,0];return[s[0]+c[0],s[1]+c[1]]},[0,0]);
-  const short={past:'Past',pres:'Present',fut:'Future'};
-  let h=`<tr><th class="rl"></th>${fs.map(f=>`<th>${f} ${F[f].slice(0,5)}.</th>`).join('')}<th>Итого</th></tr>`;
-  for(const t of ks){const r=sum(fs.map(f=>t+f));h+=`<tr><th class="rl">${short[t]}</th>${fs.map(f=>{const c=prog.cells[t+f]||[0,0];return cell(c[0],c[1])}).join('')}${cell(r[0],r[1],1)}</tr>`}
-  const all=sum(ks.flatMap(t=>fs.map(f=>t+f)));
-  h+=`<tr><th class="rl">Итого</th>${fs.map(f=>{const r=sum(ks.map(t=>t+f));return cell(r[0],r[1],1)}).join('')}${cell(all[0],all[1],1)}</tr>`;
-  $('pMx').innerHTML=h;
-  const td=prog.days[today()]||[0,0];
-  $('pSum').innerHTML=`<div><b>${all[1]?Math.round(all[0]/all[1]*100)+'%':'—'}</b><span>точность</span></div><div><b>${all[1]}</b><span>всего ответов</span></div><div><b>${td[1]}</b><span>сегодня</span></div>`;
-  const list=ks.flatMap(t=>fs.map(f=>({t,f,c:prog.cells[t+f]||[0,0]}))).filter(x=>x.c[1]>=3).map(x=>({...x,a:x.c[0]/x.c[1]}));
-  const weak=list.filter(x=>x.a<.85).sort((a,b)=>a.a-b.a).slice(0,3);
-  const strong=list.filter(x=>x.a>=.85).sort((a,b)=>b.a-a.a||b.c[1]-a.c[1]).slice(0,3);
-  const nm=x=>`${T[x.t].n} · ${x.f} ${F[x.f]} — <b>${Math.round(x.a*100)}%</b> (${x.c[0]} из ${x.c[1]})`;
-  let w='';
-  if(!list.length)w='<h3>Времена: пока мало данных</h3><p class="note" style="margin:0">Ответь хотя бы на 3 задания в каждой форме — здесь появится разбор сильных и слабых мест.</p>';
-  else{
-    w+=weak.length?`<h3>Времена: над этим поработать</h3><ul>${weak.map(x=>`<li>${nm(x)}<br><span class="note">Формула: ${T[x.t].f[x.f]}</span></li>`).join('')}</ul>`:'<h3>Слабых мест нет — отлично!</h3>';
-    if(strong.length)w+=`<h3 style="margin-top:14px">Получается хорошо</h3><ul>${strong.map(x=>`<li>${nm(x)}</li>`).join('')}</ul>`;
-    const untried=ks.flatMap(t=>fs.map(f=>t+f)).filter(k=>!(prog.cells[k]&&prog.cells[k][1]>=3)).length;
-    if(untried)w+=`<p class="note">Ещё ${untried} из 9 сочетаний без достаточной статистики (нужно от 3 ответов).</p>`;
-  }
-  $('pWeak').innerHTML=w;
-  const days=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');days.push([d,prog.days[key]||[0,0]])}
-  const mx=Math.max(1,...days.map(x=>x[1][1]));
-  const wd=['вс','пн','вт','ср','чт','пт','сб'];
-  $('pDays').innerHTML=days.map(([d,c])=>`<div class="day"><span>${wd[d.getDay()]} ${d.getDate()}</span><div class="tr"><i class="o" style="width:${c[0]/mx*100}%"></i><i class="x" style="width:${(c[1]-c[0])/mx*100}%"></i></div><b>${c[1]?Math.round(c[0]/c[1]*100)+'%':'—'}</b></div>`).join('');
-  renderArtProg();renderWordsProg();
-  $('pFocus').textContent=on.focus?'Слабые места: включено':'Тренировать слабые места';
-  $('pFocus').classList.toggle('main',!on.focus);
-}
-function sheet(){
-  const ks=Object.keys(T);
-  const ex={past:{'+':'She worked.','-':"She didn't work.",'?':'Did she work?'},
-            pres:{'+':'She works.','-':"She doesn't work.",'?':'Does she work?'},
-            fut:{'+':'She will work.','-':"She won't work.",'?':'Will she work?'}};
-  $('grid').innerHTML=Object.keys(F).map(f=>`<div class="blk ${FC[f]}"><h3 class="${FC[f]}">${f} ${F[f]}</h3>`+
-    ks.map(k=>`<div class="r"><span>${T[k].n} · ${T[k].ru}</span><b>${T[k].f[f]}</b><i>${ex[k][f]}</i></div>`).join('')+'</div>').join('');
-  $('mks').innerHTML=ks.map(k=>`<div><b>Маркеры ${T[k].n}</b><ul>${T[k].mk.map(m=>`<li>${m[0]} — ${m[1]} — ${m[2]}</li>`).join('')}</ul></div>`).join('');
-}
-
-document.addEventListener('click',e=>{
-  const tab=e.target.closest('.nav button');
-  if(tab){showTab(tab.dataset.v);return}
-  const mb=e.target.closest('[data-m]');if(mb){setMode(+mb.dataset.m);return}
-  const b=e.target.closest('.tog[data-k]');if(!b)return;
-  const k=b.dataset.k,v=b.dataset.v;
-  if(k==='lang')on.lang=v;
-  else if(k==='opt'){on[v]=on[v]?0:1;save();settings();if(v==='snd'&&on.snd)tone(true);if(v==='vib'&&on.vib)buzz(true);return}
-  else if(k==='theme'){on.theme=v;applyTheme();save();settings();return}
-  else{if(on[k][v]&&Object.values(on[k]).filter(Boolean).length===1)return;on[k][v]=on[k][v]?0:1}
-  save();settings();if(!run&&mode===0)next();
-});
-$('go').addEventListener('click',check);
-$('skip').addEventListener('click',()=>{if(!checked&&run){st.all++}st.streak=0;stats();next()});
-$('hintBtn').addEventListener('click',()=>$('hint').classList.toggle('on'));
-$('ans').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check()}});
-$('startBtn').addEventListener('click',startRun);
-$('again').addEventListener('click',()=>{show('start');startRun()});
-$('toFree').addEventListener('click',()=>setMode(0));
-$('reset').addEventListener('click',()=>{best={streak:0,1:0,3:0,5:0};save();stats();$('reset').textContent='Сброшено'});
 
 /* voice */
 let dict=null,listening=false,base='';
@@ -470,6 +291,7 @@ function showTab(v){
   const id=v==='train'&&sec!=='tense'?(sec==='art'?'v-art':'v-words'):v==='sheet'&&sec!=='tense'?(sec==='art'?'v-theory':'v-wlist'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
+  if(id==='v-sheet')sheet();
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
   if(id==='v-wlist')renderWList();
@@ -632,5 +454,5 @@ document.addEventListener('keydown',e=>{
 const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preventDefault()};
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
-document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden)$('ans').focus({preventScroll:true})},true);
+document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&cur.ex==='tr'&&!$('field').hidden)$('ans').focus({preventScroll:true})},true);
 applyTheme();topToday();renderModes();settings();sheet();renderRules();stats();aStats();wStats();next();setSec(sec);

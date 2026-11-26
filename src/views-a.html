@@ -1,5 +1,6 @@
   <section class="view" id="v-train">
-    <div class="scroll-x" id="modes"></div>
+    <div class="scroll-x" id="tsel" aria-label="Время"></div>
+    <div class="scroll-x" id="modes" aria-label="Режим"></div>
 
     <div class="card big" id="startP" hidden>
       <div class="num" id="startMin">3:00</div>
@@ -26,14 +27,17 @@
       <div class="task" id="task"></div>
       <p class="ru" id="ru"></p>
       <p class="mk" id="mk"></p>
-      <div class="field">
+      <div class="field" id="field">
         <input type="text" id="ans" lang="en" enterkeyhint="go" placeholder="Перевод на английский…" autocomplete="off" autocapitalize="sentences" autocorrect="on" spellcheck="true">
         <button id="mic" aria-label="Голосовой ввод" title="Голосовой ввод"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
       </div>
+      <div class="tiles" id="tiles" hidden><div class="tline" id="tLine"></div><div class="tpool" id="tPool"></div></div>
+      <div class="chopts" id="chOpts" hidden></div>
       <p class="tip" id="tip">На iPhone: переключи клавиатуру на <b>English</b> и нажми микрофон <b>внизу клавиатуры</b> — продиктуй перевод.</p>
       <div class="row">
         <button class="main" id="go">Проверить</button>
         <button id="hintBtn">Формула</button>
+        <button id="tClear" hidden>Сбросить</button>
         <button id="skip">Пропустить</button>
       </div>
       <div class="hint" id="hint"></div>
