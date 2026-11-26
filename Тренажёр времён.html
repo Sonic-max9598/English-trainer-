@@ -2,187 +2,277 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Тренажёр времён</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#5b4cf5">
+<title>English Intensive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* VOICE: friendly coach, fast reps, nothing in the way
-   IDEA: a metro map of sentence forms — green line +, red line −, blue line ?
-   PICTURE: the live drill card on top; timer bar runs like a train line
-   COLOUR/TYPE: white or night, green/red/blue form colours; Onest 800 + Onest
-   LAYOUT: three tabs (train, cheat sheet, settings), one calm column */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1116);--ink:light-dark(#111,#eef0f4);--mute:light-dark(#5b6270,#9aa3b2);--line:light-dark(#e4e6eb,#262b35);--card:light-dark(#f6f7f9,#161a22);
---plus:#00a05a;--minus:#e6261f;--q:#0a5cff;--amber:#ffb400}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-*{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Onest,system-ui,sans-serif;overflow-x:clip}
-.wrap{max-width:820px;margin:0 auto;padding:clamp(16px,4vw,40px) max(4vw,14px) 48px}
-h1{font-weight:800;font-size:clamp(28px,6vw,40px);line-height:1.05;margin:0 0 14px;text-wrap:balance}
-h2{font-weight:800;font-size:22px;margin:22px 0 10px}
-.rail{display:flex;gap:6px;margin-bottom:14px}.rail i{height:8px;flex:1;border-radius:4px}
-.tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px;margin-bottom:16px}
-.tabs button{flex:1;border:0;background:none;min-height:44px;border-radius:10px;font:600 16px Onest,sans-serif;color:var(--mute);cursor:pointer}
-.tabs button[aria-selected=true]{background:var(--bg);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
-.view[hidden]{display:none}
-.seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
-.seg span{color:var(--mute);font-size:14px;margin-right:4px}
-button{font:600 16px Onest,sans-serif;min-height:44px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-button:focus-visible,input:focus-visible{outline:3px solid var(--q);outline-offset:2px}
-button.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.tog[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* English Intensive — mobile-first, one-hand friendly.
+   Tokens on :root, dark theme via media query (unless forced light) and data-theme=dark. */
+:root{
+  color-scheme:light;
+  --bg:#f4f3fb;--surface:#ffffff;--surface2:#efeef8;--ink:#17162b;--mute:#62617a;--line:#e3e1f0;
+  --brand:#5b4cf5;--brand-ink:#ffffff;--brand-soft:#ebe8ff;
+  --plus:#0f9d58;--minus:#e5383b;--q:#1e6bff;--amber:#ffb020;--hot:#ff6a3d;
+  --ok-soft:#dff5e8;--no-soft:#fde4e4;--q-soft:#e3ecff;
+  --shadow:0 1px 2px rgba(23,22,43,.06),0 6px 20px rgba(23,22,43,.07);
+  --radius:20px;--nav-h:64px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme=light]){
+    color-scheme:dark;
+    --bg:#0e0e1a;--surface:#191a2b;--surface2:#222339;--ink:#f1f0fa;--mute:#a3a2bd;--line:#2d2e48;
+    --brand:#8d82ff;--brand-ink:#12112a;--brand-soft:#2a2752;
+    --plus:#34c77b;--minus:#ff5a5f;--q:#5b9bff;--amber:#ffc24d;--hot:#ff8a5c;
+    --ok-soft:#173a29;--no-soft:#43202a;--q-soft:#1d2a4d;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme=dark]{
+  color-scheme:dark;
+  --bg:#0e0e1a;--surface:#191a2b;--surface2:#222339;--ink:#f1f0fa;--mute:#a3a2bd;--line:#2d2e48;
+  --brand:#8d82ff;--brand-ink:#12112a;--brand-soft:#2a2752;
+  --plus:#34c77b;--minus:#ff5a5f;--q:#5b9bff;--amber:#ffc24d;--hot:#ff8a5c;
+  --ok-soft:#173a29;--no-soft:#43202a;--q-soft:#1d2a4d;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Onest,system-ui,-apple-system,sans-serif;overflow-x:clip;-webkit-text-size-adjust:100%}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px calc(var(--nav-h) + 28px + env(safe-area-inset-bottom))}
+h1{font-weight:800;font-size:20px;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-weight:800;font-size:20px;margin:26px 0 10px;letter-spacing:-.01em}
+.view[hidden],[hidden]{display:none!important}
+
+/* ---------- top bar & section switcher ---------- */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);margin:0 -16px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px}
+.bar1{display:flex;align-items:center;gap:10px;margin-bottom:10px;min-height:32px}
+.logo{width:32px;height:32px;flex:none}
+.bar1 h1{flex:1}
+.pill{display:inline-flex;align-items:center;gap:5px;font-weight:800;font-size:15px;padding:4px 10px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);white-space:nowrap}
+.pill svg{width:18px;height:18px}
+.sec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--surface2);border-radius:16px;padding:4px}
+.sec button{display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;min-height:48px;border-radius:12px;font:800 16px Onest,sans-serif;color:var(--mute);padding:0 6px;transition:background .2s,color .2s,box-shadow .2s}
+.sec button svg{width:20px;height:20px;flex:none}
+.sec button[aria-pressed=true]{background:var(--surface);color:var(--brand);box-shadow:var(--shadow)}
+
+/* ---------- bottom nav ---------- */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom))}
+.nav .in{max-width:720px;margin:0 auto;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}
+.nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:0;background:none;min-height:52px;padding:4px 2px;border-radius:14px;color:var(--mute);font:600 12px Onest,sans-serif;line-height:1.1}
+.nav button svg{width:24px;height:24px;transition:transform .2s}
+.nav button[aria-selected=true]{color:var(--brand)}
+.nav button[aria-selected=true] .ic{background:var(--brand-soft)}
+.nav .ic{display:grid;place-items:center;width:52px;height:30px;border-radius:999px;transition:background .2s}
+
+/* ---------- controls ---------- */
+button{font:600 16px Onest,sans-serif;min-height:44px;padding:0 18px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;touch-action:manipulation;transition:transform .12s,background .2s,border-color .2s,color .2s}
+button:active{transform:scale(.97)}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--q);outline-offset:2px}
+button.main{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:800}
+.tog[aria-pressed=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.seg>span{color:var(--mute);font-size:14px;margin-right:2px}
 .seg .tog{padding:0 14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,3vw,26px)}
+.scroll-x{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px 12px;padding:2px 16px}
+.scroll-x::-webkit-scrollbar{display:none}
+.scroll-x button{flex:none;min-height:40px;border-radius:999px;font-size:15px;padding:0 14px}
+.scroll-x>span{flex:none;align-self:center;color:var(--mute);font-size:14px}
+
+/* ---------- card ---------- */
+.card{background:var(--surface);border-radius:var(--radius);padding:20px 18px;box-shadow:var(--shadow);position:relative}
 .timer{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.timer b{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums;min-width:3.2em}
-.bar{flex:1;height:10px;border-radius:5px;background:var(--line);overflow:hidden}
-.bar i{display:block;height:100%;width:100%;background:var(--plus);transition:width .25s linear}
+.timer b{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;min-width:3.2em}
+.bar{flex:1;height:10px;border-radius:5px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;width:100%;background:var(--plus);transition:width .25s linear;border-radius:5px}
 .bar i.low{background:var(--minus)}
-.task{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.chip{display:inline-flex;align-items:center;padding:7px 13px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap;border:1px solid var(--line);background:var(--bg)}
-.chip.t{background:var(--ink);color:var(--bg);border:0}.chip.f{color:#fff;border:0}
-.chip.lang{font-weight:800}
-.ru{font-size:clamp(22px,5vw,30px);font-weight:800;line-height:1.25;margin:0 0 6px}
+.task{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap;background:var(--surface2);color:var(--ink)}
+.chip.t{background:var(--brand-soft);color:var(--brand)}
+.chip.f{color:#fff}
+.chip.lang{font-weight:800;background:var(--ink);color:var(--surface)}
+.ru{font-size:clamp(25px,6.6vw,32px);font-weight:800;line-height:1.22;margin:0 0 8px;letter-spacing:-.01em;text-wrap:balance}
 .mk{color:var(--mute);margin:0 0 14px;font-size:15px}
 .field{position:relative}
-.field input{width:100%;font:600 18px Onest,sans-serif;padding:14px 60px 14px 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
-.field input:focus{outline:none;border-color:var(--q)}
-#mic{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:44px;min-height:44px;padding:0;border:0;background:none;border-radius:10px;display:grid;place-items:center;color:var(--mute)}
+.field input{width:100%;font:600 19px Onest,sans-serif;padding:15px 58px 15px 16px;border-radius:16px;border:2px solid var(--line);background:var(--bg);color:var(--ink);transition:border-color .2s,background .2s}
+.field input:focus{outline:none;border-color:var(--brand);background:var(--surface)}
+#mic{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:46px;min-height:46px;padding:0;border:0;background:none;border-radius:12px;display:grid;place-items:center;color:var(--mute)}
 #mic svg{width:24px;height:24px}
 #mic.rec{background:var(--minus);color:#fff}
-.tip{display:none;margin:8px 0 0;padding:10px 12px;border-radius:10px;background:color-mix(in srgb,var(--q) 12%,transparent);font-size:15px}
+.tip{display:none;margin:8px 0 0;padding:10px 12px;border-radius:12px;background:var(--q-soft);font-size:15px}
 .tip.on{display:block}
 .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.row .main{flex:1 1 140px}
-.hint{margin-top:12px;font-weight:600;display:none}.hint.on{display:block}
-.fb{margin-top:12px;padding:12px 14px;border-radius:12px;display:none}
-.fb.ok{display:block;background:color-mix(in srgb,var(--plus) 15%,transparent)}
-.fb.no{display:block;background:color-mix(in srgb,var(--minus) 13%,transparent)}
-.fb b{display:block}.fb .ans{font-weight:800;font-size:18px}.fb code{font:600 15px Onest,sans-serif;opacity:.8}
-.say{display:inline-flex;align-items:center;gap:6px;margin-top:10px;min-height:40px;padding:0 14px;font-size:15px}
+.row .main{flex:1 1 150px;min-height:52px;font-size:17px}
+.hint{margin-top:12px;font-weight:600;display:none;padding:10px 12px;border-radius:12px;background:var(--brand-soft)}.hint.on{display:block}
+.fb{margin-top:12px;padding:12px 14px;border-radius:16px;display:none}
+.fb.ok{display:block;background:var(--ok-soft)}
+.fb.no{display:block;background:var(--no-soft)}
+.fb>b:first-child{display:block;font-size:15px}
+.fb.ok>b:first-child{color:var(--plus)}.fb.no>b:first-child{color:var(--minus)}
+.fb .ans{font-weight:800;font-size:19px;line-height:1.3}.fb code{font:600 15px Onest,sans-serif;opacity:.8}
+.say{display:inline-flex;align-items:center;gap:6px;margin-top:10px;min-height:44px;padding:0 14px;font-size:15px;background:var(--surface)}
 .say svg{width:20px;height:20px}.say.on{background:var(--q);color:#fff;border-color:var(--q)}
-.stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;color:var(--mute);font-size:15px}.stats b{color:var(--ink);font-size:18px}
-.big{text-align:center;padding:clamp(24px,5vw,44px) 16px}
-.big .num{font-size:clamp(56px,14vw,88px);font-weight:800;line-height:1}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;color:var(--mute);font-size:14px}.stats b{color:var(--ink);font-size:17px}
+.big{text-align:center;padding:32px 16px}
+.big .num{font-size:clamp(60px,16vw,92px);font-weight:800;line-height:1;letter-spacing:-.03em}
 .big p{color:var(--mute);margin:8px 0 18px}
 .res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 18px;text-align:center}
-.res div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 6px}
+.res div{background:var(--surface);border-radius:16px;padding:12px 6px;box-shadow:var(--shadow)}
+.card .res div{background:var(--bg);box-shadow:none}
 .res b{display:block;font-size:24px;font-weight:800}.res span{font-size:13px;color:var(--mute)}
-.sheet{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.blk{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
-.blk h3{margin:0;padding:12px 16px;color:#fff;font-size:19px;font-weight:800}
+
+/* ---------- answer feedback animation ---------- */
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;box-shadow:0 0 0 3px var(--plus),0 0 34px color-mix(in srgb,var(--plus) 45%,transparent)}
+.card.bad::after{box-shadow:0 0 0 3px var(--minus)}
+@media (prefers-reduced-motion:no-preference){
+  .card.enter{animation:enter .32s cubic-bezier(.2,.8,.2,1)}
+  @keyframes enter{from{transform:translateX(18px);opacity:0}}
+  .card.good{animation:bounce .45s cubic-bezier(.3,1.6,.5,1)}
+  .card.good::after{animation:flash .7s ease-out}
+  .card.bad{animation:shake .38s ease}
+  .card.bad::after{animation:flash .6s ease-out}
+  @keyframes bounce{0%{transform:scale(1)}35%{transform:scale(1.025)}100%{transform:scale(1)}}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+  @keyframes flash{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+  .view.vin{animation:vin .25s ease}
+  @keyframes vin{from{opacity:0;transform:translateY(6px)}}
+  .opts button.ok,.wopts button.ok{animation:bounce .4s cubic-bezier(.3,1.6,.5,1)}
+  .opts button.no,.wopts button.no{animation:shake .35s ease}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important}
+  .card.good::after,.card.bad::after{opacity:.9}
+}
+
+/* ---------- cheat sheet ---------- */
+.sheet{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.blk{border-radius:var(--radius);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.blk h3{margin:0;padding:12px 16px;color:#fff;font-size:18px;font-weight:800}
 .blk .r{padding:10px 16px;border-top:1px solid var(--line)}
 .blk .r span{display:block;font-size:13px;color:var(--mute)}
 .blk .r b{display:block;font-size:17px;line-height:1.35}
 .blk .r i{display:block;font-style:normal;font-size:15px}
 .blk.plus .r i{color:var(--plus)}.blk.minus .r i{color:var(--minus)}.blk.q .r i{color:var(--q)}
 .plus{background:var(--plus)}.minus{background:var(--minus)}.q{background:var(--q)}
-.blk.plus,.blk.minus,.blk.q{background:var(--card)}
-.mks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
-.mks div{padding:12px 16px;border:1px solid var(--line);border-radius:14px}
+.blk.plus,.blk.minus,.blk.q{background:var(--surface)}
+.mks{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:12px}
+.mks div{padding:12px 16px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow)}
 .mks b{display:block;margin-bottom:4px}.mks li{font-size:14px;color:var(--mute)}.mks ul{margin:0;padding-left:18px}
-.tabs button{font-size:14px;padding:0 2px}
-.mx{width:100%;border-collapse:separate;border-spacing:5px;table-layout:fixed}
-.mx th{font-size:13px;color:var(--mute);font-weight:600;padding:4px 2px}
-.mx th.rl{text-align:left;width:5.6em;color:var(--ink);font-size:15px}
-.mx td{text-align:center;border-radius:10px;padding:10px 2px;font-weight:800;font-size:18px;background:var(--card)}
-.mx td small{display:block;font-weight:400;font-size:12px;color:var(--mute)}
-.mx td.g{background:color-mix(in srgb,var(--plus) 22%,transparent)}
-.mx td.a{background:color-mix(in srgb,var(--amber) 28%,transparent)}
-.mx td.r{background:color-mix(in srgb,var(--minus) 22%,transparent)}
+@media(min-width:700px){.sheet,.mks{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* ---------- progress ---------- */
+.tblw{overflow-x:auto;margin:0 -4px}
+.mx{width:100%;border-collapse:separate;border-spacing:4px;table-layout:fixed}
+.mx th{font-size:12px;color:var(--mute);font-weight:600;padding:4px 2px}
+.mx th.rl{text-align:left;width:6.2em;color:var(--ink);font-size:14px}
+.mx td{text-align:center;border-radius:10px;padding:9px 2px;font-weight:800;font-size:16px;background:var(--surface)}
+.mx td small{display:block;font-weight:400;font-size:11px;color:var(--mute)}
+.mx td.g{background:color-mix(in srgb,var(--plus) 24%,var(--surface))}
+.mx td.a{background:color-mix(in srgb,var(--amber) 30%,var(--surface))}
+.mx td.r{background:color-mix(in srgb,var(--minus) 22%,var(--surface))}
 .mx td.n{color:var(--mute);font-weight:400}
 .mx .tot{outline:2px solid var(--line);outline-offset:-2px}
 .day{display:grid;grid-template-columns:4.2em minmax(0,1fr) 4.6em;gap:10px;align-items:center;margin:6px 0;font-size:14px}
-.day .tr{height:14px;border-radius:7px;background:var(--line);overflow:hidden;display:flex}
+.day .tr{height:14px;border-radius:7px;background:var(--surface2);overflow:hidden;display:flex}
 .day .tr i{display:block;height:100%}.day .tr .o{background:var(--plus)}.day .tr .x{background:var(--minus)}
 .day b{text-align:right;font-variant-numeric:tabular-nums}
 #pWeak{margin-bottom:6px}#pWeak h3{margin:0 0 8px;font-size:18px}#pWeak ul{margin:0;padding-left:20px}#pWeak li{margin:4px 0}
-.sec{display:flex;gap:6px;margin:0 0 12px}
-.sec button{flex:1;font-weight:800;font-size:17px}
-.sec button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ---------- articles ---------- */
 .gap{display:inline-block;min-width:2.4em;border-bottom:3px solid var(--q);text-align:center;color:var(--q);padding:0 4px}
 .gap.ok{color:var(--plus);border-color:var(--plus)}.gap.no{color:var(--minus);border-color:var(--minus)}
-.opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:6px}
-.opts button{min-height:60px;font-size:21px;font-weight:800;padding:0 4px;line-height:1.1}
-.opts button small{display:block;font-size:11px;font-weight:400;color:var(--mute)}
-.opts button.ok{background:var(--plus);color:#fff;border-color:var(--plus)}
-.opts button.no{background:var(--minus);color:#fff;border-color:var(--minus)}
+.opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
+.opts button{min-height:62px;font-size:21px;font-weight:800;padding:0 4px;line-height:1.1;border-radius:16px}
+.opts button small{display:block;font-size:11px;font-weight:500;color:var(--mute)}
+.opts button.ok,.wopts button.ok{background:var(--plus);color:#fff;border-color:var(--plus)}
+.opts button.no,.wopts button.no{background:var(--minus);color:#fff;border-color:var(--minus)}
 .opts button.ok small,.opts button.no small{color:#fff}
-.opts button:disabled{cursor:default;opacity:1}
-.flt{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;padding:8px 8px 8px 14px;border-radius:12px;background:color-mix(in srgb,var(--q) 12%,transparent);font-weight:600}
-.flt[hidden]{display:none}
+.opts button:disabled,.wopts button:disabled{cursor:default;opacity:1}
+.flt{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;padding:8px 8px 8px 14px;border-radius:14px;background:var(--q-soft);font-weight:600}
 .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-weight:800;font-size:13px;color:#fff;margin-right:6px;white-space:nowrap;vertical-align:2px}
 .tag.ga{background:var(--q)}.tag.gt{background:var(--amber);color:#111}.tag.g0{background:#6b7280}
-.idea{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
-.idea>div{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.idea{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:12px}
+@media(min-width:700px){.idea{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.idea>div{background:var(--bg);border-radius:14px;padding:12px 14px}
 .idea b{display:block;margin-top:6px;font-size:17px}.idea p{margin:4px 0;font-size:15px}.idea i{color:var(--mute);font-size:14px}
 .steps{counter-reset:s;list-style:none;padding:0;margin:0}
-.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;border:1px solid var(--line);border-radius:14px;margin:8px 0}
-.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-weight:800}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:var(--surface);border-radius:16px;margin:8px 0;box-shadow:var(--shadow)}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:800}
 .steps i,.th td small{color:var(--mute)}
-.th table{width:100%;border-collapse:collapse;margin:8px 0}
+.th table{width:100%;border-collapse:collapse;margin:8px 0;background:var(--surface);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
 .th th,.th td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 .th th{font-size:14px;color:var(--mute)}
-.rule{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0;background:var(--card);scroll-margin-top:16px}
+.rule{border-radius:16px;padding:14px 16px;margin:10px 0;background:var(--surface);box-shadow:var(--shadow);scroll-margin-top:150px}
 .rule h3{margin:0 0 6px;font-size:18px;line-height:1.3}
 .rule p{margin:0}.rule ul{margin:8px 0 10px;padding-left:20px}.rule li{margin:3px 0}
-.rule button{min-height:40px;font-size:15px}
-.rule.flash{outline:3px solid var(--q)}
+.rule.flash{outline:3px solid var(--brand)}
 .errs li{margin:6px 0}.errs s{color:var(--minus)}.errs b{color:var(--plus)}
-.ar{display:block;width:100%;text-align:left;padding:10px 12px;margin:6px 0;border-radius:12px;min-height:0;font-weight:400}
-.ar .top{display:flex;justify-content:space-between;gap:10px;font-size:15px;margin-bottom:6px}
-.ar .top b{white-space:nowrap}
-.ar .tr{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex}
+.ar{display:block;width:100%;text-align:left;padding:10px 12px;margin:6px 0;border-radius:14px;min-height:0;font-weight:400;border:0;box-shadow:var(--shadow)}
+.ar .top2{display:flex;justify-content:space-between;gap:10px;font-size:15px;margin-bottom:6px}
+.ar .top2 b{white-space:nowrap}
+.ar .tr{height:10px;border-radius:5px;background:var(--surface2);overflow:hidden;display:flex}
 .ar .tr i{display:block;height:100%}.ar .tr .o{background:var(--plus)}.ar .tr .x{background:var(--minus)}
-@media(max-width:600px){.idea{grid-template-columns:minmax(0,1fr)}.opts button{min-height:56px;font-size:19px}}
-.sec button{font-size:16px;padding:0 6px}
-.wq{font-size:clamp(34px,9vw,50px);font-weight:800;line-height:1.1;margin:4px 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;overflow-wrap:anywhere}
-.wq button{width:46px;min-height:46px;padding:0;display:grid;place-items:center;flex:none}.wq svg{width:22px;height:22px}
+
+/* ---------- words ---------- */
+.wq{font-size:clamp(34px,10vw,50px);font-weight:800;line-height:1.1;margin:4px 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;overflow-wrap:anywhere;letter-spacing:-.02em}
+.wq button{width:48px;min-height:48px;padding:0;display:grid;place-items:center;flex:none;border-radius:50%}.wq svg{width:22px;height:22px}
 .wopts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
-.wopts button{min-height:64px;font-size:17px;font-weight:600;padding:8px 10px;line-height:1.25}
-.wopts button.ok{background:var(--plus);color:#fff;border-color:var(--plus)}
-.wopts button.no{background:var(--minus);color:#fff;border-color:var(--minus)}
-.wopts button:disabled{cursor:default}
+.wopts button{min-height:66px;font-size:17px;font-weight:600;padding:8px 10px;line-height:1.25;border-radius:16px}
 .lvl{display:inline-flex;gap:3px;align-items:center}.lvl i{width:9px;height:9px;border-radius:50%;background:var(--line)}.lvl i.on{background:var(--plus)}
-.themes[hidden],#wThemesH[hidden]{display:none}
 .themes{display:flex;flex-wrap:wrap;gap:8px}
-.themes button{min-height:40px;font-size:15px;padding:0 12px}
+.themes button{min-height:44px;font-size:15px;padding:0 12px;border-radius:999px}
 .themes button small{font-weight:400;opacity:.75;margin-left:4px}
-.themes button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.themes button[aria-pressed=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
 .wrow{display:grid;grid-template-columns:12px minmax(0,1fr) 44px;gap:10px;align-items:center;padding:8px 2px;border-bottom:1px solid var(--line)}
 .wrow .d{width:10px;height:10px;border-radius:50%;background:var(--line)}.wrow .d.l1{background:var(--amber)}.wrow .d.l2{background:var(--plus)}
 .wrow b{display:block;font-size:17px}.wrow span{color:var(--mute);font-size:14px}
 .wrow button{width:44px;min-height:44px;padding:0;display:grid;place-items:center;border:0;background:none;color:var(--mute)}.wrow svg{width:20px;height:20px}
 .wsum{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 4px;font-size:15px;color:var(--mute)}.wsum b{color:var(--ink)}
-textarea{width:100%;font:16px/1.5 Onest,sans-serif;padding:12px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);resize:vertical}
-input[type=search]{width:100%;font:16px Onest,sans-serif;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
-.own{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:4px 14px 10px;background:var(--card)}
-.own summary{cursor:pointer;font-weight:800;font-size:17px;min-height:44px;display:flex;align-items:center}
+textarea{width:100%;font:16px/1.5 Onest,sans-serif;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);resize:vertical}
+input[type=search]{width:100%;font:16px Onest,sans-serif;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.own{margin-top:12px;border-radius:16px;padding:4px 14px 10px;background:var(--surface);box-shadow:var(--shadow)}
+.own summary{cursor:pointer;font-weight:800;font-size:17px;min-height:48px;display:flex;align-items:center}
 .note{color:var(--mute);font-size:14px;margin-top:12px}
-@media(max-width:760px){.sheet,.mks{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:no-preference){.card.pop{animation:pop .22s ease}@keyframes pop{from{transform:scale(.98);opacity:.6}}}
-@media(prefers-reduced-motion:reduce){.bar i{transition:none}}
+
+/* ---------- settings ---------- */
+.set-group{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:6px 16px;margin-bottom:12px}
+.set-row{padding:12px 0;border-bottom:1px solid var(--line)}
+.set-row:last-child{border-bottom:0}
+.set-row>b{display:block;margin-bottom:8px}
+.set-row .seg{margin:0}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;background:none;padding:0;min-height:48px;text-align:left;font-weight:600;border-radius:0}
+.switch:active{transform:none}
+.switch i{flex:none;width:52px;height:32px;border-radius:999px;background:var(--line);position:relative;transition:background .2s}
+.switch i::after{content:"";position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.switch[aria-pressed=true] i{background:var(--plus)}
+.switch[aria-pressed=true] i::after{transform:translateX(20px)}
+.switch small{display:block;font-weight:400;color:var(--mute);font-size:13px}
+
 </style>
+<script>try{var s=JSON.parse(localStorage.getItem('tenses3')||'null');if(s&&s.on&&s.on.theme&&s.on.theme!=='auto')document.documentElement.setAttribute('data-theme',s.on.theme)}catch(e){}</script>
 </head>
 <body>
 <div class="wrap">
-  <div class="rail"><i class="plus"></i><i class="minus"></i><i class="q"></i></div>
-  <h1 id="h1">Три времени: тренажёр</h1>
-  <div class="sec"><button data-sec="tense" aria-pressed="true">Времена</button><button data-sec="art" aria-pressed="false">Артикли</button><button data-sec="words" aria-pressed="false">Слова</button></div>
-  <div class="tabs" role="tablist">
-    <button role="tab" data-v="train" aria-selected="true">Учить</button>
-    <button role="tab" data-v="sheet" aria-selected="false">Формулы</button>
-    <button role="tab" data-v="prog" aria-selected="false">Прогресс</button>
-    <button role="tab" data-v="set" aria-selected="false">Настройки</button>
-  </div>
-
+  <header class="top">
+    <div class="bar1">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--brand)"/><path d="M9 22V10h8M9 16h6M9 22h8" stroke="var(--brand-ink)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="21" r="2.4" fill="var(--amber)"/></svg>
+      <h1 id="h1">Времена</h1>
+      <span class="pill" id="topStat" title="Верных ответов сегодня"><svg viewBox="0 0 24 24" fill="none" stroke="var(--plus)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span id="topToday">0</span></span>
+    </div>
+    <div class="sec" role="group" aria-label="Раздел">
+      <button data-sec="tense" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Времена</button>
+      <button data-sec="art" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l4-12 4 12M5.5 15h5M15 9h5M17.5 9v10"/></svg>Артикли</button>
+      <button data-sec="words" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>Слова</button>
+    </div>
+  </header>
   <section class="view" id="v-train">
-    <div class="seg" id="modes"><span>Режим:</span></div>
+    <div class="scroll-x" id="modes"></div>
 
     <div class="card big" id="startP" hidden>
       <div class="num" id="startMin">3:00</div>
       <p>Переведи как можно больше предложений.<br>Верный ответ — сразу следующее.</p>
-      <button class="main" id="startBtn" style="min-width:200px">Старт</button>
+      <button class="main" id="startBtn" style="min-width:200px;min-height:54px">Старт</button>
       <p id="startBest" style="margin-top:14px"></p>
     </div>
 
@@ -199,7 +289,7 @@ input[type=search]{width:100%;font:16px Onest,sans-serif;padding:12px 14px;borde
       <button id="toFree">Без таймера</button>
     </div>
 
-    <div class="card" id="card">
+    <div class="card enter" id="card">
       <div class="timer" id="timer" hidden><b id="tLeft">3:00</b><div class="bar"><i id="tBar"></i></div></div>
       <div class="task" id="task"></div>
       <p class="ru" id="ru"></p>
@@ -335,7 +425,6 @@ input[type=search]{width:100%;font:16px Onest,sans-serif;padding:12px 14px;borde
       <li><s>I go to the bed.</s> → <b>I go to bed.</b> Устойчивое выражение.</li>
     </ul>
   </section>
-
   <section class="view" id="v-sheet" hidden>
     <div class="sheet" id="grid"></div>
     <div class="mks" id="mks"></div>
@@ -349,7 +438,7 @@ input[type=search]{width:100%;font:16px Onest,sans-serif;padding:12px 14px;borde
     <p class="note" style="margin-top:0">Зелёное — выучено, жёлтое — в процессе. Нажми на уровень, чтобы учить его.</p>
     <div id="pWords"></div>
     <h2>Времена: точность по формам</h2>
-    <table class="mx" id="pMx"></table>
+    <div class="tblw"><table class="mx" id="pMx"></table></div>
     <p class="note">Зелёный — 85% и выше, жёлтый — 60–84%, красный — ниже 60%. Маленькое число — сколько ответов.</p>
     <h2>Артикли по правилам</h2>
     <p class="note" style="margin-top:0">Сверху — самые слабые. Нажми на правило, чтобы потренировать только его.</p>
@@ -361,21 +450,29 @@ input[type=search]{width:100%;font:16px Onest,sans-serif;padding:12px 14px;borde
       <button id="pReset">Сбросить прогресс</button>
     </div>
   </section>
-
   <section class="view" id="v-set" hidden>
-    <h2 style="margin-top:0">Язык заданий</h2>
-    <div class="seg" id="setL"></div>
-    <h2>Времена</h2>
-    <div class="seg" id="setT"></div>
-    <h2>Формы</h2>
-    <div class="seg" id="setF"></div>
-    <h2>Озвучка ответа</h2>
-    <div class="seg" id="setV"></div>
+    <h2 style="margin-top:6px">Задания</h2>
+    <div class="set-group">
+      <div class="set-row"><b>Язык заданий</b><div class="seg" id="setL"></div></div>
+      <div class="set-row"><b>Времена</b><div class="seg" id="setT"></div></div>
+      <div class="set-row"><b>Формы</b><div class="seg" id="setF"></div></div>
+    </div>
+    <h2>Звук и отклик</h2>
+    <div class="set-group" id="setV"></div>
+    <h2>Оформление</h2>
+    <div class="set-group"><div class="set-row"><b>Тема</b><div class="seg" id="setTheme"></div></div></div>
     <h2>Статистика</h2>
-    <button id="reset">Сбросить рекорды</button>
+    <div class="set-group"><div class="set-row"><button id="reset">Сбросить рекорды</button></div></div>
   </section>
 </div>
-
+<nav class="nav" role="tablist" aria-label="Меню">
+  <div class="in">
+    <button role="tab" data-v="train" aria-selected="true"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span>Учить</span></button>
+    <button role="tab" data-v="sheet" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><span id="navSheet">Формулы</span></button>
+    <button role="tab" data-v="prog" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span>Прогресс</span></button>
+    <button role="tab" data-v="set" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span>Настройки</span></button>
+  </div>
+</nav>
 <script>
 {
 const T={
@@ -390,96 +487,7 @@ const F={'+':'Утверждение','-':'Отрицание','?':'Вопрос
 const FC={'+':'plus','-':'minus','?':'q'};
 const L={ru:'Русский',uz:"O'zbekcha",mix:'Вперемешку'};
 // t|f|ru|uz|en|alts (;)|key words
-const BANK=`past|+|Я вчера поздно лёг спать.|Men kecha kech yotdim.|I went to bed late yesterday.|Yesterday I went to bed late.|go to bed (went) · late
-past|+|Мы купили новую машину в прошлом месяце.|Biz o'tgan oy yangi mashina sotib oldik.|We bought a new car last month.||buy (bought) · last month
-past|+|Мама приготовила плов в воскресенье.|Oyim yakshanba kuni palov pishirdi.|Mom cooked plov on Sunday.|My mom cooked plov on Sunday;Mum cooked plov on Sunday;My mother cooked plov on Sunday;Mother cooked plov on Sunday;Mom made plov on Sunday;My mom made plov on Sunday|cook · plov · on Sunday
-past|+|Я забыл телефон дома.|Men telefonimni uyda unutdim.|I forgot my phone at home.|I left my phone at home|forget (forgot) · phone · at home
-past|+|Акмал позвонил мне вечером.|Akmal kechqurun menga qo'ng'iroq qildi.|Akmal called me in the evening.|Akmal called me last night|call · in the evening
-past|+|Мы опоздали на автобус.|Biz avtobusdan qolib ketdik.|We missed the bus.||miss the bus
-past|+|Малика нашла хорошую работу.|Malika yaxshi ish topdi.|Malika found a good job.||find (found) · job
-past|+|Я заплатил за ужин.|Men kechki ovqat uchun to'ladim.|I paid for dinner.|I paid for the dinner|pay (paid) · dinner
-past|+|Вчера весь день шёл дождь.|Kecha kun bo'yi yomg'ir yog'di.|It rained all day yesterday.|Yesterday it rained all day|rain · all day
-past|+|Мы встретились в кафе после работы.|Biz ishdan keyin kafeda uchrashdik.|We met at a cafe after work.|We met in a cafe after work;We met at a café after work|meet (met) · cafe · after work
-past|-|Я не завтракал сегодня утром.|Men bugun ertalab nonushta qilmadim.|I didn't have breakfast this morning.|I didn't eat breakfast this morning|have breakfast · this morning
-past|-|Акмал не ответил на моё сообщение.|Akmal xabarimga javob bermadi.|Akmal didn't answer my message.|Akmal didn't reply to my message;Akmal didn't respond to my message|answer / reply · message
-past|-|Мы не смотрели этот фильм.|Biz bu filmni ko'rmadik.|We didn't watch this movie.|We didn't watch this film;We didn't see this movie;We didn't see this film;We didn't watch that movie;We didn't watch that film|watch · movie
-past|-|Я не спал всю ночь.|Men tun bo'yi uxlamadim.|I didn't sleep all night.||sleep · all night
-past|-|Малика не пришла на свадьбу.|Malika to'yga kelmadi.|Malika didn't come to the wedding.||come · wedding
-past|-|Папа не нашёл ключи.|Dadam kalitlarni topmadi.|Dad didn't find the keys.|My dad didn't find the keys;Dad didn't find his keys;My dad didn't find his keys;My father didn't find the keys|find · keys
-past|-|Я не взял зонт.|Men soyabon olmadim.|I didn't take an umbrella.|I didn't take my umbrella;I didn't take the umbrella|take · umbrella
-past|-|Мы не успели на поезд.|Biz poyezdga ulgurmadik.|We didn't catch the train.|We didn't make the train|catch · train
-past|-|Я не понял вопрос.|Men savolni tushunmadim.|I didn't understand the question.||understand · question
-past|-|Они не заплатили за свет.|Ular elektr uchun to'lamadi.|They didn't pay for electricity.|They didn't pay for the electricity;They didn't pay the electricity bill|pay · electricity
-past|?|Ты закрыл дверь?|Eshikni yopdingmi?|Did you close the door?|Did you lock the door|close · door
-past|?|Ты поел?|Ovqatlandingmi?|Did you eat?|Have you eaten|eat
-past|?|Вы хорошо спали?|Yaxshi uxladingizmi?|Did you sleep well?||sleep · well
-past|?|Акмал звонил тебе вчера?|Akmal kecha senga qo'ng'iroq qildimi?|Did Akmal call you yesterday?||call · yesterday
-past|?|Ты купил хлеб?|Non sotib oldingmi?|Did you buy bread?|Did you buy the bread;Did you buy some bread;Did you get bread;Did you get the bread|buy · bread
-past|?|Вы видели мои ключи?|Kalitlarimni ko'rdingizmi?|Did you see my keys?||see · keys
-past|?|Мама приготовила ужин?|Oyim kechki ovqat tayyorladimi?|Did Mom cook dinner?|Did my mom cook dinner;Did Mum cook dinner;Did mother cook dinner;Did Mom make dinner;Did my mom make dinner|cook · dinner
-past|?|Ты сделал домашнее задание?|Uy vazifasini qildingmi?|Did you do your homework?|Did you do the homework;Did you do homework|do · homework
-past|?|Они приехали вовремя?|Ular o'z vaqtida keldimi?|Did they arrive on time?|Did they come on time|arrive · on time
-past|?|Ты получил моё сообщение?|Xabarimni oldingmi?|Did you get my message?|Did you receive my message|get · message
-pres|+|Я встаю в семь утра.|Men ertalab soat yettida turaman.|I get up at seven in the morning.|I get up at 7 in the morning;I get up at seven am;I get up at 7 am;I wake up at seven in the morning;I wake up at 7 in the morning;I get up at 7;I get up at seven|get up · seven
-pres|+|Папа работает в банке.|Dadam bankda ishlaydi.|My dad works at a bank.|Dad works at a bank;My dad works in a bank;Dad works in a bank;My father works at a bank;My father works in a bank|work · bank
-pres|+|Я пью кофе каждое утро.|Men har kuni ertalab qahva ichaman.|I drink coffee every morning.||drink · coffee · every morning
-pres|+|Малика живёт в Ташкенте.|Malika Toshkentda yashaydi.|Malika lives in Tashkent.||live · Tashkent
-pres|+|Мы ездим на работу на метро.|Biz ishga metroda boramiz.|We go to work by metro.|We go to work by subway;We take the metro to work;We get to work by metro|go to work · by metro
-pres|+|Мой брат играет в футбол по выходным.|Akam dam olish kunlari futbol o'ynaydi.|My brother plays football on weekends.|My brother plays football at weekends;My brother plays football on the weekends;My brother plays football at the weekend;My brother plays soccer on weekends|play football · on weekends
-pres|+|Магазин открывается в девять.|Do'kon soat to'qqizda ochiladi.|The shop opens at nine.|The shop opens at 9;The store opens at nine;The store opens at 9|open · nine
-pres|+|Дети ходят в школу пешком.|Bolalar maktabga piyoda boradi.|The children walk to school.|Children walk to school;The kids walk to school;Kids walk to school|walk · school
-pres|+|Мама звонит мне каждый вечер.|Oyim har kuni kechqurun menga qo'ng'iroq qiladi.|Mom calls me every evening.|My mom calls me every evening;Mum calls me every evening;My mother calls me every evening;Mom calls me every night;My mom calls me every night|call · every evening
-pres|+|Я люблю плов.|Men palovni yaxshi ko'raman.|I love plov.|I like plov|love / like · plov
-pres|-|Я не пью чай без сахара.|Men choyni shakarsiz ichmayman.|I don't drink tea without sugar.||drink · tea · without sugar
-pres|-|Акмал не курит.|Akmal chekmaydi.|Akmal doesn't smoke.||smoke
-pres|-|Мы не работаем по субботам.|Biz shanba kunlari ishlamaymiz.|We don't work on Saturdays.|We don't work on Saturday|work · on Saturdays
-pres|-|Бабушка не пользуется интернетом.|Buvim internetdan foydalanmaydi.|Grandma doesn't use the internet.|My grandma doesn't use the internet;My grandmother doesn't use the internet;Grandmother doesn't use the internet;Grandma doesn't use internet|use · internet
-pres|-|Я не люблю рано вставать.|Men erta turishni yoqtirmayman.|I don't like getting up early.|I don't like to get up early;I don't like waking up early;I don't like to wake up early|like · get up · early
-pres|-|Малика не ест мясо.|Malika go'sht yemaydi.|Malika doesn't eat meat.||eat · meat
-pres|-|Автобус здесь не останавливается.|Avtobus bu yerda to'xtamaydi.|The bus doesn't stop here.||bus · stop · here
-pres|-|Мои родители не говорят по-английски.|Ota-onam inglizcha gapirmaydi.|My parents don't speak English.||parents · speak English
-pres|-|Я не знаю его номер.|Men uning raqamini bilmayman.|I don't know his number.|I don't know her number;I don't know his phone number;I don't know her phone number|know · number
-pres|-|Мы не смотрим телевизор.|Biz televizor ko'rmaymiz.|We don't watch TV.|We don't watch television|watch TV
-pres|?|Ты говоришь по-английски?|Sen inglizcha gapirasanmi?|Do you speak English?||speak English
-pres|?|Где ты работаешь?|Qayerda ishlaysan?|Where do you work?||where · work
-pres|?|Ты любишь острую еду?|Achchiq ovqatni yaxshi ko'rasanmi?|Do you like spicy food?|Do you love spicy food|like · spicy food
-pres|?|Акмал живёт рядом?|Akmal yaqin joyda yashaydimi?|Does Akmal live nearby?|Does Akmal live near here;Does Akmal live close by;Does Akmal live close|live · nearby
-pres|?|Во сколько начинается урок?|Dars soat nechada boshlanadi?|What time does the lesson start?|What time does the class start;When does the lesson start;When does the class start;What time does the lesson begin|what time · lesson · start
-pres|?|Этот автобус идёт в центр?|Bu avtobus markazga boradimi?|Does this bus go to the center?|Does this bus go to the centre;Does this bus go to the city center;Does this bus go to the city centre;Does this bus go downtown|bus · go · center
-pres|?|Твоя мама работает?|Oying ishlaydimi?|Does your mom work?|Does your mother work;Does your mum work|mom · work
-pres|?|Вы принимаете карту?|Karta qabul qilasizmi?|Do you accept cards?|Do you accept card;Do you take cards;Do you take card;Do you accept credit cards|accept · card
-pres|?|Сколько это стоит?|Bu qancha turadi?|How much does it cost?|How much does this cost;How much does that cost|how much · cost
-pres|?|Ты часто ходишь в спортзал?|Sportzalga tez-tez borasanmi?|Do you often go to the gym?|Do you go to the gym often|often · go · gym
-fut|+|Я позвоню тебе завтра.|Men senga ertaga qo'ng'iroq qilaman.|I will call you tomorrow.|Tomorrow I will call you|call · tomorrow
-fut|+|Летом мы поедем в Самарканд.|Biz yozda Samarqandga boramiz.|We will go to Samarkand in summer.|We will go to Samarkand in the summer;In summer we will go to Samarkand;In the summer we will go to Samarkand;We will travel to Samarkand in summer|go · Samarkand · in summer
-fut|+|Я помогу тебе.|Men senga yordam beraman.|I will help you.||help
-fut|+|Акмал придёт в шесть.|Akmal soat oltida keladi.|Akmal will come at six.|Akmal will come at 6;Akmal will arrive at six;Akmal will arrive at 6|come · six
-fut|+|Я куплю продукты после работы.|Ishdan keyin oziq-ovqat sotib olaman.|I will buy groceries after work.|I will buy food after work;I will buy some groceries after work;After work I will buy groceries|buy · groceries · after work
-fut|+|Завтра будет холодно.|Ertaga sovuq bo'ladi.|It will be cold tomorrow.|Tomorrow it will be cold;Tomorrow will be cold|be · cold
-fut|+|Я отправлю тебе адрес.|Senga manzilni yuboraman.|I will send you the address.|I will send the address to you;I will send you my address|send · address
-fut|+|Мы встретим тебя в аэропорту.|Biz seni aeroportda kutib olamiz.|We will meet you at the airport.|We will pick you up at the airport|meet · airport
-fut|+|Малика завтра испечёт торт.|Malika ertaga tort pishiradi.|Malika will bake a cake tomorrow.|Tomorrow Malika will bake a cake;Malika will make a cake tomorrow|bake · cake
-fut|+|Я выучу английский за год.|Men ingliz tilini bir yilda o'rganib olaman.|I will learn English in a year.|I will learn English in one year|learn · English · in a year
-fut|-|Я не опоздаю.|Men kechikmayman.|I won't be late.||be late
-fut|-|В эти выходные мы не поедем в кишлак.|Bu dam olish kunlari qishloqqa bormaymiz.|We won't go to the village this weekend.|This weekend we won't go to the village|go · village · this weekend
-fut|-|Это не займёт много времени.|Bu ko'p vaqt olmaydi.|It won't take long.|This won't take long;It won't take much time;This won't take much time;It won't take a lot of time|take · long
-fut|-|Я больше так не буду.|Boshqa bunday qilmayman.|I won't do it again.|I won't do that again;I won't do this again|do · again
-fut|-|Акмал сегодня не придёт.|Akmal bugun kelmaydi.|Akmal won't come today.|Akmal will not come today|come · today
-fut|-|Завтра магазин не будет работать.|Do'kon ertaga ishlamaydi.|The shop won't be open tomorrow.|The store won't be open tomorrow;The shop won't work tomorrow;The store won't work tomorrow;Tomorrow the shop won't be open|shop · be open
-fut|-|Я никому не скажу.|Hech kimga aytmayman.|I won't tell anyone.|I won't tell anybody|tell · anyone
-fut|-|Мы не будем тебя ждать.|Biz seni kutmaymiz.|We won't wait for you.||wait for
-fut|-|Завтра не будет дождя.|Ertaga yomg'ir yog'maydi.|It won't rain tomorrow.|Tomorrow it won't rain|rain · tomorrow
-fut|-|Я не забуду твой день рождения.|Tug'ilgan kuningni unutmayman.|I won't forget your birthday.||forget · birthday
-fut|?|Ты придёшь на ужин?|Kechki ovqatga kelasanmi?|Will you come to dinner?|Will you come for dinner|come · dinner
-fut|?|Ты поможешь мне?|Menga yordam berasanmi?|Will you help me?||help
-fut|?|Вы позвоните мне завтра?|Ertaga menga qo'ng'iroq qilasizmi?|Will you call me tomorrow?||call · tomorrow
-fut|?|Акмал будет на свадьбе?|Akmal to'yda bo'ladimi?|Will Akmal be at the wedding?||be · wedding
-fut|?|Завтра будет жарко?|Ertaga issiq bo'ladimi?|Will it be hot tomorrow?||be · hot
-fut|?|Когда ты вернёшься?|Qachon qaytasan?|When will you come back?|When will you return;When will you be back|when · come back
-fut|?|Ты купишь молоко по дороге?|Yo'lda sut olasanmi?|Will you buy milk on the way?|Will you get milk on the way;Will you buy some milk on the way;Will you get some milk on the way|buy · milk · on the way
-fut|?|Мы успеем на самолёт?|Samolyotga ulguramizmi?|Will we catch the plane?|Will we catch the flight;Will we make the plane;Will we make the flight;Will we make it to the plane|catch · plane
-fut|?|Ты будешь работать в субботу?|Shanba kuni ishlaysanmi?|Will you work on Saturday?||work · on Saturday
-fut|?|Малика поедет с нами?|Malika biz bilan boradimi?|Will Malika go with us?|Will Malika come with us|go · with us`.split('\n').map((l,i)=>{const[t,f,ru,uz,en,alt,h]=l.split('|');return{id:i,t,f,ru,uz,en,h,all:[en].concat(alt?alt.split(';'):[])}});
+const BANK="past|+|Я вчера поздно лёг спать.|Men kecha kech yotdim.|I went to bed late yesterday.|Yesterday I went to bed late.|go to bed (went) · late\npast|+|Мы купили новую машину в прошлом месяце.|Biz o'tgan oy yangi mashina sotib oldik.|We bought a new car last month.||buy (bought) · last month\npast|+|Мама приготовила плов в воскресенье.|Oyim yakshanba kuni palov pishirdi.|Mom cooked plov on Sunday.|My mom cooked plov on Sunday;Mum cooked plov on Sunday;My mother cooked plov on Sunday;Mother cooked plov on Sunday;Mom made plov on Sunday;My mom made plov on Sunday|cook · plov · on Sunday\npast|+|Я забыл телефон дома.|Men telefonimni uyda unutdim.|I forgot my phone at home.|I left my phone at home|forget (forgot) · phone · at home\npast|+|Акмал позвонил мне вечером.|Akmal kechqurun menga qo'ng'iroq qildi.|Akmal called me in the evening.|Akmal called me last night|call · in the evening\npast|+|Мы опоздали на автобус.|Biz avtobusdan qolib ketdik.|We missed the bus.||miss the bus\npast|+|Малика нашла хорошую работу.|Malika yaxshi ish topdi.|Malika found a good job.||find (found) · job\npast|+|Я заплатил за ужин.|Men kechki ovqat uchun to'ladim.|I paid for dinner.|I paid for the dinner|pay (paid) · dinner\npast|+|Вчера весь день шёл дождь.|Kecha kun bo'yi yomg'ir yog'di.|It rained all day yesterday.|Yesterday it rained all day|rain · all day\npast|+|Мы встретились в кафе после работы.|Biz ishdan keyin kafeda uchrashdik.|We met at a cafe after work.|We met in a cafe after work;We met at a café after work|meet (met) · cafe · after work\npast|-|Я не завтракал сегодня утром.|Men bugun ertalab nonushta qilmadim.|I didn't have breakfast this morning.|I didn't eat breakfast this morning|have breakfast · this morning\npast|-|Акмал не ответил на моё сообщение.|Akmal xabarimga javob bermadi.|Akmal didn't answer my message.|Akmal didn't reply to my message;Akmal didn't respond to my message|answer / reply · message\npast|-|Мы не смотрели этот фильм.|Biz bu filmni ko'rmadik.|We didn't watch this movie.|We didn't watch this film;We didn't see this movie;We didn't see this film;We didn't watch that movie;We didn't watch that film|watch · movie\npast|-|Я не спал всю ночь.|Men tun bo'yi uxlamadim.|I didn't sleep all night.||sleep · all night\npast|-|Малика не пришла на свадьбу.|Malika to'yga kelmadi.|Malika didn't come to the wedding.||come · wedding\npast|-|Папа не нашёл ключи.|Dadam kalitlarni topmadi.|Dad didn't find the keys.|My dad didn't find the keys;Dad didn't find his keys;My dad didn't find his keys;My father didn't find the keys|find · keys\npast|-|Я не взял зонт.|Men soyabon olmadim.|I didn't take an umbrella.|I didn't take my umbrella;I didn't take the umbrella|take · umbrella\npast|-|Мы не успели на поезд.|Biz poyezdga ulgurmadik.|We didn't catch the train.|We didn't make the train|catch · train\npast|-|Я не понял вопрос.|Men savolni tushunmadim.|I didn't understand the question.||understand · question\npast|-|Они не заплатили за свет.|Ular elektr uchun to'lamadi.|They didn't pay for electricity.|They didn't pay for the electricity;They didn't pay the electricity bill|pay · electricity\npast|?|Ты закрыл дверь?|Eshikni yopdingmi?|Did you close the door?|Did you lock the door|close · door\npast|?|Ты поел?|Ovqatlandingmi?|Did you eat?|Have you eaten|eat\npast|?|Вы хорошо спали?|Yaxshi uxladingizmi?|Did you sleep well?||sleep · well\npast|?|Акмал звонил тебе вчера?|Akmal kecha senga qo'ng'iroq qildimi?|Did Akmal call you yesterday?||call · yesterday\npast|?|Ты купил хлеб?|Non sotib oldingmi?|Did you buy bread?|Did you buy the bread;Did you buy some bread;Did you get bread;Did you get the bread|buy · bread\npast|?|Вы видели мои ключи?|Kalitlarimni ko'rdingizmi?|Did you see my keys?||see · keys\npast|?|Мама приготовила ужин?|Oyim kechki ovqat tayyorladimi?|Did Mom cook dinner?|Did my mom cook dinner;Did Mum cook dinner;Did mother cook dinner;Did Mom make dinner;Did my mom make dinner|cook · dinner\npast|?|Ты сделал домашнее задание?|Uy vazifasini qildingmi?|Did you do your homework?|Did you do the homework;Did you do homework|do · homework\npast|?|Они приехали вовремя?|Ular o'z vaqtida keldimi?|Did they arrive on time?|Did they come on time|arrive · on time\npast|?|Ты получил моё сообщение?|Xabarimni oldingmi?|Did you get my message?|Did you receive my message|get · message\npres|+|Я встаю в семь утра.|Men ertalab soat yettida turaman.|I get up at seven in the morning.|I get up at 7 in the morning;I get up at seven am;I get up at 7 am;I wake up at seven in the morning;I wake up at 7 in the morning;I get up at 7;I get up at seven|get up · seven\npres|+|Папа работает в банке.|Dadam bankda ishlaydi.|My dad works at a bank.|Dad works at a bank;My dad works in a bank;Dad works in a bank;My father works at a bank;My father works in a bank|work · bank\npres|+|Я пью кофе каждое утро.|Men har kuni ertalab qahva ichaman.|I drink coffee every morning.||drink · coffee · every morning\npres|+|Малика живёт в Ташкенте.|Malika Toshkentda yashaydi.|Malika lives in Tashkent.||live · Tashkent\npres|+|Мы ездим на работу на метро.|Biz ishga metroda boramiz.|We go to work by metro.|We go to work by subway;We take the metro to work;We get to work by metro|go to work · by metro\npres|+|Мой брат играет в футбол по выходным.|Akam dam olish kunlari futbol o'ynaydi.|My brother plays football on weekends.|My brother plays football at weekends;My brother plays football on the weekends;My brother plays football at the weekend;My brother plays soccer on weekends|play football · on weekends\npres|+|Магазин открывается в девять.|Do'kon soat to'qqizda ochiladi.|The shop opens at nine.|The shop opens at 9;The store opens at nine;The store opens at 9|open · nine\npres|+|Дети ходят в школу пешком.|Bolalar maktabga piyoda boradi.|The children walk to school.|Children walk to school;The kids walk to school;Kids walk to school|walk · school\npres|+|Мама звонит мне каждый вечер.|Oyim har kuni kechqurun menga qo'ng'iroq qiladi.|Mom calls me every evening.|My mom calls me every evening;Mum calls me every evening;My mother calls me every evening;Mom calls me every night;My mom calls me every night|call · every evening\npres|+|Я люблю плов.|Men palovni yaxshi ko'raman.|I love plov.|I like plov|love / like · plov\npres|-|Я не пью чай без сахара.|Men choyni shakarsiz ichmayman.|I don't drink tea without sugar.||drink · tea · without sugar\npres|-|Акмал не курит.|Akmal chekmaydi.|Akmal doesn't smoke.||smoke\npres|-|Мы не работаем по субботам.|Biz shanba kunlari ishlamaymiz.|We don't work on Saturdays.|We don't work on Saturday|work · on Saturdays\npres|-|Бабушка не пользуется интернетом.|Buvim internetdan foydalanmaydi.|Grandma doesn't use the internet.|My grandma doesn't use the internet;My grandmother doesn't use the internet;Grandmother doesn't use the internet;Grandma doesn't use internet|use · internet\npres|-|Я не люблю рано вставать.|Men erta turishni yoqtirmayman.|I don't like getting up early.|I don't like to get up early;I don't like waking up early;I don't like to wake up early|like · get up · early\npres|-|Малика не ест мясо.|Malika go'sht yemaydi.|Malika doesn't eat meat.||eat · meat\npres|-|Автобус здесь не останавливается.|Avtobus bu yerda to'xtamaydi.|The bus doesn't stop here.||bus · stop · here\npres|-|Мои родители не говорят по-английски.|Ota-onam inglizcha gapirmaydi.|My parents don't speak English.||parents · speak English\npres|-|Я не знаю его номер.|Men uning raqamini bilmayman.|I don't know his number.|I don't know her number;I don't know his phone number;I don't know her phone number|know · number\npres|-|Мы не смотрим телевизор.|Biz televizor ko'rmaymiz.|We don't watch TV.|We don't watch television|watch TV\npres|?|Ты говоришь по-английски?|Sen inglizcha gapirasanmi?|Do you speak English?||speak English\npres|?|Где ты работаешь?|Qayerda ishlaysan?|Where do you work?||where · work\npres|?|Ты любишь острую еду?|Achchiq ovqatni yaxshi ko'rasanmi?|Do you like spicy food?|Do you love spicy food|like · spicy food\npres|?|Акмал живёт рядом?|Akmal yaqin joyda yashaydimi?|Does Akmal live nearby?|Does Akmal live near here;Does Akmal live close by;Does Akmal live close|live · nearby\npres|?|Во сколько начинается урок?|Dars soat nechada boshlanadi?|What time does the lesson start?|What time does the class start;When does the lesson start;When does the class start;What time does the lesson begin|what time · lesson · start\npres|?|Этот автобус идёт в центр?|Bu avtobus markazga boradimi?|Does this bus go to the center?|Does this bus go to the centre;Does this bus go to the city center;Does this bus go to the city centre;Does this bus go downtown|bus · go · center\npres|?|Твоя мама работает?|Oying ishlaydimi?|Does your mom work?|Does your mother work;Does your mum work|mom · work\npres|?|Вы принимаете карту?|Karta qabul qilasizmi?|Do you accept cards?|Do you accept card;Do you take cards;Do you take card;Do you accept credit cards|accept · card\npres|?|Сколько это стоит?|Bu qancha turadi?|How much does it cost?|How much does this cost;How much does that cost|how much · cost\npres|?|Ты часто ходишь в спортзал?|Sportzalga tez-tez borasanmi?|Do you often go to the gym?|Do you go to the gym often|often · go · gym\nfut|+|Я позвоню тебе завтра.|Men senga ertaga qo'ng'iroq qilaman.|I will call you tomorrow.|Tomorrow I will call you|call · tomorrow\nfut|+|Летом мы поедем в Самарканд.|Biz yozda Samarqandga boramiz.|We will go to Samarkand in summer.|We will go to Samarkand in the summer;In summer we will go to Samarkand;In the summer we will go to Samarkand;We will travel to Samarkand in summer|go · Samarkand · in summer\nfut|+|Я помогу тебе.|Men senga yordam beraman.|I will help you.||help\nfut|+|Акмал придёт в шесть.|Akmal soat oltida keladi.|Akmal will come at six.|Akmal will come at 6;Akmal will arrive at six;Akmal will arrive at 6|come · six\nfut|+|Я куплю продукты после работы.|Ishdan keyin oziq-ovqat sotib olaman.|I will buy groceries after work.|I will buy food after work;I will buy some groceries after work;After work I will buy groceries|buy · groceries · after work\nfut|+|Завтра будет холодно.|Ertaga sovuq bo'ladi.|It will be cold tomorrow.|Tomorrow it will be cold;Tomorrow will be cold|be · cold\nfut|+|Я отправлю тебе адрес.|Senga manzilni yuboraman.|I will send you the address.|I will send the address to you;I will send you my address|send · address\nfut|+|Мы встретим тебя в аэропорту.|Biz seni aeroportda kutib olamiz.|We will meet you at the airport.|We will pick you up at the airport|meet · airport\nfut|+|Малика завтра испечёт торт.|Malika ertaga tort pishiradi.|Malika will bake a cake tomorrow.|Tomorrow Malika will bake a cake;Malika will make a cake tomorrow|bake · cake\nfut|+|Я выучу английский за год.|Men ingliz tilini bir yilda o'rganib olaman.|I will learn English in a year.|I will learn English in one year|learn · English · in a year\nfut|-|Я не опоздаю.|Men kechikmayman.|I won't be late.||be late\nfut|-|В эти выходные мы не поедем в кишлак.|Bu dam olish kunlari qishloqqa bormaymiz.|We won't go to the village this weekend.|This weekend we won't go to the village|go · village · this weekend\nfut|-|Это не займёт много времени.|Bu ko'p vaqt olmaydi.|It won't take long.|This won't take long;It won't take much time;This won't take much time;It won't take a lot of time|take · long\nfut|-|Я больше так не буду.|Boshqa bunday qilmayman.|I won't do it again.|I won't do that again;I won't do this again|do · again\nfut|-|Акмал сегодня не придёт.|Akmal bugun kelmaydi.|Akmal won't come today.|Akmal will not come today|come · today\nfut|-|Завтра магазин не будет работать.|Do'kon ertaga ishlamaydi.|The shop won't be open tomorrow.|The store won't be open tomorrow;The shop won't work tomorrow;The store won't work tomorrow;Tomorrow the shop won't be open|shop · be open\nfut|-|Я никому не скажу.|Hech kimga aytmayman.|I won't tell anyone.|I won't tell anybody|tell · anyone\nfut|-|Мы не будем тебя ждать.|Biz seni kutmaymiz.|We won't wait for you.||wait for\nfut|-|Завтра не будет дождя.|Ertaga yomg'ir yog'maydi.|It won't rain tomorrow.|Tomorrow it won't rain|rain · tomorrow\nfut|-|Я не забуду твой день рождения.|Tug'ilgan kuningni unutmayman.|I won't forget your birthday.||forget · birthday\nfut|?|Ты придёшь на ужин?|Kechki ovqatga kelasanmi?|Will you come to dinner?|Will you come for dinner|come · dinner\nfut|?|Ты поможешь мне?|Menga yordam berasanmi?|Will you help me?||help\nfut|?|Вы позвоните мне завтра?|Ertaga menga qo'ng'iroq qilasizmi?|Will you call me tomorrow?||call · tomorrow\nfut|?|Акмал будет на свадьбе?|Akmal to'yda bo'ladimi?|Will Akmal be at the wedding?||be · wedding\nfut|?|Завтра будет жарко?|Ertaga issiq bo'ladimi?|Will it be hot tomorrow?||be · hot\nfut|?|Когда ты вернёшься?|Qachon qaytasan?|When will you come back?|When will you return;When will you be back|when · come back\nfut|?|Ты купишь молоко по дороге?|Yo'lda sut olasanmi?|Will you buy milk on the way?|Will you get milk on the way;Will you buy some milk on the way;Will you get some milk on the way|buy · milk · on the way\nfut|?|Мы успеем на самолёт?|Samolyotga ulguramizmi?|Will we catch the plane?|Will we catch the flight;Will we make the plane;Will we make the flight;Will we make it to the plane|catch · plane\nfut|?|Ты будешь работать в субботу?|Shanba kuni ishlaysanmi?|Will you work on Saturday?||work · on Saturday\nfut|?|Малика поедет с нами?|Malika biz bilan boradimi?|Will Malika go with us?|Will Malika come with us|go · with us".split("\n").map((l,i)=>{const[t,f,ru,uz,en,alt,h]=l.split("|");return{id:i,t,f,ru,uz,en,h,all:[en].concat(alt?alt.split(";"):[])}});
 let recent=[];
 let prog={cells:{},days:{}};
 try{const pv=JSON.parse(localStorage.getItem('tenses3prog')||'null');if(pv&&pv.cells)prog=pv}catch(e){}
@@ -500,13 +508,33 @@ function norm(x){
    .replace(/'ll\b/g,' will').replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim();
 }
 
-let on={t:{past:1,pres:1,fut:1},f:{'+':1,'-':1,'?':1},lang:'mix',voice:1,slow:0};
+let on={t:{past:1,pres:1,fut:1},f:{'+':1,'-':1,'?':1},lang:'mix',voice:1,slow:0,theme:'auto',snd:1,vib:1};
 let best={streak:0,1:0,3:0,5:0};
 try{const sv=JSON.parse(localStorage.getItem('tenses3')||'null');if(sv){if(sv.on&&sv.on.t)on=Object.assign(on,sv.on);if(sv.best&&typeof sv.best==='object')best=Object.assign(best,sv.best)}}catch(e){}
 const save=()=>{try{localStorage.setItem('tenses3',JSON.stringify({on,best}))}catch(e){}};
 
 const $=id=>document.getElementById(id);
 const pick=a=>a[Math.floor(Math.random()*a.length)];
+/* ---------- feedback: animation, sound, vibration ---------- */
+const reduced=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function enter(el){el.classList.remove('enter','good','bad');void el.offsetWidth;el.classList.add('enter')}
+function fx(el,good){if(!el)return;el.classList.remove('enter','good','bad');void el.offsetWidth;el.classList.add(good?'good':'bad');clearTimeout(el._fx);el._fx=setTimeout(()=>el.classList.remove('good','bad'),reduced()?900:750)}
+let actx=null;
+function tone(good){
+  if(!on.snd)return;
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+    actx=actx||new AC();if(actx.state==='suspended')actx.resume();
+    const t0=actx.currentTime,g=actx.createGain();g.connect(actx.destination);
+    const notes=good?[[660,0],[990,.08]]:[[220,0],[185,.09]];
+    g.gain.setValueAtTime(0.0001,t0);g.gain.exponentialRampToValueAtTime(good?0.07:0.06,t0+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t0+(good?0.32:0.3));
+    for(const[f,d]of notes){const o=actx.createOscillator();o.type=good?'sine':'triangle';o.frequency.setValueAtTime(f,t0+d);o.connect(g);o.start(t0+d);o.stop(t0+d+0.2)}
+  }catch(e){}
+}
+function buzz(good){if(on.vib&&navigator.vibrate){try{navigator.vibrate(good?18:[35,45,35])}catch(e){}}}
+function feedback(el,good){fx(el,good);tone(good);buzz(good);topToday()}
+function topToday(){const d=prog.days[today()]||[0,0];$('topToday').textContent=d[0]}
+function applyTheme(){const t=on.theme||'auto';if(t==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t)}
 const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
 let cur=null,checked=false,auto=null;
 let st={ok:0,all:0,streak:0};
@@ -537,7 +565,7 @@ function next(){
   $('fb').className='fb';$('fb').innerHTML='';
   $('go').textContent='Проверить';
   const a=$('ans');a.value='';base='';a.focus({preventScroll:true});
-  const c=$('card');c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop');
+  enter($('card'));
 }
 function check(){
   if(checked){next();return}
@@ -545,7 +573,7 @@ function check(){
   if(listening&&dict)dict.stop().catch(()=>{});
   checked=true;st.all++;
   const good=cur.all.includes(norm(u));
-  record(cur.t,cur.f,good);
+  record(cur.t,cur.f,good);feedback($('card'),good);
   if(good){st.ok++;st.streak++;if(!run&&st.streak>best.streak){best.streak=st.streak;save()}}else st.streak=0;
   const fb=$('fb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
   const h=document.createElement('b');h.textContent=good?'Верно!':'Правильно так:';fb.appendChild(h);
@@ -590,7 +618,7 @@ try{if(window.speechSynthesis)speechSynthesis.getVoices()}catch(e){}
 /* timer */
 function show(p){$('startP').hidden=p!=='start';$('resP').hidden=p!=='res';$('card').hidden=p!=='card'}
 function renderModes(){
-  $('modes').innerHTML='<span>Режим:</span>'+[0,1,3,5].map(n=>`<button class="tog" data-m="${n}" aria-pressed="${mode===n}">${n?n+' мин':'Без таймера'}</button>`).join('');
+  $('modes').innerHTML='<span>Режим</span>'+[0,1,3,5].map(n=>`<button class="tog" data-m="${n}" aria-pressed="${mode===n}">${n?n+' мин':'Без таймера'}</button>`).join('');
 }
 function setMode(n){
   stopRun();mode=n;renderModes();
@@ -629,7 +657,9 @@ function finish(){
 function settings(){
   $('setL').innerHTML=Object.keys(L).map(k=>`<button class="tog" data-k="lang" data-v="${k}" aria-pressed="${on.lang===k}">${L[k]}</button>`).join('');
   $('setT').innerHTML=Object.keys(T).map(k=>`<button class="tog" data-k="t" data-v="${k}" aria-pressed="${!!on.t[k]}">${T[k].n}</button>`).join('');
-  $('setV').innerHTML=`<button class="tog" data-k="opt" data-v="voice" aria-pressed="${!!on.voice}">Читать ответ вслух</button><button class="tog" data-k="opt" data-v="slow" aria-pressed="${!!on.slow}">Медленно</button>`;
+  const sw=(v,t,d)=>`<div class="set-row"><button class="switch" data-k="opt" data-v="${v}" aria-pressed="${!!on[v]}"><span>${t}<small>${d}</small></span><i></i></button></div>`;
+  $('setV').innerHTML=sw('voice','Читать ответ вслух','Озвучка английского ответа после проверки')+sw('slow','Медленная озвучка','Скорость 0,75')+sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
+  $('setTheme').innerHTML=[['auto','Как в системе'],['light','Светлая'],['dark','Тёмная']].map(([k,n])=>`<button class="tog" data-k="theme" data-v="${k}" aria-pressed="${(on.theme||'auto')===k}">${n}</button>`).join('');
   $('setF').innerHTML=Object.keys(F).map(k=>`<button class="tog" data-k="f" data-v="${k}" aria-pressed="${!!on.f[k]}">${k} ${F[k]}</button>`).join('');
 }
 function renderProg(){
@@ -677,13 +707,14 @@ function sheet(){
 }
 
 document.addEventListener('click',e=>{
-  const tab=e.target.closest('.tabs button');
+  const tab=e.target.closest('.nav button');
   if(tab){showTab(tab.dataset.v);return}
   const mb=e.target.closest('[data-m]');if(mb){setMode(+mb.dataset.m);return}
   const b=e.target.closest('.tog[data-k]');if(!b)return;
   const k=b.dataset.k,v=b.dataset.v;
   if(k==='lang')on.lang=v;
-  else if(k==='opt'){on[v]=on[v]?0:1;save();settings();return}
+  else if(k==='opt'){on[v]=on[v]?0:1;save();settings();if(v==='snd'&&on.snd)tone(true);if(v==='vib'&&on.vib)buzz(true);return}
+  else if(k==='theme'){on.theme=v;applyTheme();save();settings();return}
   else{if(on[k][v]&&Object.values(on[k]).filter(Boolean).length===1)return;on[k][v]=on[k][v]?0:1}
   save();settings();if(!run&&mode===0)next();
 });
@@ -848,7 +879,7 @@ function aNext(){
     for(let i=0;i<pool.length;i++){r-=w[i];if(r<=0){it=pool[i];break}}
   }else it=pick(pool);
   aRecent.push(it.id);if(aRecent.length>(artFilter?2:25))aRecent.shift();
-  aCur=it;aDone=false;
+  aCur=it;aDone=false;enter($('acard'));
   const lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
   $('aTask').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip t">Артикль</span>`;
   const parts=it.en.split('___');
@@ -863,7 +894,7 @@ function aAnswer(v){
   if(aDone||!aCur)return;aDone=true;
   const good=v===aCur.a,ru=RULES[aCur.r];
   aSt.all++;if(good){aSt.ok++;aSt.streak++}else aSt.streak=0;
-  recordArt(aCur.r,good);aStats();
+  recordArt(aCur.r,good);aStats();feedback($('acard'),good);
   document.querySelectorAll('#aOpts button').forEach(b=>{b.disabled=true;if(b.dataset.a===aCur.a)b.className='ok';else if(b.dataset.a===v)b.className='no'});
   const g=$('aGap');g.textContent=aCur.a==='-'?'∅':aCur.a;g.className='gap '+(good?'ok':'no');
   const fb=$('aFb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
@@ -898,7 +929,7 @@ function renderArtProg(){
   const rows=ks.map(k=>({k,c:prog.art[k]||[0,0]}));
   rows.sort((a,b)=>{const aa=a.c[1]?a.c[0]/a.c[1]:2,bb=b.c[1]?b.c[0]/b.c[1]:2;return aa-bb});
   $('pArt').innerHTML=rows.map(({k,c})=>{const r=RULES[k],p=c[1]?Math.round(c[0]/c[1]*100):null;
-    return `<button class="ar" data-rule="${k}"><div class="top"><span><span class="tag ${GT[r.g][0]}">${GT[r.g][1]}</span>${r.n}</span><b>${p===null?'—':p+'% · '+c[1]}</b></div><div class="tr"><i class="o" style="width:${c[1]?c[0]/c[1]*100:0}%"></i><i class="x" style="width:${c[1]?(c[1]-c[0])/c[1]*100:0}%"></i></div></button>`}).join('');
+    return `<button class="ar" data-rule="${k}"><div class="top2"><span><span class="tag ${GT[r.g][0]}">${GT[r.g][1]}</span>${r.n}</span><b>${p===null?'—':p+'% · '+c[1]}</b></div><div class="tr"><i class="o" style="width:${c[1]?c[0]/c[1]*100:0}%"></i><i class="x" style="width:${c[1]?(c[1]-c[0])/c[1]*100:0}%"></i></div></button>`}).join('');
   const tot=Object.values(prog.cells).concat(Object.values(prog.art),[[WS.ok,WS.all]]).reduce((s,c)=>[s[0]+c[0],s[1]+c[1]],[0,0]);
   const td=prog.days[today()]||[0,0];
   $('pSum').innerHTML=`<div><b>${tot[1]?Math.round(tot[0]/tot[1]*100)+'%':'—'}</b><span>точность</span></div><div><b>${tot[1]}</b><span>всего ответов</span></div><div><b>${td[1]}</b><span>сегодня</span></div>`;
@@ -906,15 +937,15 @@ function renderArtProg(){
 function setSec(s){
   sec=s;on.sec=s;save();
   document.querySelectorAll('.sec button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.sec===s));
-  $('h1').textContent={tense:'Три времени: тренажёр',art:'Артикли: тренажёр',words:'Слова: тренажёр'}[s];
-  document.querySelector('.tabs [data-v=sheet]').textContent={tense:'Формулы',art:'Теория',words:'Словарь'}[s];
+  $('h1').textContent={tense:'Времена',art:'Артикли',words:'Слова'}[s];
+  $('navSheet').textContent={tense:'Формулы',art:'Теория',words:'Словарь'}[s];
   showTab(curTab);
 }
 function showTab(v){
   curTab=v;
-  document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
+  document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   const id=v==='train'&&sec!=='tense'?(sec==='art'?'v-art':'v-words'):v==='sheet'&&sec!=='tense'?(sec==='art'?'v-theory':'v-wlist'):'v-'+v;
-  document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==id);
+  document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
@@ -934,768 +965,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='Enter'&&aDone){aNext();e.preventDefault()}
 });
 /* ===== words ===== */
-const WORDS_RAW=`@Beginner|A1
-#Семья и люди
-family|семья|oila
-mother|мать|ona
-father|отец|ota
-parents|родители|ota-ona
-son|сын|o'g'il
-daughter|дочь|qiz
-brother|брат|aka / uka
-sister|сестра|opa / singil
-grandmother|бабушка|buvi
-grandfather|дедушка|bobo
-uncle|дядя|amaki / tog'a
-aunt|тётя|amma / xola
-husband|муж|er
-wife|жена|xotin
-child|ребёнок|bola
-baby|малыш|chaqaloq
-friend|друг|do'st
-neighbour|сосед|qo'shni
-guest|гость|mehmon
-people|люди|odamlar
-man|мужчина|erkak
-woman|женщина|ayol
-boy|мальчик|o'g'il bola
-girl|девочка|qiz bola
-relative|родственник|qarindosh
-wedding|свадьба|to'y
-age|возраст|yosh
-name|имя|ism
-#Дом
-house|дом|uy
-flat|квартира|kvartira
-room|комната|xona
-kitchen|кухня|oshxona
-bedroom|спальня|yotoqxona
-bathroom|ванная|vannaxona
-door|дверь|eshik
-window|окно|deraza
-wall|стена|devor
-floor|пол; этаж|pol; qavat
-roof|крыша|tom
-table|стол|stol
-chair|стул|stul
-bed|кровать|karavot
-sofa|диван|divan
-carpet|ковёр|gilam
-key|ключ|kalit
-light|свет|chiroq; yorug'lik
-fridge|холодильник|muzlatgich
-cupboard|шкаф|shkaf
-mirror|зеркало|oyna
-yard|двор|hovli
-garden|сад|bog'
-stairs|лестница|zinapoya
-rent|аренда|ijara
-clean|чистый; убирать|toza; tozalamoq
-#Еда
-food|еда|ovqat
-bread|хлеб|non
-water|вода|suv
-tea|чай|choy
-coffee|кофе|qahva
-milk|молоко|sut
-meat|мясо|go'sht
-chicken|курица|tovuq
-fish|рыба|baliq
-rice|рис|guruch
-egg|яйцо|tuxum
-cheese|сыр|pishloq
-butter|сливочное масло|sariyog'
-oil|растительное масло|o'simlik yog'i
-salt|соль|tuz
-sugar|сахар|shakar
-fruit|фрукты|meva
-vegetables|овощи|sabzavotlar
-apple|яблоко|olma
-potato|картошка|kartoshka
-onion|лук|piyoz
-carrot|морковь|sabzi
-tomato|помидор|pomidor
-soup|суп|sho'rva
-breakfast|завтрак|nonushta
-lunch|обед|tushlik
-dinner|ужин|kechki ovqat
-hungry|голодный|och
-delicious|вкусный|mazali
-sweet|сладкий|shirin
-spicy|острый|achchiq
-cook|готовить|pishirmoq
-#Время
-time|время|vaqt
-day|день|kun
-night|ночь|tun
-morning|утро|ertalab
-evening|вечер|kechqurun
-week|неделя|hafta
-month|месяц|oy
-year|год|yil
-today|сегодня|bugun
-tomorrow|завтра|ertaga
-yesterday|вчера|kecha
-hour|час|soat
-minute|минута|daqiqa
-now|сейчас|hozir
-soon|скоро|tez orada
-late|поздно|kech
-early|рано|erta
-always|всегда|doim
-often|часто|tez-tez
-sometimes|иногда|ba'zan
-never|никогда|hech qachon
-already|уже|allaqachon
-still|всё ещё|hali ham
-again|снова|yana
-weekend|выходные|dam olish kunlari
-holiday|праздник; отпуск|bayram; ta'til
-birthday|день рождения|tug'ilgan kun
-season|время года|fasl
-#Тело и здоровье
-head|голова|bosh
-face|лицо|yuz
-eye|глаз|ko'z
-ear|ухо|quloq
-nose|нос|burun
-mouth|рот|og'iz
-tooth|зуб|tish
-hair|волосы|soch
-hand|кисть руки|qo'l panjasi
-arm|рука|qo'l
-leg|нога|oyoq
-back|спина|bel; orqa
-heart|сердце|yurak
-body|тело|tana
-doctor|врач|shifokor
-medicine|лекарство|dori
-pain|боль|og'riq
-ill|больной|kasal
-healthy|здоровый|sog'lom
-tired|уставший|charchagan
-sleep|спать; сон|uxlamoq; uyqu
-rest|отдых; отдыхать|dam; dam olmoq
-cold|простуда; холодный|shamollash; sovuq
-fever|температура, жар|isitma
-#Природа и погода
-weather|погода|ob-havo
-sun|солнце|quyosh
-rain|дождь|yomg'ir
-snow|снег|qor
-wind|ветер|shamol
-cloud|облако|bulut
-sky|небо|osmon
-tree|дерево|daraxt
-flower|цветок|gul
-grass|трава|o't
-river|река|daryo
-lake|озеро|ko'l
-sea|море|dengiz
-mountain|гора|tog'
-forest|лес|o'rmon
-desert|пустыня|cho'l
-animal|животное|hayvon
-dog|собака|it
-cat|кошка|mushuk
-horse|лошадь|ot
-bird|птица|qush
-summer|лето|yoz
-winter|зима|qish
-spring|весна|bahor
-autumn|осень|kuz
-air|воздух|havo
-fire|огонь|olov
-earth|земля|yer
-@Elementary|A2
-#Город и транспорт
-city|город|shahar
-street|улица|ko'cha
-road|дорога|yo'l
-shop|магазин|do'kon
-market|рынок|bozor
-bank|банк|bank
-hospital|больница|kasalxona
-pharmacy|аптека|dorixona
-school|школа|maktab
-university|университет|universitet
-park|парк|park
-bridge|мост|ko'prik
-bus|автобус|avtobus
-car|машина|mashina
-taxi|такси|taksi
-train|поезд|poyezd
-plane|самолёт|samolyot
-airport|аэропорт|aeroport
-station|станция; вокзал|bekat; vokzal
-ticket|билет|chipta
-traffic|пробки; движение|tirbandlik; harakat
-driver|водитель|haydovchi
-corner|угол|burchak
-left|налево; левый|chap
-right|направо; правый|o'ng
-straight|прямо|to'g'ri
-near|рядом|yaqin
-far|далеко|uzoq
-map|карта (местности)|xarita
-village|деревня, кишлак|qishloq
-#Работа и учёба
-work|работа; работать|ish; ishlamoq
-job|работа (должность)|ish joyi
-office|офис|ofis
-boss|начальник|boshliq
-colleague|коллега|hamkasb
-salary|зарплата|maosh
-money|деньги|pul
-price|цена|narx
-cheap|дешёвый|arzon
-expensive|дорогой|qimmat
-pay|платить|to'lamoq
-buy|покупать|sotib olmoq
-sell|продавать|sotmoq
-business|бизнес|biznes
-company|компания|kompaniya
-meeting|встреча; совещание|uchrashuv; yig'ilish
-task|задача|vazifa
-problem|проблема|muammo
-lesson|урок|dars
-teacher|учитель|o'qituvchi
-student|студент|talaba
-exam|экзамен|imtihon
-homework|домашнее задание|uy vazifasi
-book|книга|kitob
-question|вопрос|savol
-answer|ответ; отвечать|javob; javob bermoq
-mistake|ошибка|xato
-learn|учить, изучать|o'rganmoq
-understand|понимать|tushunmoq
-explain|объяснять|tushuntirmoq
-#Глаголы
-go|идти; ехать|bormoq
-come|приходить|kelmoq
-see|видеть|ko'rmoq
-look|смотреть, глядеть|qaramoq
-watch|смотреть (фильм, ТВ)|tomosha qilmoq
-hear|слышать|eshitmoq
-listen|слушать|tinglamoq
-speak|говорить|gapirmoq
-say|сказать|aytmoq
-tell|рассказывать|aytib bermoq
-ask|спрашивать; просить|so'ramoq
-know|знать|bilmoq
-think|думать|o'ylamoq
-want|хотеть|xohlamoq
-need|нуждаться|muhtoj bo'lmoq
-like|нравиться|yoqtirmoq
-love|любить|sevmoq
-help|помогать|yordam bermoq
-give|давать|bermoq
-take|брать|olmoq
-bring|приносить|olib kelmoq
-make|делать, создавать|yasamoq
-do|делать|qilmoq
-find|находить|topmoq
-lose|терять|yo'qotmoq
-open|открывать|ochmoq
-close|закрывать|yopmoq
-start|начинать|boshlamoq
-finish|заканчивать|tugatmoq
-wait|ждать|kutmoq
-call|звонить|qo'ng'iroq qilmoq
-send|отправлять|yubormoq
-write|писать|yozmoq
-read|читать|o'qimoq
-eat|есть|yemoq
-drink|пить|ichmoq
-sit|сидеть|o'tirmoq
-stand|стоять|turmoq
-walk|идти пешком, гулять|piyoda yurmoq
-run|бежать|yugurmoq
-live|жить|yashamoq
-stay|оставаться|qolmoq
-leave|уходить; оставлять|ketmoq; qoldirmoq
-arrive|прибывать|yetib kelmoq
-return|возвращаться|qaytmoq
-forget|забывать|unutmoq
-remember|помнить|eslamoq
-try|пытаться; пробовать|urinmoq
-use|использовать|foydalanmoq
-change|менять|o'zgartirmoq
-choose|выбирать|tanlamoq
-win|выигрывать|yutmoq
-travel|путешествовать|sayohat qilmoq
-meet|встречать|uchrashmoq
-play|играть|o'ynamoq
-wash|мыть|yuvmoq
-carry|нести|ko'tarib bormoq
-show|показывать|ko'rsatmoq
-believe|верить|ishonmoq
-hope|надеяться|umid qilmoq
-feel|чувствовать|his qilmoq
-#Описания
-big|большой|katta
-small|маленький|kichik
-long|длинный|uzun
-short|короткий|qisqa
-tall|высокий (о росте)|baland bo'yli
-high|высокий|baland
-new|новый|yangi
-old|старый|eski; qari
-young|молодой|yosh
-good|хороший|yaxshi
-bad|плохой|yomon
-beautiful|красивый|chiroyli
-easy|лёгкий, простой|oson
-difficult|трудный|qiyin
-hot|жаркий; горячий|issiq
-warm|тёплый|iliq
-fast|быстрый|tez
-slow|медленный|sekin
-strong|сильный|kuchli
-weak|слабый|zaif
-rich|богатый|boy
-poor|бедный|kambag'al
-full|полный; сытый|to'la; to'q
-empty|пустой|bo'sh
-heavy|тяжёлый|og'ir
-dark|тёмный|qorong'i
-quiet|тихий|jim; tinch
-loud|громкий|baland ovozli
-dirty|грязный|iflos
-busy|занятой|band
-free|свободный; бесплатный|bo'sh; bepul
-important|важный|muhim
-interesting|интересный|qiziqarli
-boring|скучный|zerikarli
-ready|готовый|tayyor
-different|разный, другой|boshqacha
-same|одинаковый, тот же|bir xil
-true|правдивый|rost
-favourite|любимый|sevimli
-#Чувства и характер
-happy|счастливый|baxtli
-sad|грустный|g'amgin
-angry|сердитый|jahldor
-afraid|испуганный|qo'rqqan
-surprised|удивлённый|hayron
-worried|обеспокоенный|xavotirdagi
-calm|спокойный|xotirjam
-kind|добрый|mehribon
-friendly|дружелюбный|samimiy
-polite|вежливый|xushmuomala
-lazy|ленивый|dangasa
-honest|честный|halol
-clever|умный|aqlli
-funny|смешной|kulgili
-shy|застенчивый|uyatchan
-proud|гордый|g'ururli
-bored|скучающий|zerikkan
-excited|взволнованный|hayajonlangan
-lonely|одинокий|yolg'iz
-smile|улыбка; улыбаться|tabassum; jilmaymoq
-#Покупки и одежда
-clothes|одежда|kiyim
-shirt|рубашка|ko'ylak
-dress|платье|ayollar ko'ylagi
-trousers|брюки|shim
-shoes|обувь|poyabzal
-coat|пальто|palto
-jacket|куртка|kurtka
-hat|шапка, шляпа|bosh kiyim
-bag|сумка|sumka
-size|размер|o'lcham
-colour|цвет|rang
-wear|носить (одежду)|kiymoq
-discount|скидка|chegirma
-card|банковская карта|bank kartasi
-cash|наличные|naqd pul
-receipt|чек|chek
-customer|покупатель|xaridor
-gift|подарок|sovg'a
-#Общение и техника
-phone|телефон|telefon
-message|сообщение|xabar
-email|электронное письмо|elektron xat
-internet|интернет|internet
-computer|компьютер|kompyuter
-photo|фото|surat
-video|видео|video
-music|музыка|musiqa
-film|фильм|film
-news|новости|yangiliklar
-word|слово|so'z
-language|язык|til
-letter|письмо; буква|xat; harf
-number|номер; число|raqam
-address|адрес|manzil
-idea|идея|g'oya
-story|история, рассказ|hikoya
-voice|голос|ovoz
-password|пароль|parol
-screen|экран|ekran
-battery|батарея, заряд|batareya
-#Полезные слова
-because|потому что|chunki
-but|но|lekin
-if|если|agar
-when|когда|qachon
-where|где|qayerda
-why|почему|nega
-how|как|qanday
-what|что|nima
-who|кто|kim
-which|который|qaysi
-every|каждый|har bir
-all|все|hamma
-some|некоторые; немного|ba'zi; biroz
-many|много (штук)|ko'p
-much|много (чего-то)|ko'p miqdorda
-few|мало, немного|oz
-enough|достаточно|yetarli
-only|только|faqat
-also|также|ham
-very|очень|juda
-together|вместе|birga
-alone|в одиночку|yolg'iz o'zi
-maybe|может быть|balki
-probably|вероятно|ehtimol
-of course|конечно|albatta
-thing|вещь|narsa
-place|место|joy
-way|путь; способ|yo'l; usul
-life|жизнь|hayot
-world|мир|dunyo
-country|страна|mamlakat
-part|часть|qism
-example|пример|misol
-reason|причина|sabab
-chance|шанс|imkoniyat
-choice|выбор|tanlov
-plan|план|reja
-@Pre-Intermediate|A2+
-#Глаголы
-borrow|брать взаймы|qarz olmoq
-lend|давать взаймы|qarz bermoq
-decide|решать|qaror qilmoq
-agree|соглашаться|rozi bo'lmoq
-allow|разрешать|ruxsat bermoq
-invite|приглашать|taklif qilmoq
-prepare|готовить(ся)|tayyorlanmoq
-continue|продолжать|davom ettirmoq
-describe|описывать|tasvirlamoq
-compare|сравнивать|solishtirmoq
-collect|собирать|yig'moq
-deliver|доставлять|yetkazib bermoq
-repair|ремонтировать|ta'mirlamoq
-save|сохранять; копить|saqlamoq; tejamoq
-spend|тратить|sarflamoq
-earn|зарабатывать|ishlab topmoq
-fail|не суметь; провалиться|muvaffaqiyatsizlikka uchramoq
-pass|сдать (экзамен); проходить|topshirmoq; o'tmoq
-miss|скучать; пропускать|sog'inmoq; o'tkazib yubormoq
-promise|обещать|va'da bermoq
-refuse|отказываться|rad etmoq
-suggest|предлагать (идею)|taklif kiritmoq
-recognize|узнавать|tanimoq
-realize|осознавать|anglamoq
-worry|волноваться|xavotirlanmoq
-hurry|спешить|shoshilmoq
-order|заказывать|buyurtma bermoq
-reserve|бронировать|bron qilmoq
-check|проверять|tekshirmoq
-fix|чинить|tuzatmoq
-grow|расти; выращивать|o'smoq; yetishtirmoq
-break|ломать|sindirmoq
-fall|падать|yiqilmoq
-hold|держать|ushlab turmoq
-hide|прятать|yashirmoq
-#Существительные
-advice|совет|maslahat
-experience|опыт|tajriba
-opinion|мнение|fikr
-information|информация|ma'lumot
-knowledge|знание|bilim
-skill|навык|ko'nikma
-goal|цель|maqsad
-result|результат|natija
-success|успех|muvaffaqiyat
-habit|привычка|odat
-health|здоровье|salomatlik
-journey|путешествие, поездка|safar
-trip|поездка|sayohat
-luggage|багаж|bagaj
-passport|паспорт|pasport
-neighbourhood|район|mahalla
-environment|окружающая среда|atrof-muhit
-pollution|загрязнение|ifloslanish
-noise|шум|shovqin
-accident|авария|baxtsiz hodisa
-danger|опасность|xavf
-rule|правило|qoida
-law|закон|qonun
-government|правительство|hukumat
-society|общество|jamiyat
-culture|культура|madaniyat
-tradition|традиция|an'ana
-celebration|празднование|nishonlash
-event|событие|voqea
-competition|соревнование|musobaqa
-#Прилагательные
-comfortable|удобный, комфортный|qulay
-dangerous|опасный|xavfli
-safe|безопасный|xavfsiz
-famous|знаменитый|mashhur
-popular|популярный|ommabop
-modern|современный|zamonaviy
-traditional|традиционный|an'anaviy
-necessary|необходимый|zarur
-possible|возможный|mumkin
-impossible|невозможный|imkonsiz
-useful|полезный|foydali
-careful|осторожный|ehtiyotkor
-serious|серьёзный|jiddiy
-strange|странный|g'alati
-terrible|ужасный|dahshatli
-wonderful|чудесный|ajoyib
-crowded|многолюдный|odam gavjum
-fresh|свежий|yangi uzilgan; toza
-upset|расстроенный|xafa
-nervous|нервный|asabiy
-confident|уверенный в себе|o'ziga ishongan
-#Связки и наречия
-however|однако|biroq
-although|хотя|garchi
-so|поэтому|shuning uchun
-then|потом|keyin
-finally|наконец|nihoyat
-suddenly|вдруг|to'satdan
-usually|обычно|odatda
-almost|почти|deyarli
-quite|довольно|ancha
-especially|особенно|ayniqsa
-instead|вместо этого|o'rniga
-unless|если не|agar ... bo'lmasa
-while|пока, в то время как|... paytida
-during|во время|davomida
-since|с (какого-то времени)|... dan beri
-ago|назад|oldin
-yet|ещё (не)|hali
-recently|недавно|yaqinda
-anyway|в любом случае|baribir
-@Intermediate|B1
-#Глаголы
-achieve|достигать|erishmoq
-avoid|избегать|chetlab o'tmoq
-improve|улучшать|yaxshilamoq
-increase|увеличивать(ся)|oshirmoq
-reduce|уменьшать|kamaytirmoq
-develop|развивать|rivojlantirmoq
-provide|обеспечивать|ta'minlamoq
-require|требовать|talab qilmoq
-include|включать|o'z ichiga olmoq
-involve|вовлекать|jalb qilmoq
-manage|справляться; управлять|uddalamoq; boshqarmoq
-support|поддерживать|qo'llab-quvvatlamoq
-consider|рассматривать|ko'rib chiqmoq
-expect|ожидать|kutmoq
-prefer|предпочитать|afzal ko'rmoq
-mention|упоминать|eslatib o'tmoq
-discuss|обсуждать|muhokama qilmoq
-argue|спорить|bahslashmoq
-apologize|извиняться|kechirim so'ramoq
-complain|жаловаться|shikoyat qilmoq
-respect|уважать|hurmat qilmoq
-trust|доверять|ishonch bildirmoq
-afford|позволить себе (по деньгам)|qurbi yetmoq
-apply|подавать заявку|ariza bermoq
-attend|посещать|qatnashmoq
-belong|принадлежать|tegishli bo'lmoq
-deserve|заслуживать|munosib bo'lmoq
-encourage|подбадривать, поощрять|rag'batlantirmoq
-explore|исследовать|kashf etmoq
-#Существительные
-advantage|преимущество|afzallik
-disadvantage|недостаток|kamchilik
-benefit|польза, выгода|foyda
-effect|влияние, эффект|ta'sir
-solution|решение (проблемы)|yechim
-decision|решение (выбор)|qaror
-attitude|отношение|munosabat
-behaviour|поведение|xulq-atvor
-relationship|отношения|o'zaro munosabatlar
-responsibility|ответственность|mas'uliyat
-ability|способность|qobiliyat
-opportunity|возможность|imkon
-achievement|достижение|yutuq
-career|карьера|martaba
-employee|сотрудник|xodim
-interview|собеседование|suhbat
-income|доход|daromad
-loan|кредит, заём|kredit
-debt|долг|qarz
-budget|бюджет|byudjet
-research|исследование|tadqiqot
-evidence|доказательство|dalil
-survey|опрос|so'rovnoma
-generation|поколение|avlod
-crime|преступление|jinoyat
-#Прилагательные
-available|доступный|mavjud
-reliable|надёжный|ishonchli
-responsible|ответственный|mas'uliyatli
-efficient|эффективный|samarali
-obvious|очевидный|ochiq-ravshan
-similar|похожий|o'xshash
-specific|конкретный|muayyan
-various|различные|turli
-suitable|подходящий|mos
-valuable|ценный|qimmatli
-harmful|вредный|zararli
-disappointed|разочарованный|hafsalasi pir bo'lgan
-embarrassed|смущённый|xijolat bo'lgan
-grateful|благодарный|minnatdor
-jealous|ревнивый, завистливый|rashkchi
-generous|щедрый|saxiy
-patient|терпеливый|sabrli
-rude|грубый|qo'pol
-selfish|эгоистичный|xudbin
-ambitious|амбициозный|intiluvchan
-#Связки
-therefore|поэтому, следовательно|shu sababli
-moreover|более того|bundan tashqari
-otherwise|иначе|aks holda
-whereas|тогда как|holbuki
-despite|несмотря на|qaramay
-in addition|кроме того|qo'shimcha ravishda
-for instance|например|masalan
-as a result|в результате|natijada
-on the other hand|с другой стороны|boshqa tomondan
-eventually|в конце концов|oxir-oqibat
-actually|на самом деле|aslida
-apparently|по-видимому|aftidan
-@Upper-Intermediate|B2
-#Глаголы
-acknowledge|признавать|tan olmoq
-anticipate|предвидеть|oldindan ko'rmoq
-assess|оценивать|baholamoq
-assume|предполагать|taxmin qilmoq
-claim|утверждать|da'vo qilmoq
-contribute|вносить вклад|hissa qo'shmoq
-convince|убеждать|ishontirmoq
-demonstrate|демонстрировать|namoyish etmoq
-determine|определять|belgilamoq
-emphasize|подчёркивать|ta'kidlamoq
-ensure|обеспечивать, гарантировать|kafolatlamoq
-establish|основывать, устанавливать|tashkil etmoq
-estimate|приблизительно оценивать|chamalamoq
-identify|выявлять|aniqlab olmoq
-indicate|указывать|ishora qilmoq
-maintain|поддерживать, сохранять|saqlab turmoq
-obtain|получать|qo'lga kiritmoq
-overcome|преодолевать|yengib o'tmoq
-persuade|уговаривать|ko'ndirmoq
-postpone|откладывать|kechiktirmoq
-predict|предсказывать|bashorat qilmoq
-pursue|стремиться к|intilmoq
-reveal|раскрывать|oshkor qilmoq
-struggle|бороться, с трудом справляться|kurashmoq
-#Существительные
-approach|подход|yondashuv
-awareness|осведомлённость|xabardorlik
-challenge|трудная задача, вызов|qiyinchilik
-circumstances|обстоятельства|sharoit
-consequence|последствие|oqibat
-contribution|вклад|hissa
-issue|вопрос, проблема|masala
-outcome|итог|yakun
-priority|приоритет|ustuvorlik
-requirement|требование|talab
-resource|ресурс|resurs
-strategy|стратегия|strategiya
-tendency|тенденция, склонность|moyillik
-threat|угроза|tahdid
-trend|тренд|tendensiya
-feature|особенность|xususiyat
-aspect|аспект|jihat
-concern|беспокойство|tashvish
-emergency|чрезвычайная ситуация|favqulodda holat
-#Прилагательные
-accurate|точный|xatosiz
-adequate|достаточный, адекватный|yetarli darajadagi
-appropriate|уместный|o'rinli
-competitive|конкурентоспособный|raqobatbardosh
-complex|сложный|murakkab
-considerable|значительный|sezilarli
-essential|крайне важный|asosiy
-flexible|гибкий|moslashuvchan
-inevitable|неизбежный|muqarrar
-reluctant|неохотный|istar-istamas
-significant|значимый|ahamiyatli
-sufficient|достаточный|kifoya
-thorough|тщательный|puxta
-vague|расплывчатый|noaniq
-vulnerable|уязвимый|himoyasiz
-#Связки
-nevertheless|тем не менее|shunga qaramay
-furthermore|кроме того|qolaversa
-consequently|следовательно|binobarin
-regardless|независимо|qat'i nazar
-thus|таким образом|shunday qilib
-hence|отсюда, поэтому|shu boisdan
-merely|лишь, просто|shunchaki
-@Advanced|C1
-#Глаголы
-advocate|выступать за|yoqlamoq
-alleviate|облегчать (боль, проблему)|yengillashtirmoq
-comprise|состоять из|tashkil topmoq
-compile|составлять, собирать|jamlamoq
-deteriorate|ухудшаться|yomonlashmoq
-diminish|уменьшаться|kamaymoq
-endorse|одобрять|ma'qullamoq
-exacerbate|усугублять|keskinlashtirmoq
-facilitate|способствовать|ko'maklashmoq
-hinder|препятствовать|to'sqinlik qilmoq
-implement|внедрять|joriy etmoq
-mitigate|смягчать|yumshatmoq
-undermine|подрывать|putur yetkazmoq
-scrutinize|тщательно изучать|sinchiklab o'rganmoq
-underestimate|недооценивать|yetarlicha baholamaslik
-#Существительные
-ambiguity|двусмысленность|ikki ma'nolilik
-bias|предвзятость|tarafkashlik
-coherence|связность|bog'liqlik
-discrepancy|расхождение|nomuvofiqlik
-dilemma|дилемма|dilemma
-hierarchy|иерархия|ierarxiya
-implication|подтекст; последствие|yashirin ma'no
-incentive|стимул|rag'bat
-integrity|честность, порядочность|halollik
-legislation|законодательство|qonunchilik
-perception|восприятие|idrok
-prerequisite|обязательное условие|zaruriy shart
-scope|масштаб, рамки|ko'lam
-sustainability|устойчивость|barqarorlik
-#Прилагательные
-arbitrary|произвольный|asossiz
-coherent|связный, последовательный|izchil
-comprehensive|всесторонний|har tomonlama
-compelling|убедительный|ishonarli
-controversial|спорный|munozarali
-diverse|разнообразный|xilma-xil
-explicit|явный|ochiq-oydin
-feasible|осуществимый|amalga oshirsa bo'ladigan
-genuine|подлинный, искренний|chinakam
-inherent|присущий|xos
-meticulous|скрупулёзный|sinchkov
-plausible|правдоподобный|ehtimolga yaqin
-prevalent|распространённый|keng tarqalgan
-redundant|избыточный|ortiqcha
-substantial|существенный|salmoqli
-#Связки и выражения
-notwithstanding|несмотря на|... ga qaramasdan
-albeit|хотя и|garchi ... bo'lsa-da
-by and large|в целом|umuman olganda
-to some extent|в некоторой степени|ma'lum darajada`;
+const WORDS_RAW="@Beginner|A1\n#Семья и люди\nfamily|семья|oila\nmother|мать|ona\nfather|отец|ota\nparents|родители|ota-ona\nson|сын|o'g'il\ndaughter|дочь|qiz\nbrother|брат|aka / uka\nsister|сестра|opa / singil\ngrandmother|бабушка|buvi\ngrandfather|дедушка|bobo\nuncle|дядя|amaki / tog'a\naunt|тётя|amma / xola\nhusband|муж|er\nwife|жена|xotin\nchild|ребёнок|bola\nbaby|малыш|chaqaloq\nfriend|друг|do'st\nneighbour|сосед|qo'shni\nguest|гость|mehmon\npeople|люди|odamlar\nman|мужчина|erkak\nwoman|женщина|ayol\nboy|мальчик|o'g'il bola\ngirl|девочка|qiz bola\nrelative|родственник|qarindosh\nwedding|свадьба|to'y\nage|возраст|yosh\nname|имя|ism\n#Дом\nhouse|дом|uy\nflat|квартира|kvartira\nroom|комната|xona\nkitchen|кухня|oshxona\nbedroom|спальня|yotoqxona\nbathroom|ванная|vannaxona\ndoor|дверь|eshik\nwindow|окно|deraza\nwall|стена|devor\nfloor|пол; этаж|pol; qavat\nroof|крыша|tom\ntable|стол|stol\nchair|стул|stul\nbed|кровать|karavot\nsofa|диван|divan\ncarpet|ковёр|gilam\nkey|ключ|kalit\nlight|свет|chiroq; yorug'lik\nfridge|холодильник|muzlatgich\ncupboard|шкаф|shkaf\nmirror|зеркало|oyna\nyard|двор|hovli\ngarden|сад|bog'\nstairs|лестница|zinapoya\nrent|аренда|ijara\nclean|чистый; убирать|toza; tozalamoq\n#Еда\nfood|еда|ovqat\nbread|хлеб|non\nwater|вода|suv\ntea|чай|choy\ncoffee|кофе|qahva\nmilk|молоко|sut\nmeat|мясо|go'sht\nchicken|курица|tovuq\nfish|рыба|baliq\nrice|рис|guruch\negg|яйцо|tuxum\ncheese|сыр|pishloq\nbutter|сливочное масло|sariyog'\noil|растительное масло|o'simlik yog'i\nsalt|соль|tuz\nsugar|сахар|shakar\nfruit|фрукты|meva\nvegetables|овощи|sabzavotlar\napple|яблоко|olma\npotato|картошка|kartoshka\nonion|лук|piyoz\ncarrot|морковь|sabzi\ntomato|помидор|pomidor\nsoup|суп|sho'rva\nbreakfast|завтрак|nonushta\nlunch|обед|tushlik\ndinner|ужин|kechki ovqat\nhungry|голодный|och\ndelicious|вкусный|mazali\nsweet|сладкий|shirin\nspicy|острый|achchiq\ncook|готовить|pishirmoq\n#Время\ntime|время|vaqt\nday|день|kun\nnight|ночь|tun\nmorning|утро|ertalab\nevening|вечер|kechqurun\nweek|неделя|hafta\nmonth|месяц|oy\nyear|год|yil\ntoday|сегодня|bugun\ntomorrow|завтра|ertaga\nyesterday|вчера|kecha\nhour|час|soat\nminute|минута|daqiqa\nnow|сейчас|hozir\nsoon|скоро|tez orada\nlate|поздно|kech\nearly|рано|erta\nalways|всегда|doim\noften|часто|tez-tez\nsometimes|иногда|ba'zan\nnever|никогда|hech qachon\nalready|уже|allaqachon\nstill|всё ещё|hali ham\nagain|снова|yana\nweekend|выходные|dam olish kunlari\nholiday|праздник; отпуск|bayram; ta'til\nbirthday|день рождения|tug'ilgan kun\nseason|время года|fasl\n#Тело и здоровье\nhead|голова|bosh\nface|лицо|yuz\neye|глаз|ko'z\near|ухо|quloq\nnose|нос|burun\nmouth|рот|og'iz\ntooth|зуб|tish\nhair|волосы|soch\nhand|кисть руки|qo'l panjasi\narm|рука|qo'l\nleg|нога|oyoq\nback|спина|bel; orqa\nheart|сердце|yurak\nbody|тело|tana\ndoctor|врач|shifokor\nmedicine|лекарство|dori\npain|боль|og'riq\nill|больной|kasal\nhealthy|здоровый|sog'lom\ntired|уставший|charchagan\nsleep|спать; сон|uxlamoq; uyqu\nrest|отдых; отдыхать|dam; dam olmoq\ncold|простуда; холодный|shamollash; sovuq\nfever|температура, жар|isitma\n#Природа и погода\nweather|погода|ob-havo\nsun|солнце|quyosh\nrain|дождь|yomg'ir\nsnow|снег|qor\nwind|ветер|shamol\ncloud|облако|bulut\nsky|небо|osmon\ntree|дерево|daraxt\nflower|цветок|gul\ngrass|трава|o't\nriver|река|daryo\nlake|озеро|ko'l\nsea|море|dengiz\nmountain|гора|tog'\nforest|лес|o'rmon\ndesert|пустыня|cho'l\nanimal|животное|hayvon\ndog|собака|it\ncat|кошка|mushuk\nhorse|лошадь|ot\nbird|птица|qush\nsummer|лето|yoz\nwinter|зима|qish\nspring|весна|bahor\nautumn|осень|kuz\nair|воздух|havo\nfire|огонь|olov\nearth|земля|yer\n@Elementary|A2\n#Город и транспорт\ncity|город|shahar\nstreet|улица|ko'cha\nroad|дорога|yo'l\nshop|магазин|do'kon\nmarket|рынок|bozor\nbank|банк|bank\nhospital|больница|kasalxona\npharmacy|аптека|dorixona\nschool|школа|maktab\nuniversity|университет|universitet\npark|парк|park\nbridge|мост|ko'prik\nbus|автобус|avtobus\ncar|машина|mashina\ntaxi|такси|taksi\ntrain|поезд|poyezd\nplane|самолёт|samolyot\nairport|аэропорт|aeroport\nstation|станция; вокзал|bekat; vokzal\nticket|билет|chipta\ntraffic|пробки; движение|tirbandlik; harakat\ndriver|водитель|haydovchi\ncorner|угол|burchak\nleft|налево; левый|chap\nright|направо; правый|o'ng\nstraight|прямо|to'g'ri\nnear|рядом|yaqin\nfar|далеко|uzoq\nmap|карта (местности)|xarita\nvillage|деревня, кишлак|qishloq\n#Работа и учёба\nwork|работа; работать|ish; ishlamoq\njob|работа (должность)|ish joyi\noffice|офис|ofis\nboss|начальник|boshliq\ncolleague|коллега|hamkasb\nsalary|зарплата|maosh\nmoney|деньги|pul\nprice|цена|narx\ncheap|дешёвый|arzon\nexpensive|дорогой|qimmat\npay|платить|to'lamoq\nbuy|покупать|sotib olmoq\nsell|продавать|sotmoq\nbusiness|бизнес|biznes\ncompany|компания|kompaniya\nmeeting|встреча; совещание|uchrashuv; yig'ilish\ntask|задача|vazifa\nproblem|проблема|muammo\nlesson|урок|dars\nteacher|учитель|o'qituvchi\nstudent|студент|talaba\nexam|экзамен|imtihon\nhomework|домашнее задание|uy vazifasi\nbook|книга|kitob\nquestion|вопрос|savol\nanswer|ответ; отвечать|javob; javob bermoq\nmistake|ошибка|xato\nlearn|учить, изучать|o'rganmoq\nunderstand|понимать|tushunmoq\nexplain|объяснять|tushuntirmoq\n#Глаголы\ngo|идти; ехать|bormoq\ncome|приходить|kelmoq\nsee|видеть|ko'rmoq\nlook|смотреть, глядеть|qaramoq\nwatch|смотреть (фильм, ТВ)|tomosha qilmoq\nhear|слышать|eshitmoq\nlisten|слушать|tinglamoq\nspeak|говорить|gapirmoq\nsay|сказать|aytmoq\ntell|рассказывать|aytib bermoq\nask|спрашивать; просить|so'ramoq\nknow|знать|bilmoq\nthink|думать|o'ylamoq\nwant|хотеть|xohlamoq\nneed|нуждаться|muhtoj bo'lmoq\nlike|нравиться|yoqtirmoq\nlove|любить|sevmoq\nhelp|помогать|yordam bermoq\ngive|давать|bermoq\ntake|брать|olmoq\nbring|приносить|olib kelmoq\nmake|делать, создавать|yasamoq\ndo|делать|qilmoq\nfind|находить|topmoq\nlose|терять|yo'qotmoq\nopen|открывать|ochmoq\nclose|закрывать|yopmoq\nstart|начинать|boshlamoq\nfinish|заканчивать|tugatmoq\nwait|ждать|kutmoq\ncall|звонить|qo'ng'iroq qilmoq\nsend|отправлять|yubormoq\nwrite|писать|yozmoq\nread|читать|o'qimoq\neat|есть|yemoq\ndrink|пить|ichmoq\nsit|сидеть|o'tirmoq\nstand|стоять|turmoq\nwalk|идти пешком, гулять|piyoda yurmoq\nrun|бежать|yugurmoq\nlive|жить|yashamoq\nstay|оставаться|qolmoq\nleave|уходить; оставлять|ketmoq; qoldirmoq\narrive|прибывать|yetib kelmoq\nreturn|возвращаться|qaytmoq\nforget|забывать|unutmoq\nremember|помнить|eslamoq\ntry|пытаться; пробовать|urinmoq\nuse|использовать|foydalanmoq\nchange|менять|o'zgartirmoq\nchoose|выбирать|tanlamoq\nwin|выигрывать|yutmoq\ntravel|путешествовать|sayohat qilmoq\nmeet|встречать|uchrashmoq\nplay|играть|o'ynamoq\nwash|мыть|yuvmoq\ncarry|нести|ko'tarib bormoq\nshow|показывать|ko'rsatmoq\nbelieve|верить|ishonmoq\nhope|надеяться|umid qilmoq\nfeel|чувствовать|his qilmoq\n#Описания\nbig|большой|katta\nsmall|маленький|kichik\nlong|длинный|uzun\nshort|короткий|qisqa\ntall|высокий (о росте)|baland bo'yli\nhigh|высокий|baland\nnew|новый|yangi\nold|старый|eski; qari\nyoung|молодой|yosh\ngood|хороший|yaxshi\nbad|плохой|yomon\nbeautiful|красивый|chiroyli\neasy|лёгкий, простой|oson\ndifficult|трудный|qiyin\nhot|жаркий; горячий|issiq\nwarm|тёплый|iliq\nfast|быстрый|tez\nslow|медленный|sekin\nstrong|сильный|kuchli\nweak|слабый|zaif\nrich|богатый|boy\npoor|бедный|kambag'al\nfull|полный; сытый|to'la; to'q\nempty|пустой|bo'sh\nheavy|тяжёлый|og'ir\ndark|тёмный|qorong'i\nquiet|тихий|jim; tinch\nloud|громкий|baland ovozli\ndirty|грязный|iflos\nbusy|занятой|band\nfree|свободный; бесплатный|bo'sh; bepul\nimportant|важный|muhim\ninteresting|интересный|qiziqarli\nboring|скучный|zerikarli\nready|готовый|tayyor\ndifferent|разный, другой|boshqacha\nsame|одинаковый, тот же|bir xil\ntrue|правдивый|rost\nfavourite|любимый|sevimli\n#Чувства и характер\nhappy|счастливый|baxtli\nsad|грустный|g'amgin\nangry|сердитый|jahldor\nafraid|испуганный|qo'rqqan\nsurprised|удивлённый|hayron\nworried|обеспокоенный|xavotirdagi\ncalm|спокойный|xotirjam\nkind|добрый|mehribon\nfriendly|дружелюбный|samimiy\npolite|вежливый|xushmuomala\nlazy|ленивый|dangasa\nhonest|честный|halol\nclever|умный|aqlli\nfunny|смешной|kulgili\nshy|застенчивый|uyatchan\nproud|гордый|g'ururli\nbored|скучающий|zerikkan\nexcited|взволнованный|hayajonlangan\nlonely|одинокий|yolg'iz\nsmile|улыбка; улыбаться|tabassum; jilmaymoq\n#Покупки и одежда\nclothes|одежда|kiyim\nshirt|рубашка|ko'ylak\ndress|платье|ayollar ko'ylagi\ntrousers|брюки|shim\nshoes|обувь|poyabzal\ncoat|пальто|palto\njacket|куртка|kurtka\nhat|шапка, шляпа|bosh kiyim\nbag|сумка|sumka\nsize|размер|o'lcham\ncolour|цвет|rang\nwear|носить (одежду)|kiymoq\ndiscount|скидка|chegirma\ncard|банковская карта|bank kartasi\ncash|наличные|naqd pul\nreceipt|чек|chek\ncustomer|покупатель|xaridor\ngift|подарок|sovg'a\n#Общение и техника\nphone|телефон|telefon\nmessage|сообщение|xabar\nemail|электронное письмо|elektron xat\ninternet|интернет|internet\ncomputer|компьютер|kompyuter\nphoto|фото|surat\nvideo|видео|video\nmusic|музыка|musiqa\nfilm|фильм|film\nnews|новости|yangiliklar\nword|слово|so'z\nlanguage|язык|til\nletter|письмо; буква|xat; harf\nnumber|номер; число|raqam\naddress|адрес|manzil\nidea|идея|g'oya\nstory|история, рассказ|hikoya\nvoice|голос|ovoz\npassword|пароль|parol\nscreen|экран|ekran\nbattery|батарея, заряд|batareya\n#Полезные слова\nbecause|потому что|chunki\nbut|но|lekin\nif|если|agar\nwhen|когда|qachon\nwhere|где|qayerda\nwhy|почему|nega\nhow|как|qanday\nwhat|что|nima\nwho|кто|kim\nwhich|который|qaysi\nevery|каждый|har bir\nall|все|hamma\nsome|некоторые; немного|ba'zi; biroz\nmany|много (штук)|ko'p\nmuch|много (чего-то)|ko'p miqdorda\nfew|мало, немного|oz\nenough|достаточно|yetarli\nonly|только|faqat\nalso|также|ham\nvery|очень|juda\ntogether|вместе|birga\nalone|в одиночку|yolg'iz o'zi\nmaybe|может быть|balki\nprobably|вероятно|ehtimol\nof course|конечно|albatta\nthing|вещь|narsa\nplace|место|joy\nway|путь; способ|yo'l; usul\nlife|жизнь|hayot\nworld|мир|dunyo\ncountry|страна|mamlakat\npart|часть|qism\nexample|пример|misol\nreason|причина|sabab\nchance|шанс|imkoniyat\nchoice|выбор|tanlov\nplan|план|reja\n@Pre-Intermediate|A2+\n#Глаголы\nborrow|брать взаймы|qarz olmoq\nlend|давать взаймы|qarz bermoq\ndecide|решать|qaror qilmoq\nagree|соглашаться|rozi bo'lmoq\nallow|разрешать|ruxsat bermoq\ninvite|приглашать|taklif qilmoq\nprepare|готовить(ся)|tayyorlanmoq\ncontinue|продолжать|davom ettirmoq\ndescribe|описывать|tasvirlamoq\ncompare|сравнивать|solishtirmoq\ncollect|собирать|yig'moq\ndeliver|доставлять|yetkazib bermoq\nrepair|ремонтировать|ta'mirlamoq\nsave|сохранять; копить|saqlamoq; tejamoq\nspend|тратить|sarflamoq\nearn|зарабатывать|ishlab topmoq\nfail|не суметь; провалиться|muvaffaqiyatsizlikka uchramoq\npass|сдать (экзамен); проходить|topshirmoq; o'tmoq\nmiss|скучать; пропускать|sog'inmoq; o'tkazib yubormoq\npromise|обещать|va'da bermoq\nrefuse|отказываться|rad etmoq\nsuggest|предлагать (идею)|taklif kiritmoq\nrecognize|узнавать|tanimoq\nrealize|осознавать|anglamoq\nworry|волноваться|xavotirlanmoq\nhurry|спешить|shoshilmoq\norder|заказывать|buyurtma bermoq\nreserve|бронировать|bron qilmoq\ncheck|проверять|tekshirmoq\nfix|чинить|tuzatmoq\ngrow|расти; выращивать|o'smoq; yetishtirmoq\nbreak|ломать|sindirmoq\nfall|падать|yiqilmoq\nhold|держать|ushlab turmoq\nhide|прятать|yashirmoq\n#Существительные\nadvice|совет|maslahat\nexperience|опыт|tajriba\nopinion|мнение|fikr\ninformation|информация|ma'lumot\nknowledge|знание|bilim\nskill|навык|ko'nikma\ngoal|цель|maqsad\nresult|результат|natija\nsuccess|успех|muvaffaqiyat\nhabit|привычка|odat\nhealth|здоровье|salomatlik\njourney|путешествие, поездка|safar\ntrip|поездка|sayohat\nluggage|багаж|bagaj\npassport|паспорт|pasport\nneighbourhood|район|mahalla\nenvironment|окружающая среда|atrof-muhit\npollution|загрязнение|ifloslanish\nnoise|шум|shovqin\naccident|авария|baxtsiz hodisa\ndanger|опасность|xavf\nrule|правило|qoida\nlaw|закон|qonun\ngovernment|правительство|hukumat\nsociety|общество|jamiyat\nculture|культура|madaniyat\ntradition|традиция|an'ana\ncelebration|празднование|nishonlash\nevent|событие|voqea\ncompetition|соревнование|musobaqa\n#Прилагательные\ncomfortable|удобный, комфортный|qulay\ndangerous|опасный|xavfli\nsafe|безопасный|xavfsiz\nfamous|знаменитый|mashhur\npopular|популярный|ommabop\nmodern|современный|zamonaviy\ntraditional|традиционный|an'anaviy\nnecessary|необходимый|zarur\npossible|возможный|mumkin\nimpossible|невозможный|imkonsiz\nuseful|полезный|foydali\ncareful|осторожный|ehtiyotkor\nserious|серьёзный|jiddiy\nstrange|странный|g'alati\nterrible|ужасный|dahshatli\nwonderful|чудесный|ajoyib\ncrowded|многолюдный|odam gavjum\nfresh|свежий|yangi uzilgan; toza\nupset|расстроенный|xafa\nnervous|нервный|asabiy\nconfident|уверенный в себе|o'ziga ishongan\n#Связки и наречия\nhowever|однако|biroq\nalthough|хотя|garchi\nso|поэтому|shuning uchun\nthen|потом|keyin\nfinally|наконец|nihoyat\nsuddenly|вдруг|to'satdan\nusually|обычно|odatda\nalmost|почти|deyarli\nquite|довольно|ancha\nespecially|особенно|ayniqsa\ninstead|вместо этого|o'rniga\nunless|если не|agar ... bo'lmasa\nwhile|пока, в то время как|... paytida\nduring|во время|davomida\nsince|с (какого-то времени)|... dan beri\nago|назад|oldin\nyet|ещё (не)|hali\nrecently|недавно|yaqinda\nanyway|в любом случае|baribir\n@Intermediate|B1\n#Глаголы\nachieve|достигать|erishmoq\navoid|избегать|chetlab o'tmoq\nimprove|улучшать|yaxshilamoq\nincrease|увеличивать(ся)|oshirmoq\nreduce|уменьшать|kamaytirmoq\ndevelop|развивать|rivojlantirmoq\nprovide|обеспечивать|ta'minlamoq\nrequire|требовать|talab qilmoq\ninclude|включать|o'z ichiga olmoq\ninvolve|вовлекать|jalb qilmoq\nmanage|справляться; управлять|uddalamoq; boshqarmoq\nsupport|поддерживать|qo'llab-quvvatlamoq\nconsider|рассматривать|ko'rib chiqmoq\nexpect|ожидать|kutmoq\nprefer|предпочитать|afzal ko'rmoq\nmention|упоминать|eslatib o'tmoq\ndiscuss|обсуждать|muhokama qilmoq\nargue|спорить|bahslashmoq\napologize|извиняться|kechirim so'ramoq\ncomplain|жаловаться|shikoyat qilmoq\nrespect|уважать|hurmat qilmoq\ntrust|доверять|ishonch bildirmoq\nafford|позволить себе (по деньгам)|qurbi yetmoq\napply|подавать заявку|ariza bermoq\nattend|посещать|qatnashmoq\nbelong|принадлежать|tegishli bo'lmoq\ndeserve|заслуживать|munosib bo'lmoq\nencourage|подбадривать, поощрять|rag'batlantirmoq\nexplore|исследовать|kashf etmoq\n#Существительные\nadvantage|преимущество|afzallik\ndisadvantage|недостаток|kamchilik\nbenefit|польза, выгода|foyda\neffect|влияние, эффект|ta'sir\nsolution|решение (проблемы)|yechim\ndecision|решение (выбор)|qaror\nattitude|отношение|munosabat\nbehaviour|поведение|xulq-atvor\nrelationship|отношения|o'zaro munosabatlar\nresponsibility|ответственность|mas'uliyat\nability|способность|qobiliyat\nopportunity|возможность|imkon\nachievement|достижение|yutuq\ncareer|карьера|martaba\nemployee|сотрудник|xodim\ninterview|собеседование|suhbat\nincome|доход|daromad\nloan|кредит, заём|kredit\ndebt|долг|qarz\nbudget|бюджет|byudjet\nresearch|исследование|tadqiqot\nevidence|доказательство|dalil\nsurvey|опрос|so'rovnoma\ngeneration|поколение|avlod\ncrime|преступление|jinoyat\n#Прилагательные\navailable|доступный|mavjud\nreliable|надёжный|ishonchli\nresponsible|ответственный|mas'uliyatli\nefficient|эффективный|samarali\nobvious|очевидный|ochiq-ravshan\nsimilar|похожий|o'xshash\nspecific|конкретный|muayyan\nvarious|различные|turli\nsuitable|подходящий|mos\nvaluable|ценный|qimmatli\nharmful|вредный|zararli\ndisappointed|разочарованный|hafsalasi pir bo'lgan\nembarrassed|смущённый|xijolat bo'lgan\ngrateful|благодарный|minnatdor\njealous|ревнивый, завистливый|rashkchi\ngenerous|щедрый|saxiy\npatient|терпеливый|sabrli\nrude|грубый|qo'pol\nselfish|эгоистичный|xudbin\nambitious|амбициозный|intiluvchan\n#Связки\ntherefore|поэтому, следовательно|shu sababli\nmoreover|более того|bundan tashqari\notherwise|иначе|aks holda\nwhereas|тогда как|holbuki\ndespite|несмотря на|qaramay\nin addition|кроме того|qo'shimcha ravishda\nfor instance|например|masalan\nas a result|в результате|natijada\non the other hand|с другой стороны|boshqa tomondan\neventually|в конце концов|oxir-oqibat\nactually|на самом деле|aslida\napparently|по-видимому|aftidan\n@Upper-Intermediate|B2\n#Глаголы\nacknowledge|признавать|tan olmoq\nanticipate|предвидеть|oldindan ko'rmoq\nassess|оценивать|baholamoq\nassume|предполагать|taxmin qilmoq\nclaim|утверждать|da'vo qilmoq\ncontribute|вносить вклад|hissa qo'shmoq\nconvince|убеждать|ishontirmoq\ndemonstrate|демонстрировать|namoyish etmoq\ndetermine|определять|belgilamoq\nemphasize|подчёркивать|ta'kidlamoq\nensure|обеспечивать, гарантировать|kafolatlamoq\nestablish|основывать, устанавливать|tashkil etmoq\nestimate|приблизительно оценивать|chamalamoq\nidentify|выявлять|aniqlab olmoq\nindicate|указывать|ishora qilmoq\nmaintain|поддерживать, сохранять|saqlab turmoq\nobtain|получать|qo'lga kiritmoq\novercome|преодолевать|yengib o'tmoq\npersuade|уговаривать|ko'ndirmoq\npostpone|откладывать|kechiktirmoq\npredict|предсказывать|bashorat qilmoq\npursue|стремиться к|intilmoq\nreveal|раскрывать|oshkor qilmoq\nstruggle|бороться, с трудом справляться|kurashmoq\n#Существительные\napproach|подход|yondashuv\nawareness|осведомлённость|xabardorlik\nchallenge|трудная задача, вызов|qiyinchilik\ncircumstances|обстоятельства|sharoit\nconsequence|последствие|oqibat\ncontribution|вклад|hissa\nissue|вопрос, проблема|masala\noutcome|итог|yakun\npriority|приоритет|ustuvorlik\nrequirement|требование|talab\nresource|ресурс|resurs\nstrategy|стратегия|strategiya\ntendency|тенденция, склонность|moyillik\nthreat|угроза|tahdid\ntrend|тренд|tendensiya\nfeature|особенность|xususiyat\naspect|аспект|jihat\nconcern|беспокойство|tashvish\nemergency|чрезвычайная ситуация|favqulodda holat\n#Прилагательные\naccurate|точный|xatosiz\nadequate|достаточный, адекватный|yetarli darajadagi\nappropriate|уместный|o'rinli\ncompetitive|конкурентоспособный|raqobatbardosh\ncomplex|сложный|murakkab\nconsiderable|значительный|sezilarli\nessential|крайне важный|asosiy\nflexible|гибкий|moslashuvchan\ninevitable|неизбежный|muqarrar\nreluctant|неохотный|istar-istamas\nsignificant|значимый|ahamiyatli\nsufficient|достаточный|kifoya\nthorough|тщательный|puxta\nvague|расплывчатый|noaniq\nvulnerable|уязвимый|himoyasiz\n#Связки\nnevertheless|тем не менее|shunga qaramay\nfurthermore|кроме того|qolaversa\nconsequently|следовательно|binobarin\nregardless|независимо|qat'i nazar\nthus|таким образом|shunday qilib\nhence|отсюда, поэтому|shu boisdan\nmerely|лишь, просто|shunchaki\n@Advanced|C1\n#Глаголы\nadvocate|выступать за|yoqlamoq\nalleviate|облегчать (боль, проблему)|yengillashtirmoq\ncomprise|состоять из|tashkil topmoq\ncompile|составлять, собирать|jamlamoq\ndeteriorate|ухудшаться|yomonlashmoq\ndiminish|уменьшаться|kamaymoq\nendorse|одобрять|ma'qullamoq\nexacerbate|усугублять|keskinlashtirmoq\nfacilitate|способствовать|ko'maklashmoq\nhinder|препятствовать|to'sqinlik qilmoq\nimplement|внедрять|joriy etmoq\nmitigate|смягчать|yumshatmoq\nundermine|подрывать|putur yetkazmoq\nscrutinize|тщательно изучать|sinchiklab o'rganmoq\nunderestimate|недооценивать|yetarlicha baholamaslik\n#Существительные\nambiguity|двусмысленность|ikki ma'nolilik\nbias|предвзятость|tarafkashlik\ncoherence|связность|bog'liqlik\ndiscrepancy|расхождение|nomuvofiqlik\ndilemma|дилемма|dilemma\nhierarchy|иерархия|ierarxiya\nimplication|подтекст; последствие|yashirin ma'no\nincentive|стимул|rag'bat\nintegrity|честность, порядочность|halollik\nlegislation|законодательство|qonunchilik\nperception|восприятие|idrok\nprerequisite|обязательное условие|zaruriy shart\nscope|масштаб, рамки|ko'lam\nsustainability|устойчивость|barqarorlik\n#Прилагательные\narbitrary|произвольный|asossiz\ncoherent|связный, последовательный|izchil\ncomprehensive|всесторонний|har tomonlama\ncompelling|убедительный|ishonarli\ncontroversial|спорный|munozarali\ndiverse|разнообразный|xilma-xil\nexplicit|явный|ochiq-oydin\nfeasible|осуществимый|amalga oshirsa bo'ladigan\ngenuine|подлинный, искренний|chinakam\ninherent|присущий|xos\nmeticulous|скрупулёзный|sinchkov\nplausible|правдоподобный|ehtimolga yaqin\nprevalent|распространённый|keng tarqalgan\nredundant|избыточный|ortiqcha\nsubstantial|существенный|salmoqli\n#Связки и выражения\nnotwithstanding|несмотря на|... ga qaramasdan\nalbeit|хотя и|garchi ... bo'lsa-da\nby and large|в целом|umuman olganda\nto some extent|в некоторой степени|ma'lum darajada";
 const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
@@ -1743,7 +1013,7 @@ function wNext(){
   const right=key(w);
   const cand=shuf(all.filter(x=>x.k!==w.k&&x.lv===w.lv&&x.th===w.th)).concat(shuf(all.filter(x=>x.lv===w.lv&&x.th!==w.th)),shuf(all.filter(x=>x.lv!==w.lv)));
   const opts=[right];for(const c of cand){const t=key(c);if(!opts.includes(t))opts.push(t);if(opts.length===4)break}
-  wCur={w,lang,dir,right,opts:shuf(opts)};wLast=w.k;wDone=false;
+  wCur={w,lang,dir,right,opts:shuf(opts)};wLast=w.k;wDone=false;enter($('wcard'));
   $('wTask').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>${isNew?'<span class="chip f plus">Новое слово</span>':`<span class="chip">${dots(lvlOf(w))}</span>`}`;
   const q=$('wQ');q.innerHTML='';
   const t=document.createElement('span');t.textContent=dir==='en'?w.en:w[lang];q.appendChild(t);
@@ -1760,7 +1030,7 @@ function wAnswer(i){
   if(good){s.b=first?2:Math.min(s.b+1,6);s.n=WS.wc+IV[s.b]}else{s.b=1;s.n=WS.wc+2}
   WS.W[w.k]=s;WS.all++;if(good)WS.ok++;saveW();
   const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();
-  wSes.all++;if(good)wSes.ok++;wStats();
+  wSes.all++;if(good)wSes.ok++;wStats();feedback($('wcard'),good);
   document.querySelectorAll('#wOpts button').forEach((b,j)=>{b.disabled=true;if(wCur.opts[j]===wCur.right)b.className='ok';else if(j===i)b.className='no'});
   const fb=$('wFb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
   const h=document.createElement('b');h.textContent=good?'Верно!':'Запомни:';fb.appendChild(h);
@@ -1798,7 +1068,7 @@ function renderWordsProg(){
   const rows=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]).map(n=>{const ws=all.filter(w=>w.lv===n);return{n,c:n===OWNTH?'':LVC(n),t:ws.length,l:ws.filter(w=>lvlOf(w)>=4).length,p:ws.filter(w=>{const b=lvlOf(w);return b>0&&b<4}).length}});
   const L=rows.reduce((s,r)=>s+r.l,0),N=rows.reduce((s,r)=>s+r.t,0),P=rows.reduce((s,r)=>s+r.p,0);
   $('pWords').innerHTML=`<div class="wsum"><span>Выучено <b>${L}</b> из <b>${N}</b></span><span>В процессе <b>${P}</b></span></div>`+
-   rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
+   rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top2"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
 }
 $('wOpts').addEventListener('click',e=>{const b=e.target.closest('[data-wi]');if(b)wAnswer(+b.dataset.wi)});
 $('wNextB').addEventListener('click',wNext);
@@ -1840,7 +1110,8 @@ const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preven
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
 document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden)$('ans').focus({preventScroll:true})},true);
-renderModes();settings();sheet();renderRules();stats();aStats();wStats();next();setSec(sec);
+applyTheme();topToday();renderModes();settings();sheet();renderRules();stats();aStats();wStats();next();setSec(sec);
+
 }
 </script>
 </body>

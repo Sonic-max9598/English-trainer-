@@ -1,0 +1,762 @@
+@Beginner|A1
+#Семья и люди
+family|семья|oila
+mother|мать|ona
+father|отец|ota
+parents|родители|ota-ona
+son|сын|o'g'il
+daughter|дочь|qiz
+brother|брат|aka / uka
+sister|сестра|opa / singil
+grandmother|бабушка|buvi
+grandfather|дедушка|bobo
+uncle|дядя|amaki / tog'a
+aunt|тётя|amma / xola
+husband|муж|er
+wife|жена|xotin
+child|ребёнок|bola
+baby|малыш|chaqaloq
+friend|друг|do'st
+neighbour|сосед|qo'shni
+guest|гость|mehmon
+people|люди|odamlar
+man|мужчина|erkak
+woman|женщина|ayol
+boy|мальчик|o'g'il bola
+girl|девочка|qiz bola
+relative|родственник|qarindosh
+wedding|свадьба|to'y
+age|возраст|yosh
+name|имя|ism
+#Дом
+house|дом|uy
+flat|квартира|kvartira
+room|комната|xona
+kitchen|кухня|oshxona
+bedroom|спальня|yotoqxona
+bathroom|ванная|vannaxona
+door|дверь|eshik
+window|окно|deraza
+wall|стена|devor
+floor|пол; этаж|pol; qavat
+roof|крыша|tom
+table|стол|stol
+chair|стул|stul
+bed|кровать|karavot
+sofa|диван|divan
+carpet|ковёр|gilam
+key|ключ|kalit
+light|свет|chiroq; yorug'lik
+fridge|холодильник|muzlatgich
+cupboard|шкаф|shkaf
+mirror|зеркало|oyna
+yard|двор|hovli
+garden|сад|bog'
+stairs|лестница|zinapoya
+rent|аренда|ijara
+clean|чистый; убирать|toza; tozalamoq
+#Еда
+food|еда|ovqat
+bread|хлеб|non
+water|вода|suv
+tea|чай|choy
+coffee|кофе|qahva
+milk|молоко|sut
+meat|мясо|go'sht
+chicken|курица|tovuq
+fish|рыба|baliq
+rice|рис|guruch
+egg|яйцо|tuxum
+cheese|сыр|pishloq
+butter|сливочное масло|sariyog'
+oil|растительное масло|o'simlik yog'i
+salt|соль|tuz
+sugar|сахар|shakar
+fruit|фрукты|meva
+vegetables|овощи|sabzavotlar
+apple|яблоко|olma
+potato|картошка|kartoshka
+onion|лук|piyoz
+carrot|морковь|sabzi
+tomato|помидор|pomidor
+soup|суп|sho'rva
+breakfast|завтрак|nonushta
+lunch|обед|tushlik
+dinner|ужин|kechki ovqat
+hungry|голодный|och
+delicious|вкусный|mazali
+sweet|сладкий|shirin
+spicy|острый|achchiq
+cook|готовить|pishirmoq
+#Время
+time|время|vaqt
+day|день|kun
+night|ночь|tun
+morning|утро|ertalab
+evening|вечер|kechqurun
+week|неделя|hafta
+month|месяц|oy
+year|год|yil
+today|сегодня|bugun
+tomorrow|завтра|ertaga
+yesterday|вчера|kecha
+hour|час|soat
+minute|минута|daqiqa
+now|сейчас|hozir
+soon|скоро|tez orada
+late|поздно|kech
+early|рано|erta
+always|всегда|doim
+often|часто|tez-tez
+sometimes|иногда|ba'zan
+never|никогда|hech qachon
+already|уже|allaqachon
+still|всё ещё|hali ham
+again|снова|yana
+weekend|выходные|dam olish kunlari
+holiday|праздник; отпуск|bayram; ta'til
+birthday|день рождения|tug'ilgan kun
+season|время года|fasl
+#Тело и здоровье
+head|голова|bosh
+face|лицо|yuz
+eye|глаз|ko'z
+ear|ухо|quloq
+nose|нос|burun
+mouth|рот|og'iz
+tooth|зуб|tish
+hair|волосы|soch
+hand|кисть руки|qo'l panjasi
+arm|рука|qo'l
+leg|нога|oyoq
+back|спина|bel; orqa
+heart|сердце|yurak
+body|тело|tana
+doctor|врач|shifokor
+medicine|лекарство|dori
+pain|боль|og'riq
+ill|больной|kasal
+healthy|здоровый|sog'lom
+tired|уставший|charchagan
+sleep|спать; сон|uxlamoq; uyqu
+rest|отдых; отдыхать|dam; dam olmoq
+cold|простуда; холодный|shamollash; sovuq
+fever|температура, жар|isitma
+#Природа и погода
+weather|погода|ob-havo
+sun|солнце|quyosh
+rain|дождь|yomg'ir
+snow|снег|qor
+wind|ветер|shamol
+cloud|облако|bulut
+sky|небо|osmon
+tree|дерево|daraxt
+flower|цветок|gul
+grass|трава|o't
+river|река|daryo
+lake|озеро|ko'l
+sea|море|dengiz
+mountain|гора|tog'
+forest|лес|o'rmon
+desert|пустыня|cho'l
+animal|животное|hayvon
+dog|собака|it
+cat|кошка|mushuk
+horse|лошадь|ot
+bird|птица|qush
+summer|лето|yoz
+winter|зима|qish
+spring|весна|bahor
+autumn|осень|kuz
+air|воздух|havo
+fire|огонь|olov
+earth|земля|yer
+@Elementary|A2
+#Город и транспорт
+city|город|shahar
+street|улица|ko'cha
+road|дорога|yo'l
+shop|магазин|do'kon
+market|рынок|bozor
+bank|банк|bank
+hospital|больница|kasalxona
+pharmacy|аптека|dorixona
+school|школа|maktab
+university|университет|universitet
+park|парк|park
+bridge|мост|ko'prik
+bus|автобус|avtobus
+car|машина|mashina
+taxi|такси|taksi
+train|поезд|poyezd
+plane|самолёт|samolyot
+airport|аэропорт|aeroport
+station|станция; вокзал|bekat; vokzal
+ticket|билет|chipta
+traffic|пробки; движение|tirbandlik; harakat
+driver|водитель|haydovchi
+corner|угол|burchak
+left|налево; левый|chap
+right|направо; правый|o'ng
+straight|прямо|to'g'ri
+near|рядом|yaqin
+far|далеко|uzoq
+map|карта (местности)|xarita
+village|деревня, кишлак|qishloq
+#Работа и учёба
+work|работа; работать|ish; ishlamoq
+job|работа (должность)|ish joyi
+office|офис|ofis
+boss|начальник|boshliq
+colleague|коллега|hamkasb
+salary|зарплата|maosh
+money|деньги|pul
+price|цена|narx
+cheap|дешёвый|arzon
+expensive|дорогой|qimmat
+pay|платить|to'lamoq
+buy|покупать|sotib olmoq
+sell|продавать|sotmoq
+business|бизнес|biznes
+company|компания|kompaniya
+meeting|встреча; совещание|uchrashuv; yig'ilish
+task|задача|vazifa
+problem|проблема|muammo
+lesson|урок|dars
+teacher|учитель|o'qituvchi
+student|студент|talaba
+exam|экзамен|imtihon
+homework|домашнее задание|uy vazifasi
+book|книга|kitob
+question|вопрос|savol
+answer|ответ; отвечать|javob; javob bermoq
+mistake|ошибка|xato
+learn|учить, изучать|o'rganmoq
+understand|понимать|tushunmoq
+explain|объяснять|tushuntirmoq
+#Глаголы
+go|идти; ехать|bormoq
+come|приходить|kelmoq
+see|видеть|ko'rmoq
+look|смотреть, глядеть|qaramoq
+watch|смотреть (фильм, ТВ)|tomosha qilmoq
+hear|слышать|eshitmoq
+listen|слушать|tinglamoq
+speak|говорить|gapirmoq
+say|сказать|aytmoq
+tell|рассказывать|aytib bermoq
+ask|спрашивать; просить|so'ramoq
+know|знать|bilmoq
+think|думать|o'ylamoq
+want|хотеть|xohlamoq
+need|нуждаться|muhtoj bo'lmoq
+like|нравиться|yoqtirmoq
+love|любить|sevmoq
+help|помогать|yordam bermoq
+give|давать|bermoq
+take|брать|olmoq
+bring|приносить|olib kelmoq
+make|делать, создавать|yasamoq
+do|делать|qilmoq
+find|находить|topmoq
+lose|терять|yo'qotmoq
+open|открывать|ochmoq
+close|закрывать|yopmoq
+start|начинать|boshlamoq
+finish|заканчивать|tugatmoq
+wait|ждать|kutmoq
+call|звонить|qo'ng'iroq qilmoq
+send|отправлять|yubormoq
+write|писать|yozmoq
+read|читать|o'qimoq
+eat|есть|yemoq
+drink|пить|ichmoq
+sit|сидеть|o'tirmoq
+stand|стоять|turmoq
+walk|идти пешком, гулять|piyoda yurmoq
+run|бежать|yugurmoq
+live|жить|yashamoq
+stay|оставаться|qolmoq
+leave|уходить; оставлять|ketmoq; qoldirmoq
+arrive|прибывать|yetib kelmoq
+return|возвращаться|qaytmoq
+forget|забывать|unutmoq
+remember|помнить|eslamoq
+try|пытаться; пробовать|urinmoq
+use|использовать|foydalanmoq
+change|менять|o'zgartirmoq
+choose|выбирать|tanlamoq
+win|выигрывать|yutmoq
+travel|путешествовать|sayohat qilmoq
+meet|встречать|uchrashmoq
+play|играть|o'ynamoq
+wash|мыть|yuvmoq
+carry|нести|ko'tarib bormoq
+show|показывать|ko'rsatmoq
+believe|верить|ishonmoq
+hope|надеяться|umid qilmoq
+feel|чувствовать|his qilmoq
+#Описания
+big|большой|katta
+small|маленький|kichik
+long|длинный|uzun
+short|короткий|qisqa
+tall|высокий (о росте)|baland bo'yli
+high|высокий|baland
+new|новый|yangi
+old|старый|eski; qari
+young|молодой|yosh
+good|хороший|yaxshi
+bad|плохой|yomon
+beautiful|красивый|chiroyli
+easy|лёгкий, простой|oson
+difficult|трудный|qiyin
+hot|жаркий; горячий|issiq
+warm|тёплый|iliq
+fast|быстрый|tez
+slow|медленный|sekin
+strong|сильный|kuchli
+weak|слабый|zaif
+rich|богатый|boy
+poor|бедный|kambag'al
+full|полный; сытый|to'la; to'q
+empty|пустой|bo'sh
+heavy|тяжёлый|og'ir
+dark|тёмный|qorong'i
+quiet|тихий|jim; tinch
+loud|громкий|baland ovozli
+dirty|грязный|iflos
+busy|занятой|band
+free|свободный; бесплатный|bo'sh; bepul
+important|важный|muhim
+interesting|интересный|qiziqarli
+boring|скучный|zerikarli
+ready|готовый|tayyor
+different|разный, другой|boshqacha
+same|одинаковый, тот же|bir xil
+true|правдивый|rost
+favourite|любимый|sevimli
+#Чувства и характер
+happy|счастливый|baxtli
+sad|грустный|g'amgin
+angry|сердитый|jahldor
+afraid|испуганный|qo'rqqan
+surprised|удивлённый|hayron
+worried|обеспокоенный|xavotirdagi
+calm|спокойный|xotirjam
+kind|добрый|mehribon
+friendly|дружелюбный|samimiy
+polite|вежливый|xushmuomala
+lazy|ленивый|dangasa
+honest|честный|halol
+clever|умный|aqlli
+funny|смешной|kulgili
+shy|застенчивый|uyatchan
+proud|гордый|g'ururli
+bored|скучающий|zerikkan
+excited|взволнованный|hayajonlangan
+lonely|одинокий|yolg'iz
+smile|улыбка; улыбаться|tabassum; jilmaymoq
+#Покупки и одежда
+clothes|одежда|kiyim
+shirt|рубашка|ko'ylak
+dress|платье|ayollar ko'ylagi
+trousers|брюки|shim
+shoes|обувь|poyabzal
+coat|пальто|palto
+jacket|куртка|kurtka
+hat|шапка, шляпа|bosh kiyim
+bag|сумка|sumka
+size|размер|o'lcham
+colour|цвет|rang
+wear|носить (одежду)|kiymoq
+discount|скидка|chegirma
+card|банковская карта|bank kartasi
+cash|наличные|naqd pul
+receipt|чек|chek
+customer|покупатель|xaridor
+gift|подарок|sovg'a
+#Общение и техника
+phone|телефон|telefon
+message|сообщение|xabar
+email|электронное письмо|elektron xat
+internet|интернет|internet
+computer|компьютер|kompyuter
+photo|фото|surat
+video|видео|video
+music|музыка|musiqa
+film|фильм|film
+news|новости|yangiliklar
+word|слово|so'z
+language|язык|til
+letter|письмо; буква|xat; harf
+number|номер; число|raqam
+address|адрес|manzil
+idea|идея|g'oya
+story|история, рассказ|hikoya
+voice|голос|ovoz
+password|пароль|parol
+screen|экран|ekran
+battery|батарея, заряд|batareya
+#Полезные слова
+because|потому что|chunki
+but|но|lekin
+if|если|agar
+when|когда|qachon
+where|где|qayerda
+why|почему|nega
+how|как|qanday
+what|что|nima
+who|кто|kim
+which|который|qaysi
+every|каждый|har bir
+all|все|hamma
+some|некоторые; немного|ba'zi; biroz
+many|много (штук)|ko'p
+much|много (чего-то)|ko'p miqdorda
+few|мало, немного|oz
+enough|достаточно|yetarli
+only|только|faqat
+also|также|ham
+very|очень|juda
+together|вместе|birga
+alone|в одиночку|yolg'iz o'zi
+maybe|может быть|balki
+probably|вероятно|ehtimol
+of course|конечно|albatta
+thing|вещь|narsa
+place|место|joy
+way|путь; способ|yo'l; usul
+life|жизнь|hayot
+world|мир|dunyo
+country|страна|mamlakat
+part|часть|qism
+example|пример|misol
+reason|причина|sabab
+chance|шанс|imkoniyat
+choice|выбор|tanlov
+plan|план|reja
+@Pre-Intermediate|A2+
+#Глаголы
+borrow|брать взаймы|qarz olmoq
+lend|давать взаймы|qarz bermoq
+decide|решать|qaror qilmoq
+agree|соглашаться|rozi bo'lmoq
+allow|разрешать|ruxsat bermoq
+invite|приглашать|taklif qilmoq
+prepare|готовить(ся)|tayyorlanmoq
+continue|продолжать|davom ettirmoq
+describe|описывать|tasvirlamoq
+compare|сравнивать|solishtirmoq
+collect|собирать|yig'moq
+deliver|доставлять|yetkazib bermoq
+repair|ремонтировать|ta'mirlamoq
+save|сохранять; копить|saqlamoq; tejamoq
+spend|тратить|sarflamoq
+earn|зарабатывать|ishlab topmoq
+fail|не суметь; провалиться|muvaffaqiyatsizlikka uchramoq
+pass|сдать (экзамен); проходить|topshirmoq; o'tmoq
+miss|скучать; пропускать|sog'inmoq; o'tkazib yubormoq
+promise|обещать|va'da bermoq
+refuse|отказываться|rad etmoq
+suggest|предлагать (идею)|taklif kiritmoq
+recognize|узнавать|tanimoq
+realize|осознавать|anglamoq
+worry|волноваться|xavotirlanmoq
+hurry|спешить|shoshilmoq
+order|заказывать|buyurtma bermoq
+reserve|бронировать|bron qilmoq
+check|проверять|tekshirmoq
+fix|чинить|tuzatmoq
+grow|расти; выращивать|o'smoq; yetishtirmoq
+break|ломать|sindirmoq
+fall|падать|yiqilmoq
+hold|держать|ushlab turmoq
+hide|прятать|yashirmoq
+#Существительные
+advice|совет|maslahat
+experience|опыт|tajriba
+opinion|мнение|fikr
+information|информация|ma'lumot
+knowledge|знание|bilim
+skill|навык|ko'nikma
+goal|цель|maqsad
+result|результат|natija
+success|успех|muvaffaqiyat
+habit|привычка|odat
+health|здоровье|salomatlik
+journey|путешествие, поездка|safar
+trip|поездка|sayohat
+luggage|багаж|bagaj
+passport|паспорт|pasport
+neighbourhood|район|mahalla
+environment|окружающая среда|atrof-muhit
+pollution|загрязнение|ifloslanish
+noise|шум|shovqin
+accident|авария|baxtsiz hodisa
+danger|опасность|xavf
+rule|правило|qoida
+law|закон|qonun
+government|правительство|hukumat
+society|общество|jamiyat
+culture|культура|madaniyat
+tradition|традиция|an'ana
+celebration|празднование|nishonlash
+event|событие|voqea
+competition|соревнование|musobaqa
+#Прилагательные
+comfortable|удобный, комфортный|qulay
+dangerous|опасный|xavfli
+safe|безопасный|xavfsiz
+famous|знаменитый|mashhur
+popular|популярный|ommabop
+modern|современный|zamonaviy
+traditional|традиционный|an'anaviy
+necessary|необходимый|zarur
+possible|возможный|mumkin
+impossible|невозможный|imkonsiz
+useful|полезный|foydali
+careful|осторожный|ehtiyotkor
+serious|серьёзный|jiddiy
+strange|странный|g'alati
+terrible|ужасный|dahshatli
+wonderful|чудесный|ajoyib
+crowded|многолюдный|odam gavjum
+fresh|свежий|yangi uzilgan; toza
+upset|расстроенный|xafa
+nervous|нервный|asabiy
+confident|уверенный в себе|o'ziga ishongan
+#Связки и наречия
+however|однако|biroq
+although|хотя|garchi
+so|поэтому|shuning uchun
+then|потом|keyin
+finally|наконец|nihoyat
+suddenly|вдруг|to'satdan
+usually|обычно|odatda
+almost|почти|deyarli
+quite|довольно|ancha
+especially|особенно|ayniqsa
+instead|вместо этого|o'rniga
+unless|если не|agar ... bo'lmasa
+while|пока, в то время как|... paytida
+during|во время|davomida
+since|с (какого-то времени)|... dan beri
+ago|назад|oldin
+yet|ещё (не)|hali
+recently|недавно|yaqinda
+anyway|в любом случае|baribir
+@Intermediate|B1
+#Глаголы
+achieve|достигать|erishmoq
+avoid|избегать|chetlab o'tmoq
+improve|улучшать|yaxshilamoq
+increase|увеличивать(ся)|oshirmoq
+reduce|уменьшать|kamaytirmoq
+develop|развивать|rivojlantirmoq
+provide|обеспечивать|ta'minlamoq
+require|требовать|talab qilmoq
+include|включать|o'z ichiga olmoq
+involve|вовлекать|jalb qilmoq
+manage|справляться; управлять|uddalamoq; boshqarmoq
+support|поддерживать|qo'llab-quvvatlamoq
+consider|рассматривать|ko'rib chiqmoq
+expect|ожидать|kutmoq
+prefer|предпочитать|afzal ko'rmoq
+mention|упоминать|eslatib o'tmoq
+discuss|обсуждать|muhokama qilmoq
+argue|спорить|bahslashmoq
+apologize|извиняться|kechirim so'ramoq
+complain|жаловаться|shikoyat qilmoq
+respect|уважать|hurmat qilmoq
+trust|доверять|ishonch bildirmoq
+afford|позволить себе (по деньгам)|qurbi yetmoq
+apply|подавать заявку|ariza bermoq
+attend|посещать|qatnashmoq
+belong|принадлежать|tegishli bo'lmoq
+deserve|заслуживать|munosib bo'lmoq
+encourage|подбадривать, поощрять|rag'batlantirmoq
+explore|исследовать|kashf etmoq
+#Существительные
+advantage|преимущество|afzallik
+disadvantage|недостаток|kamchilik
+benefit|польза, выгода|foyda
+effect|влияние, эффект|ta'sir
+solution|решение (проблемы)|yechim
+decision|решение (выбор)|qaror
+attitude|отношение|munosabat
+behaviour|поведение|xulq-atvor
+relationship|отношения|o'zaro munosabatlar
+responsibility|ответственность|mas'uliyat
+ability|способность|qobiliyat
+opportunity|возможность|imkon
+achievement|достижение|yutuq
+career|карьера|martaba
+employee|сотрудник|xodim
+interview|собеседование|suhbat
+income|доход|daromad
+loan|кредит, заём|kredit
+debt|долг|qarz
+budget|бюджет|byudjet
+research|исследование|tadqiqot
+evidence|доказательство|dalil
+survey|опрос|so'rovnoma
+generation|поколение|avlod
+crime|преступление|jinoyat
+#Прилагательные
+available|доступный|mavjud
+reliable|надёжный|ishonchli
+responsible|ответственный|mas'uliyatli
+efficient|эффективный|samarali
+obvious|очевидный|ochiq-ravshan
+similar|похожий|o'xshash
+specific|конкретный|muayyan
+various|различные|turli
+suitable|подходящий|mos
+valuable|ценный|qimmatli
+harmful|вредный|zararli
+disappointed|разочарованный|hafsalasi pir bo'lgan
+embarrassed|смущённый|xijolat bo'lgan
+grateful|благодарный|minnatdor
+jealous|ревнивый, завистливый|rashkchi
+generous|щедрый|saxiy
+patient|терпеливый|sabrli
+rude|грубый|qo'pol
+selfish|эгоистичный|xudbin
+ambitious|амбициозный|intiluvchan
+#Связки
+therefore|поэтому, следовательно|shu sababli
+moreover|более того|bundan tashqari
+otherwise|иначе|aks holda
+whereas|тогда как|holbuki
+despite|несмотря на|qaramay
+in addition|кроме того|qo'shimcha ravishda
+for instance|например|masalan
+as a result|в результате|natijada
+on the other hand|с другой стороны|boshqa tomondan
+eventually|в конце концов|oxir-oqibat
+actually|на самом деле|aslida
+apparently|по-видимому|aftidan
+@Upper-Intermediate|B2
+#Глаголы
+acknowledge|признавать|tan olmoq
+anticipate|предвидеть|oldindan ko'rmoq
+assess|оценивать|baholamoq
+assume|предполагать|taxmin qilmoq
+claim|утверждать|da'vo qilmoq
+contribute|вносить вклад|hissa qo'shmoq
+convince|убеждать|ishontirmoq
+demonstrate|демонстрировать|namoyish etmoq
+determine|определять|belgilamoq
+emphasize|подчёркивать|ta'kidlamoq
+ensure|обеспечивать, гарантировать|kafolatlamoq
+establish|основывать, устанавливать|tashkil etmoq
+estimate|приблизительно оценивать|chamalamoq
+identify|выявлять|aniqlab olmoq
+indicate|указывать|ishora qilmoq
+maintain|поддерживать, сохранять|saqlab turmoq
+obtain|получать|qo'lga kiritmoq
+overcome|преодолевать|yengib o'tmoq
+persuade|уговаривать|ko'ndirmoq
+postpone|откладывать|kechiktirmoq
+predict|предсказывать|bashorat qilmoq
+pursue|стремиться к|intilmoq
+reveal|раскрывать|oshkor qilmoq
+struggle|бороться, с трудом справляться|kurashmoq
+#Существительные
+approach|подход|yondashuv
+awareness|осведомлённость|xabardorlik
+challenge|трудная задача, вызов|qiyinchilik
+circumstances|обстоятельства|sharoit
+consequence|последствие|oqibat
+contribution|вклад|hissa
+issue|вопрос, проблема|masala
+outcome|итог|yakun
+priority|приоритет|ustuvorlik
+requirement|требование|talab
+resource|ресурс|resurs
+strategy|стратегия|strategiya
+tendency|тенденция, склонность|moyillik
+threat|угроза|tahdid
+trend|тренд|tendensiya
+feature|особенность|xususiyat
+aspect|аспект|jihat
+concern|беспокойство|tashvish
+emergency|чрезвычайная ситуация|favqulodda holat
+#Прилагательные
+accurate|точный|xatosiz
+adequate|достаточный, адекватный|yetarli darajadagi
+appropriate|уместный|o'rinli
+competitive|конкурентоспособный|raqobatbardosh
+complex|сложный|murakkab
+considerable|значительный|sezilarli
+essential|крайне важный|asosiy
+flexible|гибкий|moslashuvchan
+inevitable|неизбежный|muqarrar
+reluctant|неохотный|istar-istamas
+significant|значимый|ahamiyatli
+sufficient|достаточный|kifoya
+thorough|тщательный|puxta
+vague|расплывчатый|noaniq
+vulnerable|уязвимый|himoyasiz
+#Связки
+nevertheless|тем не менее|shunga qaramay
+furthermore|кроме того|qolaversa
+consequently|следовательно|binobarin
+regardless|независимо|qat'i nazar
+thus|таким образом|shunday qilib
+hence|отсюда, поэтому|shu boisdan
+merely|лишь, просто|shunchaki
+@Advanced|C1
+#Глаголы
+advocate|выступать за|yoqlamoq
+alleviate|облегчать (боль, проблему)|yengillashtirmoq
+comprise|состоять из|tashkil topmoq
+compile|составлять, собирать|jamlamoq
+deteriorate|ухудшаться|yomonlashmoq
+diminish|уменьшаться|kamaymoq
+endorse|одобрять|ma'qullamoq
+exacerbate|усугублять|keskinlashtirmoq
+facilitate|способствовать|ko'maklashmoq
+hinder|препятствовать|to'sqinlik qilmoq
+implement|внедрять|joriy etmoq
+mitigate|смягчать|yumshatmoq
+undermine|подрывать|putur yetkazmoq
+scrutinize|тщательно изучать|sinchiklab o'rganmoq
+underestimate|недооценивать|yetarlicha baholamaslik
+#Существительные
+ambiguity|двусмысленность|ikki ma'nolilik
+bias|предвзятость|tarafkashlik
+coherence|связность|bog'liqlik
+discrepancy|расхождение|nomuvofiqlik
+dilemma|дилемма|dilemma
+hierarchy|иерархия|ierarxiya
+implication|подтекст; последствие|yashirin ma'no
+incentive|стимул|rag'bat
+integrity|честность, порядочность|halollik
+legislation|законодательство|qonunchilik
+perception|восприятие|idrok
+prerequisite|обязательное условие|zaruriy shart
+scope|масштаб, рамки|ko'lam
+sustainability|устойчивость|barqarorlik
+#Прилагательные
+arbitrary|произвольный|asossiz
+coherent|связный, последовательный|izchil
+comprehensive|всесторонний|har tomonlama
+compelling|убедительный|ishonarli
+controversial|спорный|munozarali
+diverse|разнообразный|xilma-xil
+explicit|явный|ochiq-oydin
+feasible|осуществимый|amalga oshirsa bo'ladigan
+genuine|подлинный, искренний|chinakam
+inherent|присущий|xos
+meticulous|скрупулёзный|sinchkov
+plausible|правдоподобный|ehtimolga yaqin
+prevalent|распространённый|keng tarqalgan
+redundant|избыточный|ortiqcha
+substantial|существенный|salmoqli
+#Связки и выражения
+notwithstanding|несмотря на|... ga qaramasdan
+albeit|хотя и|garchi ... bo'lsa-da
+by and large|в целом|umuman olganda
+to some extent|в некоторой степени|ma'lum darajada
