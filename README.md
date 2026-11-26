@@ -1,6 +1,8 @@
 # English Intensive — тренажёр английского
 
-Готовое приложение — один файл `Тренажёр времён.html` (открывается в браузере, работает офлайн).
+Готовое приложение — один файл `index.html` (открывается в браузере, работает офлайн).
+
+Онлайн через GitHub Pages: https://sonic-max9598.github.io/English-trainer-/ (Settings → Pages → Deploy from a branch → main, / (root)).
 
 Исходники для правок:
 - `src/` — разметка, стили (`style.css`) и код (`app.js`);
