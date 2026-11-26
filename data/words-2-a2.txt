@@ -1,0 +1,351 @@
+@Elementary|A2
+#Глаголы A2
+become|становиться|bo'lmoq, aylanmoq|He became a doctor.
+begin|начинать|boshlamoq|The lesson begins at nine.
+build|строить|qurmoq|They're building a new school.
+burn|гореть, жечь|yonmoq, kuydirmoq|I burned my finger.
+clean up|убирать|yig'ishtirmoq|Clean up your room.
+climb|взбираться|chiqmoq, tirmashmoq|We climbed the hill.
+cost|стоить|turmoq (narx)|How much does it cost?
+cross|пересекать|kesib o'tmoq|Cross the street carefully.
+die|умирать|o'lmoq|The flowers died in the cold.
+drop|ронять|tushirib yubormoq|I dropped my phone.
+enjoy|наслаждаться|zavq olmoq|Enjoy your holiday!
+enter|входить|kirmoq|Knock before you enter.
+fill|наполнять|to'ldirmoq|Fill the glass with water.
+fight|драться, бороться|urishmoq, kurashmoq|The boys are fighting.
+follow|следовать|ergashmoq|Follow me.
+guess|угадывать|taxmin qilmoq|Guess who called!
+happen|случаться|sodir bo'lmoq|What happened?
+hate|ненавидеть|yomon ko'rmoq|I hate waiting.
+hit|ударять|urmoq|The ball hit the window.
+join|присоединяться|qo'shilmoq|Join us for dinner.
+keep|хранить, держать|saqlamoq|Keep the change.
+kill|убивать|o'ldirmoq|The cold killed the plants.
+kiss|целовать|o'pmoq|She kissed her baby.
+knock|стучать|taqillatmoq|Someone is knocking.
+lie|лежать; лгать|yotmoq; yolg'on gapirmoq|Don't lie to me.
+lift|поднимать|ko'tarmoq|Help me lift this box.
+mean|значить|anglatmoq|What does this word mean?
+move|двигать; переезжать|siljitmoq; ko'chmoq|We moved to Tashkent.
+paint|красить, рисовать красками|bo'yamoq|We painted the walls white.
+pick|выбирать; срывать|tanlamoq; uzmoq|Pick a card.
+pick up|поднять; забрать|olib ketmoq|I'll pick you up at six.
+plant|сажать|ekmoq|We planted a tree.
+practise|практиковаться|mashq qilmoq|Practise every day.
+print|печатать|chop etmoq|Print this page, please.
+rain (verb)|идти (о дожде)|yog'moq|It rained all night.
+reach|доставать; достигать|yetmoq|I can't reach the top shelf.
+relax|отдыхать, расслабляться|dam olmoq|Relax, everything is OK.
+rent (verb)|снимать, арендовать|ijaraga olmoq|We rent a flat in the centre.
+ring|звонить (о звонке)|jiringlamoq|The phone is ringing.
+rise|подниматься|ko'tarilmoq|The sun rises early in summer.
+seem|казаться|tuyulmoq|You seem tired.
+share|делиться|bo'lishmoq|Let's share the cake.
+shout|кричать|baqirmoq|Don't shout at me!
+shut|закрывать|yopmoq|Shut the door.
+sign|подписывать|imzolamoq|Sign here, please.
+smell|пахнуть; нюхать|hidlamoq|It smells good.
+smoke|курить; дым|chekmoq; tutun|He doesn't smoke.
+solve|решать|hal qilmoq|We solved the problem.
+steal|красть|o'g'irlamoq|Someone stole my bike.
+taste|пробовать на вкус; вкус|tatib ko'rmoq; ta'm|Taste this soup.
+thank|благодарить|minnatdorchilik bildirmoq|I want to thank you.
+touch|трогать|tegmoq|Don't touch it!
+turn on|включать|yoqmoq|Turn on the TV.
+turn off|выключать|o'chirmoq|Turn off the light.
+wake|будить|uyg'otmoq|Don't wake the baby.
+wish|желать|tilamoq|I wish you luck.
+check in|регистрироваться|ro'yxatdan o'tmoq|We checked in at the hotel.
+get on|садиться (в транспорт)|chiqmoq (transportga)|Get on the bus here.
+get off|выходить (из транспорта)|tushmoq|Get off at the next stop.
+look for|искать|qidirmoq|I'm looking for my keys.
+look after|заботиться|qaramoq|She looks after her grandma.
+try on|примерять|kiyib ko'rmoq|Can I try on this jacket?
+put on|надевать|kiymoq|Put on your coat.
+take off|снимать; взлетать|yechmoq; havoga ko'tarilmoq|Take off your shoes.
+give back|возвращать|qaytarib bermoq|Give me back my pen.
+find out|узнавать|bilib olmoq|I found out the truth.
+grow up|вырастать|ulg'aymoq|I grew up in a village.
+set|ставить; устанавливать|qo'ymoq; o'rnatmoq|Set the alarm for six.
+#Существительные A2
+accident|авария|baxtsiz hodisa|He had an accident.
+activity|занятие, деятельность|mashg'ulot|Swimming is a good activity.
+adult|взрослый|kattalar|Tickets for adults cost more.
+advert|реклама|reklama|I saw an advert on TV.
+alarm|будильник; тревога|budilnik; signal|My alarm rings at six.
+area|район, область|hudud|We live in a quiet area.
+art|искусство|san'at|She loves modern art.
+article|статья|maqola|I read an article about it.
+bill|счёт|hisob|Can we have the bill, please?
+bit|кусочек; немного|bo'lak; biroz|Wait a bit.
+blood test|анализ крови|qon tahlili|I need a blood test.
+bottom|дно; низ|tub, pastki qism|At the bottom of the page.
+building|здание|bino|That building is very tall.
+camera|фотоаппарат, камера|fotoapparat|I bought a new camera.
+capital letter|заглавная буква|bosh harf|Start with a capital letter.
+change (money)|сдача|qaytim|Keep the change.
+cheque|чек (банковский)|chek|He paid by cheque.
+class|класс; занятие|sinf; dars|My class starts at nine.
+coin|монета|tanga|I have only coins.
+contact|контакт|aloqa|Let's stay in contact.
+conversation|разговор|suhbat|We had a long conversation.
+cost (noun)|стоимость|narx|The cost of living is high.
+course|курс|kurs|I'm taking an English course.
+crowd|толпа|olomon|There was a big crowd.
+cuisine|кухня (национальная)|oshxona (milliy)|I love Uzbek cuisine.
+dentist|стоматолог|tish shifokori|I'm going to the dentist.
+designer|дизайнер|dizayner|She's a fashion designer.
+diary|дневник; ежедневник|kundalik|I write in my diary every night.
+dictionary|словарь|lug'at|Look it up in a dictionary.
+difference|разница|farq|What's the difference?
+direction|направление|yo'nalish|Which direction is the station?
+dream|мечта; сон|orzu; tush|I had a strange dream.
+end|конец|oxir|See you at the end of the week.
+energy|энергия|energiya|I have no energy today.
+entrance|вход|kirish|Meet me at the entrance.
+exit|выход|chiqish|Where's the exit?
+factory|завод|zavod|My father works at a factory.
+fan|болельщик; вентилятор|muxlis; ventilyator|He's a big football fan.
+fashion|мода|moda|She works in fashion.
+festival|фестиваль|festival|The music festival is in May.
+floor (level)|этаж|qavat|I live on the fifth floor.
+form|бланк, форма|anketa|Fill in this form.
+fun|веселье|qiziqarli vaqt|We had a lot of fun.
+future|будущее|kelajak|Think about your future.
+game|игра|o'yin|Let's play a game.
+group|группа|guruh|We work in groups.
+guide|гид|gid|Our guide spoke English.
+guitar|гитара|gitara|He plays the guitar.
+history|история|tarix|I love history.
+hobby|хобби|hobbi|My hobby is cooking.
+hole|дыра|teshik|There's a hole in my sock.
+ice|лёд|muz|Be careful, there's ice.
+illness|болезнь|kasallik|He's recovering from an illness.
+island|остров|orol|They live on an island.
+kind (type)|вид, тип|tur|What kind of music do you like?
+land|земля, суша|yer|They bought some land.
+level|уровень|daraja|What's your English level?
+line|линия; очередь|chiziq; navbat|Draw a line.
+list|список|ro'yxat|Make a shopping list.
+machine|машина, аппарат|mashina, apparat|The coffee machine is broken.
+magazine|журнал|jurnal|I read a magazine on the plane.
+match|матч; спичка|o'yin; gugurt|Did you watch the match?
+middle|середина|o'rta|Stand in the middle.
+mobile|мобильный|mobil|What's your mobile number?
+nature|природа|tabiat|I love nature.
+note|записка; заметка|yozuv|I left you a note.
+page|страница|sahifa|Open your books at page ten.
+pair|пара|juft|A pair of shoes.
+party|вечеринка|ziyofat|We're having a party.
+passenger|пассажир|yo'lovchi|The plane had 200 passengers.
+piece|кусок|bo'lak|A piece of cake, please.
+plant (noun)|растение|o'simlik|Water the plants.
+pocket money|карманные деньги|cho'ntak puli|Kids get pocket money.
+point|точка; смысл|nuqta; mazmun|What's the point?
+police|полиция|politsiya|Call the police!
+prize|приз|sovrin|She won first prize.
+programme|программа; передача|dastur; ko'rsatuv|My favourite programme is on.
+project|проект|loyiha|We're working on a project.
+pupil|ученик|o'quvchi|The school has 500 pupils.
+queue|очередь|navbat|There's a long queue.
+race|гонка; раса|poyga|He won the race.
+report|отчёт|hisobot|Finish the report by Friday.
+rest (the rest)|остальное|qolgani|I'll do the rest tomorrow.
+ride (noun)|поездка|sayohat|Can I have a ride?
+river bank|берег реки|daryo qirg'og'i|We sat on the river bank.
+roundabout|круговой перекрёсток|aylanma yo'l|Turn right at the roundabout.
+sale|распродажа|chegirmali savdo|Everything is on sale.
+seat|место, сиденье|o'rindiq|Is this seat free?
+secret|секрет|sir|Can you keep a secret?
+service|обслуживание|xizmat|The service was great.
+side|сторона|tomon|On the other side of the road.
+sign (noun)|знак, табличка|belgi|Read the sign.
+silver|серебро|kumush|A silver ring.
+gold|золото|oltin|A gold watch.
+song|песня|qo'shiq|I love this song.
+sound|звук|tovush|What's that sound?
+space|пространство; космос|joy; koinot|There's no space in the car.
+speed|скорость|tezlik|Slow down your speed.
+sport|спорт|sport|What sport do you play?
+square|площадь; квадрат|maydon; kvadrat|Meet me in the main square.
+stamp|марка; печать|marka; muhr|I need a stamp for this letter.
+star (famous)|звезда (о человеке)|yulduz|He's a football star.
+step|шаг; ступенька|qadam|Watch your step.
+subject|предмет (школьный)|fan|Maths is my favourite subject.
+suitcase|чемодан|chamadon|My suitcase is too heavy.
+supermarket|супермаркет|supermarket|I go to the supermarket on Saturdays.
+surname|фамилия|familiya|What's your surname?
+team|команда|jamoa|Our team won.
+test|тест, проверка|test|We have a test tomorrow.
+text|текст; сообщение|matn; xabar|Send me a text.
+theatre|театр|teatr|We went to the theatre.
+tour|тур, экскурсия|sayohat|We went on a tour of the city.
+tourist|турист|sayyoh|Many tourists visit Samarkand.
+toy|игрушка|o'yinchoq|The kids have too many toys.
+trouble|беда, проблема|muammo|We're in trouble.
+type|тип|tur|What type of car is it?
+uniform|форма (одежда)|forma|Pupils wear a uniform.
+view|вид|manzara|What a view!
+visitor|посетитель|tashrif buyuruvchi|The museum had many visitors.
+wallet|кошелёк|hamyon|I lost my wallet.
+war|война|urush|My grandfather remembers the war.
+website|сайт|veb-sayt|Check our website.
+wood|дерево (материал); лес|yog'och; o'rmon|The table is made of wood.
+#Прилагательные A2
+able|способный|qodir|Will you be able to come?
+amazing|потрясающий|hayratlanarli|The view is amazing.
+asleep|спящий|uxlab yotgan|The kids are asleep.
+awake|бодрствующий|uyg'oq|Are you awake?
+awful|ужасный|dahshatli|The weather is awful.
+basic|основной, базовый|asosiy|I know basic English.
+brave|храбрый|jasur|You're very brave.
+bright|яркий|yorqin|The room is bright.
+broken|сломанный|singan|My phone is broken.
+central|центральный|markaziy|The hotel is very central.
+cheerful|весёлый|xushchaqchaq|She's always cheerful.
+clear|ясный|aniq|Is that clear?
+cloudy|облачный|bulutli|It's cloudy today.
+correct|правильный|to'g'ri|Your answer is correct.
+crazy|сумасшедший|jinni|That's a crazy idea.
+cute|милый|yoqimtoy|What a cute baby!
+dear|дорогой|aziz|Dear Malika, thank you for the letter.
+deep|глубокий|chuqur|The lake is very deep.
+excellent|отличный|a'lo|Your English is excellent.
+fair|справедливый; светлый|adolatli|That's not fair!
+fantastic|фантастический|ajoyib|We had a fantastic time.
+foreign|иностранный|chet el|Do you speak any foreign languages?
+glad|довольный, рад|xursand|I'm glad you came.
+huge|огромный|ulkan|They have a huge house.
+ill (unwell)|нездоровый|betob|She's been ill all week.
+international|международный|xalqaro|It's an international company.
+large|большой|katta|A large coffee, please.
+local|местный|mahalliy|Let's try the local food.
+lovely|прекрасный|go'zal|What a lovely day!
+lucky|удачливый|omadli|You're so lucky!
+main|главный|asosiy|This is the main road.
+medium|средний|o'rtacha|A medium pizza, please.
+missing|пропавший|yo'qolgan|My keys are missing.
+national|национальный|milliy|Navruz is a national holiday.
+natural|натуральный|tabiiy|It's a natural product.
+noisy|шумный|shovqinli|The street is noisy.
+normal|обычный|oddiy, odatiy|It's normal to be nervous.
+online|онлайн|onlayn|I bought it online.
+perfect|идеальный|mukammal|Your English is perfect.
+pleasant|приятный|yoqimli|It was a pleasant evening.
+private|частный|xususiy|This is a private road.
+public|общественный|jamoat|Use public transport.
+quick|быстрый|tez|Can I ask a quick question?
+real|настоящий|haqiqiy|Is it real gold?
+round|круглый|dumaloq|A round table.
+salty|солёный|sho'r|The soup is too salty.
+scared|испуганный|qo'rqqan|I'm scared of the dark.
+sharp|острый|o'tkir|Be careful, the knife is sharp.
+silly|глупый|ahmoqona|Don't be silly.
+simple|простой|oddiy|It's a simple question.
+single|одинокий; один|yolg'iz; bitta|Is he single?
+sleepy|сонный|uyqusiragan|I feel sleepy.
+special|особый|maxsus|Today is a special day.
+square (adj)|квадратный|kvadrat|A square box.
+sunny|солнечный|quyoshli|It's sunny today.
+thick|толстый (о предметах)|qalin|A thick book.
+typical|типичный|odatiy|It's a typical Uzbek dish.
+unhappy|несчастный|baxtsiz|She looks unhappy.
+unusual|необычный|g'ayrioddiy|What an unusual name.
+whole|целый|butun|I ate the whole cake.
+wide|широкий|keng|The road is very wide.
+wild|дикий|yovvoyi|Wild animals live here.
+windy|ветреный|shamolli|It's windy today.
+wise|мудрый|dono|My grandfather is very wise.
+wooden|деревянный|yog'och|A wooden door.
+#Наречия и связки A2
+above|над|ustida|The picture is above the sofa.
+across|через, поперёк|bo'ylab, orqali|Walk across the bridge.
+along|вдоль|bo'ylab|Walk along the river.
+around|вокруг|atrofida|They sat around the table.
+behind|позади|orqasida|The car is behind the house.
+below|ниже|pastda|Write your name below.
+between|между|o'rtasida|Sit between us.
+beside|рядом с|yonida|Sit beside me.
+inside|внутри|ichkarida|Let's go inside.
+outside|снаружи|tashqarida|It's cold outside.
+opposite|напротив|qarshisida|The bank is opposite the park.
+next to|рядом с|yonida|The café is next to the bank.
+in front of|перед|oldida|Park in front of the house.
+until|до (времени)|...gacha|Wait until six.
+through|через, сквозь|orqali|We drove through the city.
+towards|по направлению к|tomon|He walked towards me.
+ever|когда-либо|hech qachon (savolda)|Have you ever been to Khiva?
+else|ещё, кроме|yana|Anything else?
+even|даже|hatto|Even kids know that.
+far away|далеко|uzoqda|They live far away.
+fast asleep|крепко спящий|qattiq uxlagan|The baby is fast asleep.
+just|только что; просто|hozirgina; shunchaki|I just arrived.
+later on|позже|keyinroq|I'll tell you later on.
+nearly|почти|deyarli|It's nearly midnight.
+once|однажды; один раз|bir marta|I've been there once.
+twice|дважды|ikki marta|I call Mom twice a week.
+perhaps|возможно|balki|Perhaps he's busy.
+quickly|быстро|tez|Come quickly!
+slowly|медленно|sekin|Speak slowly, please.
+well|хорошо|yaxshi|She sings well.
+badly|плохо|yomon|I slept badly.
+really|действительно|haqiqatan|I really like it.
+everywhere|везде|hamma joyda|I looked everywhere.
+somewhere|где-то|qayerdadir|I left it somewhere.
+nowhere|нигде|hech qayerda|There's nowhere to sit.
+anywhere|где угодно|istalgan joyda|Sit anywhere.
+upstairs|наверху|yuqori qavatda|The bedroom is upstairs.
+downstairs|внизу|pastki qavatda|The kitchen is downstairs.
+abroad|за границей|chet elda|She studies abroad.
+as|как; так как|kabi; chunki|As I said, I'm busy.
+than|чем|...dan (qiyoslash)|He's older than me.
+or so|примерно|taxminan|Ten minutes or so.
+both|оба|ikkalasi|Both my sisters are teachers.
+either|любой из двух; тоже (в отриц.)|har ikkisidan biri|I don't like it either.
+neither|ни один из двух|hech biri|Neither of us knew.
+each|каждый|har bir|Each room has a TV.
+any|любой; какой-нибудь|biror|Do you have any questions?
+#Дом, быт и город A2
+apartment|квартира|kvartira|They live in a small apartment.
+electricity|электричество|elektr|The electricity is off.
+gas|газ|gaz|We cook on gas.
+heating|отопление|isitish|The heating doesn't work.
+lift (elevator)|лифт|lift|The lift is broken.
+furniture|мебель|mebel|We need new furniture.
+washing machine|стиральная машина|kir yuvish mashinasi|The washing machine is new.
+dishes|посуда|idish-tovoq|I'll wash the dishes.
+rubbish|мусор|axlat|Take out the rubbish.
+housework|работа по дому|uy ishlari|I hate housework.
+shopping|покупки|xarid|I go shopping on Saturdays.
+post office|почта|pochta|Where's the post office?
+police station|полицейский участок|politsiya bo'limi|Go to the police station.
+petrol station|заправка|yoqilg'i quyish shoxobchasi|Stop at the petrol station.
+car park|парковка|avtoturargoh|The car park is full.
+traffic lights|светофор|svetofor|Stop at the traffic lights.
+pavement|тротуар|piyodalar yo'lagi|Walk on the pavement.
+crossroads|перекрёсток|chorraha|Turn left at the crossroads.
+#Работа, учёба и техника A2
+manager|менеджер, управляющий|menejer|I'd like to speak to the manager.
+secretary|секретарь|kotib|The secretary will call you.
+lawyer|юрист|huquqshunos|She wants to be a lawyer.
+pilot|пилот|uchuvchi|My uncle is a pilot.
+scientist|учёный|olim|She's a famous scientist.
+artist|художник|rassom|He's a talented artist.
+journalist|журналист|jurnalist|The journalist asked many questions.
+mechanic|механик|mexanik|The mechanic fixed my car.
+programmer|программист|dasturchi|He works as a programmer.
+classroom|классная комната|sinfxona|The classroom is on the first floor.
+desk|парта; письменный стол|parta; yozuv stoli|Sit at your desk.
+grade|оценка|baho|I got a good grade.
+term|четверть, семестр|chorak, semestr|The term starts in September.
+app|приложение|ilova|Download this app.
+keyboard|клавиатура|klaviatura|The keyboard is dirty.
+laptop|ноутбук|noutbuk|I work on my laptop.
+charger|зарядка|zaryadlovchi|Can I borrow your charger?
+download|скачивать|yuklab olmoq|Download the file.
+upload|загружать|yuklamoq|Upload your photo.
+click|щёлкать|bosmoq|Click here.
+search|искать; поиск|qidirmoq|Search on the internet.
+account|аккаунт; счёт|akkaunt; hisob|Create an account.
+online shop|интернет-магазин|onlayn do'kon|I ordered it from an online shop.

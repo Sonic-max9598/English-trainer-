@@ -51,12 +51,18 @@
   </section>
 
   <section class="view" id="v-words" hidden>
+    <div class="scroll-x" id="wModes"></div>
+    <div class="daybar" id="wDay"></div>
+    <div class="flt" id="wWarn" hidden><span id="wWarnT"></span><span class="row" style="margin:0"><button id="wWarnB">10 новых в день</button><button id="wSkipRev">К новым словам</button></span></div>
     <div class="flt" id="wFlt" hidden><span id="wFltT"></span><button id="wFltX">Все темы</button></div>
     <div class="card" id="wcard">
       <div class="task" id="wTask"></div>
       <div class="wq" id="wQ"></div>
       <p class="mk" id="wSub"></p>
+      <div id="wEx"></div>
       <div class="wopts" id="wOpts"></div>
+      <div class="field" id="wField" hidden><input type="text" id="wIn" lang="en" enterkeyhint="go" placeholder="Слово по-английски…" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+      <div class="row" id="wWriteRow" hidden><button class="main" id="wGo">Проверить</button><button id="wSkip">Не знаю</button></div>
       <div class="fb" id="wFb"></div>
       <div class="row"><button class="main" id="wNextB" hidden>Дальше</button></div>
       <div class="stats">
@@ -64,7 +70,13 @@
         <span>Выучено слов <b id="wLearned">0</b></span>
       </div>
     </div>
-    <p class="note">Новые слова идут по порядку. Слова, в которых ты ошибаешься, возвращаются через пару заданий, а знакомые — всё реже. Слово считается выученным после 3–4 верных ответов подряд (4 зелёные точки).</p>
+    <div class="card big" id="wDoneP" hidden>
+      <div class="num">✓</div>
+      <p style="margin-bottom:6px"><b>План на сегодня выполнен!</b></p>
+      <p id="wDoneT"></p>
+      <div class="row" style="justify-content:center"><button class="main" id="wMore">Ещё 10 новых слов</button><button id="wFree">Свободная практика</button></div>
+    </div>
+    <p class="note">Каждый день сначала повторяем слова, которым пришло время, потом учим новые блоками по 10: знакомство → мини-тест. Ошибки возвращаются через 3–5 заданий и на следующий день. Слово выучено после 3–4 верных ответов подряд (4 зелёные точки).</p>
   </section>
 
   <section class="view" id="v-wlist" hidden>

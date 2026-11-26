@@ -244,7 +244,7 @@ function renderProg(){
   const mx=Math.max(1,...days.map(x=>x[1][1]));
   const wd=['вс','пн','вт','ср','чт','пт','сб'];
   $('pDays').innerHTML=days.map(([d,c])=>`<div class="day"><span>${wd[d.getDay()]} ${d.getDate()}</span><div class="tr"><i class="o" style="width:${c[0]/mx*100}%"></i><i class="x" style="width:${(c[1]-c[0])/mx*100}%"></i></div><b>${c[1]?Math.round(c[0]/c[1]*100)+'%':'—'}</b></div>`).join('');
-  renderArtProg();renderWordsProg();
+  renderArtProg();renderWordsProg();if(typeof renderWordDays==='function')renderWordDays();
   $('pFocus').textContent=on.focus?'Слабые места: включено':'Тренировать слабые места';
   $('pFocus').classList.toggle('main',!on.focus);
   if(typeof renderGameProg==='function')renderGameProg();

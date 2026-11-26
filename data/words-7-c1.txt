@@ -1,0 +1,294 @@
+@Advanced|C1
+#Глаголы C1
+abolish|отменять|bekor qilmoq|They abolished the old law.
+accentuate|подчёркивать|ta'kidlamoq|The dress accentuates her figure.
+adhere|придерживаться|amal qilmoq|Adhere to the rules.
+allege|утверждать (без доказательств)|da'vo qilmoq|He alleged that he was cheated.
+alienate|отчуждать|begonalashtirmoq|Don't alienate your friends.
+ascertain|выяснять|aniqlamoq|We need to ascertain the facts.
+aspire|стремиться|intilmoq|She aspires to be a judge.
+attribute|приписывать|bog'lamoq|He attributes his success to luck.
+augment|увеличивать|ko'paytirmoq|Augment your income.
+bolster|поддерживать|mustahkamlamoq|The news bolstered our hopes.
+circumvent|обходить|aylanib o'tmoq|They circumvented the rules.
+coincide|совпадать|to'g'ri kelmoq|My birthday coincides with Navruz.
+commemorate|отмечать память|xotirlamoq|A statue commemorates the poet.
+comply|подчиняться|bo'ysunmoq|Comply with the law.
+concede|признавать; уступать|tan olmoq|He conceded defeat.
+condemn|осуждать|qoralamoq|We condemn violence.
+confer|совещаться; присуждать|maslahatlashmoq|They conferred for an hour.
+consolidate|укреплять|mustahkamlamoq|Consolidate your knowledge.
+contemplate|обдумывать|o'ylab ko'rmoq|I'm contemplating a move.
+contend|утверждать; бороться|da'vo qilmoq|He contends that he's innocent.
+corroborate|подтверждать|tasdiqlamoq|Witnesses corroborated the story.
+curtail|сокращать|qisqartirmoq|They curtailed spending.
+deduce|делать вывод|xulosa chiqarmoq|What can you deduce?
+defer|откладывать|kechiktirmoq|Defer the payment.
+delegate|делегировать|topshirmoq|Delegate tasks to the team.
+depict|изображать|tasvirlamoq|The painting depicts a bazaar.
+deplete|истощать|tugatmoq|We are depleting resources.
+deter|удерживать|to'xtatib qolmoq|High fines deter speeding.
+devise|придумывать|o'ylab topmoq|They devised a plan.
+discern|различать|farqlay olmoq|I can't discern any difference.
+disclose|раскрывать|oshkor qilmoq|Don't disclose your password.
+disperse|рассеиваться|tarqalmoq|The crowd dispersed.
+disrupt|нарушать|buzmoq|The strike disrupted transport.
+dwell|жить; задерживаться (мыслями)|yashamoq; o'ylanib qolmoq|Don't dwell on the past.
+elicit|вызывать (ответ)|chiqarib olmoq|The joke elicited laughter.
+embark|начинать; садиться|kirishmoq|We embarked on a new project.
+encompass|охватывать|qamrab olmoq|The course encompasses many topics.
+endeavour|стараться|harakat qilmoq|We endeavour to help.
+entail|влечь за собой|talab qilmoq|The job entails long hours.
+eradicate|искоренять|yo'q qilmoq|Eradicate poverty.
+evoke|вызывать (чувства)|uyg'otmoq|The song evokes memories.
+exemplify|служить примером|namuna bo'lmoq|Her work exemplifies good design.
+exert|прилагать|sarflamoq|Exert pressure.
+exploit|эксплуатировать|ekspluatatsiya qilmoq|Don't exploit workers.
+fabricate|выдумывать|to'qib chiqarmoq|He fabricated the story.
+falter|колебаться|ikkilanmoq|His voice faltered.
+fluctuate|колебаться|tebranmoq|Prices fluctuate.
+forge|подделывать; ковать|qalbakilashtirmoq|He forged a signature.
+foster|воспитывать; поощрять|tarbiyalamoq|Foster creativity.
+galvanise|побуждать|ruhlantirmoq|The speech galvanised people.
+hamper|мешать|xalaqit bermoq|Snow hampered the rescue.
+harness|использовать|foydalanmoq|Harness solar energy.
+impede|препятствовать|to'sqinlik qilmoq|Traffic impeded our progress.
+incur|навлекать|duchor bo'lmoq|Incur extra costs.
+induce|вызывать|sabab bo'lmoq|The drug induces sleep.
+infringe|нарушать|buzmoq|Infringe copyright.
+instigate|подстрекать; инициировать|qo'zg'atmoq|He instigated the fight.
+intervene|вмешиваться|aralashmoq|The teacher intervened.
+invoke|ссылаться; вызывать|murojaat qilmoq|He invoked the law.
+jeopardise|ставить под угрозу|xavf ostiga qo'ymoq|Don't jeopardise your career.
+linger|задерживаться|uzoq qolmoq|The smell lingered.
+manipulate|манипулировать|manipulyatsiya qilmoq|Don't manipulate people.
+mediate|быть посредником|vositachilik qilmoq|She mediated the dispute.
+mobilise|мобилизовать|safarbar qilmoq|Mobilise volunteers.
+necessitate|требовать|zarur qilmoq|The change necessitates training.
+nurture|взращивать|parvarish qilmoq|Nurture your talent.
+obscure|затемнять|yashirmoq|Clouds obscured the moon.
+offset|компенсировать|qoplamoq|Savings offset the costs.
+omit|пропускать|tushirib qoldirmoq|Don't omit any details.
+oust|вытеснять|siqib chiqarmoq|They ousted the leader.
+outweigh|перевешивать|ustun kelmoq|Benefits outweigh risks.
+perpetuate|увековечивать|davom ettirmoq|Don't perpetuate myths.
+plummet|резко падать|keskin tushmoq|Prices plummeted.
+ponder|размышлять|mulohaza qilmoq|She pondered the question.
+preclude|исключать|yo'l qo'ymaslik|This precludes any mistakes.
+procure|добывать|qo'lga kiritmoq|Procure supplies.
+prolong|продлевать|uzaytirmoq|Don't prolong the meeting.
+propagate|распространять|tarqatmoq|Propagate ideas.
+provoke|провоцировать|qo'zg'atmoq|Don't provoke him.
+rectify|исправлять|tuzatmoq|Rectify the error.
+refrain|воздерживаться|o'zini tiymoq|Please refrain from smoking.
+reiterate|повторять|takrorlamoq|Let me reiterate.
+relinquish|отказываться|voz kechmoq|He relinquished control.
+render|делать; оказывать|aylantirmoq; ko'rsatmoq|The news rendered him speechless.
+replicate|воспроизводить|takrorlamoq|Replicate the experiment.
+reconcile|примирять|yarashtirmoq|They reconciled after years.
+rejuvenate|омолаживать|yasharmoq|A holiday rejuvenates you.
+retaliate|мстить|qasos olmoq|Don't retaliate.
+safeguard|защищать|himoya qilmoq|Safeguard your data.
+scrutinise|тщательно изучать|sinchiklab o'rganmoq|Scrutinise every detail.
+shun|избегать|chetlanmoq|He shuns publicity.
+soar|взлетать|ko'tarilmoq|Prices soared.
+stipulate|оговаривать|shart qilib qo'ymoq|The contract stipulates the price.
+streamline|упрощать|soddalashtirmoq|Streamline the process.
+subdue|подавлять|bo'ysundirmoq|They subdued the fire.
+supplement|дополнять|to'ldirmoq|Supplement your diet with fruit.
+surpass|превосходить|ortda qoldirmoq|She surpassed expectations.
+thrive|процветать|gullab-yashnamoq|Plants thrive in sunlight.
+transcend|выходить за пределы|oshib o'tmoq|Music transcends borders.
+uphold|поддерживать|qo'llab-quvvatlamoq|Uphold the law.
+validate|подтверждать|tasdiqlamoq|Validate your ticket.
+verify|проверять|tekshirmoq|Verify your email.
+waive|отказываться от|voz kechmoq|They waived the fee.
+wield|обладать (властью)|qo'llamoq|He wields great power.
+#Существительные C1
+accountability|подотчётность|hisobdorlik|Government accountability.
+adversity|невзгоды|qiyinchilik|Courage in adversity.
+affluence|достаток|farovonlik|A sign of affluence.
+allegation|обвинение|ayblov|Serious allegations.
+allocation|распределение|taqsimot|Budget allocation.
+anomaly|аномалия|anomaliya|A strange anomaly.
+apathy|апатия|loqaydlik|Voter apathy.
+aspiration|стремление|intilish|Her aspirations are high.
+autonomy|автономия|muxtoriyat|Personal autonomy.
+backlash|негативная реакция|keskin norozilik|A public backlash.
+benchmark|эталон|mezon|A benchmark for quality.
+bureaucracy|бюрократия|byurokratiya|Too much bureaucracy.
+catalyst|катализатор|katalizator|A catalyst for change.
+cohesion|сплочённость|birdamlik|Social cohesion.
+compliance|соблюдение|rioya qilish|Compliance with rules.
+complexity|сложность|murakkablik|The complexity of the task.
+conformity|соответствие|muvofiqlik|Conformity to norms.
+connotation|коннотация|qo'shimcha ma'no|A negative connotation.
+conscience|совесть|vijdon|A clear conscience.
+constraint|ограничение|cheklov|Time constraints.
+contingency|непредвиденный случай|kutilmagan holat|A contingency plan.
+continuity|непрерывность|uzluksizlik|Continuity of care.
+correlation|корреляция|bog'liqlik|A strong correlation.
+credibility|доверие, правдоподобие|ishonchlilik|He lost credibility.
+deadlock|тупик|boshi berk|The talks reached a deadlock.
+deficit|дефицит|taqchillik|A budget deficit.
+degradation|деградация|tanazzul|Environmental degradation.
+dichotomy|противопоставление|ikkiga bo'linish|The dichotomy of good and evil.
+discourse|дискурс|nutq, munozara|Political discourse.
+disparity|неравенство|tafovut|Income disparity.
+dissent|несогласие|norozilik|Political dissent.
+endorsement|одобрение|qo'llab-quvvatlash|A celebrity endorsement.
+entity|сущность, организация|tashkilot|A legal entity.
+equilibrium|равновесие|muvozanat|Market equilibrium.
+excerpt|отрывок|parcha|An excerpt from the novel.
+exemption|освобождение|ozod qilish|Tax exemption.
+fallacy|заблуждение|noto'g'ri fikr|A common fallacy.
+fluctuation|колебание|tebranish|Price fluctuations.
+foresight|предвидение|uzoqni ko'ra bilish|He had the foresight to save.
+heir|наследник|merosxo'r|The heir to the throne.
+hindrance|помеха|to'siq|More of a hindrance than a help.
+hypocrisy|лицемерие|ikkiyuzlamachilik|That's pure hypocrisy.
+impetus|импульс|turtki|A new impetus.
+inception|начало|boshlanish|Since its inception.
+inclination|склонность|moyillik|I have no inclination to go.
+inequality|неравенство|tengsizlik|Social inequality.
+influx|приток|oqim|An influx of tourists.
+ingenuity|изобретательность|zukkolik|Human ingenuity.
+insistence|настойчивость|qat'iyat|At his insistence.
+irony|ирония|kinoya|The irony is clear.
+jurisdiction|юрисдикция|yurisdiksiya|Outside our jurisdiction.
+leverage|рычаг влияния|ta'sir vositasi|Use your leverage.
+longevity|долголетие|uzoq umr|The secret of longevity.
+magnitude|величина|ko'lam|The magnitude of the problem.
+mandate|мандат|vakolat|A clear mandate.
+moderation|умеренность|me'yor|Eat in moderation.
+nuance|нюанс|nozik farq|Every nuance matters.
+obsession|одержимость|berilib ketish|An obsession with fitness.
+paradigm|парадигма|paradigma|A paradigm shift.
+paradox|парадокс|paradoks|It's a paradox.
+persistence|настойчивость|qat'iyat|Persistence pays off.
+plight|тяжёлое положение|og'ir ahvol|The plight of refugees.
+precedent|прецедент|pretsedent|It sets a precedent.
+predicament|затруднительное положение|noqulay vaziyat|We're in a predicament.
+premise (idea)|предпосылка|asosiy g'oya|The premise of the film.
+prestige|престиж|obro'|Social prestige.
+proficiency|мастерство|mahorat|English proficiency.
+prognosis|прогноз|prognoz|A good prognosis.
+proponent|сторонник|tarafdor|A proponent of reform.
+prosperity|процветание|farovonlik|Peace and prosperity.
+provenance|происхождение|kelib chiqishi|The provenance of the carpet.
+rationale|обоснование|asos|The rationale behind it.
+reciprocity|взаимность|o'zaro|Reciprocity in trade.
+repercussion|последствие|oqibat|Serious repercussions.
+resilience|устойчивость|chidamlilik|Resilience in hard times.
+retention|удержание|saqlab qolish|Staff retention.
+rhetoric|риторика|ritorika|Empty rhetoric.
+scarcity|дефицит|tanqislik|Water scarcity.
+scrutiny|тщательная проверка|sinchkovlik bilan tekshirish|Under public scrutiny.
+segregation|сегрегация|ajratish|Racial segregation.
+sentiment|настроение, чувство|kayfiyat|Public sentiment.
+solidarity|солидарность|birdamlik|Show solidarity.
+spectrum|спектр|spektr|A wide spectrum of views.
+stagnation|застой|turg'unlik|Economic stagnation.
+stigma|клеймо|tamg'a|The stigma of illness.
+subsidiary|дочерняя компания|sho''ba korxona|A foreign subsidiary.
+synergy|синергия|sinergiya|Team synergy.
+threshold|порог|ostona|The pain threshold.
+trajectory|траектория|traektoriya|Career trajectory.
+turmoil|смятение|notinchlik|Political turmoil.
+upheaval|потрясение|to'ntarish|Social upheaval.
+vigilance|бдительность|hushyorlik|Constant vigilance.
+viability|жизнеспособность|hayotiylik|The viability of the plan.
+volatility|изменчивость|beqarorlik|Market volatility.
+whim|прихоть|injiqlik|On a whim.
+#Прилагательные C1
+adept|искусный|mohir|She's adept at languages.
+adjacent|соседний|qo'shni|The adjacent room.
+aesthetic|эстетический|estetik|Aesthetic value.
+affluent|состоятельный|badavlat|An affluent area.
+amiable|дружелюбный|xushmuomala|An amiable man.
+analogous|аналогичный|o'xshash|An analogous case.
+arduous|трудный|mashaqqatli|An arduous journey.
+astute|проницательный|zukko|An astute businessman.
+benevolent|доброжелательный|xayrixoh|A benevolent leader.
+blatant|вопиющий|ochiqdan-ochiq|A blatant lie.
+candid|откровенный|samimiy|A candid interview.
+cognitive|когнитивный|kognitiv|Cognitive skills.
+coherent (clear)|связный|aniq, izchil|A clear and coherent argument.
+commensurate|соразмерный|mos|Salary commensurate with experience.
+complacent|самодовольный|o'zidan mamnun|Don't get complacent.
+concise|краткий|lo'nda|A concise summary.
+conducive|благоприятствующий|qulay|Conducive to learning.
+contentious|спорный|bahsli|A contentious issue.
+credible|правдоподобный|ishonchli|A credible witness.
+cumbersome|громоздкий|noqulay|A cumbersome process.
+daunting|пугающий|qo'rqinchli|A daunting task.
+detrimental|вредный|zararli|Detrimental to health.
+diligent|прилежный|tirishqoq|A diligent student.
+discreet|сдержанный, тактичный|ehtiyotkor|Be discreet.
+dubious|сомнительный|shubhali|A dubious offer.
+eloquent|красноречивый|notiq|An eloquent speaker.
+elusive|неуловимый|tutqich bermas|An elusive answer.
+empirical|эмпирический|empirik|Empirical evidence.
+erroneous|ошибочный|xato|An erroneous belief.
+exemplary|образцовый|namunali|Exemplary behaviour.
+exquisite|изысканный|nafis|Exquisite taste.
+fervent|пылкий|qizg'in|A fervent supporter.
+frugal|бережливый|tejamkor|A frugal lifestyle.
+futile|тщетный|befoyda|A futile attempt.
+gratuitous|беспричинный|asossiz|Gratuitous violence.
+holistic|целостный|yaxlit|A holistic approach.
+imminent|неминуемый|yaqinlashib kelayotgan|An imminent danger.
+impeccable|безупречный|benuqson|Impeccable manners.
+imperative|крайне важный|o'ta muhim|It's imperative to act now.
+implicit|подразумеваемый|yashirin|Implicit trust.
+incessant|непрестанный|tinimsiz|Incessant rain.
+indifferent|безразличный|befarq|Indifferent to criticism.
+indigenous|коренной|mahalliy|Indigenous people.
+insatiable|ненасытный|to'ymas|An insatiable appetite.
+intricate|замысловатый|murakkab|An intricate pattern.
+intrinsic|присущий|ichki|Intrinsic value.
+lenient|снисходительный|yumshoq|A lenient teacher.
+lucrative|прибыльный|daromadli|A lucrative business.
+mundane|обыденный|zerikarli, oddiy|Mundane tasks.
+negligent|небрежный|beparvo|A negligent driver.
+nostalgic|ностальгический|sog'inchli|I feel nostalgic.
+obsolete|устаревший|eskirgan|Obsolete technology.
+ominous|зловещий|dahshatli|Ominous clouds.
+paramount|первостепенный|eng muhim|Safety is paramount.
+pervasive|всепроникающий|keng tarqalgan|A pervasive smell.
+pragmatic|прагматичный|amaliy|A pragmatic approach.
+precarious|шаткий|xavfli|A precarious situation.
+profound|глубокий|chuqur|A profound effect.
+prolific|плодовитый|sermahsul|A prolific writer.
+prudent|благоразумный|ehtiyotkor|A prudent decision.
+reciprocal|взаимный|o'zaro|A reciprocal agreement.
+resilient|стойкий|chidamli|Children are resilient.
+rigorous|строгий|qat'iy|Rigorous testing.
+salient|главный, выдающийся|asosiy|The salient points.
+scrupulous|добросовестный|vijdonli|Scrupulous honesty.
+spurious|ложный|soxta|A spurious claim.
+stringent|строгий|qat'iy|Stringent rules.
+superfluous|излишний|ortiqcha|Superfluous details.
+tangible|осязаемый|aniq|Tangible results.
+tenacious|упорный|qat'iyatli|A tenacious player.
+tentative|предварительный|taxminiy|A tentative plan.
+trivial|тривиальный|arzimas|A trivial problem.
+ubiquitous|повсеместный|hamma joyda|Smartphones are ubiquitous.
+unanimous|единогласный|bir ovozdan|A unanimous decision.
+viable|жизнеспособный|hayotiy|A viable option.
+volatile|изменчивый|beqaror|A volatile market.
+#Выражения C1
+as a matter of fact|по сути дела|aslida|As a matter of fact, I was there.
+by no means|ни в коем случае|hech qachon|It's by no means easy.
+in the long run|в долгосрочной перспективе|uzoq muddatda|It's cheaper in the long run.
+on the whole|в целом|umuman|On the whole, it went well.
+in light of|в свете|...ni hisobga olgan holda|In light of the news, we waited.
+with regard to|что касается|...ga kelsak|With regard to your question, yes.
+for the sake of|ради|...uchun|For the sake of peace.
+to a large extent|в значительной степени|katta darajada|To a large extent, you're right.
+in hindsight|оглядываясь назад|orqaga nazar tashlasak|In hindsight, it was a mistake.
+at the expense of|за счёт|...hisobiga|At the expense of quality.
+inasmuch as|поскольку|chunki|Inasmuch as it's legal, it's fine.
+thereby|тем самым|shu bilan|He paid early, thereby saving money.
+hitherto|до сих пор|hozirgacha|A hitherto unknown fact.
+henceforth|отныне|bundan buyon|Henceforth, meetings are online.

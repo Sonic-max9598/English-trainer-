@@ -1,0 +1,726 @@
+family|My family is big and loud.
+mother|My mother makes the best soup.
+father|His father works at the airport.
+parents|My parents live in Bukhara.
+son|Their son is five years old.
+daughter|She has one daughter.
+brother|My brother is older than me.
+sister|My little sister loves drawing.
+grandmother|Grandmother tells us old stories.
+grandfather|My grandfather grows apricots.
+uncle|My uncle drives a taxi.
+aunt|Our aunt came from Namangan.
+husband|Her husband is a builder.
+wife|His wife is a nurse.
+child|Every child needs a friend.
+baby|The baby is sleeping now.
+friend|Akmal is my best friend.
+neighbour|Our neighbour has three dogs.
+guest|We have a guest for dinner.
+people|Many people came to the party.
+man|A tall man opened the door.
+woman|The woman in red is my teacher.
+boy|The boy kicked the ball.
+girl|That girl speaks three languages.
+relative|All our relatives came to the wedding.
+wedding|The wedding lasted two days.
+age|What is your age?
+name|What is your name?
+house|They built a new house.
+flat|We rent a small flat.
+room|My room is on the second floor.
+kitchen|Mom is in the kitchen.
+bedroom|The bedroom has a big window.
+bathroom|The bathroom is next to the kitchen.
+door|Please close the door.
+window|Open the window, it's hot.
+wall|There is a clock on the wall.
+floor|The keys fell on the floor.
+roof|A cat is sitting on the roof.
+table|Put the cups on the table.
+chair|This chair is very old.
+bed|I go to bed at eleven.
+sofa|Grandpa is sleeping on the sofa.
+carpet|We bought a red carpet.
+key|I can't find my key.
+light|Turn off the light, please.
+fridge|The milk is in the fridge.
+cupboard|The plates are in the cupboard.
+mirror|She looked in the mirror.
+yard|The kids play in the yard.
+garden|We grow tomatoes in the garden.
+stairs|The lift is broken, take the stairs.
+rent|The rent is due on Monday.
+clean|Our kitchen is always clean.
+food|The food here is great.
+bread|Buy some bread on the way home.
+water|Drink more water.
+tea|Would you like some green tea?
+coffee|I need a strong coffee.
+milk|The baby drinks warm milk.
+meat|I don't eat much meat.
+chicken|We had chicken for lunch.
+fish|He caught a big fish.
+rice|Plov is made with rice.
+egg|I had an egg for breakfast.
+cheese|This cheese is too salty.
+butter|Put some butter on the bread.
+oil|Fry the onion in oil.
+salt|Pass me the salt, please.
+sugar|No sugar in my tea, please.
+fruit|Fruit is cheap in summer.
+vegetables|Eat more vegetables.
+apple|An apple a day is good for you.
+potato|Peel the potatoes for the soup.
+onion|Cutting onions makes me cry.
+carrot|Plov needs a lot of carrots.
+tomato|These tomatoes are from our garden.
+soup|The soup is still hot.
+breakfast|What's for breakfast?
+lunch|Let's have lunch together.
+dinner|Dinner is at seven.
+hungry|I'm hungry, let's eat.
+delicious|Your cake is delicious!
+sweet|These grapes are very sweet.
+spicy|I can't eat spicy food.
+cook|My dad loves to cook on Sundays.
+time|What time is it?
+day|Have a nice day!
+night|It was a cold night.
+morning|I run every morning.
+evening|See you this evening.
+week|I work five days a week.
+month|We moved here last month.
+year|This year went so fast.
+today|Today is my day off.
+tomorrow|See you tomorrow!
+yesterday|I saw Malika yesterday.
+hour|The trip takes an hour.
+minute|Wait a minute, please.
+now|I'm busy now.
+soon|The bus will come soon.
+late|Sorry, I'm late.
+early|We left early in the morning.
+always|She is always on time.
+often|I often walk to work.
+sometimes|Sometimes I cook dinner.
+never|He never eats breakfast.
+already|I've already paid.
+still|Are you still at work?
+again|Say it again, please.
+weekend|What are you doing this weekend?
+holiday|We need a holiday.
+birthday|Happy birthday, Malika!
+season|Autumn is my favourite season.
+head|My head hurts.
+face|Wash your face.
+eye|She has green eyes.
+ear|He whispered in my ear.
+nose|My nose is cold.
+mouth|Don't talk with your mouth full.
+tooth|I have a bad tooth.
+hair|Her hair is very long.
+hand|Raise your hand.
+arm|He broke his arm.
+leg|My legs are tired.
+back|My back hurts after work.
+heart|Her heart was beating fast.
+body|Sport is good for your body.
+doctor|You should see a doctor.
+medicine|Take this medicine twice a day.
+pain|I have a pain in my knee.
+ill|He's ill and can't come.
+healthy|Eat well and stay healthy.
+tired|I'm too tired to cook.
+sleep|I need eight hours of sleep.
+rest|Let's stop and rest.
+cold|I've got a cold.
+fever|The child has a high fever.
+weather|The weather is lovely today.
+sun|The sun is very strong.
+rain|I love the smell of rain.
+snow|The kids played in the snow.
+wind|The wind is cold today.
+cloud|There isn't a cloud in the sky.
+sky|The sky is so blue.
+tree|There's an old tree near our house.
+flower|He gave her a flower.
+grass|Don't walk on the grass.
+river|We swam in the river.
+lake|The lake is frozen.
+sea|I've never seen the sea.
+mountain|We climbed the mountain.
+forest|They got lost in the forest.
+desert|The desert is hot by day and cold by night.
+animal|What's your favourite animal?
+dog|Our dog barks at strangers.
+cat|The cat is sleeping in the sun.
+horse|He rides a horse.
+bird|A bird is singing outside.
+summer|Summer in Tashkent is very hot.
+winter|Winter is short here.
+spring|Trees bloom in spring.
+autumn|In autumn the leaves turn yellow.
+air|Let's get some fresh air.
+fire|They sat around the fire.
+earth|The Earth goes around the Sun.
+city|Tashkent is a big city.
+street|I live on this street.
+road|The road to the village is bad.
+shop|The shop closes at nine.
+market|We buy fruit at the market.
+bank|The bank is on the corner.
+hospital|She works at a hospital.
+pharmacy|Is there a pharmacy nearby?
+school|My son goes to school.
+university|She studies at university.
+park|Let's go for a walk in the park.
+bridge|Cross the bridge and turn left.
+bus|I take the bus to work.
+car|Whose car is this?
+taxi|Let's take a taxi.
+train|The train leaves at six.
+plane|The plane landed on time.
+airport|I'll meet you at the airport.
+station|The station is far from here.
+ticket|I bought two tickets.
+traffic|The traffic is terrible today.
+driver|The driver was very polite.
+corner|Wait for me at the corner.
+left|Turn left at the bank.
+right|The shop is on the right.
+straight|Go straight on.
+near|We live near the park.
+far|Is it far from here?
+map|Look at the map.
+village|My grandparents live in a village.
+work|I start work at nine.
+job|She got a new job.
+office|Our office is on the fifth floor.
+boss|My boss is very strict.
+colleague|A colleague helped me.
+salary|My salary is paid monthly.
+money|I don't have much money.
+price|The price is too high.
+cheap|This phone is cheap.
+expensive|Taxis are expensive here.
+pay|Can I pay by card?
+buy|I want to buy new shoes.
+sell|They sell fresh bread.
+business|He runs a small business.
+company|She works for a big company.
+meeting|The meeting starts at ten.
+task|This task is easy.
+problem|No problem!
+lesson|The lesson lasts an hour.
+teacher|Our teacher is very kind.
+student|He is a good student.
+exam|I passed the exam!
+homework|Did you do your homework?
+book|This book is very interesting.
+question|Can I ask a question?
+answer|I don't know the answer.
+mistake|Everyone makes mistakes.
+learn|I learn ten words a day.
+understand|I don't understand.
+explain|Can you explain this rule?
+go|Let's go home.
+come|Come here, please.
+see|I can't see without my glasses.
+look|Look at this photo!
+watch|We watched a film last night.
+hear|Can you hear me?
+listen|Listen to me carefully.
+speak|Do you speak English?
+say|What did she say?
+tell|Tell me about your day.
+ask|Ask the teacher.
+know|I know the answer.
+think|I think you're right.
+want|I want a cup of tea.
+need|I need your help.
+like|I like this song.
+love|I love my family.
+help|Can you help me?
+give|Give me your hand.
+take|Take an umbrella.
+bring|Bring your passport.
+make|Let's make a cake.
+do|What do you do?
+find|I can't find my phone.
+lose|Don't lose your ticket.
+open|Open your books.
+close|Close your eyes.
+start|The film starts at eight.
+finish|I'll finish this tomorrow.
+wait|Wait for me!
+call|Call me later.
+send|Send me the photo.
+write|Write your name here.
+read|I read before bed.
+eat|We eat at seven.
+drink|Drink some water.
+sit|Sit down, please.
+stand|Stand in line, please.
+walk|I walk to work.
+run|Run, the bus is coming!
+live|Where do you live?
+stay|Stay with us tonight.
+leave|The train leaves soon.
+arrive|We arrived late.
+return|I'll return the book tomorrow.
+forget|Don't forget your keys.
+remember|I remember this place.
+try|Try this cake.
+use|Can I use your phone?
+change|I want to change my life.
+choose|Choose one colour.
+win|Our team won!
+travel|I love to travel.
+meet|Nice to meet you.
+play|The kids play outside.
+wash|Wash your hands.
+carry|Can you carry this bag?
+show|Show me your photos.
+believe|I believe you.
+hope|I hope you're well.
+feel|I feel great today.
+big|They have a big house.
+small|It's a small town.
+long|It was a long day.
+short|The film is short.
+tall|He's very tall.
+high|The mountains are high.
+new|I bought a new car.
+old|This building is very old.
+young|She's too young to drive.
+good|Good morning!
+bad|The weather is bad today.
+beautiful|What a beautiful view!
+easy|The test was easy.
+difficult|English grammar is difficult.
+hot|It's hot today.
+warm|Wear a warm coat.
+fast|He drives too fast.
+slow|The internet is slow.
+strong|He's strong enough to lift it.
+weak|I feel weak after the flu.
+rich|They are very rich.
+poor|The family was poor.
+full|The bus is full.
+empty|The fridge is empty.
+heavy|This box is heavy.
+dark|It gets dark early in winter.
+quiet|The library is quiet.
+loud|The music is too loud.
+dirty|Your shoes are dirty.
+busy|I'm busy right now.
+free|Are you free tonight?
+important|This is very important.
+interesting|What an interesting idea!
+boring|The film was boring.
+ready|Are you ready?
+different|We're very different.
+same|We were born on the same day.
+true|Is it true?
+favourite|Blue is my favourite colour.
+happy|I'm happy to see you.
+sad|Why are you sad?
+angry|Don't be angry with me.
+afraid|She's afraid of dogs.
+surprised|I was surprised to see him.
+worried|Mom is worried about you.
+calm|Stay calm.
+kind|Thank you, you're very kind.
+friendly|The people here are friendly.
+polite|Be polite to everyone.
+lazy|I feel lazy on Sundays.
+honest|Be honest with me.
+clever|She's a clever girl.
+funny|He told a funny story.
+shy|Don't be shy.
+proud|I'm proud of you.
+bored|I'm bored, let's go out.
+excited|The kids are excited about the trip.
+lonely|He feels lonely in the new city.
+smile|She has a lovely smile.
+clothes|I need new clothes.
+shirt|He's wearing a white shirt.
+dress|She bought a red dress.
+trousers|These trousers are too long.
+shoes|Take off your shoes.
+coat|Put on your coat.
+jacket|This jacket is warm.
+hat|Wear a hat in the sun.
+bag|My bag is heavy.
+size|What size do you need?
+colour|What colour is your car?
+wear|I wear glasses.
+discount|Is there a discount?
+card|Can I pay by card?
+cash|I only have cash.
+receipt|Keep the receipt.
+customer|The customer is always right.
+gift|This is a gift for you.
+phone|My phone is dead.
+message|I got your message.
+email|Send me an email.
+internet|The internet is down.
+computer|My computer is slow.
+photo|Let's take a photo.
+video|Watch this video!
+music|I listen to music on the bus.
+film|Let's watch a film.
+news|Have you heard the news?
+word|What does this word mean?
+language|English is a global language.
+letter|I got a letter from my friend.
+number|What's your phone number?
+address|What's your address?
+idea|That's a great idea!
+story|Tell me a story.
+voice|She has a beautiful voice.
+password|I forgot my password.
+screen|The screen is cracked.
+battery|My battery is low.
+because|I'm late because of the traffic.
+but|It's cheap but good.
+if|If it rains, we'll stay home.
+when|Call me when you arrive.
+where|Where are you?
+why|Why are you laughing?
+how|How are you?
+what|What is this?
+who|Who is that man?
+which|Which one do you want?
+every|I call her every day.
+all|All my friends came.
+some|I need some help.
+many|Many people live here.
+much|How much is it?
+few|Only a few people came.
+enough|We have enough time.
+only|I have only five minutes.
+also|She also speaks Russian.
+very|It's very cold.
+together|Let's do it together.
+alone|I live alone.
+maybe|Maybe tomorrow.
+probably|It will probably rain.
+of course|Of course I'll help you.
+thing|What's that thing?
+place|This is a nice place.
+way|Is this the way to the station?
+life|Life is short.
+world|She wants to travel the world.
+country|Uzbekistan is a beautiful country.
+part|This is the best part of the film.
+example|Give me an example.
+reason|What's the reason?
+chance|Give me one more chance.
+choice|You have no choice.
+plan|What's the plan for today?
+borrow|Can I borrow your pen?
+lend|Can you lend me some money?
+decide|I can't decide what to wear.
+agree|I agree with you.
+allow|Smoking is not allowed here.
+invite|They invited us to the wedding.
+prepare|Prepare for the exam.
+continue|Please continue.
+describe|Describe your best friend.
+compare|Don't compare yourself to others.
+collect|He collects old coins.
+deliver|They deliver pizza until midnight.
+repair|He can repair anything.
+save|I'm saving for a car.
+spend|Don't spend all your money.
+earn|She earns a good salary.
+fail|I failed my driving test.
+pass|Did you pass the exam?
+miss|I missed the bus.
+promise|I promise to call you.
+refuse|He refused to help.
+suggest|I suggest we leave early.
+recognize|I didn't recognize you!
+realize|I didn't realize it was so late.
+worry|Don't worry, be happy.
+hurry|Hurry up, we're late!
+order|Let's order a pizza.
+reserve|I'd like to reserve a table.
+check|Check your answers.
+fix|Can you fix my bike?
+grow|Children grow fast.
+break|Don't break the glass.
+fall|Be careful, don't fall.
+hold|Hold my hand.
+hide|The cat is hiding under the bed.
+advice|Can you give me some advice?
+experience|She has a lot of experience.
+opinion|In my opinion, it's too expensive.
+information|I need more information.
+knowledge|Knowledge is power.
+skill|Cooking is a useful skill.
+goal|My goal is to speak English well.
+result|The results were good.
+success|Hard work leads to success.
+habit|Reading is a good habit.
+health|Health is more important than money.
+journey|The journey took ten hours.
+trip|Have a nice trip!
+luggage|Don't forget your luggage.
+passport|Show me your passport, please.
+neighbourhood|Our neighbourhood is quiet.
+environment|We must protect the environment.
+pollution|Air pollution is a big problem.
+noise|What's that noise?
+accident|There was an accident on the road.
+danger|The sign means danger.
+rule|Follow the rules.
+law|Everyone must obey the law.
+government|The government raised taxes.
+society|Society is changing fast.
+culture|I love Uzbek culture.
+tradition|Navruz is an old tradition.
+celebration|The celebration lasted all night.
+event|The event starts at six.
+competition|She won the competition.
+comfortable|This sofa is very comfortable.
+dangerous|Swimming here is dangerous.
+safe|This area is safe.
+famous|He's a famous singer.
+popular|This café is very popular.
+modern|They live in a modern building.
+traditional|We wore traditional clothes.
+necessary|Is it really necessary?
+possible|Is it possible to change the date?
+impossible|Nothing is impossible.
+useful|This app is very useful.
+careful|Be careful on the road.
+serious|Are you serious?
+strange|That's strange.
+terrible|The food was terrible.
+wonderful|We had a wonderful time.
+crowded|The metro is crowded in the morning.
+fresh|The bread is still fresh.
+upset|She's upset about the news.
+nervous|I'm nervous before exams.
+confident|Be confident at the interview.
+however|It was cold. However, we went out.
+although|Although it was late, he called.
+so|It was raining, so we stayed home.
+then|First wash, then cut.
+finally|Finally, the bus came.
+suddenly|Suddenly the lights went out.
+usually|I usually get up at seven.
+almost|It's almost ten.
+quite|The film was quite good.
+especially|I love fruit, especially melons.
+instead|Let's walk instead.
+unless|Don't call unless it's urgent.
+while|He called while I was cooking.
+during|Don't talk during the film.
+since|I've lived here since 2019.
+ago|I met him two years ago.
+yet|Have you finished yet?
+recently|I've been busy recently.
+anyway|It's late, but let's go anyway.
+achieve|You can achieve anything.
+avoid|Avoid sugar.
+improve|I want to improve my English.
+increase|Prices increased again.
+reduce|Reduce your speed.
+develop|The city is developing fast.
+provide|The hotel provides breakfast.
+require|This job requires experience.
+include|The price includes tax.
+involve|The job involves travel.
+manage|She manages a big team.
+support|My family supports me.
+consider|Consider all the options.
+expect|I didn't expect you so early.
+prefer|I prefer tea to coffee.
+mention|He mentioned your name.
+discuss|Let's discuss it tomorrow.
+argue|They often argue about money.
+apologize|I apologize for the delay.
+complain|He always complains about the food.
+respect|Respect your elders.
+trust|I trust you.
+afford|We can't afford a new car.
+apply|I applied for the job.
+attend|Did you attend the meeting?
+belong|This bag belongs to me.
+deserve|You deserve a rest.
+encourage|My teacher encouraged me.
+explore|Let's explore the old town.
+advantage|What are the advantages of this plan?
+disadvantage|The only disadvantage is the price.
+benefit|Exercise has many benefits.
+effect|The medicine had a quick effect.
+solution|We need a solution.
+decision|It was a hard decision.
+attitude|She has a positive attitude.
+behaviour|His behaviour was strange.
+relationship|They have a good relationship.
+responsibility|It's your responsibility.
+ability|She has the ability to lead.
+opportunity|This is a great opportunity.
+achievement|Graduating was a big achievement.
+career|He wants a career in IT.
+employee|The company has fifty employees.
+interview|I have a job interview tomorrow.
+income|Their income is low.
+loan|We took a loan for the house.
+debt|He paid off his debt.
+budget|We're on a tight budget.
+research|She does research on climate.
+evidence|There's no evidence.
+survey|The survey shows interesting results.
+generation|The younger generation uses phones more.
+crime|Crime is falling in the city.
+available|Is this room available?
+reliable|He's a reliable worker.
+responsible|Who is responsible for this?
+efficient|This heater is very efficient.
+obvious|The answer is obvious.
+similar|Our ideas are similar.
+specific|Can you be more specific?
+various|We tried various methods.
+suitable|This film is not suitable for children.
+valuable|This ring is valuable.
+harmful|Smoking is harmful.
+disappointed|I was disappointed with the result.
+embarrassed|I felt embarrassed.
+grateful|I'm grateful for your help.
+jealous|He's jealous of his brother.
+generous|She's very generous.
+patient|Be patient with children.
+rude|Don't be rude.
+selfish|That was selfish.
+ambitious|She's young and ambitious.
+therefore|It's late; therefore, we should go.
+moreover|It's cheap. Moreover, it's good.
+otherwise|Hurry, otherwise we'll be late.
+whereas|He likes tea, whereas I like coffee.
+despite|Despite the rain, we went out.
+in addition|In addition, we offer free delivery.
+for instance|Some fruits, for instance melons, are cheap now.
+as a result|He trained hard. As a result, he won.
+on the other hand|It's cheap. On the other hand, it's slow.
+eventually|Eventually, he agreed.
+actually|Actually, I'm a teacher.
+apparently|Apparently, the shop is closed.
+acknowledge|He acknowledged his mistake.
+anticipate|We anticipate some delays.
+assess|The teacher will assess your work.
+assume|I assume you're hungry.
+claim|He claims he saw a ghost.
+contribute|Everyone contributed to the gift.
+convince|She convinced me to stay.
+demonstrate|Let me demonstrate how it works.
+determine|Tests will determine the cause.
+emphasize|He emphasized the main points.
+ensure|Please ensure the door is locked.
+establish|The school was established in 1990.
+estimate|Can you estimate the cost?
+identify|Can you identify the problem?
+indicate|The signs indicate the exit.
+maintain|It's hard to maintain an old car.
+obtain|You need to obtain a visa.
+overcome|She overcame her fear.
+persuade|I persuaded him to come.
+postpone|They postponed the meeting.
+predict|Nobody can predict the future.
+pursue|She wants to pursue a career in law.
+reveal|He revealed the secret.
+struggle|Many families struggle to pay rent.
+approach|We need a new approach.
+awareness|We need more awareness about health.
+challenge|Learning a language is a challenge.
+circumstances|Under these circumstances, we'll wait.
+consequence|Every action has consequences.
+contribution|Thank you for your contribution.
+issue|This is a serious issue.
+outcome|The outcome was positive.
+priority|Safety is our priority.
+requirement|English is a requirement for this job.
+resource|Water is a valuable resource.
+strategy|We need a better strategy.
+tendency|He has a tendency to be late.
+threat|Pollution is a threat to health.
+trend|This is a new trend.
+feature|The phone has a new feature.
+aspect|Consider every aspect of the problem.
+concern|Safety is our main concern.
+emergency|Call 103 in an emergency.
+accurate|The forecast was accurate.
+adequate|The salary is adequate.
+appropriate|Wear appropriate clothes.
+competitive|The market is very competitive.
+complex|It's a complex problem.
+considerable|It costs a considerable amount.
+essential|Water is essential for life.
+flexible|My working hours are flexible.
+inevitable|Change is inevitable.
+reluctant|He was reluctant to answer.
+significant|There was a significant change.
+sufficient|Is this sufficient?
+thorough|The doctor did a thorough check.
+vague|His answer was vague.
+vulnerable|Old people are vulnerable to flu.
+nevertheless|It was hard; nevertheless, we finished.
+furthermore|Furthermore, it saves time.
+consequently|He missed the bus and consequently was late.
+regardless|We'll go regardless of the weather.
+thus|Thus, we decided to wait.
+hence|It's handmade, hence the price.
+merely|It was merely a joke.
+advocate|She advocates for children's rights.
+alleviate|This will alleviate the pain.
+comprise|The team comprises five people.
+compile|We compiled a list of questions.
+deteriorate|His health began to deteriorate.
+diminish|The pain diminished over time.
+endorse|The famous player endorsed the brand.
+exacerbate|Stress can exacerbate the illness.
+facilitate|The new road will facilitate trade.
+hinder|Bad weather hindered the work.
+implement|They implemented the new system.
+mitigate|Trees mitigate the heat.
+undermine|Lies undermine trust.
+scrutinize|The officer scrutinized my passport.
+underestimate|Never underestimate your rivals.
+ambiguity|There's some ambiguity in the rules.
+bias|The article shows clear bias.
+coherence|The essay lacks coherence.
+discrepancy|There's a discrepancy in the numbers.
+dilemma|I'm facing a dilemma.
+hierarchy|The company has a strict hierarchy.
+implication|Think about the implications.
+incentive|Bonuses are a good incentive.
+integrity|He is a man of integrity.
+legislation|New legislation protects workers.
+perception|Our perception of time changes with age.
+prerequisite|Basic maths is a prerequisite for this course.
+scope|That's beyond the scope of this project.
+sustainability|The city focuses on sustainability.
+arbitrary|The rules seem arbitrary.
+coherent|Give a coherent answer.
+comprehensive|We need a comprehensive plan.
+compelling|She made a compelling argument.
+controversial|It's a controversial topic.
+diverse|Tashkent is a diverse city.
+explicit|The instructions were explicit.
+feasible|Is the plan feasible?
+genuine|Is this leather genuine?
+inherent|Every job has inherent risks.
+meticulous|She keeps meticulous notes.
+plausible|His story sounds plausible.
+prevalent|This illness is prevalent in winter.
+redundant|Delete the redundant words.
+substantial|They made a substantial profit.
+notwithstanding|Notwithstanding the cost, we'll buy it.
+albeit|He agreed, albeit slowly.
+by and large|By and large, the trip was good.
+to some extent|I agree to some extent.

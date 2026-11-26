@@ -315,10 +315,12 @@ const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wid
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const WD=[],LEVELS=[];
-{let lv='',th='';WORDS_RAW.split('\n').forEach(l=>{l=l.trim();if(!l)return;
-  if(l[0]==='@'){const[n,c]=l.slice(1).split('|');lv=n;LEVELS.push({n,c,th:[]});return}
-  if(l[0]==='#'){th=l.slice(1);LEVELS[LEVELS.length-1].th.push(th);return}
-  const[en,ru,uz]=l.split('|');WD.push({k:en,en,ru,uz,lv,th})})}
+{let lv='',th='';const LI={};WORDS_RAW.split('\n').forEach(l=>{l=l.trim();if(!l)return;
+  if(l[0]==='@'){const[n,c]=l.slice(1).split('|');lv=n;if(!(n in LI)){LI[n]=LEVELS.length;LEVELS.push({n,c,th:[]})}return}
+  if(l[0]==='#'){th=l.slice(1);const L=LEVELS[LI[lv]];if(!L.th.includes(th))L.th.push(th);return}
+  const[en,ru,uz,ex]=l.split('|');WD.push({k:en,en,ru,uz,ex,lv,th,o:WD.length})});
+  /* learning order: by level (A1 → C1), then file order */
+  WD.sort((a,b)=>LI[a.lv]-LI[b.lv]||a.o-b.o)}
 const LVC=n=>{const L=LEVELS.find(x=>x.n===n);return L?L.c:''};
 const OWNTH='Мои слова';
 let OWN=[];try{const o=JSON.parse(localStorage.getItem('tenses3own')||'[]');if(Array.isArray(o))OWN=o.filter(x=>x&&typeof x.en==='string'&&typeof x.tr==='string')}catch(e){}
@@ -328,66 +330,7 @@ let WS={W:{},wc:0,ok:0,all:0};
 try{const x=JSON.parse(localStorage.getItem('tenses3words')||'null');if(x&&x.W&&typeof x.W==='object')WS=Object.assign(WS,x)}catch(e){}
 const saveW=()=>{try{localStorage.setItem('tenses3words',JSON.stringify(WS))}catch(e){}};
 const IV=[0,3,7,15,35,80,200];
-let wTheme=null,wLevel=null,wCur=null,wDone=false,wLast=null,wAuto=null,wSes={ok:0,all:0};
-const lvlOf=w=>{const s=WS.W[w.k];return s?s.b:0};
-const dots=b=>`<span class="lvl" title="Знание слова">${[1,2,3,4,5].map(i=>`<i class="${i<=b?'on':''}"></i>`).join('')}</span>`;
-function wPick(){
-  const all=allWords();const pool=all.filter(w=>(!wLevel||w.lv===wLevel)&&(!wTheme||w.th===wTheme));
-  if(!pool.length)return null;
-  const alt=pool.length>1?pool.filter(w=>w.k!==wLast):pool;
-  const due=alt.filter(w=>{const s=WS.W[w.k];return s&&s.n<=WS.wc}).sort((a,b)=>WS.W[a.k].n-WS.W[b.k].n);
-  if(due.length)return pick(due.slice(0,3));
-  const nw=alt.filter(w=>!WS.W[w.k]);
-  if(nw.length)return nw[0];
-  return alt.slice().sort((a,b)=>WS.W[a.k].n-WS.W[b.k].n)[0];
-}
-function wStats(){
-  $('wOk').textContent=wSes.ok;$('wAll').textContent=wSes.all;
-  $('wLearned').textContent=allWords().filter(w=>lvlOf(w)>=4).length;
-}
-function wNext(){
-  clearTimeout(wAuto);stopSay();
-  $('wFlt').hidden=!wLevel;if(wLevel)$('wFltT').textContent=(wLevel===OWNTH?OWNTH:wLevel+' ('+LVC(wLevel)+')')+(wTheme&&wTheme!==OWNTH?' · '+wTheme:'');
-  const w=wPick();
-  if(!w){$('wQ').textContent='Здесь пока нет слов';$('wOpts').innerHTML='';$('wSub').textContent='';$('wTask').innerHTML='';return}
-  const all=allWords();
-  const isNew=!WS.W[w.k];
-  const lang=w.th===OWNTH?'ru':on.lang==='mix'?pick(['ru','uz']):on.lang;
-  const dir=isNew?'en':pick(['en','tr']);
-  const key=dir==='en'?(x=>x[lang]):(x=>x.en);
-  const right=key(w);
-  const cand=shuf(all.filter(x=>x.k!==w.k&&x.lv===w.lv&&x.th===w.th)).concat(shuf(all.filter(x=>x.lv===w.lv&&x.th!==w.th)),shuf(all.filter(x=>x.lv!==w.lv)));
-  const opts=[right];for(const c of cand){const t=key(c);if(!opts.includes(t))opts.push(t);if(opts.length===4)break}
-  wCur={w,lang,dir,right,opts:shuf(opts)};wLast=w.k;wDone=false;enter($('wcard'));
-  $('wTask').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>${isNew?'<span class="chip f plus">Новое слово</span>':`<span class="chip">${dots(lvlOf(w))}</span>`}`;
-  const q=$('wQ');q.innerHTML='';
-  const t=document.createElement('span');t.textContent=dir==='en'?w.en:w[lang];q.appendChild(t);
-  if(dir==='en'){const b=document.createElement('button');b.innerHTML=SPK;b.setAttribute('aria-label','Произношение');b.addEventListener('click',()=>say(w.en));q.appendChild(b)}
-  $('wSub').textContent=dir==='en'?(lang==='ru'?'Выбери перевод':'Tarjimasini tanlang'):'Выбери английское слово';
-  $('wOpts').innerHTML=wCur.opts.map((o,i)=>`<button data-wi="${i}">${esc(o)}</button>`).join('');
-  $('wFb').className='fb';$('wFb').innerHTML='';$('wNextB').hidden=true;
-  if(dir==='en'&&on.voice)say(w.en);
-}
-function wAnswer(i){
-  if(wDone||!wCur)return;wDone=true;
-  const {w}=wCur,good=wCur.opts[i]===wCur.right,first=!WS.W[w.k];
-  WS.wc++;const s=WS.W[w.k]||{b:0,n:0};
-  if(good){s.b=first?2:Math.min(s.b+1,6);s.n=WS.wc+IV[s.b]}else{s.b=1;s.n=WS.wc+2}
-  WS.W[w.k]=s;WS.all++;if(good)WS.ok++;saveW();
-  const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();
-  wSes.all++;if(good)wSes.ok++;wStats();feedback($('wcard'),good);
-  document.querySelectorAll('#wOpts button').forEach((b,j)=>{b.disabled=true;if(wCur.opts[j]===wCur.right)b.className='ok';else if(j===i)b.className='no'});
-  const fb=$('wFb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
-  const h=document.createElement('b');h.textContent=good?'Верно!':'Запомни:';fb.appendChild(h);
-  const a=document.createElement('div');a.className='ans';a.textContent=w.en;fb.appendChild(a);
-  const tr=document.createElement('div');tr.textContent=w.th===OWNTH?w.ru:`${w.ru}  ·  ${w.uz}`;fb.appendChild(tr);
-  const lv=document.createElement('div');lv.style.marginTop='6px';lv.innerHTML=`Знание: ${dots(Math.min(s.b,5))}${s.b>=4?' <b style="display:inline">выучено</b>':''}`;fb.appendChild(lv);
-  const sb=document.createElement('button');sb.className='say';sb.innerHTML=SPK+'<span>Послушать</span>';sb.addEventListener('click',()=>{clearTimeout(wAuto);say(w.en)});fb.appendChild(sb);
-  $('wNextB').hidden=false;
-  const id=wCur;
-  if(on.voice){const p=say(w.en);if(good)p.then(()=>{if(wDone&&wCur===id)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},350)})}
-  else if(good)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},900);
-}
+/*@WORDS*/
 function renderWList(){
   const all=allWords(),q=$('wSearch').value.trim().toLowerCase();
   const lvs=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]);
@@ -415,9 +358,6 @@ function renderWordsProg(){
   $('pWords').innerHTML=`<div class="wsum"><span>Выучено <b>${L}</b> из <b>${N}</b></span><span>В процессе <b>${P}</b></span></div>`+
    rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top2"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
 }
-$('wOpts').addEventListener('click',e=>{const b=e.target.closest('[data-wi]');if(b)wAnswer(+b.dataset.wi)});
-$('wNextB').addEventListener('click',wNext);
-$('wFltX').addEventListener('click',()=>{wTheme=null;wLevel=null;wNext()});
 $('wSearch').addEventListener('input',renderWList);
 $('wStudy').addEventListener('click',()=>{showTab('train');wNext();window.scrollTo({top:0,behavior:'smooth'})});
 document.addEventListener('click',e=>{
@@ -445,14 +385,9 @@ $('ownClear').addEventListener('click',()=>{const b=$('ownClear');
   for(const o of OWN)delete WS.W['own:'+o.en.toLowerCase()];OWN=[];saveOwn();saveW();
   if(wLevel===OWNTH){wLevel=null;wTheme=null}$('ownMsg').textContent='Твои слова удалены.';renderWList();
 });
-document.addEventListener('keydown',e=>{
-  if($('v-words').hidden||e.target.closest('input,textarea'))return;
-  if(['1','2','3','4'].includes(e.key)){wAnswer(+e.key-1);e.preventDefault()}
-  else if(e.key==='Enter'&&wDone){wNext();e.preventDefault()}
-});
 /* keep the keyboard open: buttons in the card never take focus from the input */
-const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preventDefault()};
+const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preventDefault();if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)e.preventDefault()};
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
-document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&cur.ex==='tr'&&!$('field').hidden)$('ans').focus({preventScroll:true})},true);
-applyTheme();topToday();renderModes();settings();sheet();renderRules();stats();aStats();wStats();next();setSec(sec);
+document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&cur.ex==='tr'&&!$('field').hidden)$('ans').focus({preventScroll:true});if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)$('wIn').focus({preventScroll:true})},true);
+applyTheme();topToday();renderModes();settings();sheet();renderRules();stats();aStats();wStats();wSettings();next();setSec(sec);

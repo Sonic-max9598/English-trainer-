@@ -1,0 +1,214 @@
+@Elementary|A2
+#Повседневные глаголы
+add|добавлять|qo'shmoq|Add some salt.
+answer (verb)|отвечать|javob bermoq|Answer the question.
+appear|появляться|paydo bo'lmoq|A man appeared at the door.
+attack|нападать|hujum qilmoq|The dog attacked the cat.
+bake|печь|pishirmoq (pechda)|She bakes bread every Friday.
+bite|кусать|tishlamoq|Does your dog bite?
+blow|дуть|puflamoq|The wind is blowing.
+boil|кипятить|qaynatmoq|Boil the water first.
+book (verb)|бронировать|band qilmoq|I booked a table for two.
+breathe|дышать|nafas olmoq|Breathe slowly.
+brush|чистить щёткой|cho'tkalamoq|Brush your teeth.
+celebrate|праздновать|nishonlamoq|We celebrate Navruz in March.
+chat|болтать|gaplashmoq|We chatted for an hour.
+cheer|подбадривать|olqishlamoq|The fans cheered.
+complete|завершать|yakunlamoq|Complete the form.
+copy|копировать|nusxa olmoq|Copy this text.
+cover|покрывать|yopmoq|Cover the pot.
+create|создавать|yaratmoq|She created a website.
+dig|копать|qazimoq|The dog is digging a hole.
+divide|делить|bo'lmoq|Divide the cake into eight.
+doubt|сомневаться|shubhalanmoq|I doubt it.
+dress (verb)|одеваться|kiyinmoq|Get dressed, we're late.
+dry (verb)|сушить|quritmoq|Dry your hair.
+exercise|упражняться; упражнение|mashq qilmoq|I exercise every morning.
+feed|кормить|boqmoq|Feed the cat, please.
+fit|подходить по размеру|mos kelmoq|These shoes don't fit.
+float|плавать на поверхности|suzib yurmoq|Wood floats on water.
+fold|складывать|buklamoq|Fold your clothes.
+freeze|замерзать|muzlamoq|The lake froze.
+greet|приветствовать|salomlashmoq|She greeted us at the door.
+hang|вешать|osmoq|Hang your coat here.
+heat|нагревать; жара|isitmoq; issiqlik|Heat the milk.
+hug|обнимать|quchoqlamoq|She hugged her son.
+hunt|охотиться|ov qilmoq|They hunt in winter.
+imagine|представлять|tasavvur qilmoq|Imagine a world without phones.
+introduce|представлять (знакомить)|tanishtirmoq|Let me introduce my wife.
+invent|изобретать|ixtiro qilmoq|Who invented the phone?
+iron|гладить; утюг|dazmollamoq; dazmol|I need to iron my shirt.
+joke|шутить; шутка|hazillashmoq; hazil|He's always joking.
+kick|пинать|tepmoq|Kick the ball!
+kneel|вставать на колени|tiz cho'kmoq|He knelt down to pray.
+land (verb)|приземляться|qo'nmoq|The plane landed safely.
+lock|запирать; замок|qulflamoq; qulf|Lock the door.
+mark|отмечать; оценка|belgilamoq|Mark the correct answer.
+melt|таять|erimoq|The ice is melting.
+mix|смешивать|aralashtirmoq|Mix the eggs and sugar.
+own (verb)|владеть|egalik qilmoq|They own two shops.
+pack|упаковывать, собирать вещи|yig'ishtirmoq|Pack your bag.
+park (verb)|парковаться|to'xtatib qo'ymoq|You can't park here.
+point (verb)|указывать|ko'rsatmoq|Don't point at people.
+pour|наливать|quymoq|Pour me some tea.
+pray|молиться|ibodat qilmoq|They pray five times a day.
+pronounce|произносить|talaffuz qilmoq|How do you pronounce this?
+protect|защищать|himoya qilmoq|Sunglasses protect your eyes.
+record|записывать|yozib olmoq|Record the lesson.
+remove|убирать, удалять|olib tashlamoq|Remove your shoes.
+reply|отвечать|javob qaytarmoq|Please reply soon.
+rescue|спасать|qutqarmoq|They rescued the cat.
+rob|грабить|o'g'irlamoq|They robbed a bank.
+rush|спешить|shoshilmoq|Don't rush.
+scream|кричать (от страха)|chinqirmoq|She screamed and ran.
+shake|трясти|silkitmoq|Shake the bottle.
+shine|светить|porlamoq|The sun is shining.
+shoot|стрелять; снимать|otmoq; suratga olmoq|They shot a film here.
+shop (verb)|делать покупки|xarid qilmoq|I shop online.
+sink|тонуть; раковина|cho'kmoq; rakovina|The boat sank.
+skate|кататься на коньках|konkida uchmoq|Can you skate?
+ski|кататься на лыжах|chang'ida uchmoq|We ski in Chimgan.
+slide|скользить|sirpanmoq|The kids slid down the hill.
+slip|поскользнуться|toyib ketmoq|I slipped on the ice.
+smile (verb)|улыбаться|jilmaymoq|Smile for the photo!
+snow (verb)|идти (о снеге)|qor yog'moq|It's snowing!
+sort|сортировать|saralamoq|Sort the papers.
+spill|проливать|to'kib yubormoq|I spilled my coffee.
+split|делить, разделять|bo'lishmoq|Let's split the bill.
+spread|намазывать; распространять|surtmoq; tarqatmoq|Spread butter on the bread.
+squeeze|сжимать|siqmoq|Squeeze a lemon.
+stir|мешать (ложкой)|aralashtirmoq|Stir the soup.
+stretch|растягивать(ся)|cho'zilmoq|Stretch before running.
+suit|подходить, идти|yarashmoq|This colour suits you.
+surf|сёрфить|serfing qilmoq|I surf the internet at night.
+switch|переключать|almashtirmoq|Switch off the TV.
+tear|рвать|yirtmoq|Don't tear the paper.
+tie|завязывать|bog'lamoq|Tie your shoes.
+train (verb)|тренироваться|mashq qilmoq|He trains every day.
+translate|переводить|tarjima qilmoq|Translate this sentence.
+type (verb)|печатать на клавиатуре|terish|She types very fast.
+vote|голосовать|ovoz bermoq|Did you vote?
+wave|махать; волна|qo'l silkitmoq; to'lqin|She waved goodbye.
+weigh|весить|og'irlikda bo'lmoq|How much do you weigh?
+whisper|шептать|shivirlamoq|Don't whisper in class.
+wonder|интересоваться, задаваться вопросом|qiziqmoq|I wonder where he is.
+#Еда и кухня
+bean|фасоль, боб|loviya|Bean soup is very filling.
+cabbage|капуста|karam|Grandma makes cabbage salad.
+pumpkin|тыква|qovoq|Pumpkin samsa is delicious.
+garlic|чеснок|sarimsoq|Add some garlic.
+mushroom|гриб|qo'ziqorin|I don't like mushrooms.
+pear|груша|nok|This pear is very juicy.
+peach|персик|shaftoli|Peaches are ripe in July.
+apricot|абрикос|o'rik|Dried apricots are healthy.
+cherry|вишня, черешня|olcha, gilos|Cherry season is short.
+pomegranate|гранат|anor|Pomegranate juice is red.
+strawberry|клубника|qulupnay|I love strawberries.
+raisin|изюм|mayiz|Add raisins to the plov.
+dough|тесто|xamir|Mom is making dough for manti.
+yoghurt|йогурт|yogurt|I have yoghurt for breakfast.
+cream|сливки; крем|qaymoq; krem|Coffee with cream, please.
+noodles|лапша|lag'mon, ugra|Lagman is made with noodles.
+steak|стейк|steyk|A steak, please.
+pizza|пицца|pitsa|Let's order a pizza.
+sandwich|бутерброд|sendvich|I made a sandwich.
+pasta|макароны|makaron|Kids love pasta.
+biscuit|печенье|pechene|Have a biscuit with your tea.
+sauce|соус|sous|This sauce is spicy.
+fried|жареный|qovurilgan|Fried eggs, please.
+boiled|варёный|qaynatilgan|A boiled egg.
+raw|сырой|xom|Don't eat raw meat.
+ripe|спелый|pishgan|The melons are ripe.
+sour|кислый|nordon|This apple is sour.
+bitter|горький|achchiq (ta'm)|Black coffee is bitter.
+tasty|вкусный|mazali|The samsa is tasty.
+recipe|рецепт|retsept|Can I have the recipe?
+dessert|десерт|desert|What's for dessert?
+pan|сковорода|tova|Heat the pan.
+pot|кастрюля|qozon|Put the pot on the stove.
+kettle|чайник|choynak|Put the kettle on.
+#Дом и семья ещё
+grandson|внук|nevara (o'g'il)|My grandson is three.
+granddaughter|внучка|nevara (qiz)|Her granddaughter sings well.
+grandparents|бабушка и дедушка|bobo-buvi|My grandparents live with us.
+nephew|племянник|jiyan (o'g'il)|My nephew is at school.
+niece|племянница|jiyan (qiz)|My niece is a dentist.
+twin|близнец|egizak|They're twins.
+bride|невеста|kelin|The bride looked beautiful.
+groom|жених|kuyov|The groom was nervous.
+couple|пара|juftlik|They're a lovely couple.
+teenager|подросток|o'smir|He's a teenager now.
+pet|домашнее животное|uy hayvoni|Do you have a pet?
+birth|рождение|tug'ilish|What's your date of birth?
+marriage|брак|nikoh|Their marriage is happy.
+divorce|развод|ajralish|They got a divorce.
+married|женатый, замужем|uylangan, turmushga chiqqan|Are you married?
+single (unmarried)|холостой|bo'ydoq|He's still single.
+#Город, путешествия
+flight|рейс, полёт|reys|Our flight is at six.
+boarding pass|посадочный талон|bortga chiqish taloni|Show your boarding pass.
+gate (airport)|выход на посадку|chiqish eshigi|Go to gate five.
+customs|таможня|bojxona|We went through customs.
+visa|виза|viza|Do I need a visa?
+border|граница|chegara|We crossed the border.
+tour guide|экскурсовод|gid|The tour guide speaks English.
+souvenir|сувенир|esdalik sovg'a|I bought a souvenir.
+sight|достопримечательность; зрение|diqqatga sazovor joy|Let's see the sights.
+guesthouse|гостевой дом|mehmon uyi|We stayed at a guesthouse.
+reception|ресепшн|qabulxona|Ask at the reception.
+single room|одноместный номер|bir kishilik xona|A single room, please.
+double room|двухместный номер|ikki kishilik xona|We booked a double room.
+backpack|рюкзак|ryukzak|My backpack is light.
+underground|метро (брит.)|metro|Take the underground.
+platform|платформа|platforma|The train leaves from platform two.
+timetable|расписание|jadval|Check the timetable.
+delay|задержка|kechikish|There's a delay.
+fare|плата за проезд|yo'l haqi|The bus fare is cheap.
+return ticket|билет туда и обратно|borib-kelish chiptasi|A return ticket, please.
+one-way|в одну сторону|bir tomonlama|A one-way ticket to Bukhara.
+crossing|переход|o'tish joyi|Use the crossing.
+motorway|автомагистраль|avtomagistral|The motorway is busy.
+#Чувства и характер ещё
+annoyed|раздражённый|g'ashi kelgan|I'm annoyed with him.
+anxious|тревожный|xavotirli|She's anxious about the exam.
+cruel|жестокий|shafqatsiz|Don't be cruel.
+curious|любопытный|qiziquvchan|Kids are curious.
+delighted|восхищённый|juda xursand|I'm delighted to meet you.
+fond of|любящий|yaxshi ko'radigan|She's fond of cats.
+frightened|испуганный|qo'rqib ketgan|The child was frightened.
+furious|разъярённый|g'azablangan|He was furious.
+gentle|нежный, мягкий|muloyim|Be gentle with the baby.
+hard-working|трудолюбивый|mehnatkash|She's very hard-working.
+helpful|полезный, отзывчивый|yordamchi|Thanks, you're very helpful.
+hopeful|надеющийся|umidvor|I'm hopeful about the future.
+mean (unkind)|подлый, жадный|baxil|Don't be mean to your sister.
+pleased|довольный|mamnun|I'm pleased with the result.
+relaxed|расслабленный|xotirjam|I feel relaxed.
+sensible|разумный|aqlli, oqilona|That's a sensible idea.
+sensitive|чувствительный|ta'sirchan|She's very sensitive.
+sincere|искренний|samimiy|He's a sincere person.
+stupid|глупый|ahmoq|That was stupid.
+talented|талантливый|iste'dodli|She's a talented singer.
+thankful|благодарный|minnatdor|I'm thankful for my family.
+tidy|опрятный|ozoda|Keep your room tidy.
+#Здоровье и тело ещё
+ambulance|скорая помощь|tez yordam|Call an ambulance!
+appointment|приём (у врача), встреча|qabul|I have an appointment at ten.
+bandage|бинт|bint|Put a bandage on it.
+cough|кашель; кашлять|yo'tal; yo'talmoq|I have a bad cough.
+diet|диета|parhez|I'm on a diet.
+flu|грипп|gripp|She has the flu.
+injury|травма|jarohat|It's a serious injury.
+patient (noun)|пациент|bemor|The patient is sleeping.
+pill|таблетка|tabletka|Take one pill a day.
+sore throat|больное горло|tomoq og'rig'i|I have a sore throat.
+temperature|температура|harorat|You have a temperature.
+toothache|зубная боль|tish og'rig'i|I have a toothache.
+wound|рана|yara|Clean the wound.
+x-ray|рентген|rentgen|You need an x-ray.
+operation|операция|operatsiya|He had an operation.
+recover|выздоравливать|tuzalmoq|She recovered quickly.
+sneeze|чихать|aksirmoq|Cover your mouth when you sneeze.
+weight|вес|vazn|I'm trying to lose weight.
+fit (healthy)|в форме|sog'lom|He's very fit.
+gym|спортзал|sport zali|I go to the gym.
