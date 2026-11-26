@@ -203,7 +203,7 @@ r15|I bought ___ two kilos of apples.|-|Я купил два килограмм�
 r15|___ Akmal's car is new.|-|Машина Акмала новая.|Akmalning mashinasi yangi.`.split('\n').map((l,i)=>{const[r,en,a,ru,uz]=l.split('|');return{id:i,r,en,a,ru,uz}});
 if(!prog.art)prog.art={};
 let aCur=null,aDone=false,aRecent=[],artFilter=null,aAuto=null,aSt={ok:0,all:0,streak:0};
-let sec=['art','words'].includes(on.sec)?on.sec:'tense',curTab='train';
+let sec=['art','words'].includes(on.sec)?on.sec:'tense',curTab='home';
 const capS=s=>s.replace(/(^|[.!?]\s+)([a-z])/g,(m,p,c)=>p+c.toUpperCase());
 const fullA=it=>capS(it.en.replace('___ ',it.a==='-'?'':it.a+' '));
 function recordArt(r,good){
@@ -214,6 +214,7 @@ function recordArt(r,good){
 function aStats(){$('aOk').textContent=aSt.ok;$('aAll').textContent=aSt.all;$('aSt').textContent=aSt.streak}
 function aNext(){
   clearTimeout(aAuto);stopSay();
+  if(lessonGate('art'))return;
   let pool=AB.filter(x=>!artFilter||x.r===artFilter);
   const fresh=pool.filter(x=>!aRecent.includes(x.id));if(fresh.length)pool=fresh;
   let it;
@@ -222,6 +223,7 @@ function aNext(){
     let r=Math.random()*w.reduce((a,b)=>a+b,0);it=pool[pool.length-1];
     for(let i=0;i<pool.length;i++){r-=w[i];if(r<=0){it=pool[i];break}}
   }else it=pick(pool);
+  {const f=gameForce('art');if(f){const x=AB.find(a=>a.en===f);if(x)it=x}}
   aRecent.push(it.id);if(aRecent.length>(artFilter?2:25))aRecent.shift();
   aCur=it;aDone=false;enter($('acard'));
   const lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
@@ -238,7 +240,7 @@ function aAnswer(v){
   if(aDone||!aCur)return;aDone=true;
   const good=v===aCur.a,ru=RULES[aCur.r];
   aSt.all++;if(good){aSt.ok++;aSt.streak++}else aSt.streak=0;
-  recordArt(aCur.r,good);aStats();feedback($('acard'),good);
+  recordArt(aCur.r,good);aStats();feedback($('acard'),good);onAnswer(good,{kind:'art',id:aCur.en,r:aCur.r});
   document.querySelectorAll('#aOpts button').forEach(b=>{b.disabled=true;if(b.dataset.a===aCur.a)b.className='ok';else if(b.dataset.a===v)b.className='no'});
   const g=$('aGap');g.textContent=aCur.a==='-'?'∅':aCur.a;g.className='gap '+(good?'ok':'no');
   const fb=$('aFb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
@@ -288,9 +290,13 @@ function setSec(s){
 function showTab(v){
   curTab=v;
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
-  const id=v==='train'&&sec!=='tense'?(sec==='art'?'v-art':'v-words'):v==='sheet'&&sec!=='tense'?(sec==='art'?'v-theory':'v-wlist'):'v-'+v;
+  document.body.dataset.tab=v;
+  $('h1').textContent=v==='home'?'Сегодня':{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
+  const id=v==='home'?'v-home':v==='train'&&sec!=='tense'?(sec==='art'?'v-art':'v-words'):v==='sheet'&&sec!=='tense'?(sec==='art'?'v-theory':'v-wlist'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
+  if(v==='home')renderHome();
+  lessonBar();
   if(id==='v-sheet')sheet();
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
@@ -385,6 +391,7 @@ $('ownClear').addEventListener('click',()=>{const b=$('ownClear');
   for(const o of OWN)delete WS.W['own:'+o.en.toLowerCase()];OWN=[];saveOwn();saveW();
   if(wLevel===OWNTH){wLevel=null;wTheme=null}$('ownMsg').textContent='Твои слова удалены.';renderWList();
 });
+/*@GAME*/
 /* keep the keyboard open: buttons in the card never take focus from the input */
 const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preventDefault();if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)e.preventDefault()};
 document.addEventListener('mousedown',keepKb);

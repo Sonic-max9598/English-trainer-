@@ -60,6 +60,7 @@ function tPool(){
   return pool;
 }
 function pickItem(){
+  if(!run){const f=gameForce('tense');if(f){const x=BANK.find(b=>b.en===f);if(x)return x}}
   let pool=tPool();
   const fresh=pool.filter(x=>!recent.includes(x.id));if(fresh.length)pool=fresh;
   let it;
@@ -74,6 +75,7 @@ function pickItem(){
 function exNow(){return run?'tr':ex}
 function next(){
   clearTimeout(auto);stopSay();
+  if(!run&&lessonGate('tense'))return;
   const it=pickItem(),t=it.t,f=it.f,e=exNow();
   const lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
   cur={t,f,lang,a:it.en,all:it.all.map(norm),it,ex:e};checked=false;
@@ -131,7 +133,7 @@ function finishAnswer(good){
   else record(cur.t,cur.f,good);
   feedback($('card'),good);
   if(good){st.ok++;st.streak++;if(!run&&st.streak>best.streak){best.streak=st.streak;save()}}else st.streak=0;
-  if(typeof onAnswer==='function')onAnswer(good,{kind:'tense',t:cur.t,f:cur.f,ex:cur.ex,id:cur.it.id});
+  if(!run)onAnswer(good,{kind:'tense',t:cur.t,f:cur.f,ex:cur.ex,id:cur.it.en});else onAnswer(good,{kind:'timer'});
   const fb=$('fb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
   const h=document.createElement('b');h.textContent=good?'Верно!':(cur.ex==='choose'?'Это '+tName(cur.t):'Правильно так:');fb.appendChild(h);
   const a=document.createElement('div');a.className='ans';a.textContent=cur.a;fb.appendChild(a);

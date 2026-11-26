@@ -57,7 +57,9 @@ function wModes(){
 }
 function wNext(){
   clearTimeout(wAuto);stopSay();wModes();
+  if(lessonGate('words'))return;
   $('wDoneP').hidden=true;$('wcard').hidden=false;
+  {const f=gameForce('word');if(f){const w=wGet(f.k||f);if(w){$('wFlt').hidden=true;showTask(w,f.type||'tr','free');return}}}
   if(wMode==='day'){dayNext();return}
   $('wFlt').hidden=!wLevel;if(wLevel)$('wFltT').textContent=(wLevel===OWNTH?OWNTH:wLevel+' ('+LVC(wLevel)+')')+(wTheme&&wTheme!==OWNTH?' · '+wTheme:'');
   const w=wPick();
@@ -120,7 +122,7 @@ function showIntro(w){
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
   $('wNextB').hidden=false;$('wNextB').textContent=D.introIdx<D.block.length?'Следующее слово':'Проверим себя';
-  enter($('wcard'));dayStats();
+  enter($('wcard'));dayStats();onActivity('new');
   if(on.voice)say(bare(w.en));
 }
 function exHTML(w){const g=gapOf(w);return g?esc(g.pre)+'<b>'+esc(g.hit)+'</b>'+esc(g.post):esc(w.ex)}
@@ -173,7 +175,7 @@ function wAnswer(i,forced,typo){
   const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();
   wSes.all++;if(good)wSes.ok++;wStats();feedback($('wcard'),good);
   if(!good&&wMode==='day'&&wCur.phase!=='free'){const alt=['tr','en','audio'].filter(x=>x!==wCur.type);D.retry.push({k:w.k,type:pick(alt),phase:wCur.phase==='rev'?'rev':'new',wait:3+Math.floor(Math.random()*3)})}
-  if(typeof onAnswer==='function')onAnswer(good,{kind:'word',k:w.k,type:wCur.type});
+  onAnswer(good,{kind:'word',k:w.k,type:wCur.type,phase:wCur.phase});
   if(wCur.type==='write'){$('wIn').disabled=true;$('wWriteRow').hidden=true}
   document.querySelectorAll('#wOpts button').forEach((b,j)=>{b.disabled=true;if(wCur.opts[j]===wCur.right)b.className='ok';else if(j===i)b.className='no'});
   if(wCur.type==='gap'){const g=gapOf(w);$('wEx').querySelector('.gap').outerHTML=`<span class="gap ${good?'ok':'no'}">${esc(g.hit)}</span>`}
