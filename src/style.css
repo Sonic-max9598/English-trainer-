@@ -664,3 +664,12 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
 .bigspk{display:inline-flex;align-items:center;gap:10px;min-height:64px;padding:0 22px;border-radius:999px;background:var(--brand);color:var(--brand-ink,#fff);border:0;font-size:17px;font-weight:800}
 .bigspk svg{width:28px;height:28px}
 .vrow span{grid-column:2/5}
+/* teacher's message on the home screen and the "Учитель онлайн" settings */
+.nw{border-left:6px solid var(--brand);margin:0 0 14px}
+.nw-h{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.nw-h b{font-weight:900;color:var(--brand)}
+.nw p{margin:6px 0 0;white-space:pre-line;line-height:1.5;overflow-wrap:anywhere}
+.nw-x{min-height:40px;padding:0 14px;font-size:15px}
+.cl{display:block;font-weight:800;margin-bottom:6px}
+.cin{width:100%;font:700 17px var(--font);padding:12px 14px;border-radius:16px;border:2px solid var(--line);background:var(--surface2);color:var(--ink);-webkit-appearance:none;appearance:none}
+.cin:focus-visible{outline:3px solid var(--brand);outline-offset:2px}

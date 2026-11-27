@@ -1,0 +1,26 @@
+# Render Blueprint: the admin server only. The database is Neon (free Postgres), see README → «Админка учителя».
+# Render → New → Blueprint → this repository. Values with sync: false are entered by hand in Render, never stored in git.
+services:
+  - type: web
+    name: english-intensive-admin
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: cd server && npm ci --omit=dev
+    startCommand: node server/server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
+    buildFilter:
+      paths: ["server/**", "fonts/**", "render.yaml"]
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL   # connection string from Neon (postgresql://…neon.tech/neondb?sslmode=require…)
+        sync: false
+      - key: ADMIN_PASSWORD # password for /admin
+        sync: false
+      - key: CLASS_CODE     # optional: students enter it in the app; empty = anyone can connect
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://sonic-max9598.github.io

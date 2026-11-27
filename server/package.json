@@ -1,0 +1,15 @@
+{
+  "name": "english-intensive-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Admin server for English Intensive: class register (student progress) and announcements",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}

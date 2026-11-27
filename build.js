@@ -33,7 +33,7 @@ let js=r('src/app.js')
   .replace('/*@VERBS*/',()=>r('src/verbs.js').replace('__IRREG__',()=>JSON.stringify(r('data/irregular.txt').replace(/\r/g,'').trim())))
   .replace('/*@GAME*/',()=>r('src/game.js'))
   .replace('/*@BOOK*/',()=>r('src/theory-tenses.js')+r('src/theory-book.js')+r('src/book.js'))
-  .replace('/*@PWA*/',()=>r('src/pwa.js'))
+  .replace('/*@PWA*/',()=>r('src/pwa.js')+r('src/cloud.js').replace('__API_URL__',()=>(process.env.API_URL||'https://english-intensive-admin.onrender.com').replace(/\/+$/,'')))
   .replace('__TENSES__',()=>JSON.stringify(tenses)).replace('__MIXED__',()=>JSON.stringify(mixed)).replace('__WORDS__',()=>JSON.stringify(words()));
 if(process.env.TEST)js+='\nwindow.__dbg=s=>eval(s);';
 let html=r('src/head.html').replace('/*@CSS*/',()=>r('src/style.css'))
