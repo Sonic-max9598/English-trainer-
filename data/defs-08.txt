@@ -1,0 +1,300 @@
+facility|a building, service or piece of equipment for a particular purpose|The new sports centre has excellent facilities, including a pool and a gym.
+failure|lack of success|His first business was a failure, but he learned a lot from it.
+faith|strong belief or trust|She never lost faith in her ability to pass the exam.
+fame|being known by many people|The young singer found fame after one of her videos went viral.
+finance|the management of money|She studied finance and now works at an international bank.
+fitness|the condition of being physically healthy and strong|Swimming is one of the best ways to improve your fitness.
+freedom|the right to do or say what you want|Moving out of my parents' house gave me a new sense of freedom.
+friendship|the relationship between friends|Their friendship began at school and has lasted forty years.
+funeral|a ceremony after someone dies|Hundreds of people came to the funeral of the respected teacher.
+goods|things that are made to be sold|The shop sells household goods at very low prices.
+guarantee|a promise that something will be done or will work|The washing machine comes with a two-year guarantee.
+headline|the title of a newspaper story in large letters|The headline on every newspaper was about the earthquake.
+heritage|traditions, buildings and art passed down from the past|The old city of Khiva is part of the world's cultural heritage.
+household|all the people who live together in one house|Most households in the village have their own vegetable garden.
+identity|who a person is|You need to show proof of your identity to open a bank account.
+image|a picture; the way people see someone or something|The company is trying to improve its image after the scandal.
+impact|a strong effect|Social media has had a huge impact on the way young people communicate.
+improvement|the act of getting better|There has been a big improvement in your pronunciation this month.
+independence|freedom from control by another country or person|Uzbekistan celebrates Independence Day on the first of September.
+inflation|a general rise in prices over time|Because of inflation, the same shopping costs much more than last year.
+ingredient|one of the foods used to make a dish|The secret ingredient in her soup is a little fresh coriander.
+inhabitant|a person who lives in a particular place|The village has fewer than five hundred inhabitants.
+instance|an example of something|There have been several instances of theft on the night trains.
+intelligence|the ability to learn and understand things|Artificial intelligence is changing the way we work.
+investment|putting money into something to get more back|Buying that flat was the best investment we ever made.
+journalism|the work of collecting and writing news|She studied journalism and now works for a national newspaper.
+landscape|everything you can see when you look across an area of land|The landscape changes completely as you drive from the desert to the mountains.
+lecture|a talk given to students on a subject|The professor's lecture on ancient history was absolutely fascinating.
+lifestyle|the way a person lives|Moving to the countryside gave them a slower, healthier lifestyle.
+literature|written works, especially of high quality, like novels and poems|She loves classical Uzbek literature, especially the poems of Navoi.
+majority|more than half of a group|The majority of students prefer online lessons in winter.
+management|controlling and organizing a business; the people in charge|The new management has made many changes in the company.
+material|a substance used to make things; information used for a purpose|The jacket is made of a light material that dries quickly.
+mayor|the head of a city government|The mayor promised to build three new parks this year.
+media|television, radio, newspapers and the internet|The story about the lost dog spread quickly through social media.
+member|a person who belongs to a group|She's been a member of the chess club for five years.
+minority|less than half of a group|Only a small minority of people voted against the plan.
+mood|the way you feel at a particular time|He's in a bad mood because his team lost the match.
+motivation|the reason or desire to do something|My main motivation for learning English is to work abroad.
+network|a group of connected people, computers, etc.|She has a large network of contacts in the tourism industry.
+nutrition|the food you eat and its effect on health|Good nutrition is especially important for growing children.
+obstacle|something that makes it difficult to do something|Lack of money was the biggest obstacle to his studies.
+occasion|a special event; a particular time when something happens|We only use the best plates on special occasions.
+option|a choice|You have two options: take the bus or wait for a taxi.
+organisation|a group of people working together for a purpose|She works for an organisation that helps refugees.
+owner|a person who owns something|The owner of the café always gives us an extra cup of tea.
+participant|a person who takes part in something|All participants will receive a certificate at the end of the course.
+partner|a person you do something with; a husband, wife or girlfriend/boyfriend|He started the business with his partner ten years ago.
+performance|the act of performing; how well something works|The children's performance at the school concert was wonderful.
+personality|a person's character|She has a strong personality and isn't afraid to say what she thinks.
+phenomenon|something that happens and can be observed|The northern lights are a natural phenomenon that people travel far to see.
+policy|a plan or set of rules agreed by an organization|The company has a strict policy on using phones at work.
+politics|activities relating to government|My grandfather loves to talk about politics at the dinner table.
+portion|a part of something; the amount of food for one person|The portions in this restaurant are so big that one is enough for two.
+poverty|being very poor|The charity helps families living in poverty.
+presentation|a talk giving information about something|I have to give a presentation in English at tomorrow's meeting.
+press|newspapers and journalists|The minister refused to answer questions from the press.
+privacy|being free from attention from other people|I need more privacy — my little brother keeps reading my messages.
+procedure|the official or usual way of doing something|Applying for a visa is a long and complicated procedure.
+product|something that is made to be sold|The company is launching a new product next month.
+profession|a job that needs special training, like medicine or law|Teaching is a respected profession in our culture.
+property|things you own; a building and land|The house is private property, so we can't go in.
+proposal|a suggestion or plan; an offer of marriage|The committee accepted our proposal to build a new playground.
+psychology|the study of the mind and behaviour|She studied psychology because she wanted to understand people better.
+qualification|an exam result or skill that shows you can do a job|What qualifications do you need to become a pilot?
+reaction|the way you respond to something|His first reaction to the news was complete silence.
+reality|the way things really are|Living abroad was very different from what I imagined; the reality was much harder.
+recording|sound or pictures that have been recorded|Listen to the recording twice before you answer the questions.
+reduction|a decrease in size or amount|There has been a big reduction in the number of road accidents.
+reference|a mention of something; a letter about someone's character|My old boss wrote me an excellent reference for my new job.
+refund|money given back to you when you return something|The shoes broke after a week, so I asked for a refund.
+reputation|the opinion people have of someone or something|The restaurant has a reputation for the best plov in town.
+reservation|an arrangement to keep a table, room or seat for you|I'd like to make a reservation for four people at seven o'clock.
+resident|a person who lives in a particular place|Local residents complained about the noise from the new bar.
+review|an article giving an opinion about a book, film, etc.; a check|The film got excellent reviews, so we decided to see it.
+revolution|a very big change; an attempt to change a government by force|Smartphones started a revolution in the way we communicate.
+role|the position or purpose someone has; a part in a film or play|Grandparents play an important role in raising children here.
+routine|the usual order in which you do things|My morning routine includes a short walk and a cup of green tea.
+satisfaction|the pleasant feeling when you get what you wanted|Finishing a difficult project gives me a great sense of satisfaction.
+security|protection from danger or crime|Security at the airport has become much stricter.
+shift|a period of work in a place that works day and night|My sister is a nurse and often works the night shift.
+shortage|a situation where there is not enough of something|There's a shortage of teachers in many rural schools.
+signal|a sound, light or movement that gives information; the strength of a phone connection|There's no phone signal in the mountains.
+soldier|a member of an army|My great-grandfather was a soldier in the Second World War.
+species|a group of animals or plants of the same type|Many species of birds stop at the lakes during migration.
+statement|something said or written officially|The police made a statement about the accident.
+status|a person's position in society; the current situation|You can check the status of your order online.
+stranger|a person you don't know|My grandmother taught me never to get into a car with a stranger.
+suggestion|an idea or plan put forward for consideration|Do you have any suggestions for a good restaurant?
+summary|a short statement of the main points|Write a short summary of the article in your own words.
+supporter|a person who supports a team, person or idea|Thousands of supporters travelled to watch the final.
+surgery|medical treatment that involves cutting the body|She needed surgery on her knee after the accident.
+target|something you aim at or try to achieve|Our target is to sell a thousand books this year.
+tax|money you pay to the government|Part of your salary goes on tax.
+technique|a particular way of doing something|The teacher showed us a simple technique for remembering new words.
+term (word)|a word with a particular meaning in a subject|"Past Perfect" is a grammar term that confuses many learners.
+traffic jam|a long line of vehicles that cannot move|We were stuck in a traffic jam for two hours on the way to the airport.
+treatment|medical care for an illness or injury|The treatment was successful, and she was home in a week.
+union|a group of workers who protect their rights; a joining together|The union is asking for better pay for teachers.
+vehicle|a machine for carrying people or goods, like a car or bus|Heavy vehicles are not allowed in the city centre during the day.
+wealth|a large amount of money or possessions|Health is more important than wealth.
+witness|a person who sees an event, especially a crime|The police are looking for witnesses to the accident.
+absolute|complete; total|I have absolute trust in my doctor.
+academic|relating to schools, colleges and universities|She has an excellent academic record.
+accessible|easy to reach or use|The museum is fully accessible for people in wheelchairs.
+additional|extra; more|There's an additional charge for breakfast.
+amused|finding something funny|The teacher looked amused by our excuses for being late.
+apparent|easy to see or understand; seeming to be true|It soon became apparent that nobody knew the way.
+artificial|made by people, not natural|The cake was full of artificial colours and flavours.
+ashamed|feeling guilty or embarrassed about something you did|I was ashamed of how rude I had been to my mother.
+astonished|very surprised|We were astonished by how much the city had changed.
+automatic|working by itself without people controlling it|The supermarket has automatic doors that open as you walk towards them.
+brilliant|extremely clever; very bright; very good|She had a brilliant idea for raising money for the school.
+capable|having the ability to do something|She's perfectly capable of travelling on her own.
+cautious|careful to avoid danger or risk|Be cautious when you drive on mountain roads in winter.
+challenging|difficult in an interesting way|Learning a new language at forty is challenging but exciting.
+chemical|relating to chemistry; made with chemicals|Farmers here try to grow fruit without chemical fertilizers.
+conscious|awake and aware; knowing about something|She was conscious of everyone looking at her as she walked in.
+constant|happening all the time|The constant noise from the building site made it impossible to work.
+convenient|easy, useful and not causing problems|The hotel is in a convenient location near the station.
+critical|very important; saying what is wrong with something|The next few days are critical for the patient's recovery.
+crucial|extremely important|Getting enough sleep is crucial before an exam.
+current|happening now|The current situation is difficult, but things are getting better.
+decent|good enough; honest and fair|We found a decent hotel at a very reasonable price.
+delicate|easily broken or damaged; needing care|This old silk dress is very delicate, so wash it by hand.
+desperate|feeling there is little hope and ready to do anything|He was desperate to find a job after months without work.
+digital|using computer technology|Most people now prefer digital books to paper ones.
+dramatic|sudden and surprising; exciting|There has been a dramatic increase in the number of tourists.
+eager|wanting very much to do something|The children were eager to start their summer holidays.
+economic|relating to the economy|The country has seen strong economic growth in recent years.
+effective|producing the result you want|Speaking with native speakers is the most effective way to improve.
+elderly|old (a polite word)|The elderly man next door tells wonderful stories about the old days.
+emotional|showing strong feelings|It was an emotional moment when she saw her family after five years.
+enormous|extremely large|They built an enormous shopping centre on the edge of the city.
+entire|whole; complete|I spent the entire weekend cleaning the flat.
+environmental|relating to the natural world|Plastic waste is a serious environmental problem.
+ethnic|relating to a group of people with a shared culture|Tashkent is home to many different ethnic groups.
+exhausted|extremely tired|After a twelve-hour shift, she was completely exhausted.
+experienced|having a lot of knowledge or skill from doing something|We need an experienced driver for the mountain roads.
+fascinating|extremely interesting|The guide told us fascinating stories about the Silk Road.
+financial|relating to money|The family had financial problems after the father lost his job.
+fortunate|lucky|We were fortunate to find a hotel room during the festival.
+fundamental|basic and very important|Respect is a fundamental part of any good relationship.
+historic|important in history|The signing of the agreement was a historic moment.
+honourable|deserving respect; honest|He's an honourable man who always keeps his promises.
+ideal|perfect; the best possible|This quiet village is the ideal place to rest.
+impressive|making you admire something|Her knowledge of history is really impressive.
+incredible|very good; difficult to believe|The view from the top of the mountain was incredible.
+initial|happening at the beginning|My initial reaction was surprise, but then I was happy.
+intense|very strong|The heat in July can be intense, so drink plenty of water.
+logical|reasonable and sensible|There must be a logical explanation for what happened.
+loyal|always supporting a person, team or company|He's been a loyal customer of our shop for twenty years.
+massive|very large|There was a massive queue outside the new store on its opening day.
+medical|relating to medicine and treating illness|You need a medical certificate to get a driving license.
+minor|small and not very important|There were a few minor problems, but the event went well.
+moral|relating to right and wrong behaviour|Parents have a moral duty to take care of their children.
+multiple|many|The test has multiple-choice questions.
+occasional|happening sometimes but not often|We have occasional power cuts in winter.
+ordinary|normal; not special|It was just an ordinary day until the phone rang.
+outstanding|extremely good|She's an outstanding student who always gets top marks.
+overweight|heavier than is healthy|The doctor said he was overweight and should exercise more.
+permanent|lasting for a long time or forever|After years of short contracts, she finally got a permanent job.
+practical|relating to real situations; useful|Can you give me some practical advice about moving abroad?
+precious|very valuable or important|Time with family is precious, so put your phone away.
+pregnant|having a baby developing in her body|My sister is pregnant with her second child.
+present (current)|existing now|The present situation is much better than last year.
+productive|achieving a lot|I had a very productive morning and finished all my tasks.
+professional|relating to a job that needs special training; doing a job very well|She's a professional photographer who works at weddings.
+reasonable|fair and sensible; not too expensive|The prices at this café are very reasonable.
+relevant|connected with what is being discussed|Please only ask questions that are relevant to the topic.
+remote|far away from towns; controlled from a distance|They live in a remote village high in the mountains.
+romantic|relating to love|He planned a romantic dinner for their anniversary.
+satisfied|pleased because you got what you wanted|Are you satisfied with the service at the hotel?
+scientific|relating to science|There's no scientific evidence that this medicine works.
+shocked|very surprised and upset|We were shocked to hear about the accident.
+slight|small; not serious|I have a slight headache, but I'm OK.
+social|relating to society or meeting people|She's very social and loves going to parties.
+solid|hard and firm; not liquid|The lake was frozen solid, so we could walk across it.
+spiritual|relating to the human spirit or religion|For many people, visiting the old mosque is a spiritual experience.
+stable|not likely to change or move|After years of moving around, she now has a stable job.
+steady|happening at a regular rate|There has been a steady increase in the number of students.
+strict|demanding that rules are obeyed|My father was very strict when I was a teenager.
+stunning|extremely beautiful|The bride looked absolutely stunning in her dress.
+temporary|lasting for a short time only|I found a temporary job for the summer.
+tough|difficult; strong|It was a tough decision, but we decided to move.
+unemployed|without a job|He was unemployed for six months before he found work.
+unique|being the only one of its kind|Each hand-made carpet is unique.
+urgent|needing to be dealt with immediately|I have an urgent message for the manager.
+valid|legally acceptable; based on good reasons|Your ticket is valid for one month.
+variable|likely to change|The weather in spring is very variable.
+visual|relating to seeing|Some people learn better with visual aids like pictures.
+willing|happy and ready to do something|Are you willing to work at the weekend if necessary?
+worldwide|across the whole world|The film was a worldwide success.
+according to|as said by someone or shown by something|According to the weather forecast, it will snow tomorrow.
+accordingly|in a way that is suitable; therefore|Read the instructions and act accordingly.
+additionally|also; as well|Additionally, the hotel offers free parking.
+afterward|later; after something|We had dinner and afterward went for a walk.
+alright|all right; OK|Are you alright? You look a bit pale.
+altogether|in total; completely|That will be fifty thousand sums altogether.
+anyhow|anyway; in any case|It's late, but let's finish the work anyhow.
+as long as|only if|You can borrow my car as long as you drive carefully.
+as soon as|immediately after|Call me as soon as you land.
+as well|also; too|I'll have a coffee, and a piece of cake as well.
+besides|also; in addition to|Besides English, she also speaks Turkish and German.
+briefly|for a short time; in a few words|Let me briefly explain how the system works.
+due to|because of|The flight was cancelled due to bad weather.
+even though|despite the fact that|She went to work even though she was ill.
+except|not including|Everyone came to the party except my brother.
+fortunately|luckily|Fortunately, nobody was hurt in the accident.
+gradually|slowly over a period of time|My English gradually improved as I practised more.
+in case|because something might happen|Take an umbrella in case it rains.
+in fact|actually; really|I thought the test would be hard. In fact, it was quite easy.
+in order to|with the purpose of|She moved to Tashkent in order to study at the university.
+instead of|in place of|Let's walk instead of taking a taxi.
+largely|mostly; mainly|The success of the project was largely due to her hard work.
+no longer|not any more|He no longer lives in that street.
+obviously|clearly; in a way that is easy to see|Obviously, you need a visa to travel there.
+particularly|especially|I particularly enjoyed the music at the wedding.
+possibly|perhaps|I might possibly be late, so don't wait for me.
+previously|before; earlier|She previously worked as a teacher in a small village.
+regularly|often; at regular times|You should check your tyres regularly.
+seldom|rarely; not often|We seldom eat out because it's expensive.
+so that|in order that|Speak louder so that everyone can hear you.
+surely|used to show you think something is true|Surely you're not going out in this weather?
+thanks to|because of (something good)|Thanks to your help, we finished on time.
+throughout|in every part of; during the whole time|The museum is open throughout the year.
+whatever|anything; no matter what|You can order whatever you like — I'm paying.
+whenever|every time that; at any time|Call me whenever you need help.
+wherever|in or to any place|You can sit wherever you like.
+break down|to stop working (of a machine or car)|Our car broke down on the way to the mountains.
+bring up|to raise a child; to mention a subject|She was brought up by her grandparents in the village.
+call back|to phone someone again|I'm busy right now — can I call you back in ten minutes?
+carry on|to continue|Carry on with your work while I make some tea.
+come across|to find or meet by chance|I came across some old photos while I was cleaning.
+come up with|to think of an idea or plan|We need to come up with a better solution.
+cut down on|to do or use less of something|I'm trying to cut down on sugar and coffee.
+drop off|to take someone or something to a place and leave them there|Could you drop me off at the station on your way to work?
+end up|to finally be in a situation you did not plan|We got lost and ended up in a tiny village in the mountains.
+fall out|to argue and stop being friendly|The two brothers fell out over money years ago.
+figure out|to understand or solve something|I can't figure out how to use this new app.
+fill in|to complete a form|Please fill in this form and sign it at the bottom.
+get along|to have a friendly relationship|I get along really well with my new colleagues.
+get over|to recover from an illness or a sad experience|It took her months to get over the loss of her grandmother.
+get rid of|to throw away or remove something you don't want|We got rid of all our old furniture when we moved.
+give in|to finally agree after refusing|After hours of begging, my parents finally gave in and bought me a puppy.
+give up|to stop trying or stop doing something|Don't give up — you're nearly there!
+go on|to continue; to happen|What's going on? Why is everyone shouting?
+go out|to leave home for entertainment|We go out for dinner every Friday evening.
+hang out|to spend time relaxing with friends (informal)|We used to hang out at the café after school.
+hold on|to wait (informal)|Hold on — I'll check if the manager is free.
+keep up|to continue at the same level; to stay level with someone|Keep up the good work — your English is improving fast.
+let down|to disappoint someone|I promised to help, and I won't let you down.
+look forward to|to feel happy about something that is going to happen|I'm really looking forward to seeing you next week.
+look up|to find information in a book or online|Look up any words you don't know in the dictionary.
+make up|to invent a story; to become friends again after an argument|They argued in the morning but made up by lunchtime.
+pass away|to die (a polite expression)|His grandfather passed away peacefully at the age of ninety.
+pay back|to return money you borrowed|I'll pay you back as soon as I get my salary.
+put off|to delay something|Stop putting off your homework — do it now.
+put up with|to accept something unpleasant|I can't put up with the noise from the neighbours any longer.
+run out of|to use all of something|We ran out of petrol in the middle of the desert.
+set up|to start a business or organization; to prepare equipment|She set up her own online shop selling hand-made jewellery.
+show off|to try to impress people|He's always showing off his new car.
+show up|to arrive, often late or unexpectedly|He showed up two hours late without any explanation.
+sort out|to solve a problem; to organize|Don't worry — we'll sort out the problem tomorrow.
+take after|to look or behave like an older relative|She takes after her mother — they have the same smile.
+take care of|to look after someone or something|My sister takes care of our parents.
+take up|to start a new hobby or activity|I've taken up yoga to help with my back pain.
+throw away|to get rid of something you don't want|Don't throw away the bread — we can feed it to the birds.
+turn down|to refuse an offer; to reduce the volume|She turned down the job because the salary was too low.
+turn up|to increase the volume; to arrive|Turn up the radio — I love this song!
+work out|to exercise; to find a solution|I work out at the gym three times a week.
+ATM|a machine that gives out money from your bank account|Is there an ATM near here? I need some cash.
+bonus|extra money paid as a reward|All employees got a bonus at the end of the year.
+cashier|a person who takes and gives out money in a shop or bank|The cashier gave me the wrong change.
+client|a person who pays for a professional service|The lawyer has a meeting with a new client this afternoon.
+CV|a document describing your education and work experience|Send your CV to the email address on the website.
+director|the person in charge of a company or film|The director of the school welcomed all the new students.
+employer|a person or company that pays people to work for them|My employer pays for my English lessons.
+expenses|money spent on something|The company pays all travel expenses.
+freelancer|a person who works for several companies, not employed by one|As a freelancer, she can work from anywhere.
+headquarters|the main office of an organization|The company's headquarters are in Tashkent.
+intern|a student or young person working to gain experience|She worked as an intern at a bank during the summer.
+invoice|a list of goods or services and how much you must pay|Please send me the invoice by the end of the month.
+overtime|extra time worked beyond normal hours|I worked overtime every day last week to finish the project.
+pension|money paid regularly to someone who has retired|My grandfather lives on a small pension.
+promotion|a move to a higher position at work|She got a promotion after only two years at the company.
+savings|money that you have saved|They spent all their savings on a new house.
+shareholder|a person who owns part of a company|The shareholders were happy with this year's results.
+strike|a period when workers refuse to work as a protest|The bus drivers went on strike for higher wages.
+wage|money paid for work, usually weekly or hourly|The minimum wage has gone up this year.
+workplace|the place where people work|Smoking is not allowed in the workplace.
+climate change|changes in the Earth's weather caused mainly by human activity|Climate change is making summers here hotter every year.
+drought|a long period without rain|The drought destroyed most of the crops this summer.
+extinct|no longer existing|Dinosaurs have been extinct for millions of years.
+fog|thick cloud near the ground that is hard to see through|The fog was so thick that flights were delayed.
+global warming|the rise in the Earth's temperature|Global warming is causing glaciers in the mountains to melt.
+harvest|the time when crops are collected; the crops collected|The grape harvest was excellent this year.
+hill|an area of land higher than the land around it|We walked up the hill to see the sunset over the city.
+lightning|a flash of bright light in the sky during a storm|Lightning hit the old tree in the park.
+mud|soft wet earth|After the rain, the path was covered in mud.
