@@ -7,14 +7,18 @@ const mixed=r('data/mixed.txt').replace(/\r/g,'').replace(/\n+$/,'');
 // words: base list (+examples) then extra files by level; duplicates are skipped
 function words(){
   const ex={};for(const l of r('data/examples-base.txt').split('\n')){const i=l.indexOf('|');if(i>0)ex[l.slice(0,i)]=l.slice(i+1)}
-  const seen=new Set(),out=[];let dup=[],noEx=[];
+  const seen=new Set(),out=[];let dup=[],noEx=[],noDef=[];
+  /* data/defs-*.txt: word|simple English definition|natural example */
+  const DEFS={};for(const f of fs.readdirSync(path.join(__dirname,'data')).filter(f=>/^defs-.*\.txt$/.test(f)).sort())for(const l of r('data/'+f).split('\n')){const q=l.split('|');if(q.length>=3&&q[0].trim())DEFS[q[0].trim()]=[q[1].trim(),q[2].trim()]}
   const add=(l)=>{if(!l.trim())return;if(/^[@#]/.test(l)){out.push(l);return}
     const p=l.split('|');const k=p[0].trim();if(seen.has(k.toLowerCase())){dup.push(k);return}seen.add(k.toLowerCase());
-    if(p.length<4){if(ex[k])p[3]=ex[k];else noEx.push(k)}out.push(p.slice(0,4).join('|'))};
+    if(p.length<4){if(ex[k])p[3]=ex[k];else noEx.push(k)}
+    const d=DEFS[k];if(d){p[4]=d[0];p[5]=d[1]}else noDef.push(k);
+    out.push(p.slice(0,6).join('|'))};
   r('data/words-base.txt').split('\n').forEach(add);
   ls('data').filter(f=>/^words-\d.*\.txt$/.test(f)).forEach(f=>r('data/'+f).split('\n').forEach(add));
   const n=out.filter(l=>!/^[@#]/.test(l)).length;
-  console.log('words:',n,'duplicates skipped:',dup.length,'| without example:',noEx.length);
+  console.log('words:',n,'duplicates skipped:',dup.length,'| without example:',noEx.length,'| without definition:',noDef.length);
   return out.join('\n');
 }
 console.log('mixed-tense sentences:',mixed.split('\n').length);
@@ -23,6 +27,10 @@ let js=r('src/app.js')
   .replace('/*@TENSES_META*/',()=>r('src/tenses-meta.js'))
   .replace('/*@TENSE_TRAINER*/',()=>r('src/tense.js').replace('/*@MATCH*/',()=>r('src/match.js')))
   .replace('/*@WORDS*/',()=>r('src/words.js'))
+  .replace('/*@I18N*/',()=>r('src/i18n.js').replace('__I18N__',()=>JSON.stringify({ru:JSON.parse(r('i18n/ru.json')),uz:JSON.parse(r('i18n/uz.json')),content:JSON.parse(r('i18n/uz-content.json'))})))
+  .replace('/*@SPEECH*/',()=>r('src/speech.js'))
+  .replace('/*@STUDY*/',()=>r('src/study.js'))
+  .replace('/*@VERBS*/',()=>r('src/verbs.js').replace('__IRREG__',()=>JSON.stringify(r('data/irregular.txt').replace(/\r/g,'').trim())))
   .replace('/*@GAME*/',()=>r('src/game.js'))
   .replace('/*@BOOK*/',()=>r('src/theory-tenses.js')+r('src/theory-book.js')+r('src/book.js'))
   .replace('/*@PWA*/',()=>r('src/pwa.js'))

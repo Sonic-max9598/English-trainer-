@@ -132,7 +132,7 @@ function nextMix(lang){
   $('fb').className='fb';$('fb').innerHTML='';
   $('go').textContent='Проверить';$('go').hidden=false;$('hintBtn').hidden=false;
   $('field').hidden=false;$('tiles').hidden=true;$('chOpts').hidden=true;$('tClear').hidden=true;
-  $('ru').textContent=lang==='ru'?it.ru:it.uz;$('mk').textContent='Слова: '+it.h;
+  $('ru').textContent=lang==='ru'?it.ru:it.uz;$('mk').textContent=tr('Слова:')+' '+hintTxt(it.h);
   const a=$('ans');a.value='';base='';a.focus({preventScroll:true});
   enter($('card'));
 }
@@ -158,7 +158,7 @@ function next(){
     $('chOpts').innerHTML=opts.map(o=>`<button data-ch="${o}">${tName(o)}</button>`).join('');
   }else{
     $('ru').textContent=lang==='ru'?it.ru:it.uz;
-    $('mk').textContent='Слова: '+it.h;
+    $('mk').textContent=tr('Слова:')+' '+hintTxt(it.h);
   }
   if(e==='tiles')buildTiles(it);
   if(e==='tr'){const a=$('ans');a.value='';base='';a.focus({preventScroll:true})}
@@ -210,13 +210,15 @@ function finishAnswer(good){
   if(good&&cur.note){const n=document.createElement('div');n.className='fbnote';n.textContent=cur.note;fb.appendChild(n)}
   if(cur.ex==='mix'){const w=document.createElement('p');w.className='why';w.textContent=cur.mix.why;fb.appendChild(w)}
   else{const fm=document.createElement('code');fm.textContent=tName(cur.t)+' · '+T[cur.t].f[cur.f];fb.appendChild(fm)}
+  {const sp=document.createElement('div');sp.innerHTML=sayBtn(cur.a);fb.appendChild(sp.firstChild)}
   if(!good&&!run){const tb=document.createElement('button');tb.className='say';tb.type='button';tb.innerHTML=BOOKIC+'<span>Глава в теории</span>';tb.dataset.chap=cur.ex==='mix'?'t-'+MIXT[cur.mix.k][1][0]:'t-'+cur.t;fb.appendChild(tb)}
   $('go').textContent='Дальше';$('go').hidden=false;
   if(cur.ex==='tiles')renderTiles();
   stats();
   const fresh=syncOpened();if(fresh)unlockToast(fresh);
   const id=cur;
-  if(good)auto=setTimeout(()=>{if(checked&&cur===id)next()},run?600:cur.ex==='mix'?2200:1100);
+  const go=()=>{if(checked&&cur===id)next()};
+  if(!readAnswer(cur.a,good,go,cur.ex==='mix'?1200:250)&&good)auto=setTimeout(go,run?600:cur.ex==='mix'?2200:1100);
 }
 function unlockToast(i){
   for(const t of GROUPS[i])if(on.t[t]===undefined)on.t[t]=1;save();
@@ -281,7 +283,7 @@ function settings(){
   $('setT').innerHTML=openT().map(k=>`<button class="tog" data-k="t" data-v="${k}" aria-pressed="${tOn(k)}">${tName(k)}</button>`).join('')
     +(openT().length<STOPS.length?`<p class="note" style="margin:6px 0 0;width:100%">Остальные времена открываются по очереди: ≥ 85% верных минимум на 30 ответах по предыдущему.</p>`:'');
   const sw=(v,t,d)=>`<div class="set-row"><button class="switch" data-k="opt" data-v="${v}" aria-pressed="${!!on[v]}"><span>${t}<small>${d}</small></span><i></i></button></div>`;
-  $('setV').innerHTML=sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
+  $('setV').innerHTML=sw('voice','Читать ответ вслух','Озвучка английского ответа после проверки')+sw('slow','Медленная озвучка','Скорость 0,75')+sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
   $('setOpen').innerHTML=sw('allOpen','Открыть все времена сразу','Без очереди — для тех, кто уже знает основы');
   $('setTheme').innerHTML=[['auto','Как в системе'],['light','Светлая'],['dark','Тёмная']].map(([k,n])=>`<button class="tog" data-k="theme" data-v="${k}" aria-pressed="${(on.theme||'auto')===k}">${n}</button>`).join('');
   $('setFs').innerHTML=[[0,'Обычный'],[1,'Крупный'],[2,'Очень крупный']].map(([k,n])=>`<button class="tog" data-fs="${k}" aria-pressed="${bookFs()===k}">${n}</button>`).join('');
@@ -295,7 +297,7 @@ function renderProg(){
   const cls=a=>a===null?'n':a>=.85?'g':a>=.6?'a':'r';
   const cell=(ok,all,tot)=>{const a=all?ok/all:null;return `<td class="${cls(a)}${tot?' tot':''}">${a===null?'—':Math.round(a*100)+'%'}<small>${all||0}</small></td>`};
   const sum=(arr)=>arr.reduce((s,k)=>{const c=prog.cells[k]||[0,0];return[s[0]+c[0],s[1]+c[1]]},[0,0]);
-  let h=`<tr><th class="rl"></th>${fs.map(f=>`<th>${f} ${F[f].slice(0,5)}.</th>`).join('')}<th>Итого</th></tr>`;
+  let h=`<tr><th class="rl"></th>${fs.map(f=>`<th>${f} ${tr(F[f]).slice(0,5)}.</th>`).join('')}<th>Итого</th></tr>`;
   for(const t of ks){const r=sum(fs.map(f=>t+f));h+=`<tr><th class="rl">${tName(t).replace(' Simple','').replace('Continuous','Cont.').replace('Perfect','Perf.')}</th>${fs.map(f=>{const c=prog.cells[t+f]||[0,0];return cell(c[0],c[1])}).join('')}${cell(r[0],r[1],1)}</tr>`}
   const all=sum(ks.flatMap(t=>fs.map(f=>t+f)));
   h+=`<tr><th class="rl">Итого</th>${fs.map(f=>{const r=sum(ks.map(t=>t+f));return cell(r[0],r[1],1)}).join('')}${cell(all[0],all[1],1)}</tr>`;

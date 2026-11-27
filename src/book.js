@@ -21,11 +21,13 @@ function tenseChapter(t){
   const exs=[];for(const f of ['+','-','?','+']){const it=BANK.find(b=>b.t===t&&b.f===f&&!exs.some(e=>e[0]===b.en));if(it)exs.push([it.en,it.ru,it.uz])}
   const html=tx.more+`<div class="fgrid">${Object.keys(F).map(f=>`<div class="f3 ${FC[f]}"><span>${f} ${F[f]}</span><b>${x.f[f]}</b><em>${x.ex[f]}</em></div>`).join('')}</div>
    <h3>Когда используется</h3><ul class="use">${x.use.map(u=>`<li>${u}</li>`).join('')}</ul>
-   <h3>Маркеры — слова-подсказки</h3><div class="mkl">${x.mk.map(m=>`<div><b>${m[0]}</b><span>${m[1]} · ${m[2]}</span></div>`).join('')}</div>
+   <h3>Маркеры — слова-подсказки</h3><div class="mkl">${x.mk.map(m=>`<div><b>${m[0]}</b><span>${UI==='uz'?m[2]:m[1]}</span></div>`).join('')}</div>
    <h3>Не путай</h3>${x.vs.map(([o,s])=>`<div class="vs"><button class="chip t" data-chap="t-${o}">${tName(o)}</button><p>${s}</p></div>`).join('')}
    <div data-train="${t}"></div>`;
   return{id:'t-'+t,part:0,n:x.n,s:x.ru,tip:tx.tip,html,ex:exs,err:tx.err,quiz:tx.quiz,t};
 }
+/* Uzbek texts must be in place before the chapters are assembled */
+i18nContent({T,TX,book:CH_MORE,OVERVIEW,PARTS,RULES});
 const BOOK=[OVERVIEW].concat(STOPS.map(tenseChapter),CH_MORE.filter(c=>c.part===0),CH_MORE.filter(c=>c.part>0).sort((a,b)=>a.part-b.part));
 const chIdx=id=>BOOK.findIndex(c=>c.id===id);
 const strip=h=>h.replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ');
@@ -73,7 +75,7 @@ function renderChap(id){
    <p class="cpart">${PARTS[c.part]}</p><h2 class="ctitle">${c.n}</h2><p class="csub">${c.s}</p>
    <div class="ctip"><div class="mascot" id="chM" data-mood="think"></div><p><b>Главное</b>${c.tip}</p></div>
    <div class="ctext">${c.html}</div>
-   <h3>Примеры с переводом</h3><div class="exlist">${c.ex.map(e=>`<div class="exi"><b>${e[0]}</b><span><i>RU</i>${e[1]}</span><span><i>UZ</i>${e[2]}</span></div>`).join('')}</div>
+   <h3>Примеры с переводом</h3><div class="exlist">${c.ex.map(e=>`<div class="exi"><b>${e[0]}</b><span>${UI==='uz'?e[2]:e[1]}</span></div>`).join('')}</div>
    <h3>Частые ошибки</h3><div class="errlist">${c.err.map(e=>`<div class="erri"><p><s>${e[0]}</s></p><p class="r">${e[1]}</p><small>${e[2]}</small></div>`).join('')}</div>
    <h3>Мини-тест</h3><div class="quiz" id="quiz"></div>
    <button class="readbtn${X.book.read[id]?' on':''}" data-read="${id}">${ico('check',20)}<span>${X.book.read[id]?'Глава прочитана':'Отметить как прочитанную'}</span></button>

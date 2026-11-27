@@ -1,5 +1,5 @@
 /* ===== offline app: service worker + quiet "update available" banner; moving progress between Safari and the Home Screen app ===== */
-$('appVer').textContent='Версия '+APP_VER+' · работает без интернета после первого открытия';
+$('appVer').textContent=tr('Версия')+' '+APP_VER+' · '+tr('работает без интернета после первого открытия');
 if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){
   let reloading=false;
   const offer=w=>{if(!w)return;const b=$('upd');b.hidden=false;b.onclick=()=>{b.disabled=true;b.querySelector('span').textContent='Обновляю…';w.postMessage('skipWaiting')}};

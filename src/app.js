@@ -26,6 +26,8 @@ try{const sv=JSON.parse(localStorage.getItem('tenses3')||'null');if(sv){if(sv.on
 const save=()=>{if(noSave)return;try{localStorage.setItem('tenses3',JSON.stringify({on,best}))}catch(e){}};
 
 const $=id=>document.getElementById(id);
+/*@I18N*/
+/*@SPEECH*/
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 /* ---------- feedback: animation, sound, vibration ---------- */
 const reduced=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -181,7 +183,7 @@ r15|I bought ___ two kilos of apples.|-|Я купил два килограмм�
 r15|___ Akmal's car is new.|-|Машина Акмала новая.|Akmalning mashinasi yangi.`.split('\n').map((l,i)=>{const[r,en,a,ru,uz]=l.split('|');return{id:i,r,en,a,ru,uz}});
 if(!prog.art)prog.art={};
 let aCur=null,aDone=false,aRecent=[],artFilter=null,aAuto=null,aSt={ok:0,all:0,streak:0};
-let sec=['art','words'].includes(on.sec)?on.sec:'tense',curTab='home';
+let sec=['art','words','verbs'].includes(on.sec)?on.sec:'tense',curTab='home';
 const capS=s=>s.replace(/(^|[.!?]\s+)([a-z])/g,(m,p,c)=>p+c.toUpperCase());
 const fullA=it=>capS(it.en.replace('___ ',it.a==='-'?'':it.a+' '));
 function recordArt(r,good){
@@ -230,10 +232,11 @@ function aAnswer(v){
   const row=document.createElement('div');row.className='row';row.style.marginTop='8px';
   const tb=document.createElement('button');tb.className='say';tb.style.marginTop='0';tb.innerHTML=BOOKIC+'<span>Правило в теории</span>';
   const rid=aCur.r;tb.addEventListener('click',()=>{clearTimeout(aAuto);openRule(rid)});
-  row.append(tb);fb.appendChild(row);
+  row.insertAdjacentHTML('beforeend',sayBtn(fullA(aCur)));row.append(tb);fb.appendChild(row);
   $('aNextB').hidden=false;
   const id=aCur;
-  if(good)aAuto=setTimeout(()=>{if(aDone&&aCur===id)aNext()},1300);
+  const go=()=>{if(aDone&&aCur===id)aNext()};
+  if(!readAnswer(fullA(aCur),good,go,400)&&good)aAuto=setTimeout(go,1300);
 }
 function renderRules(){
   const el=document.querySelector('#bookChap [data-rules]');if(!el)return;
@@ -267,8 +270,8 @@ function showTab(v){
   curTab=v;
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   document.body.dataset.tab=v;
-  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
-  const id=v==='train'?(sec==='art'?'v-art':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
+  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова',verbs:'Глаголы'}[sec];
+  const id=v==='train'?(sec==='art'?'v-art':sec==='verbs'?'v-verbs':sec==='words'?(wList?'v-wlist':wView==='study'?'v-study':wView?'v-sets':'v-words'):'v-train'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(v==='home')renderHome();
@@ -276,7 +279,10 @@ function showTab(v){
   if(id==='v-book'){renderBook();if(toBook&&X.book.cur&&!bookNoRestore){const y=X.book.pos[X.book.cur]||0;requestAnimationFrame(()=>window.scrollTo({top:y}))}}
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
+  if(id==='v-verbs'){if(!vCur||vMode==='list')vNext();else vModes()}
   if(id==='v-wlist'){wModes();renderWList()}
+  if(id==='v-sets'){wModes();if(wView==='set'&&curSet)renderSet();else renderSets()}
+  if(id==='v-study')renderStudy();
 }
 document.querySelectorAll('#aOpts button').forEach(b=>b.addEventListener('click',()=>aAnswer(b.dataset.a)));
 $('aNextB').addEventListener('click',aNext);
@@ -300,7 +306,7 @@ const WD=[],LEVELS=[];
 {let lv='',th='';const LI={};WORDS_RAW.split('\n').forEach(l=>{l=l.trim();if(!l)return;
   if(l[0]==='@'){const[n,c]=l.slice(1).split('|');lv=n;if(!(n in LI)){LI[n]=LEVELS.length;LEVELS.push({n,c,th:[]})}return}
   if(l[0]==='#'){th=l.slice(1);const L=LEVELS[LI[lv]];if(!L.th.includes(th))L.th.push(th);return}
-  const[en,ru,uz,ex]=l.split('|');WD.push({k:en,en,ru,uz,ex,lv,th,o:WD.length})});
+  const[en,ru,uz,ex0,def,ex2]=l.split('|');WD.push({k:en,en,ru,uz,ex:ex2||ex0,ex0,def,lv,th,o:WD.length})});
   /* learning order: by level (A1 → C1), then file order */
   WD.sort((a,b)=>LI[a.lv]-LI[b.lv]||a.o-b.o)}
 const LVC=n=>{const L=LEVELS.find(x=>x.n===n);return L?L.c:''};
@@ -313,6 +319,9 @@ try{const x=JSON.parse(localStorage.getItem('tenses3words')||'null');if(x&&x.W&&
 const saveW=()=>{if(noSave)return;try{localStorage.setItem('tenses3words',JSON.stringify(WS))}catch(e){}};
 const IV=[0,3,7,15,35,80,200];
 /*@WORDS*/
+/*@VERBS*/
+/*@STUDY*/
+let wFilter='all',wShown=[];
 function renderWList(){
   const all=allWords(),q=$('wSearch').value.trim().toLowerCase();
   const lvs=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]);
@@ -321,7 +330,12 @@ function renderWList(){
   const L=LEVELS.find(x=>x.n===wLevel);
   $('wThemesH').hidden=!L;$('wThemes').hidden=!L;
   $('wThemes').innerHTML=L?[null].concat(L.th).map(t=>`<button data-th="${esc(t||'')}" aria-pressed="${wTheme===t}">${esc(t||'Все темы')}<small>${cnt(w=>w.lv===wLevel&&(!t||w.th===t))}</small></button>`).join(''):'';
-  const list=q?all.filter(w=>(w.en+' '+w.ru+' '+w.uz).toLowerCase().includes(q)):all.filter(w=>(!wLevel||w.lv===wLevel)&&(!wTheme||w.th===wTheme));
+  const st=w=>{const s=WS.W[w.k];return !s?'new':s.b>=4?'done':s.b<=1?'hard':'learn'};
+  const FL=[['all','Все'],['new','Новые'],['learn','Учу'],['done','Выучены'],['hard','Трудные']];
+  $('wFilt').innerHTML=FL.map(([k,n])=>`<button class="tog" data-wf="${k}" aria-pressed="${wFilter===k}">${n}</button>`).join('');
+  let list=q?all.filter(w=>(w.en+' '+w.ru+' '+w.uz+' '+(w.def||'')).toLowerCase().includes(q)):all.filter(w=>(!wLevel||w.lv===wLevel)&&(!wTheme||w.th===wTheme));
+  if(wFilter!=='all')list=list.filter(w=>st(w)===wFilter);
+  wShown=list;
   const title=wLevel?(wLevel===OWNTH?OWNTH:wLevel+' · '+LVC(wLevel))+(wTheme&&wTheme!==OWNTH?' · '+wTheme:''):'Все слова';
   $('wListH').textContent=q?'Поиск':title;
   const Ln=list.filter(w=>lvlOf(w)>=4).length,P=list.filter(w=>{const b=lvlOf(w);return b>0&&b<4}).length;
@@ -329,7 +343,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(w.lv===OWNTH?w.ru:w.ru+' · '+w.uz)}</span></div></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b> ${spkBtn(bare(w.en))}${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(trw(w))}</span><p class="wlinks"><a href="${dictLink(w.en)}" target="_blank" rel="noopener">Открыть в Cambridge</a></p></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }
@@ -341,6 +355,8 @@ function renderWordsProg(){
    rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top2"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
 }
 $('wSearch').addEventListener('input',renderWList);
+$('wStudyList').addEventListener('click',()=>openStudy($('wListH').textContent,wShown,'list:'+(wLevel||'all')+':'+(wTheme||'')+':'+wFilter));
+document.addEventListener('click',e=>{const f=e.target.closest('[data-wf]');if(f){wFilter=f.dataset.wf;renderWList();return}if(e.target.closest('[data-back-study]')){wView=ST.src&&ST.src.startsWith('my:')?'set':ST.src&&ST.src.startsWith('list')?'':'sets';if(!wView)wList=true;showTab('train')}});
 $('wStudy').addEventListener('click',()=>{wList=false;showTab('train');wNext();window.scrollTo({top:0})});
 document.addEventListener('click',e=>{
   const lv=e.target.closest('[data-lv]');if(lv){wLevel=lv.dataset.lv||null;wTheme=wLevel===OWNTH?OWNTH:null;renderWList();return}
@@ -374,4 +390,7 @@ const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preven
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
 document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&(cur.ex==='tr'||cur.ex==='mix')&&!$('field').hidden)$('ans').focus({preventScroll:true});if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)$('wIn').focus({preventScroll:true})},true);
+/* tasks are translated from the interface language */
+on.lang=UI;delete on.ui;X.ui=UI;
 checkAch();applyTheme();topToday();renderModes();settings();stats();aStats();wStats();wSettings();next();setSec(sec);setMascot($('logoT'),'idle');teacherFirstRun();
+renderLangSw();i18nStart();

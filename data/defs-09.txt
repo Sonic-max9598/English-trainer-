@@ -1,0 +1,300 @@
+ocean|a very large area of salt water|She has always dreamed of crossing the Atlantic Ocean by ship.
+plastic|a light material made from chemicals, used to make many things|The city has banned plastic bags in supermarkets to reduce waste.
+rainbow|a curve of colours in the sky after rain|After the storm, a huge rainbow appeared over the mountains.
+recycling|treating used materials so they can be used again|Recycling plastic bottles is now much easier in our neighbourhood.
+renewable|able to be replaced naturally, like energy from the sun or wind|The country plans to get a third of its electricity from renewable sources.
+soil|the top layer of earth where plants grow|The soil in the Fergana Valley is rich enough to grow almost anything.
+solar|relating to the sun|They put solar panels on the roof to save money on electricity.
+thunder|the loud noise in the sky during a storm|The thunder was so loud that it woke up the whole house.
+valley|low land between hills or mountains|The road winds through a green valley full of apricot trees.
+waterfall|a place where a river falls from a high point|We hiked for three hours to reach a beautiful waterfall.
+wildlife|wild animals and plants|The national park is home to rare wildlife, including snow leopards.
+blog|a website where someone regularly writes about a topic|She writes a travel blog about her trips around Central Asia.
+browser|a program used to look at websites|Clear your browser history if the page doesn't load properly.
+cloud storage|a service that stores your files on the internet|I keep all my photos in cloud storage in case I lose my phone.
+cyber attack|an illegal attempt to damage or steal from computer systems|The bank's website was down for hours after a cyber attack.
+file|a collection of information stored on a computer|Save the file before you close the program, or you'll lose your work.
+folder|a place on a computer where you keep files together|I keep all my English homework in one folder on my laptop.
+hacker|a person who gets into computer systems illegally|A hacker stole thousands of passwords from the website.
+headphones|a device you wear over your ears to listen to music|I always wear headphones on the metro to listen to podcasts.
+link|a connection to another web page|Click the link in the email to confirm your registration.
+notification|a message on your phone that tells you about something new|I turn off notifications in the evening so I can relax.
+podcast|a recorded programme you can listen to online|I listen to an English podcast every morning on the way to work.
+post|a message on social media; letters and parcels|Her post about the lost cat was shared hundreds of times.
+printer|a machine that puts text and pictures onto paper|The printer in the office has run out of paper again.
+profile|a description of a person on a website|Update your profile with a recent photo and your contact details.
+screenshot|a picture of what is on a computer or phone screen|Take a screenshot of the ticket in case the internet doesn't work at the airport.
+smartphone|a mobile phone that can use the internet and apps|My grandmother finally got a smartphone so she can video-call her grandchildren.
+social media|websites and apps where people share content and communicate|Many small businesses find new customers through social media.
+software|programs used by a computer|The company bought new software to manage its orders.
+subscribe|to sign up to receive something regularly|Subscribe to our channel for a new English lesson every week.
+update|a newer version of something; new information|Install the latest update to fix the problem with the app.
+username|the name you use to log in to a website or app|Your username must be at least six letters long.
+Wi-Fi|a wireless way of connecting to the internet|Does the hotel have free Wi-Fi in the rooms?
+broom|a brush with a long handle for sweeping floors|My grandmother sweeps the yard with an old broom every morning.
+bucket|an open container with a handle for carrying water|We carried water from the river in buckets to water the garden.
+cushion|a soft bag for sitting on or leaning against|The guests sat on colourful cushions around the low table.
+drawer|a box-shaped part of furniture that slides in and out|The scissors are in the top drawer of the kitchen cupboard.
+hammer|a tool for hitting nails|Hand me the hammer so I can hang this picture.
+ladder|a set of steps you can carry, used to reach high places|He climbed the ladder to pick the apricots at the top of the tree.
+laundry|clothes that need to be washed or have just been washed|I do the laundry on Sundays because the electricity is cheaper.
+lid|a cover for a container|Put the lid on the pot so the rice cooks properly.
+plug|a device that connects a machine to the electricity supply|Pull out the plug before you clean the kettle.
+rope|a thick strong string|We tied the suitcases to the roof of the car with rope.
+scissors|a tool with two blades for cutting paper or cloth|Can you pass me the scissors? I need to open this parcel.
+socket|a place in the wall where you connect electrical equipment|There's only one socket in the hotel room, so we had to take turns charging our phones.
+stove|a piece of equipment for cooking, with gas or electric rings|The soup is warming on the stove.
+tap|a device that controls the flow of water from a pipe|Turn off the tap while you brush your teeth to save water.
+torch|a small electric light you carry in your hand|Take a torch — there are no street lights in the village.
+tray|a flat object for carrying cups and plates|She brought tea and sweets on a beautiful painted tray.
+vacuum cleaner|a machine that cleans floors by sucking up dust|The vacuum cleaner is so loud that the cat runs away whenever I use it.
+bazaar|a market, especially in Asia|Chorsu Bazaar is the best place to buy spices and dried fruit.
+ceremony|a formal event to mark an important occasion|The graduation ceremony took place in the main hall of the university.
+citizenship|the legal right to belong to a country|After living there for ten years, he applied for citizenship.
+court|the place where legal cases are decided|The case will be heard in court next month.
+embassy|the official building of a foreign government in another country|You need to apply for your visa at the embassy in Tashkent.
+immigrant|a person who comes to live in a new country|Many immigrants work hard to build a new life abroad.
+mahalla|a traditional neighbourhood community in Uzbekistan|The whole mahalla helped to prepare food for the wedding.
+minister|a person in charge of a government department|The minister of education visited our school last week.
+parliament|the group of elected people who make the laws of a country|Parliament passed a new law to protect the environment.
+president|the leader of a country or organization|The president gave a speech on Independence Day.
+prison|a building where criminals are kept as punishment|He spent five years in prison for robbery.
+refugee|a person who has had to leave their country because of danger|The charity provides food and shelter for refugees.
+suburb|an area where people live on the edge of a city|They moved to a quiet suburb with more space for the children.
+thief|a person who steals|The thief took my phone while I was looking at the menu.
+apology|words saying that you are sorry|Please accept my apology for the delay.
+betray|to break someone's trust|He felt betrayed when his best friend told everyone his secret.
+compliment|something nice you say about someone|She paid me a compliment on my English pronunciation.
+courage|the ability to do something difficult or dangerous|It took a lot of courage to speak in front of the whole school.
+envy|the feeling of wanting what someone else has|She looked with envy at her friend's new car.
+forgiveness|the act of forgiving someone|He asked his parents for forgiveness after the argument.
+gratitude|the feeling of being thankful|I want to express my gratitude to everyone who helped us.
+guilt|the feeling of having done something wrong|She felt a sense of guilt for not visiting her grandmother more often.
+homesick|feeling sad because you are away from home|During my first month abroad, I was terribly homesick.
+jealousy|an unhappy feeling because someone has something you want|Jealousy can destroy even the closest friendship.
+kindness|the quality of being kind|I'll never forget the kindness of strangers when I was lost in the city.
+loneliness|the feeling of being alone and sad|Many old people suffer from loneliness after their children move away.
+passion|a very strong interest or feeling|Cooking is his real passion — he spends every weekend trying new recipes.
+patience|the ability to wait or deal with problems calmly|Learning to play the dutar requires a lot of patience.
+sympathy|feeling sorry for someone in a difficult situation|We sent flowers to show our sympathy after her father died.
+tears|drops of water that come from your eyes when you cry|There were tears in her eyes as she said goodbye.
+upbringing|the way a child is raised|She had a strict but loving upbringing in a big family.
+acknowledge|to accept that something is true|He finally acknowledged that he had made a mistake.
+anticipate|to expect something and prepare for it|We didn't anticipate so many guests, so we ran out of food.
+assess|to judge the quality, value or importance of something|Teachers assess students through tests, projects and class work.
+assume|to think something is true without proof|I assumed the shop would be open, but it was closed for the holiday.
+claim|to say that something is true, even if others may not believe it|He claims that he can speak seven languages fluently.
+contribute|to give something to help achieve something|Everyone contributed some money to buy a present for our teacher.
+convince|to make someone believe something|She convinced her parents that studying abroad was a good idea.
+demonstrate|to show how something works; to prove|The teacher demonstrated how to use the new interactive board.
+determine|to find out or decide something|The tests will determine the cause of the illness.
+emphasize|to show that something is especially important|The doctor emphasized the importance of regular exercise.
+ensure|to make certain that something happens|Please ensure that all windows are closed before you leave.
+establish|to start or create something that will last|The university was established in 1920.
+estimate|to guess the size, cost or amount of something|We estimated that the repairs would cost about a thousand dollars.
+identify|to recognize and name someone or something|Can you identify the man in this photo?
+indicate|to show or point to something|The research indicates that children learn faster through play.
+maintain|to keep something in good condition or at the same level|It's expensive to maintain such a big old house.
+obtain|to get something, especially with effort|You need to obtain permission before you can film inside the mosque.
+overcome|to successfully deal with a problem|She overcame her fear of public speaking by practising every day.
+persuade|to make someone agree to do something|I persuaded my brother to come with us to the mountains.
+postpone|to move an event to a later time|The match was postponed because of heavy snow.
+predict|to say what will happen in the future|Nobody could have predicted how successful the business would become.
+pursue|to try to achieve something over a long time|She decided to pursue a career in medicine.
+reveal|to make something known that was secret|The magician never reveals how he does his tricks.
+struggle|to try very hard to do something difficult|Many families struggle to pay their bills in winter.
+approach|a way of dealing with something; to come closer|We need a completely new approach to this problem.
+awareness|knowledge or understanding of something|The campaign aims to raise awareness of the dangers of smoking.
+challenge|something difficult that tests your ability|Learning Chinese was the biggest challenge of my life.
+circumstances|the facts or conditions that affect a situation|Under the circumstances, we decided to cancel the trip.
+consequence|a result of an action, often a bad one|If you don't study, you'll have to face the consequences.
+contribution|something you give to help achieve something|Thank you for your generous contribution to the charity.
+issue|an important topic or problem|Water shortage is a serious issue in the region.
+outcome|the result of a process or event|We're still waiting for the outcome of the interview.
+priority|something more important than other things|My family's health is my top priority.
+requirement|something that is needed or demanded|A good level of English is a requirement for this job.
+resource|something useful, like money, water or information|Water is the most valuable resource in a desert country.
+strategy|a plan to achieve a goal|We need a clear strategy to increase our sales.
+tendency|a habit of behaving in a particular way|He has a tendency to arrive late for every meeting.
+threat|a danger; a statement that someone will cause harm|Pollution is a serious threat to the health of the city.
+trend|a general direction of change|There's a growing trend for people to work from home.
+feature|an important part or quality of something|The best feature of this phone is its excellent camera.
+aspect|a particular part or side of something|Money is just one aspect of the problem.
+concern|a feeling of worry; something important to someone|Parents expressed concern about the safety of the new road.
+emergency|a sudden dangerous situation that needs immediate action|In an emergency, call 103 for an ambulance.
+accurate|correct and exact|The weather forecast was surprisingly accurate this week.
+adequate|good enough; sufficient|The hotel room was small but adequate for one night.
+appropriate|suitable for a particular situation|Jeans aren't appropriate for a formal wedding.
+competitive|trying hard to win; offering good prices|The job market is very competitive, so you need good English.
+complex|made of many parts; difficult to understand|The human brain is incredibly complex.
+considerable|large or important|The new road will save a considerable amount of time.
+essential|absolutely necessary|Water and sun cream are essential for a trip to the desert.
+flexible|able to change easily|My job has flexible hours, so I can pick up my children from school.
+inevitable|certain to happen|With so many cars on the road, traffic jams are inevitable.
+reluctant|not willing to do something|He was reluctant to admit that he was wrong.
+significant|important or large enough to notice|There has been a significant increase in prices this year.
+sufficient|enough|We have sufficient food for all the guests.
+thorough|careful and complete|The doctor gave me a thorough examination.
+vague|not clear or exact|His answer was so vague that nobody understood what he meant.
+vulnerable|easily hurt or harmed|Old people and young children are more vulnerable to the flu.
+nevertheless|in spite of that|The task was difficult; nevertheless, we finished it on time.
+furthermore|also; in addition|The flat is cheap. Furthermore, it's close to the metro.
+consequently|as a result|He missed the bus and consequently arrived late for the exam.
+regardless|without being affected by something|We'll go hiking regardless of the weather.
+thus|therefore; in this way|The road was closed, thus we had to find another route.
+hence|for this reason|The carpet is hand-made, hence the high price.
+merely|only; just|It was merely a suggestion — you don't have to follow it.
+abandon|to leave someone or something forever|The village was abandoned after the river dried up.
+absorb|to take in a liquid or information|Children absorb new languages incredibly quickly.
+accelerate|to go faster|The car accelerated as soon as the traffic lights turned green.
+accommodate|to provide space for someone; to change to suit something|The new hotel can accommodate five hundred guests.
+accomplish|to succeed in doing something|We accomplished a lot in just one week.
+accumulate|to gather or collect over time|Dust accumulates quickly in the house during the summer.
+accuse|to say that someone has done something wrong|The shopkeeper accused the boy of stealing a chocolate bar.
+acquire|to get or gain something|She acquired excellent English skills while working abroad.
+allocate|to give something to someone for a particular purpose|The city allocated money to repair the old school.
+alter|to change something|We had to alter our plans because of the storm.
+amend|to make small changes to improve something|The government amended the law after many complaints.
+appeal|to make a serious request; to be attractive to someone|The idea of a quiet holiday in the mountains really appeals to me.
+assemble|to put the parts of something together; to gather|It took us three hours to assemble the new wardrobe.
+assure|to tell someone something to make them less worried|The doctor assured us that the operation was routine.
+attain|to achieve something after effort|She attained the highest score in the country.
+bond|to develop a close relationship|The team bonded during a weekend trip to the mountains.
+boost|to increase or improve something|The festival gave a big boost to local businesses.
+browse|to look through something casually; to look at websites|I like to browse the bookshop for hours on rainy afternoons.
+cease|to stop|The factory ceased production last year.
+clarify|to make something clearer|Could you clarify what you mean by "flexible hours"?
+collapse|to fall down suddenly|The old bridge collapsed after the heavy rain.
+commence|to begin (formal)|The ceremony will commence at ten o'clock.
+compensate|to pay someone because of a loss or injury|The airline compensated us for the cancelled flight.
+compose|to write music or poetry; to form something|He composed a beautiful song for his daughter's wedding.
+conclude|to finish; to decide after thinking|After a long discussion, we concluded that the plan was too expensive.
+conduct|to organize and carry out an activity|The university is conducting research on water use in agriculture.
+confront|to face a difficult situation or person directly|She finally confronted her colleague about the problem.
+conserve|to protect something from being wasted or damaged|We need to conserve water during the dry summer months.
+constitute|to form or make up something|Women constitute more than half of the university's students.
+consult|to ask an expert for advice|You should consult a lawyer before signing the contract.
+cooperate|to work together with others|The two countries cooperated to build the new railway.
+coordinate|to organize people or activities so they work well together|She coordinates all the volunteers at the festival.
+criticise|to say what is wrong with someone or something|The film was criticised for being too long.
+cultivate|to prepare land and grow crops; to develop something|Farmers here have cultivated cotton for centuries.
+dedicate|to give your time and energy to something|She dedicated her life to helping children with disabilities.
+derive|to come from something|Many English words derive from Latin.
+devote|to give your time or energy to something|He devotes every weekend to his garden.
+differ|to be different|Customs differ from one region to another.
+diagnose|to find out what illness someone has|The doctor diagnosed her with a mild infection.
+discourage|to try to stop someone from doing something|My parents discouraged me from studying art.
+dismiss|to remove someone from their job; to refuse to consider something|He was dismissed for being late too many times.
+dispose|to get rid of something|Please dispose of your rubbish in the bins provided.
+distinguish|to see the difference between things|It's hard to distinguish between the twins.
+dominate|to control or have the most power|Our team dominated the whole match.
+eliminate|to remove completely|The new system will eliminate the need for paper forms.
+embrace|to hug someone; to accept something new with enthusiasm|The village embraced the new school with great excitement.
+enhance|to improve the quality of something|A little lemon juice enhances the flavour of the salad.
+enforce|to make sure people obey a rule or law|The police are enforcing the new speed limits.
+evolve|to develop gradually|Languages evolve over time as people use them.
+exaggerate|to describe something as bigger or better than it is|He always exaggerates how much money he earns.
+exceed|to be more than something|The cost of the repairs exceeded our budget.
+exclude|to deliberately not include someone or something|The price excludes breakfast and airport transfers.
+expose|to show something that was hidden; to put someone in a risky situation|The journalist exposed the company's illegal activities.
+fade|to slowly become less bright or strong|The colours of the old carpet have faded in the sun.
+flourish|to grow or develop successfully|Small businesses are flourishing in the old part of the city.
+forbid|to order someone not to do something|My father forbade me to ride a motorbike.
+formulate|to develop an idea or plan carefully|The committee formulated a new plan to reduce traffic.
+fulfil|to do what is required or promised; to achieve a dream|She finally fulfilled her dream of travelling around the world.
+grab|to take hold of something quickly|He grabbed his bag and ran to catch the bus.
+grant|to give or allow something officially|The university granted her a full scholarship.
+illustrate|to explain something with examples or pictures|The teacher illustrated the rule with several examples.
+impose|to force people to accept something|The government imposed a new tax on cigarettes.
+incorporate|to include something as part of something larger|The new design incorporates traditional Uzbek patterns.
+infer|to reach a conclusion from information|From his accent, I inferred that he was from the south.
+inherit|to receive money or property from someone who has died|She inherited her grandmother's house in the village.
+initiate|to start something|The school initiated a new programme to help weaker students.
+insert|to put something into something else|Insert your card and enter your PIN.
+interpret|to explain the meaning of something; to translate spoken words|My cousin interpreted for us during the business meeting.
+justify|to give good reasons for something|How can you justify spending so much money on a phone?
+launch|to start something new; to send a rocket into space|The company launched a new app for learning languages.
+lean|to bend your body; to rest against something|Don't lean on the door — it's not very strong.
+modify|to change something slightly|We modified the recipe to make it less spicy.
+monitor|to watch and check something over time|Doctors are monitoring his condition closely.
+motivate|to make someone want to do something|A good teacher knows how to motivate students.
+neglect|to not give enough attention or care to something|The garden was neglected for years and full of weeds.
+nominate|to suggest someone for a job or prize|She was nominated for the best teacher award.
+oblige|to force someone to do something|The law obliges drivers to wear seat belts.
+occupy|to fill a space or time; to live in a place|The old library occupies the whole ground floor.
+outline|to describe the main points of something|The manager outlined the plan for the next year.
+overlook|to fail to notice something; to have a view of something|Our hotel room overlooked the old city.
+overwhelm|to have a strong emotional effect on someone; to be too much for someone|She was overwhelmed by the kindness of strangers.
+perceive|to notice or understand something|Children often perceive more than adults realize.
+persist|to continue doing something despite difficulties|If the pain persists, see a doctor.
+precede|to come before something|A loud noise preceded the explosion.
+prohibit|to officially forbid something|Smoking is prohibited in all public buildings.
+prosper|to be successful, especially financially|The town prospered when the new railway was built.
+recall|to remember something|I can't recall where I left my keys.
+recruit|to find new people to join an organization|The company is recruiting new staff for its Samarkand office.
+refer|to mention something; to send someone to another person for help|My doctor referred me to a specialist.
+regulate|to control something with rules|The government regulates the price of bread.
+reinforce|to make something stronger|They reinforced the old walls before winter.
+resemble|to look like someone or something|She strongly resembles her grandmother at the same age.
+resist|to fight against something; to stop yourself from doing something|I couldn't resist eating another piece of cake.
+restrict|to limit something|The new law restricts the use of plastic bags.
+retain|to keep something|The old city has retained much of its traditional charm.
+retrieve|to get something back|I managed to retrieve all my photos from the broken phone.
+reverse|to go backwards; to change to the opposite|Reverse the car slowly into the garage.
+revise|to study again before an exam; to change something|I need to revise grammar before my English exam.
+seek|to look for or try to get something|Many young people go abroad to seek better jobs.
+seize|to take hold of something quickly; to take control of something|She seized the opportunity to study abroad.
+simplify|to make something easier|Can you simplify the instructions for the children?
+specify|to state something clearly and in detail|Please specify the date and time of your arrival.
+stimulate|to encourage something to grow or develop|Reading stimulates children's imagination.
+submit|to give a document for official consideration|Submit your application before the end of the month.
+substitute|to use something instead of something else|You can substitute honey for sugar in this recipe.
+summarise|to give a short description of the main points|Summarise the article in three sentences.
+suspend|to stop something for a time; to hang something|All flights were suspended because of the storm.
+sustain|to keep something going|It's hard to sustain your motivation when learning alone.
+tackle|to deal with a difficult problem|The government is trying to tackle unemployment.
+terminate|to end something|The company terminated his contract after three months.
+undergo|to experience something difficult or unpleasant|He underwent surgery on his knee last month.
+utilise|to use something effectively|The school utilises modern technology in every classroom.
+vary|to be different; to change|Prices at the bazaar vary from day to day.
+withdraw|to take money out of a bank; to move back|I withdrew some cash from the ATM before the trip.
+yield|to produce a crop or result; to give way|The apricot trees yielded a huge harvest this year.
+abuse|cruel or violent treatment; wrong use of something|The charity helps children who have suffered abuse.
+acceptance|the act of agreeing to receive something; approval|She received a letter of acceptance from the university.
+accuracy|being correct and exact|The accuracy of the weather forecast has improved a lot.
+acquisition|something bought or obtained; the process of learning|Language acquisition is easier for young children.
+addiction|a strong need to keep doing something harmful|Phone addiction is a growing problem among teenagers.
+administration|the management of an organization|The school administration decided to change the timetable.
+adolescence|the time between childhood and adulthood|Adolescence can be a difficult time for both teenagers and parents.
+agenda|a list of things to discuss at a meeting|The first item on the agenda is the budget for next year.
+analysis|a detailed examination of something|A careful analysis of the data showed some surprising results.
+anxiety|a feeling of worry and nervousness|Many students suffer from anxiety before exams.
+appetite|the desire to eat|The fresh mountain air gave us a huge appetite.
+assessment|a judgement about the quality or value of something|Our final grade is based on continuous assessment.
+asset|something valuable; a person who is useful|Her experience abroad is a great asset to the company.
+assumption|something you think is true without proof|It's a common assumption that English is easy to learn.
+breakthrough|an important discovery or development|Scientists have made a breakthrough in cancer research.
+burden|a heavy load; something difficult to deal with|Looking after three young children alone is a heavy burden.
+capability|the ability to do something|This new phone has impressive camera capabilities.
+chaos|a state of complete confusion|After the snowstorm, the roads were in chaos.
+characteristic|a typical quality or feature|Hospitality is a characteristic of Uzbek culture.
+cluster|a group of similar things close together|A cluster of small houses stood at the foot of the hill.
+collaboration|working together with others|The project was a collaboration between two universities.
+commitment|a promise to do something; dedication|Learning a language requires time and commitment.
+compromise|an agreement where both sides accept less than they wanted|After a long discussion, we reached a compromise.
+consensus|general agreement|There was a consensus that the meeting should be moved.
+conservation|the protection of nature and old buildings|The conservation of ancient monuments is very expensive.
+consumption|the amount of something used|Electricity consumption goes up sharply in summer.
+controversy|a lot of public disagreement|The new law caused a lot of controversy.
+corruption|dishonest behaviour by people in power|The government has promised to fight corruption.
+criterion|a standard used to judge something|Experience is the most important criterion for this job.
+decline|a gradual decrease|There has been a decline in the number of people smoking.
+deficiency|a lack of something necessary|A vitamin deficiency can make you feel tired.
+dependence|the state of needing someone or something|The country is trying to reduce its dependence on imported fuel.
+deprivation|a lack of things people need|Sleep deprivation can affect your memory.
+dimension|a measurement like length or width; an aspect|The project has an important social dimension.
+discipline|training to follow rules; self-control|Learning a language every day takes a lot of discipline.
+discrimination|treating people unfairly because of who they are|Discrimination at work is against the law.
+dispute|a disagreement|The neighbours had a long dispute about the fence.
+diversity|a range of different things or people|Tashkent is known for its cultural diversity.
+emission|gas or other substances sent into the air|Cars are a major source of carbon emissions.

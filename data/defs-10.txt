@@ -1,0 +1,280 @@
+emphasis|special importance given to something|Our school puts great emphasis on speaking practice rather than grammar rules.
+enthusiasm|a feeling of strong excitement and interest|The children started the new project with enormous enthusiasm.
+ethics|moral principles that control behaviour|Doctors must follow strict professional ethics.
+exception|something that does not follow the rule|Everyone passed the exam, with the exception of two students.
+expectation|a belief about what will happen|The hotel was even better than our expectations.
+expenditure|the total amount of money spent|Government expenditure on education has doubled in ten years.
+expertise|special knowledge or skill|We need someone with expertise in digital marketing.
+exposure|being in a situation where you can be affected by something|Too much exposure to the sun can damage your skin.
+framework|a basic structure or set of rules|The new law provides a framework for protecting workers' rights.
+fraud|the crime of deceiving people to get money|He was arrested for credit card fraud.
+frustration|the feeling of being annoyed because you can't do something|I felt a lot of frustration when I couldn't understand the native speakers.
+grief|deep sadness, especially after someone dies|The whole village shared the family's grief.
+guideline|advice about how to do something|Follow these guidelines when you write your essay.
+harassment|repeated behaviour that annoys or threatens someone|The company has a strict policy against harassment at work.
+harmony|a state of peaceful agreement|People of different cultures live here in harmony.
+hostility|unfriendly or aggressive behaviour|There was obvious hostility between the two neighbours.
+hypothesis|an idea that has not yet been proved|The scientists tested their hypothesis in a series of experiments.
+infrastructure|basic systems like roads, water and electricity|The government is investing heavily in rural infrastructure.
+initiative|the ability to act without being told; a new plan|She took the initiative and organized the whole event herself.
+innovation|a new idea or method|Innovation is the key to success in the technology industry.
+insight|a clear understanding of something|The book gives a fascinating insight into life on the Silk Road.
+instinct|a natural feeling that makes you act without thinking|My instinct told me that something was wrong.
+institution|a large important organization|Universities are among the oldest institutions in the country.
+intention|a plan or aim|I have no intention of leaving my job.
+interaction|communication between people|Online lessons can't fully replace face-to-face interaction.
+interpretation|an explanation of the meaning of something|There are several interpretations of this old poem.
+intervention|action taken to improve a situation|Without quick medical intervention, he wouldn't have survived.
+justice|fairness in the way people are treated|The family fought for years to get justice for their son.
+landmark|a famous building or place that is easy to recognize|The Registan is Samarkand's most famous landmark.
+liability|legal responsibility for something|The company accepted liability for the accident.
+likelihood|the chance that something will happen|There's a high likelihood of rain this afternoon.
+logic|a sensible way of thinking|I don't understand the logic behind this decision.
+mechanism|the parts of a machine that work together; a system|The clock has a simple but clever mechanism.
+mentality|a particular way of thinking|The team has a winning mentality.
+merit|a good quality that deserves praise|The plan has some merit, but it's too expensive.
+migration|the movement of people or animals from one place to another|Labour migration has changed many villages in the region.
+milestone|an important event in the development of something|Learning to walk is a big milestone in a child's life.
+misconception|a wrong idea|It's a common misconception that adults can't learn languages well.
+momentum|the force that keeps something moving or developing|The campaign is gaining momentum as more people join.
+monopoly|complete control of a market by one company|The company has a monopoly on electricity supply in the region.
+morale|the level of confidence and enthusiasm in a group|Team morale improved after the manager praised everyone's work.
+negotiation|formal discussion to reach an agreement|After weeks of negotiation, the two companies signed the deal.
+objective|a goal you are trying to achieve|The main objective of the course is to improve your speaking.
+obligation|something you must do|Parents have an obligation to send their children to school.
+outbreak|the sudden start of a disease or war|There was an outbreak of flu at the school last month.
+output|the amount produced|The factory's output has doubled since last year.
+overview|a short general description|The first chapter gives an overview of English grammar.
+participation|taking part in something|Active participation in class will improve your grade.
+perspective|a way of thinking about something|Travelling abroad gave me a completely new perspective on life.
+phase|a stage in a process|The first phase of the project will finish in March.
+preference|liking one thing more than another|Do you have a preference for a window or an aisle seat?
+prejudice|an unfair opinion formed without knowledge|We must fight prejudice against people from other cultures.
+premise|an idea on which a theory is based; a building and land|The film's premise is simple but very clever.
+proportion|a part of a whole; the relation between amounts|A large proportion of students study online.
+prospect|the possibility of something happening in the future|The prospect of working abroad excited her.
+provision|the act of providing something|The provision of clean water is the town's top priority.
+publicity|attention from the media|The new restaurant got a lot of publicity on social media.
+recession|a period when the economy is doing badly|Many businesses closed during the recession.
+recovery|getting better after an illness or a difficult period|She made a full recovery after the operation.
+reform|a change that improves a system|The government announced major reforms in education.
+regulation|an official rule|New safety regulations came into force this year.
+reliance|dependence on someone or something|Our reliance on mobile phones is growing every year.
+remedy|a cure for an illness; a solution|Hot tea with honey is a traditional remedy for a sore throat.
+restriction|a rule that limits something|There are strict restrictions on what you can bring on the plane.
+revenue|money a business or government receives|Tourism brings in significant revenue for the city.
+sacrifice|giving up something valuable for something more important|Her parents made many sacrifices to pay for her education.
+sanction|an official punishment; official permission|The country faced economic sanctions after the war.
+scandal|an event that shocks people because it is wrong|The minister resigned after a corruption scandal.
+scenario|a description of possible events|In the worst-case scenario, we'll have to cancel the trip.
+sector|a part of an economy or society|The tourism sector employs thousands of young people.
+self-esteem|confidence in your own value|Praise from teachers can boost a child's self-esteem.
+setback|a problem that delays progress|The injury was a setback, but she was back on the field in a month.
+shortcoming|a weakness or fault|Despite its shortcomings, the plan was approved.
+stability|the state of not changing or being likely to change|Economic stability is important for attracting investors.
+stereotype|a fixed, often unfair, idea about a type of person|It's a stereotype that all teenagers are lazy.
+stimulus|something that encourages activity|The new factory provided a stimulus to the local economy.
+subsidy|money from the government to help pay costs|Farmers receive a subsidy for growing wheat.
+supervision|watching over someone to make sure things are done correctly|Young children must swim under adult supervision.
+surplus|more than is needed|There was a surplus of melons, so prices fell sharply.
+surveillance|careful watching of a person or place|There are surveillance cameras on every corner of the street.
+symptom|a sign of an illness|A high temperature is a common symptom of flu.
+tension|a feeling of nervousness; a difficult relationship|You could feel the tension in the room before the results were announced.
+transition|a change from one state to another|The transition from school to university can be difficult.
+transparency|being open and honest|Citizens are demanding more transparency from the government.
+unemployment|not having a job; the number of people without jobs|Unemployment among young people has fallen this year.
+validity|being legally acceptable or logically correct|Check the validity of your passport before booking a flight.
+welfare|health, comfort and happiness; help from the government|The charity works for the welfare of street children.
+abstract|based on ideas rather than real things|Love and freedom are abstract concepts.
+abundant|existing in large amounts|Fresh fruit is abundant at the markets in summer.
+acceptable|good enough; allowed|Is it acceptable to wear jeans to the office?
+adverse|harmful or unfavourable|The medicine may have some adverse effects.
+affordable|cheap enough for people to buy|The city needs more affordable housing for young families.
+aggressive|behaving angrily and violently|The dog became aggressive when strangers came near.
+alert|quick to notice things|Drivers must stay alert on long night journeys.
+ambiguous|having more than one possible meaning|The question was ambiguous, so many students answered it wrongly.
+anonymous|with a name that is not known|The hospital received a large donation from an anonymous businessman.
+authentic|real; not a copy|This restaurant serves authentic Uzbek food.
+beneficial|having a good effect|Regular walking is beneficial for your heart.
+bold|brave and confident|It was a bold decision to leave a safe job and start a business.
+casual|relaxed; not formal|You can wear casual clothes to the party.
+compatible|able to work or exist together|This charger isn't compatible with my new phone.
+compulsory|required by law or rules|Wearing a seat belt is compulsory.
+confidential|meant to be kept secret|All your personal information will be kept confidential.
+conservative|not liking sudden change; traditional|My grandparents have quite conservative views.
+consistent|always behaving in the same way|She's been a consistent student who never misses a lesson.
+contemporary|modern; belonging to the present time|The gallery shows contemporary art by young Uzbek artists.
+crude|simple and basic; in a natural state|Crude oil is processed into petrol and other products.
+deliberate|done on purpose|It wasn't an accident — it was a deliberate attempt to cheat.
+dense|thick; with many things close together|We got lost in the dense forest.
+distinct|clearly different; easy to notice|There's a distinct difference between British and American accents.
+dynamic|full of energy and new ideas|Tashkent is a dynamic, fast-growing city.
+elaborate|detailed and complicated|They prepared an elaborate meal for the guests.
+eligible|having the right to do or receive something|Students with good grades are eligible for a scholarship.
+evident|clear and obvious|It was evident from his face that he was tired.
+excessive|too much|Excessive use of phones can affect children's sleep.
+fragile|easily broken|Be careful with the box — there are fragile plates inside.
+frank|honest and direct|To be frank, I didn't enjoy the film at all.
+gradual|happening slowly over time|There has been a gradual improvement in the air quality.
+hostile|unfriendly and aggressive|The audience was hostile towards the new proposal.
+identical|exactly the same|The twins wore identical clothes to the party.
+immense|extremely large|The project requires an immense amount of work.
+impartial|not supporting one side more than another|A judge must be completely impartial.
+inadequate|not good enough|The heating in the old building is inadequate for winter.
+incompatible|not able to exist or work together|Their personalities were completely incompatible.
+indispensable|absolutely necessary|A good dictionary is indispensable for language learners.
+innovative|using new methods or ideas|The school uses innovative methods to teach maths.
+intermediate|between two levels; not basic and not advanced|She's at an intermediate level of English.
+irrelevant|not connected with what is being discussed|His comments were irrelevant to the topic.
+keen|very interested or eager|My son is very keen on football.
+legitimate|allowed by law; reasonable|Is this a legitimate website or a fake one?
+lengthy|lasting a long time|After lengthy negotiations, they finally reached an agreement.
+liberal|accepting different ideas and behaviour|She has liberal views on education.
+literal|basic and exact; word for word|A literal translation often sounds strange in another language.
+mature|behaving like an adult; fully grown|She's very mature for her age.
+moderate|neither too much nor too little|Moderate exercise is good for people of all ages.
+mutual|felt or done by two people towards each other|Their friendship is based on mutual respect.
+naive|lacking experience and too ready to believe others|It was naive of me to think the work would be easy.
+neutral|not supporting either side|Switzerland stayed neutral during the war.
+notable|important or interesting|The town is notable for its beautiful old mosque.
+optimistic|hopeful about the future|I'm optimistic that we'll find a solution.
+partial|not complete|The project was only a partial success.
+passive|not active; allowing things to happen|Don't be passive in class — ask questions.
+pessimistic|expecting bad things to happen|He's always pessimistic about the weather.
+potential|possible in the future|The new market has huge potential for growth.
+preliminary|coming before the main part|The preliminary results look very promising.
+prominent|important and well known|She is a prominent writer in Uzbekistan.
+radical|very new and different; extreme|The company needs radical changes to survive.
+rational|based on reason, not emotion|Let's try to make a rational decision.
+reckless|not caring about danger|He was fined for reckless driving.
+refined|elegant; improved by removing unwanted parts|She has very refined taste in clothes.
+remarkable|unusual and surprising in a good way|She made remarkable progress in just three months.
+respective|belonging to each one separately|After the meeting, everyone returned to their respective offices.
+rigid|stiff; not easy to change|The school has very rigid rules about uniforms.
+robust|strong and unlikely to break|This phone has a robust case that protects it if you drop it.
+sceptical|having doubts about something|I'm sceptical about claims that you can learn English in a week.
+selective|choosing carefully|She's very selective about the films she watches.
+sophisticated|complex and advanced; elegant|The new security system is very sophisticated.
+spontaneous|happening without planning|We made a spontaneous decision to drive to the lake.
+straightforward|simple and easy|The instructions are straightforward.
+subtle|not obvious; delicate|There's a subtle difference between these two words.
+superficial|only on the surface; not deep|His knowledge of the subject is quite superficial.
+supreme|highest in rank or importance|The Supreme Court made the final decision.
+tedious|boring and long|Filling in all these forms is a tedious job.
+transparent|clear enough to see through; open and honest|The new building has transparent glass walls.
+ultimate|final; the best or most extreme|Our ultimate goal is to open a school in every village.
+unprecedented|never having happened before|The city saw an unprecedented number of tourists this year.
+vital|extremely important|Clean water is vital for good health.
+vivid|bright and clear; producing strong images in your mind|I have vivid memories of my grandmother's garden.
+widespread|happening in many places|There is widespread support for the new park.
+admittedly|used when you agree that something is true|Admittedly, I should have called you earlier.
+alternatively|as another possibility|We could take the train. Alternatively, we could fly.
+arguably|used when you think something can be shown to be true|This is arguably the best plov in the whole city.
+as opposed to|rather than; in contrast to|I prefer tea as opposed to coffee.
+broadly|in a general way|Broadly speaking, I agree with your plan.
+conversely|in an opposite way|Some people love the heat; conversely, others prefer the cold.
+essentially|basically; in the most important way|The two plans are essentially the same.
+explicitly|clearly and directly|The rules explicitly say that phones are not allowed.
+given that|considering the fact that|Given that it's raining, let's stay at home.
+in contrast|showing a difference|The city is noisy; in contrast, the village is very peaceful.
+in particular|especially|I love Uzbek food, plov in particular.
+in spite of|despite|In spite of the rain, the festival went ahead.
+likewise|in the same way|She was polite to everyone, and they treated her likewise.
+namely|used to give more detail|Two students, namely Akmal and Malika, got full marks.
+nonetheless|in spite of this|The task was difficult; nonetheless, we did it.
+presumably|probably; as you would expect|Presumably the shop will be closed on the holiday.
+provided that|only if|You can borrow the car provided that you return it by six.
+relatively|quite, compared with others|The flat is relatively cheap for this area.
+respectively|in the order mentioned|Akmal and Malika are 25 and 23, respectively.
+roughly|approximately|Roughly two hundred people came to the event.
+seemingly|appearing to be true|It was a seemingly simple question, but nobody could answer it.
+solely|only|The decision was made solely by the director.
+subsequently|after something else|He was arrested and subsequently released.
+virtually|almost completely|Virtually everyone in the village came to the wedding.
+whereby|by which|They introduced a system whereby customers can pay online.
+advocate|to publicly support an idea or plan|Many doctors advocate a diet rich in fruit and vegetables.
+alleviate|to make something less severe|This medicine will help alleviate the pain.
+comprise|to consist of; to form|The course comprises twelve lessons and a final exam.
+compile|to collect information from different places into one list|We compiled a list of the most useful English phrases.
+deteriorate|to become worse|His health deteriorated rapidly during the winter.
+diminish|to become smaller or less important|The pain gradually diminished after a few days.
+endorse|to publicly support someone or something|The famous footballer endorses a new sports drink.
+exacerbate|to make a bad situation worse|Stress can exacerbate many health problems.
+facilitate|to make something easier|The new bridge will facilitate trade between the two regions.
+hinder|to make it difficult for something to happen|Heavy snow hindered the rescue efforts.
+implement|to put a plan into action|The school will implement the new timetable next month.
+mitigate|to make something less harmful|Planting trees helps mitigate the effects of pollution.
+undermine|to gradually make something weaker|Constant criticism can undermine a child's confidence.
+scrutinize|to examine very carefully|The officer scrutinized every page of my passport.
+underestimate|to think something is smaller or less important than it is|Never underestimate how long it takes to learn a language.
+ambiguity|the state of having more than one meaning|The ambiguity in the contract caused problems later.
+bias|an unfair preference for or against something|The newspaper was accused of political bias.
+coherence|being logical and well organized|Your essay needs more coherence between paragraphs.
+discrepancy|a difference between things that should be the same|There's a discrepancy between the two reports.
+dilemma|a difficult choice between two options|I faced a dilemma: take the well-paid job or stay near my family.
+hierarchy|a system of ranks from lowest to highest|There's a strict hierarchy in the company.
+implication|a possible result; something suggested but not said|Have you considered the implications of this decision?
+incentive|something that encourages you to do something|The company offers a bonus as an incentive to work harder.
+integrity|honesty and strong moral principles|She's a woman of great integrity.
+legislation|laws, or the process of making laws|New legislation protects workers' rights.
+perception|the way you see or understand something|Our perception of time changes as we get older.
+prerequisite|something that must exist before something else can happen|Basic English is a prerequisite for this course.
+scope|the range of a subject or activity|The scope of the project is wider than we expected.
+sustainability|the use of resources in a way that can continue|The city is focusing on sustainability and green energy.
+arbitrary|based on chance rather than reason|The decision seemed completely arbitrary.
+coherent|logical and clearly expressed|She gave a clear and coherent explanation.
+comprehensive|including everything|The guide gives a comprehensive list of museums.
+compelling|very interesting; convincing|She made a compelling argument for changing the rules.
+controversial|causing a lot of disagreement|The new law is very controversial.
+diverse|very different from each other|The city has a diverse population.
+explicit|clear and detailed|The teacher gave explicit instructions for the exam.
+feasible|possible and practical|Is it feasible to finish the project in two weeks?
+genuine|real; sincere|This is a genuine silk carpet from Khotan.
+inherent|existing as a natural part of something|There are inherent risks in mountain climbing.
+meticulous|very careful about details|She is meticulous about checking her work.
+plausible|seeming likely to be true|His excuse sounded plausible, so we believed him.
+prevalent|common at a particular time or place|Colds are prevalent in winter.
+redundant|no longer needed|Delete any redundant words from your essay.
+substantial|large in amount or importance|They made a substantial donation to the hospital.
+notwithstanding|despite (formal)|Notwithstanding the bad weather, the event was a success.
+albeit|although (formal)|He accepted the job, albeit reluctantly.
+by and large|in general|By and large, the trip went very well.
+to some extent|partly|I agree with you to some extent.
+abolish|to officially end a law or system|Many countries have abolished the death penalty.
+accentuate|to make something more noticeable|The bright lights accentuate the beauty of the old buildings.
+adhere|to follow rules or beliefs; to stick to something|All staff must adhere to the safety regulations.
+allege|to say someone has done something wrong without proof|The newspaper alleges that the minister took bribes.
+alienate|to make someone feel unwelcome or unfriendly|His rude comments alienated his colleagues.
+ascertain|to find out the truth about something|Police are trying to ascertain the cause of the fire.
+aspire|to have a strong wish to achieve something|She aspires to become a famous architect.
+attribute|to say that something is caused by something|She attributes her success to hard work and luck.
+augment|to increase the size or value of something|He took a second job to augment his income.
+bolster|to support or make stronger|The good news bolstered our confidence.
+circumvent|to find a way around a rule or problem|They found a way to circumvent the new restrictions.
+coincide|to happen at the same time|My birthday coincides with Navruz this year.
+commemorate|to remember an important person or event officially|A statue was built to commemorate the great poet.
+comply|to obey a rule or request|All restaurants must comply with health regulations.
+concede|to admit that something is true, often unwillingly|He finally conceded that he had been wrong.
+condemn|to say publicly that something is very bad|World leaders condemned the attack.
+confer|to discuss something; to give an honour|The judges conferred before announcing the winner.
+consolidate|to make something stronger or more secure|Review exercises help you consolidate new vocabulary.
+contemplate|to think carefully about something|She is contemplating a move to another country.
+contend|to argue that something is true; to compete|Some experts contend that the climate is changing faster than expected.
+corroborate|to provide evidence that supports a statement|Two witnesses corroborated his story.
+curtail|to reduce or limit something|The company had to curtail spending during the crisis.
+deduce|to reach a conclusion by thinking logically|From the evidence, the detective deduced who the thief was.
+defer|to delay something until later|We decided to defer our holiday until next year.
+delegate|to give part of your work to someone else|A good manager knows how to delegate tasks.
+depict|to show in a picture or describe|The painting depicts a busy bazaar in old Bukhara.
+deplete|to reduce the amount of something|We are depleting the planet's natural resources.
+deter|to make someone decide not to do something|High fines deter people from parking illegally.
+devise|to plan or invent something|She devised a clever way to remember irregular verbs.
+discern|to notice or understand something that is not obvious|It was hard to discern any difference between the two versions.
+disclose|to make information known|The company refused to disclose its profits.
+disperse|to spread out in different directions|The crowd dispersed after the concert.
+disrupt|to stop something from continuing normally|The strike disrupted train services across the country.
+dwell|to live somewhere; to think about something too much|Don't dwell on your mistakes — learn from them.
+elicit|to get a reaction or information from someone|The teacher's question elicited some interesting answers.
+embark|to start something new; to get on a ship or plane|She embarked on a new career as a translator.
+encompass|to include many things|The course encompasses grammar, vocabulary and pronunciation.
+endeavour|to try very hard to do something|We endeavour to answer all emails within a day.

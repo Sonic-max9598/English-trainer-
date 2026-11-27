@@ -1,0 +1,270 @@
+drink|to take liquid into your mouth and swallow it|In the summer heat we drink at least two litres of water a day.
+sit|to rest on a chair or on the ground with your back upright|We sat on the riverbank and watched the sun go down.
+stand|to be on your feet; to be upright|There were no free seats, so we had to stand for the whole journey.
+walk|to move on foot at a normal speed|We walked all the way home because the last bus had already gone.
+run|to move very fast on your legs|I had to run to catch the bus, and I still missed it.
+live|to have your home somewhere; to be alive|My cousins live in a small town at the foot of the mountains.
+stay|to remain in a place; to live somewhere for a short time|We stayed with relatives instead of booking a hotel.
+leave|to go away from a place; to let something remain|She left the office early to pick up her son from school.
+arrive|to reach a place at the end of a journey|By the time we arrived at the station, the train had already left.
+return|to come or go back; to give something back|He returned from his business trip with presents for everyone.
+forget|to not remember something|I forgot to buy bread, so we had rice with our soup instead.
+remember|to keep something in your mind; to not forget|Do you remember the name of that little café we liked so much?
+try|to make an effort to do something; to test something|I tried to call you three times, but your phone was off.
+use|to do something with an object for a purpose|You can use my laptop while yours is being repaired.
+change|to make or become different|She changed her hairstyle, and at first I didn't recognize her.
+choose|to decide which one you want|It took me an hour to choose a present for my mother.
+win|to be the best in a game or competition|Our team won the final after a very nervous last ten minutes.
+travel|to go from one place to another, often far away|I'd love to travel around Central Asia by train one day.
+meet|to see and talk to someone for the first time, or by arrangement|I met my wife at a friend's wedding ten years ago.
+play|to take part in a game or sport; to make music on an instrument|The boys play football in the yard until it gets too dark to see the ball.
+wash|to clean something with water and usually soap|I'll cook if you wash the dishes afterwards.
+carry|to hold something and take it somewhere|He offered to carry my suitcase up the stairs.
+show|to let someone see something|Can you show me how this new phone works?
+believe|to think that something is true|I couldn't believe how much the city had changed since my last visit.
+hope|to want something to happen and think it might|I hope the weather is good for the wedding on Saturday.
+feel|to experience an emotion or a physical feeling|I feel much better after a good night's sleep.
+big|large in size or amount|They live in a big house with a garden full of fruit trees.
+small|little in size or amount|We rented a small flat near the university.
+long|measuring a great distance from one end to the other; lasting a lot of time|It was a long journey, but the views made it worth it.
+short|not long; not tall|The film was surprisingly short — only an hour and a half.
+tall|having a greater height than usual|My brother is so tall that he has to bend to get through the door.
+high|a long way above the ground|The highest mountains in the country are covered in snow all year.
+new|recently made, bought or started|I bought a new phone because the old one kept switching off.
+old|having lived or existed for a long time|This old mosque was built more than five hundred years ago.
+young|not old; in the early part of life|My grandmother got married when she was very young.
+good|of high quality; pleasant; morally right|That was a really good film — I'd happily watch it again.
+bad|not good; unpleasant|The traffic was so bad that it took us two hours to get home.
+beautiful|very attractive to look at|Registan Square looks even more beautiful at night.
+easy|not difficult|The first part of the exam was easy, but the second part was a nightmare.
+difficult|not easy; needing effort or skill|It was a difficult decision, but we decided to move abroad.
+hot|having a high temperature|It was so hot yesterday that the streets were almost empty at noon.
+warm|slightly hot in a pleasant way|The sea was warm enough to swim in, even in October.
+fast|moving or happening quickly|The new train is so fast that you can get to Samarkand in two hours.
+slow|not fast|The internet is so slow today that I can't even open my email.
+strong|having great physical power; not easily broken|He is strong enough to carry the washing machine on his own.
+weak|not physically strong; not powerful|I still feel weak after the flu, so I'm staying at home.
+rich|having a lot of money|They became rich after selling their family business.
+poor|having very little money|Many poor families get help from the local mahalla.
+full|containing as much as possible|The bus was so full that we had to wait for the next one.
+empty|with nothing or no one inside|When we got home, the fridge was completely empty.
+heavy|weighing a lot|This suitcase is too heavy — what did you put in it?
+dark|with little or no light|It gets dark very early in December.
+quiet|making little or no noise|The library is so quiet that you can hear people turning pages.
+loud|making a lot of noise|The music at the wedding was so loud that we couldn't hear each other.
+dirty|not clean|Take off your dirty boots before you come into the house.
+busy|having a lot to do; full of people or activity|I'm really busy this week, but let's meet on Saturday.
+free|not costing anything; not busy|Entry to the museum is free on the first Sunday of the month.
+important|having great value or effect|It's important to drink enough water when you exercise.
+interesting|holding your attention|Our guide told us interesting stories about every building we passed.
+boring|not interesting|The lecture was so boring that half the students fell asleep.
+ready|prepared for something|Dinner will be ready in five minutes, so please set the table.
+different|not the same|My brother and I are completely different, even though we're twins.
+same|exactly like another; not different|We were born in the same hospital, only a week apart.
+true|correct; based on facts|Is it true that you're moving to another city?
+favourite|liked more than all others|Plov is my favourite dish, especially at weddings.
+happy|feeling or showing pleasure|She looked so happy when she opened the present.
+sad|unhappy|It was sad to say goodbye to my classmates on the last day of school.
+angry|having a strong feeling against someone who has done something wrong|My father was angry when I came home at three in the morning.
+afraid|feeling fear|My little sister is afraid of the dark, so she sleeps with a lamp on.
+surprised|feeling that something is unexpected|I was surprised to see my old teacher at the market.
+worried|unhappy because you think something bad may happen|My mother is always worried when I drive at night.
+calm|peaceful and not anxious or excited|She stayed calm even when the plane started shaking.
+kind|caring and helpful towards others|It was very kind of you to drive me to the airport so early.
+friendly|behaving in a pleasant, welcoming way|The people in the village were so friendly that we felt at home immediately.
+polite|having good manners and respect for others|It's polite to stand up when an older person comes into the room.
+lazy|not wanting to work or make an effort|I feel so lazy on Sunday mornings that I don't even want to cook.
+honest|telling the truth; not cheating|Thank you for being honest with me, even though it was hard to hear.
+clever|quick at learning and understanding things|She's so clever that she finished school a year early.
+funny|making you laugh|He told such funny stories that everyone at the table was laughing.
+shy|nervous and uncomfortable with other people|He was too shy to speak English in class at first.
+proud|pleased about something you or someone close to you has done|My parents were so proud when I got my first job.
+bored|tired and unhappy because nothing interesting is happening|The kids got bored after an hour in the car.
+excited|very happy and enthusiastic about something|The children were too excited to sleep the night before the trip.
+lonely|unhappy because you are alone or have no friends|He felt lonely in the big city during his first months there.
+smile|an expression where the corners of your mouth turn up when you are happy|Her smile made everyone in the room relax.
+clothes|the things you wear, like shirts, trousers and dresses|I need to buy some warm clothes before winter.
+shirt|a piece of clothing for the upper body, with a collar and buttons|He ironed his best shirt for the job interview.
+dress|a piece of clothing for a woman or girl that covers the body and legs|She wore a traditional silk dress to her sister's wedding.
+trousers|a piece of clothing covering the legs, with a separate part for each leg|These trousers are too long — I'll have to get them shortened.
+shoes|coverings for your feet, usually made of leather|I bought comfortable shoes because we'll be walking all day.
+coat|a long warm piece of clothing worn over other clothes|Put on your coat — it's freezing outside.
+jacket|a short coat|I left my jacket in the restaurant and had to go back for it.
+hat|a covering for the head|Wear a hat in the sun or you'll get a headache.
+bag|a container made of cloth, leather or plastic for carrying things|She always carries a huge bag with everything she might need.
+size|how big or small something is|Do you have these shoes in a bigger size?
+colour|red, blue, green, etc.|What colour shall we paint the kitchen?
+wear|to have clothes, glasses, jewellery, etc. on your body|She wears glasses for reading but not for driving.
+discount|a reduction in the usual price|Students get a ten percent discount at the museum.
+card|a small piece of plastic for paying; also a piece of stiff paper with a message|Can I pay by card, or do I need cash?
+cash|money in coins or notes|Some small shops at the bazaar only accept cash.
+receipt|a piece of paper that shows you have paid for something|Keep the receipt in case you need to return the shoes.
+customer|a person who buys something from a shop or business|The shop gives a free coffee to its regular customers.
+gift|something you give to someone; a present|This hand-painted plate was a gift from our Uzbek friends.
+phone|a device for talking to people who are far away|My phone died just when I needed to call a taxi.
+message|a short piece of written or spoken information you send to someone|I sent her a message, but she hasn't replied yet.
+email|a message sent from one computer or phone to another|I get more than fifty work emails a day.
+internet|the system that connects computers around the world|You can find almost any recipe on the internet these days.
+computer|an electronic machine that stores and processes information|My computer is so old that it takes five minutes to turn on.
+photo|a picture taken with a camera|We took hundreds of photos during our trip to Khiva.
+video|a recording of moving pictures and sound|My brother posted a video of the concert online.
+music|sounds arranged in a pleasant way, played or sung|I listen to music on the bus to make the journey go faster.
+film|a story shown in moving pictures; a movie|We watched an old Uzbek film with English subtitles.
+news|new information about events, often on TV, radio or the internet|Have you heard the news? Akmal is getting married!
+word|a unit of language that has a meaning|I learn ten new English words every day.
+language|the system of words that people use to communicate|Learning a second language opens doors to new friends and jobs.
+letter|a written message sent by post; also a symbol of the alphabet|My grandfather still writes letters by hand to his old friends.
+number|a symbol like 1, 2 or 3; an amount|What's your phone number? I'll call you later.
+address|the details of where someone lives|Could you write your address on this form?
+idea|a thought or a plan|I have an idea — why don't we cook together tonight?
+story|a description of events, real or imaginary|My grandmother tells the best stories about her childhood.
+voice|the sound you make when you speak or sing|She has such a beautiful voice that she should sing professionally.
+password|a secret word that lets you use a computer, phone or account|I forgot my password and had to reset it three times.
+screen|the flat surface on a TV, computer or phone where pictures appear|I dropped my phone and cracked the screen.
+battery|a device that gives electricity to a phone, car, etc.|My phone battery dies by the evening, so I always carry a charger.
+because|for the reason that|I stayed at home because I wasn't feeling well.
+but|used to show a contrast|The hotel was expensive, but the view was amazing.
+if|used to talk about a possible situation|If it rains tomorrow, we'll stay at home and watch films.
+when|at what time; at the time that|Call me when you arrive at the station.
+where|in or to what place|Where did you buy that beautiful carpet?
+why|for what reason|Why didn't you tell me you were moving?
+how|in what way|How did you learn to speak English so well?
+what|used to ask about things or information|What do you want to do this weekend?
+who|used to ask about a person|Who is that woman talking to your father?
+which|used to ask about one of a limited number of things|Which bus goes to the city centre?
+every|all the members of a group, without exception|Every student in the class has to give a short presentation.
+all|the whole of; every one of|All my friends came to my birthday party.
+some|an amount or number of something, not exact|Can you buy some apples on your way home?
+many|a large number of|Many people come to Samarkand to see the old buildings.
+much|a large amount of (used with things you can't count)|I don't have much time, so let's be quick.
+few|a small number of|Only a few people came because of the heavy snow.
+enough|as much or as many as necessary|Do we have enough chairs for all the guests?
+only|no more than; nobody or nothing except|I only have five minutes, so tell me quickly.
+also|in addition; too|She speaks English and Russian, and she's also learning Korean.
+very|to a high degree|The test was very difficult, but I think I passed.
+together|with each other|We cooked dinner together and talked for hours.
+alone|without other people|She travelled alone across Europe when she was twenty.
+maybe|perhaps; possibly|Maybe we should leave earlier to avoid the traffic.
+probably|almost certainly|It'll probably rain this afternoon, so take an umbrella.
+of course|certainly; used to agree or give permission|"Can I borrow your pen?" "Of course, here you are."
+thing|an object, idea or event that you do not name exactly|There are so many things I want to do this summer.
+place|a particular area, building or position|This café is my favourite place to read on a rainy afternoon.
+way|a road or direction; a method of doing something|Excuse me, is this the way to the museum?
+life|the time between birth and death; being alive|My grandfather has lived an interesting life full of travel.
+world|the Earth and all the people and countries on it|She wants to travel around the world before she turns thirty.
+country|a nation with its own government; also land outside cities|Uzbekistan is a country with a rich history and amazing food.
+part|a piece or section of something|The best part of the trip was the night we spent in the desert.
+example|something that shows what others of the same kind are like|Can you give me an example of how to use this word?
+reason|the cause of something; why something happens|The reason I'm late is that my car wouldn't start.
+chance|a possibility; an opportunity|There's a good chance that it'll snow tonight.
+choice|the act of choosing; the things you can choose from|The restaurant has a huge choice of dishes from all over the world.
+plan|something you have decided to do and how you will do it|What are your plans for the summer holidays?
+become|to start to be|He became a doctor after seven years of hard study.
+begin|to start|The concert will begin as soon as everyone is seated.
+build|to make a building or other structure|They're building a new metro station near our house.
+burn|to be on fire; to damage something with fire or heat|I burned my hand on the hot pan while I was cooking.
+clean up|to make a place clean and tidy|After the party, it took us three hours to clean up the flat.
+climb|to go up something using your hands and feet|We climbed to the top of the minaret for a view of the whole city.
+cost|to have a particular price|How much does it cost to fly to Istanbul in summer?
+cross|to go from one side of something to the other|Be careful when you cross the road — the cars here drive fast.
+die|to stop living|Many trees died during the long dry summer.
+drop|to let something fall|I dropped my phone in the street, but luckily it didn't break.
+enjoy|to get pleasure from something|We really enjoyed our trip to the mountains.
+enter|to come or go into a place|Please take off your shoes before you enter the mosque.
+fill|to make something full|Fill the bottle with water before we start the hike.
+fight|to use physical force against someone; to try hard to stop something|The two boys started to fight over a football.
+follow|to come or go after someone; to obey rules|Follow me — I know a shortcut to the bazaar.
+guess|to give an answer without being sure|Guess who I saw at the airport today!
+happen|to take place; to occur|What happened? Why is everyone so upset?
+hate|to dislike someone or something very much|I hate waiting in long queues at the bank.
+hit|to touch something with force|The ball hit the window and broke the glass.
+join|to become a member of a group; to connect|I'd like to join a football team to meet new people.
+keep|to continue to have something; to continue doing something|You can keep the book — I've already read it twice.
+kill|to make someone or something die|The frost in April killed most of the apricot flowers.
+kiss|to touch someone with your lips to show love or greeting|She kissed her grandmother on both cheeks.
+knock|to hit a door with your hand to tell people you are there|Someone knocked on the door late at night.
+lie|to be in a flat position; also to say something that is not true|I lay on the sofa all afternoon because I had a headache.
+lift|to move something to a higher position|Can you help me lift this box onto the shelf?
+mean|to have a particular meaning; to intend|What does this word mean in Uzbek?
+move|to change position; to go to live in a new place|We moved to Tashkent when I was ten years old.
+paint|to cover something with paint; to make a picture with paint|We painted the kitchen walls a light yellow colour.
+pick|to choose; to take a fruit or flower from a plant|Pick any cake you like — I'm paying.
+pick up|to lift something from a surface; to collect someone|I'll pick you up from the station at six.
+plant|to put seeds or young plants in the ground|We planted three apricot trees in the garden last spring.
+practise|to do something regularly to improve your skill|If you practise speaking every day, you'll improve much faster.
+print|to produce words or pictures on paper using a machine|Could you print two copies of this document for the meeting?
+rain (verb)|when water falls from the clouds|It rained so hard that the streets turned into rivers.
+reach|to arrive at a place; to stretch your arm to touch something|We reached the top of the mountain just before sunset.
+relax|to rest and become less worried or tense|After the exams, I just want to relax by the lake for a week.
+rent (verb)|to pay money to use a flat, car, etc. for a period of time|We rented a car to drive around the Fergana Valley.
+rise|to move upwards; to increase|Prices have risen so much that a simple lunch now costs twice as much.
+seem|to appear to be|She seems tired — maybe she didn't sleep well.
+share|to have or use something together with others|We shared a big plate of plov between four people.
+shout|to say something very loudly|There's no need to shout — I can hear you perfectly.
+shut|to close something|Shut the window — the noise from the street is terrible.
+sign|to write your name on a document|Please sign here to show that you've received the package.
+smell|to have a particular smell; to notice something with your nose|The whole house smells of fresh bread when my mother bakes.
+smoke|to breathe in smoke from a cigarette; also the grey gas from fire|He stopped smoking after his doctor warned him about his heart.
+solve|to find an answer to a problem|We solved the problem by asking a neighbour for help.
+steal|to take something that does not belong to you|Someone stole my bike while I was in the shop.
+taste|to have a particular flavour; to try a little food|Taste the soup and tell me if it needs more salt.
+thank|to tell someone you are grateful|I want to thank everyone who helped us organize the wedding.
+touch|to put your hand on something|Please don't touch the paintings in the museum.
+turn on|to make a machine or light start working|Turn on the light — I can't see anything.
+turn off|to make a machine or light stop working|Don't forget to turn off the gas before you leave.
+wake|to stop sleeping, or to make someone stop sleeping|The noise from the street woke me at four in the morning.
+wish|to want something that is unlikely or impossible; to hope for someone|I wish I could speak English as well as my teacher.
+check in|to arrive at a hotel or airport and give your details|We checked in at the hotel and went straight to bed.
+get on|to enter a bus, train or plane|Get on the bus at the front and pay the driver.
+get off|to leave a bus, train or plane|Get off at the third stop after the bridge.
+look for|to try to find something|I've been looking for my glasses all morning.
+look after|to take care of someone or something|My mother looks after my children while I'm at work.
+try on|to put on clothes to see if they fit|Can I try on this jacket in a bigger size?
+put on|to dress yourself in clothes|Put on a warm coat — it's snowing outside.
+take off|to remove clothes; also when a plane leaves the ground|Please take off your shoes before you come into the house.
+give back|to return something to its owner|I need to give back the book I borrowed from the library.
+find out|to discover a fact or information|I found out that the museum is closed on Mondays.
+grow up|to change from a child into an adult|I grew up in a small village with no internet.
+set|to put something in a place; to make a clock or device ready|I set my alarm for six because I have an early flight.
+activity|something that you do for interest or pleasure|The hotel offers lots of activities, including horse riding and hiking.
+adult|a person who is fully grown|Tickets cost ten dollars for adults and five for children.
+advert|a picture, short film or text that tries to make people buy something|I saw an advert for a new English course on the metro.
+alarm|a device that makes a loud noise to wake you or warn you|My alarm didn't go off, so I was late for work.
+area|a part of a city, country or place|We live in a quiet area with lots of parks.
+art|paintings, drawings, music and other creative work|The museum has an impressive collection of modern art.
+article|a piece of writing in a newspaper, magazine or website|I read an interesting article about learning languages faster.
+bill|a document showing how much money you have to pay|Could we have the bill, please? We need to leave soon.
+bit|a small piece or amount|Could you turn the music down a bit?
+blood test|a medical check in which some of your blood is examined|The doctor sent me for a blood test to check my iron levels.
+bottom|the lowest part of something|The keys were at the bottom of my bag, under everything else.
+building|a structure with walls and a roof, like a house or office|Our office is in a tall glass building near the metro.
+camera|a device for taking photos or making videos|He bought a professional camera for his trip to the mountains.
+capital letter|a large letter of the alphabet, like A, B, C|Start every sentence with a capital letter.
+change (money)|the money you get back when you pay more than the price|The shop assistant forgot to give me my change.
+cheque|a printed form used instead of cash to pay someone|Very few people pay by cheque in Uzbekistan these days.
+class|a group of students taught together; a lesson|There are twenty students in my English class.
+coin|a small round piece of metal money|I keep all my small coins in a jar by the door.
+contact|communication with someone; to communicate with someone|Let's stay in contact after the course finishes.
+conversation|a talk between two or more people|I had a long conversation with my grandfather about his childhood.
+cost (noun)|the amount of money needed to buy or do something|The cost of living in the capital is much higher than in the villages.
+course|a set of lessons on a subject|She signed up for a three-month English course.
+crowd|a large group of people in one place|A huge crowd gathered in the square to watch the fireworks.
+cuisine|a style of cooking of a particular country or region|Uzbek cuisine is famous for its plov, samsa and fresh bread.
+dentist|a person whose job is to treat people's teeth|I have to go to the dentist because my tooth hurts.
+designer|a person who plans how something will look|She works as a fashion designer in Istanbul.
+diary|a book where you write about what happens each day; a book for planning|I've kept a diary in English for a year, and it really helps.
+dictionary|a book or app that gives the meanings of words|Look up the word in the dictionary if you don't know it.
+difference|the way in which things are not the same|Can you explain the difference between these two tenses?
+direction|the way something is moving or pointing|Excuse me, which direction is the train station?
+dream|images in your mind when you sleep; a wish for the future|Her dream is to study medicine abroad.
+end|the last part of something|At the end of the film, everyone in the cinema was crying.
+energy|the power and strength to be active|I don't have any energy left after a twelve-hour shift.
+entrance|a door or gate where you go into a place|Let's meet at the main entrance of the shopping centre.
+exit|a door or gate where you leave a place|In case of fire, use the nearest exit.
+factory|a building where goods are made by machines|My uncle works at a textile factory outside the city.
+fan|a person who likes someone or something very much; a device that moves air|He's been a fan of that football team since he was a child.
+fashion|a style of clothes that is popular at a particular time|She always follows the latest fashion.
+festival|a special period of celebration or a series of events|The music festival in Samarkand attracts musicians from many countries.
+floor (level)|a level of a building|Our flat is on the ninth floor, and the lift is often broken.
+form|a document with spaces where you write information|Please fill in this form with your name and address.
+fun|enjoyment; something that gives pleasure|We had so much fun at the water park.

@@ -64,6 +64,26 @@
     </div>
   </section>
 
+  <section class="view" id="v-verbs" hidden>
+    <div class="scroll-x" id="vModes"></div>
+    <div class="daybar" id="vProg"></div>
+    <div class="scroll-x vgroups" id="vGroups" aria-label="Группы по 10 глаголов"></div>
+    <div id="vDrill">
+      <div class="card" id="vcard">
+        <div class="task" id="vTask"></div>
+        <div class="vform">
+          <div class="vslot v1"><small>V1</small><b id="vV1"></b></div>
+          <label class="vslot" id="vS2"><small>V2</small><input id="vIn2" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="next"></label>
+          <label class="vslot" id="vS3"><small>V3</small><input id="vIn3" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go"></label>
+        </div>
+        <p class="mk vtr" id="vTr"></p>
+        <div class="row"><button class="main" id="vGo">Проверить</button></div>
+        <div class="fb" id="vFb"></div>
+      </div>
+      <p class="note">Напиши вторую и третью форму. Если форм две (learnt / learned), подойдёт любая. Глаголы, в которых ошибаешься, возвращаются чаще; глагол выучен после трёх верных ответов подряд.</p>
+    </div>
+    <div id="vList" hidden><div id="vListBody"></div></div>
+  </section>
   <section class="view" id="v-words" hidden>
     <div class="scroll-x" id="wModes"></div>
     <div class="daybar" id="wDay"></div>
@@ -107,9 +127,23 @@
     <h2 id="wThemesH" hidden>Темы</h2>
     <div class="themes" id="wThemes" hidden></div>
     <h2 id="wListH">Все слова</h2>
+    <div class="scroll-x" id="wFilt" aria-label="Фильтр"></div>
     <div class="wsum" id="wSum"></div>
-    <div class="row" style="margin:8px 0 6px"><button class="main" id="wStudy">Учить</button></div>
+    <div class="row" style="margin:8px 0 6px"><button class="main" id="wStudyList">Учить этот список</button><button id="wStudy">Учить</button></div>
     <div id="wList"></div>
+  </section>
+
+  <section class="view" id="v-sets" hidden>
+    <div class="scroll-x" id="wModes3"></div>
+    <div id="setsBody"></div>
+  </section>
+
+  <section class="view" id="v-study" hidden>
+    <button class="link" data-back-study>← Назад</button>
+    <h2 id="sTitle" style="margin:4px 0 0"></h2>
+    <p class="mk" id="sMeta"></p>
+    <div class="scroll-x" id="sModes"></div>
+    <div id="sBody"></div>
   </section>
 
   <section class="view" id="v-art" hidden>

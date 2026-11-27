@@ -58,18 +58,19 @@ function onAnswer(good,info){
   if(!info||info.kind==='timer'){qRec().ans++;markActive();saveX();return}
   onActivity(isNewMaterial(info)?'new':'rev');
   for(const r of SR)r.wait--;
-  const kind=info.kind==='word'?'word':info.kind;
+  const kind=info.kind==='word'?'word':info.kind;const ownSR=info.kind==='word'||info.kind==='verb'||info.kind==='study';/* these have their own repetition */
   const id=info.kind==='word'?{k:info.k,type:info.type}:info.id;
   const keyOf=v=>typeof v==='object'?v.k:v;
   if(!good){
-    if(info.kind!=='word')SR.push({kind,id,wait:3+Math.floor(Math.random()*3)});
-    if(info.kind!=='word'&&!X.errs.some(e=>e.kind===kind&&e.id===id)){X.errs.push({kind,id,due:tdy()+1});if(X.errs.length>150)X.errs.shift()}
-  }else if(info.kind!=='word'){const k=X.errs.findIndex(e=>e.kind===kind&&e.id===id&&e.due<=tdy());if(k>=0)X.errs.splice(k,1)}
+    if(!ownSR)SR.push({kind,id,wait:3+Math.floor(Math.random()*3)});
+    if(!ownSR&&!X.errs.some(e=>e.kind===kind&&e.id===id)){X.errs.push({kind,id,due:tdy()+1});if(X.errs.length>150)X.errs.shift()}
+  }else if(!ownSR){const k=X.errs.findIndex(e=>e.kind===kind&&e.id===id&&e.due<=tdy());if(k>=0)X.errs.splice(k,1)}
   combo=good?combo+1:0;
   const mult=combo>=10?3:combo>=5?2:1;
   const gain=good?10*mult:1;
   X.g.xp+=gain;if(combo>X.g.comboBest){const was=X.g.comboBest;X.g.comboBest=combo;if(was>=5&&combo===was+1&&!COMBO_MS[combo])celebrate('Новый рекорд серии: '+combo+'!')}
   if(good&&COMBO_MS[combo])comboReward(combo);
+  if(info.kind==='study'){checkQuests();checkAch();saveX();lessonBar(gain,mult);return}/* set study has its own rounds, not 10-task lessons */
   const L=les();L.n++;if(good)L.ok++;L.xp+=gain;L.run=good?L.run+1:0;L.best=Math.max(L.best,L.run);
   if(info.kind==='tense'&&isNewMaterial(info))L.newT++;
   if(!good)L.mist.push({kind,id,label:mistLabel(info)});
@@ -83,7 +84,9 @@ function mistLabel(info){
   if(info.kind==='tense'){const b=BANK.find(x=>x.en===info.id);return b?b.en:''}
   if(info.kind==='art'){const a=AB.find(x=>x.en===info.id);return a?fullA(a):''}
   if(info.kind==='mix'){const m=MIX.find(x=>x.en===info.id);return m?m.en:''}
-  if(info.kind==='word'){const w=wGet(info.k);return w?bare(w.en)+' — '+w.ru:''}
+  if(info.kind==='word'){const w=wGet(info.k);return w?bare(w.en)+' — '+trw(w):''}
+  if(info.kind==='study'){const w=allWords().concat(X.sets.flatMap(setWords)).find(x=>x.k===info.id);return w?bare(w.en)+' — '+trOf(w):''}
+  if(info.kind==='verb'){const v=IRREG.find(x=>x.v1===info.id);return v?v.v1+' – '+v.v2+' – '+v.v3:''}
   return '';
 }
 function lessonBar(gain,mult){
@@ -113,7 +116,7 @@ function closeSummary(again,retry){
   LES[sec]=null;const N=les();
   if(retry)N.retry=mist.map(m=>({kind:m.kind,id:m.id}));
   lessonBar();
-  if(again||retry){wList=false;showTab('train');if(sec==='tense')next();else if(sec==='art')aNext();else wNext()}
+  if(again||retry){wList=false;showTab('train');if(sec==='tense')next();else if(sec==='art')aNext();else if(sec==='verbs')vNext();else wNext()}
 }
 
 /* --- quests --- */
