@@ -15,7 +15,7 @@ const SYN={while:'when',film:'movie',films:'movies',mum:'mom',mother:'mom',mommy
   reply:'answer',replied:'answered',replies:'answers',respond:'answer',responded:'answered',
   arrive:'come',arrived:'came',arrives:'comes',arriving:'coming',
 };
-const CONJ="when|while|because|before|after|if|until|as soon as|by the time|since|although|though|unless|as";
+const M_CONJ="when|while|because|before|after|if|until|as soon as|by the time|since|although|though|unless|as";
 const TIMEP=["yesterday","tomorrow","today","tonight","now","right now","at the moment","every day","every morning","every evening","every week","last week","last month","last year","last night","next week","next month","next year","this morning","this evening","this weekend","this year","on sundays","on weekends","in the morning","in the evening","in summer","in the summer","in winter","soon","already","at that time","at this time yesterday","this time tomorrow","at this time tomorrow","by then","by the end of the year"];
 const ART=new Set(['a','an','the']);
 const GRAM=new Set(['do','does','did','is','are','am','was','were','be','been','being','have','has','had','will','would','not','no','never','can','could','should','must','shall']);
@@ -23,9 +23,9 @@ function synWords(s){return s.split(' ').map(w=>SYN[w]||w).join(' ').replace(/\s
 /* clause swap on raw text: "When X, Y" <-> "Y when X" */
 function clauseSwaps(raw){
   const out=[raw];const t=raw.trim().replace(/[.!?]+$/,'');
-  const m=t.match(new RegExp('^('+CONJ+')\\b(.+?),\\s*(.+)$','i'));
+  const m=t.match(new RegExp('^('+M_CONJ+')\\b(.+?),\\s*(.+)$','i'));
   if(m)out.push(m[3]+' '+m[1]+m[2]);
-  const k=t.match(new RegExp('^(.+?),?\\s+\\b('+CONJ+')\\b\\s+(.+)$','i'));
+  const k=t.match(new RegExp('^(.+?),?\\s+\\b('+M_CONJ+')\\b\\s+(.+)$','i'));
   if(k&&k[1].split(' ').length>1)out.push(k[2]+' '+k[3]+', '+k[1]);
   return out;
 }

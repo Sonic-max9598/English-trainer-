@@ -1,5 +1,6 @@
-</div>
 <div class="toast" id="toast" role="status" hidden></div>
+<div class="mpop" id="mpop" hidden><div class="mascot sm" data-mood="happy"></div><span></span></div>
+<button class="upd" id="upd" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg><span>Доступно обновление, нажми, чтобы обновить</span></button>
 <div class="lsum" id="lsum" hidden role="dialog" aria-modal="true" aria-labelledby="lsTitle">
   <div class="lsbox">
     <div class="mascot" id="lsMascot"></div>
@@ -12,11 +13,19 @@
     <button id="lsClose" class="link">Закрыть</button>
   </div>
 </div>
+<div class="lsum" id="ssheet" hidden role="dialog" aria-modal="true" aria-labelledby="ssTitle"><div class="lsbox sbox" id="ssBox"></div></div>
+<div class="lsum center" id="tpickM" hidden role="dialog" aria-modal="true" aria-labelledby="tpTitle">
+  <div class="lsbox">
+    <h2 id="tpTitle" style="margin:4px 0 4px">Кто будет твоим учителем?</h2>
+    <p class="mk" style="margin:0 0 14px">Выбери — потом можно поменять в настройках.</p>
+    <div class="tpick" id="tpickBox"></div>
+  </div>
+</div>
 <nav class="nav" role="tablist" aria-label="Меню">
   <div class="in">
-    <button role="tab" data-v="home" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3.5 5 6 5 11a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.6 1.2 2.6 2.5 3 0-3-1-6 0-9z"/></svg></span><span>Сегодня</span></button>
+    <button role="tab" data-v="home" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-9 4 5 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg></span><span>Сегодня</span></button>
     <button role="tab" data-v="train" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><span>Учить</span></button>
-    <button role="tab" data-v="sheet" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><span id="navSheet">Формулы</span></button>
+    <button role="tab" data-v="book" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span><span>Теория</span></button>
     <button role="tab" data-v="prog" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span>Прогресс</span></button>
     <button role="tab" data-v="set" aria-selected="false"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span>Настройки</span></button>
   </div>

@@ -54,7 +54,7 @@ function detectT(en){
   const s=s0.replace(/ will (not )?have /g,' WH ').replace(/ will (\w+ )?(\w+ )?have /g,' WH ');
   if(ing(s.match(/ had (not )?been (\w+ing) /),2)||ing(s.match(new RegExp('^ had '+SUBJ+' been (\\w+ing) ')),2))out.add('papc');
   else if(new RegExp(' had (not |never |already |just |ever )?'+V3+' ').test(s)||new RegExp('^ had '+SUBJ+' (ever |already |just )?'+V3+' ').test(s))out.add('pap');
-  if(ing(s.match(/ (have|has) (not )?been (\w+ing) /),3)||ing(s.match(new RegExp('^ (\\w+ )?(\\w+ )?(have|has) '+SUBJ+' been (\\w+ing) ')),5)||/ how long (have|has) \w+ (\w+ )?been \w+ing /.test(s))out.add('ppc');
+  if(ing(s.match(/ (have|has) (not )?been (\w+ing) /),3)||ing(s.match(new RegExp(' (have|has) '+SUBJ+' been (\\w+ing) ')),3)||/ how long (have|has) \w+ (\w+ )?been \w+ing /.test(s))out.add('ppc');
   else if((new RegExp(' (have|has) (not |never |already |just |ever |recently )?'+V3+' ').test(s)||new RegExp('^ (\\w+ )?(have|has) '+SUBJ+' (ever |already |just |not )?'+V3+' ').test(s))&&!/ (have|has) (got )?to /.test(s)&&!/ (i|you|we|they|he|she|it) (have|has) got /.test(s))out.add('pp');
   if(ing(s.match(/ will (not )?be (\w+ing) /),2)||ing(s.match(new RegExp(' will '+SUBJ+' be (\\w+ing) ')),2))out.add('fc');
   for(const m of s.matchAll(/ (am|is|are) (not |still |just |always |now )?(\w+ing) /g))if(ingV(m[3]))out.add('pc');
@@ -72,8 +72,28 @@ const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
 let cur=null,checked=false,auto=null;
 let st={ok:0,all:0,streak:0};
 let mode=0,run=null,tick=null;
-let ex=['tr','tiles','choose'].includes(on.ex)?on.ex:'tr';
-const EXN={tr:'Перевод',tiles:'Собери',choose:'Выбери время'};
+let ex=['tr','tiles','choose','mix'].includes(on.ex)?on.ex:'tr';
+const EXN={tr:'Перевод',tiles:'Собери',choose:'Выбери время',mix:'Смешанные времена'};
+/* ===== mixed tenses: real-life sentences with two tenses ===== */
+const MIXT={pacps:['Past Continuous + Past Simple',['pac','past']],ppps:['Present Perfect + Past Simple',['pp','past']],futif:['Future Simple + Present Simple',['fut','pres']],papps:['Past Perfect + Past Simple',['pap','past']],prespc:['Present Simple + Present Continuous',['pres','pc']],fcwhen:['Future Continuous + Present Simple',['fc','pres']],ppsince:['Present Perfect (Continuous) + Past Simple',['ppc','pp','past']]};
+/* «When X, Y» is also right as «Y when X» (and back) */
+const CONJ=/^(when|while|if|as soon as|before|after|until|by the time|because)\s+([^,]+),\s*(.+?)([.!?]?)$/i;
+const CONJ2=/^(.+?)\s+(when|while|if|as soon as|before|after|until|by the time)\s+(.+?)([.!?]?)$/i;
+function swapClauses(x){
+  const out=[x];let m=x.match(CONJ);if(m&&m[1].toLowerCase()!=='because')out.push(m[3]+' '+m[1].toLowerCase()+' '+m[2]+m[4]);
+  if(!m&&!x.includes('—')&&(m=x.match(CONJ2)))out.push(m[2]+' '+m[3]+', '+m[1]+m[4]);
+  return out;
+}
+const MIX=__MIXED__.split("\n").map((l,i)=>{const[k,ru,uz,en,alt,h,why]=l.split("|");const all=[en].concat(alt?alt.split(";"):[]);return{id:i,k,ru,uz,en,h,why,all:[...new Set(all.flatMap(swapClauses).map(norm))]}});
+let mixRecent=[];
+/* mixed sentences only from tenses that are already open */
+const mixOpen=()=>MIX.filter(x=>allowedEn(x.en));
+function pickMix(){
+  {const f=gameForce('mix');if(f){const x=MIX.find(m=>m.en===f);if(x)return x}}
+  const okM=mixOpen();if(!okM.length)return null;
+  let pool=okM.filter(x=>!mixRecent.includes(x.id));if(!pool.length)pool=okM;
+  const it=pick(pool);mixRecent.push(it.id);if(mixRecent.length>40)mixRecent.shift();return it;
+}
 const NAMES=/^(I|Akmal|Malika|Mom|Mum|Dad|Grandma|Tashkent|Samarkand|Bukhara|London|Moscow|Istanbul|England|English|Monday|Friday|September|March|May|June)$/;
 
 function stats(){
@@ -101,16 +121,33 @@ function pickItem(){
   return it;
 }
 function exNow(){return run?'tr':ex}
+function nextMix(lang){
+  const it=pickMix();
+  if(!it){ex='tr';on.ex='tr';save();renderModes();toast('<b>Смешанные времена пока закрыты</b><br>Откроются вместе с Past Continuous.');return next()}
+  const M=MIXT[it.k];
+  cur={t:M[1][0],mix:it,lang,a:it.en,all:it.all,it,ex:'mix'};checked=false;
+  $('card').dataset.kind='mix';
+  $('task').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip t">${M[0]}</span>`;
+  $('hint').className='hint';$('hint').innerHTML=M[1].map(t=>`<div><b>${tName(t)}</b>: ${T[t].f['+']}</div>`).join('');
+  $('fb').className='fb';$('fb').innerHTML='';
+  $('go').textContent='Проверить';$('go').hidden=false;$('hintBtn').hidden=false;
+  $('field').hidden=false;$('tiles').hidden=true;$('chOpts').hidden=true;$('tClear').hidden=true;
+  $('ru').textContent=lang==='ru'?it.ru:it.uz;$('mk').textContent='Слова: '+it.h;
+  const a=$('ans');a.value='';base='';a.focus({preventScroll:true});
+  enter($('card'));
+}
 function next(){
-  clearTimeout(auto);stopSay();
+  clearTimeout(auto);
   if(!run&&lessonGate('tense'))return;
-  const it=pickItem(),t=it.t,f=it.f,e=exNow();
-  const lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
+  const e=exNow(),lang=on.lang==='mix'?pick(['ru','uz']):on.lang;
+  $('tsel').hidden=e==='mix';
+  if(e==='mix')return nextMix(lang);
+  const it=pickItem(),t=it.t,f=it.f;
   cur={t,f,lang,a:it.en,all:it.all.map(norm),it,ex:e};checked=false;
   $('card').dataset.kind=e;
   const chips=e==='choose'?`<span class="chip t">Какое это время?</span>`:`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip t">${tName(t)}</span><span class="chip f ${FC[f]}">${f} ${F[f]}</span>`;
   $('task').innerHTML=chips;
-  $('hint').className='hint';$('hint').textContent='Формула: '+T[t].f[f];
+  $('hint').className='hint';$('hint').innerHTML='<b>Формула:</b> '+T[t].f[f]+'<br><span class="mk">'+TX[t].tip+'</span>';
   $('fb').className='fb';$('fb').innerHTML='';
   $('go').textContent='Проверить';$('go').hidden=e==='choose';$('hintBtn').hidden=e==='choose';
   $('field').hidden=e!=='tr';$('tiles').hidden=e!=='tiles';$('chOpts').hidden=e!=='choose';$('tClear').hidden=e!=='tiles';
@@ -161,27 +198,25 @@ function chooseAnswer(o){
 }
 function finishAnswer(good){
   checked=true;st.all++;
-  if(cur.ex==='choose'){prog.ch=prog.ch||{};const c=prog.ch[cur.t]||(prog.ch[cur.t]=[0,0]);c[1]++;if(good)c[0]++;const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg()}
+  if(cur.ex==='mix'){X.mixS=X.mixS||{};const c=X.mixS[cur.mix.k]||(X.mixS[cur.mix.k]=[0,0]);c[1]++;if(good)c[0]++;const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();saveX()}
+  else if(cur.ex==='choose'){prog.ch=prog.ch||{};const c=prog.ch[cur.t]||(prog.ch[cur.t]=[0,0]);c[1]++;if(good)c[0]++;const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg()}
   else record(cur.t,cur.f,good);
   feedback($('card'),good);
   if(good){st.ok++;st.streak++;if(!run&&st.streak>best.streak){best.streak=st.streak;save()}}else st.streak=0;
-  if(!run)onAnswer(good,{kind:'tense',t:cur.t,f:cur.f,ex:cur.ex,id:cur.it.en});else onAnswer(good,{kind:'timer'});
+  if(run)onAnswer(good,{kind:'timer'});else if(cur.ex==='mix')onAnswer(good,{kind:'mix',id:cur.mix.en});else onAnswer(good,{kind:'tense',t:cur.t,f:cur.f,ex:cur.ex,id:cur.it.en});
   const fb=$('fb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
   const h=document.createElement('b');h.textContent=good?(cur.ex==='tr'&&norm($('ans').value)!==norm(cur.a)?'Верно! Вариант из ответов:':'Верно!'):(cur.ex==='choose'?'Это '+tName(cur.t):'Правильно так:');fb.appendChild(h);
   const a=document.createElement('div');a.className='ans';a.textContent=cur.a;fb.appendChild(a);
   if(good&&cur.note){const n=document.createElement('div');n.className='fbnote';n.textContent=cur.note;fb.appendChild(n)}
-  const fm=document.createElement('code');fm.textContent=tName(cur.t)+' · '+T[cur.t].f[cur.f];fb.appendChild(fm);
-  const sb=document.createElement('button');sb.className='say';sb.type='button';
-  sb.innerHTML=SPK+'<span>Послушать</span>';
-  sb.addEventListener('click',()=>{clearTimeout(auto);say(cur.a)});
-  const br=document.createElement('div');br.appendChild(sb);fb.appendChild(br);
+  if(cur.ex==='mix'){const w=document.createElement('p');w.className='why';w.textContent=cur.mix.why;fb.appendChild(w)}
+  else{const fm=document.createElement('code');fm.textContent=tName(cur.t)+' · '+T[cur.t].f[cur.f];fb.appendChild(fm)}
+  if(!good&&!run){const tb=document.createElement('button');tb.className='say';tb.type='button';tb.innerHTML=BOOKIC+'<span>Глава в теории</span>';tb.dataset.chap=cur.ex==='mix'?'t-'+MIXT[cur.mix.k][1][0]:'t-'+cur.t;fb.appendChild(tb)}
   $('go').textContent='Дальше';$('go').hidden=false;
   if(cur.ex==='tiles')renderTiles();
   stats();
   const fresh=syncOpened();if(fresh)unlockToast(fresh);
   const id=cur;
-  if(on.voice){const p=say(cur.a);if(good)p.then(()=>{if(checked&&cur===id)auto=setTimeout(()=>{if(checked&&cur===id)next()},250)})}
-  else if(good)auto=setTimeout(()=>{if(checked&&cur===id)next()},run?600:900);
+  if(good)auto=setTimeout(()=>{if(checked&&cur===id)next()},run?600:cur.ex==='mix'?2200:1100);
 }
 function unlockToast(i){
   for(const t of GROUPS[i])if(on.t[t]===undefined)on.t[t]=1;save();
@@ -198,11 +233,12 @@ function toast(html){
 function show(p){$('startP').hidden=p!=='start';$('resP').hidden=p!=='res';$('card').hidden=p!=='card'}
 const LOCK='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
 function renderModes(){
+  $('tsel').hidden=!mode&&ex==='mix';
   const tf=on.tf&&tOpen(on.tf)?on.tf:'';
   $('tsel').innerHTML=`<button class="tog" data-tf="" aria-pressed="${!tf}">Микс</button>`+STOPS.map(t=>tOpen(t)
     ?`<button class="tog" data-tf="${t}" aria-pressed="${tf===t}">${tName(t)}</button>`
     :`<button class="locked" data-tf="${t}" data-lock="1">${LOCK}${tName(t)}</button>`).join('');
-  $('modes').innerHTML=['tr','tiles','choose'].map(k=>`<button class="tog" data-ex="${k}" aria-pressed="${!mode&&ex===k}">${EXN[k]}</button>`).join('')
+  $('modes').innerHTML=['tr','tiles','choose','mix'].filter(k=>k!=='mix'||mixOpen().length).map(k=>`<button class="tog" data-ex="${k}" aria-pressed="${!mode&&ex===k}">${EXN[k]}</button>`).join('')
     +'<span>Таймер</span>'+[1,3,5].map(n=>`<button class="tog" data-m="${n}" aria-pressed="${mode===n}">${n} мин</button>`).join('');
 }
 function setMode(n){
@@ -245,9 +281,11 @@ function settings(){
   $('setT').innerHTML=openT().map(k=>`<button class="tog" data-k="t" data-v="${k}" aria-pressed="${tOn(k)}">${tName(k)}</button>`).join('')
     +(openT().length<STOPS.length?`<p class="note" style="margin:6px 0 0;width:100%">Остальные времена открываются по очереди: ≥ 85% верных минимум на 30 ответах по предыдущему.</p>`:'');
   const sw=(v,t,d)=>`<div class="set-row"><button class="switch" data-k="opt" data-v="${v}" aria-pressed="${!!on[v]}"><span>${t}<small>${d}</small></span><i></i></button></div>`;
-  $('setV').innerHTML=sw('voice','Читать ответ вслух','Озвучка английского ответа после проверки')+sw('slow','Медленная озвучка','Скорость 0,75')+sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
+  $('setV').innerHTML=sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
   $('setOpen').innerHTML=sw('allOpen','Открыть все времена сразу','Без очереди — для тех, кто уже знает основы');
   $('setTheme').innerHTML=[['auto','Как в системе'],['light','Светлая'],['dark','Тёмная']].map(([k,n])=>`<button class="tog" data-k="theme" data-v="${k}" aria-pressed="${(on.theme||'auto')===k}">${n}</button>`).join('');
+  $('setFs').innerHTML=[[0,'Обычный'],[1,'Крупный'],[2,'Очень крупный']].map(([k,n])=>`<button class="tog" data-fs="${k}" aria-pressed="${bookFs()===k}">${n}</button>`).join('');
+  $('setTeacher').innerHTML=teacherCards();
   $('setF').innerHTML=Object.keys(F).map(k=>`<button class="tog" data-k="f" data-v="${k}" aria-pressed="${!!on.f[k]}">${k} ${F[k]}</button>`).join('');
 }
 
@@ -279,6 +317,8 @@ function renderProg(){
   const mx=Math.max(1,...days.map(x=>x[1][1]));
   const wd=['вс','пн','вт','ср','чт','пт','сб'];
   $('pDays').innerHTML=days.map(([d,c])=>`<div class="day"><span>${wd[d.getDay()]} ${d.getDate()}</span><div class="tr"><i class="o" style="width:${c[0]/mx*100}%"></i><i class="x" style="width:${(c[1]-c[0])/mx*100}%"></i></div><b>${c[1]?Math.round(c[0]/c[1]*100)+'%':'—'}</b></div>`).join('');
+  const ms=X.mixS||{},mt=Object.keys(MIXT);
+  $('pMix').innerHTML=mt.map(k=>{const c=ms[k]||[0,0],p=c[1]?Math.round(c[0]/c[1]*100):null;return `<div class="ar plain"><div class="top2"><span>${MIXT[k][0]}</span><b>${p===null?'—':p+'% · '+c[1]}</b></div><div class="tr"><i class="o" style="width:${c[1]?c[0]/c[1]*100:0}%"></i><i class="x" style="width:${c[1]?(c[1]-c[0])/c[1]*100:0}%"></i></div></div>`}).join('')+`<div class="row"><button class="main" data-ex="mix" data-gotrain="1">Тренировать смешанные времена</button></div>`;
   renderArtProg();renderWordsProg();if(typeof renderWordDays==='function')renderWordDays();
   $('pFocus').textContent=on.focus?'Слабые места: включено':'Тренировать слабые места';
   $('pFocus').classList.toggle('main',!on.focus);
@@ -286,45 +326,23 @@ function renderProg(){
 }
 const dkey=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 
-/* ===== cheat sheet: one tense in detail + overview ===== */
-let shT=null;
-function sheet(){
-  if(!shT)shT=on.tf&&T[on.tf]?on.tf:'pres';
-  $('shSel').innerHTML=STOPS.map(t=>`<button class="tog" data-sh="${t}" aria-pressed="${shT===t}">${tOpen(t)?'':LOCK}${tName(t)}</button>`).join('');
-  const x=T[shT],open=tOpen(shT),gi=gOf(shT);
-  let lock='';
-  if(!open){
-    const p=GROUPS[gi-1],c=gStat(gi-1),a=c[1]?Math.round(c[0]/c[1]*100):0;
-    lock=`<div class="flt" style="margin:12px 0 0"><span>${LOCK} Откроется после ${p.map(tName).join(' / ')}: нужно ≥ 85% на 30+ ответах. Сейчас: ${a}% на ${c[1]}.</span></div>`;
-  }
-  $('shBody').innerHTML=`<div class="card th1"><h2 style="margin:0">${x.n}</h2><p class="mk" style="margin:2px 0 0">${x.ru}</p>${lock}</div>
-  <div class="sheet" style="margin-top:12px">${Object.keys(F).map(f=>`<div class="blk ${FC[f]}"><h3 class="${FC[f]}">${f} ${F[f]}</h3><div class="r"><b>${x.f[f]}</b><i>${x.ex[f]}</i></div></div>`).join('')}</div>
-  <h2>Когда используется</h2><div class="card"><ul class="use">${x.use.map(u=>`<li>${u}</li>`).join('')}</ul></div>
-  <h2>Маркеры — слова-подсказки</h2><div class="card mkl">${x.mk.map(m=>`<div><b>${m[0]}</b><span>${m[1]} · ${m[2]}</span></div>`).join('')}</div>
-  <h2>Не путай</h2>${x.vs.map(([o,s])=>`<div class="card vs"><button class="chip t" data-sh="${o}">${tName(o)}</button><p>${s}</p></div>`).join('')}
-  <div class="row"><button class="main" data-trt="${shT}" ${open?'':'disabled'}>${open?'Тренировать '+x.n:'Пока закрыто'}</button></div>`;
-  const sp=$('shSel').querySelector('[aria-pressed=true]');if(sp&&sp.scrollIntoView)sp.scrollIntoView({inline:'center',block:'nearest'});
-  $('shAll').innerHTML=`<table><tr><th>Время</th><th>+ Утверждение</th></tr>${STOPS.map(t=>`<tr><td><b>${tName(t)}</b><br><small>${T[t].ru}</small></td><td>${T[t].f['+']}<br><small>${T[t].ex['+']}</small></td></tr>`).join('')}</table>`;
-}
-
 /* ===== events ===== */
 document.addEventListener('click',e=>{
   const tab=e.target.closest('.nav button');
   if(tab){showTab(tab.dataset.v);return}
   const mb=e.target.closest('[data-m]');if(mb){setMode(+mb.dataset.m);return}
-  const eb=e.target.closest('button[data-ex]');if(eb){ex=eb.dataset.ex;on.ex=ex;save();setMode(0);return}
+  const eb=e.target.closest('button[data-ex]');if(eb){ex=eb.dataset.ex;on.ex=ex;save();if(eb.dataset.gotrain){if(sec!=='tense')setSec('tense');showTab('train');window.scrollTo({top:0})}setMode(0);return}
   const tf=e.target.closest('[data-tf]');if(tf){
-    if(tf.dataset.lock){shT=tf.dataset.tf;showTab('sheet');return}
+    if(tf.dataset.lock){openChapter('t-'+tf.dataset.tf);return}
     on.tf=tf.dataset.tf||null;save();renderModes();if(!run)next();return}
-  const sh=e.target.closest('[data-sh]');if(sh){shT=sh.dataset.sh;sheet();if(e.target.closest('.vs'))window.scrollTo({top:0,behavior:'smooth'});return}
-  const tr=e.target.closest('[data-trt]');if(tr){on.tf=tr.dataset.trt;save();if(sec!=='tense')setSec('tense');showTab('train');setMode(0);window.scrollTo({top:0});return}
+  const tr=e.target.closest('[data-trt]');if(tr){on.tf=tr.dataset.trt;if(ex==='mix'){ex='tr';on.ex='tr'}save();if(sec!=='tense')setSec('tense');showTab('train');setMode(0);window.scrollTo({top:0});return}
   const ch=e.target.closest('[data-ch]');if(ch){chooseAnswer(ch.dataset.ch);return}
   const tp=e.target.closest('[data-tp]');if(tp){if(checked)return;const i=+tp.dataset.tp;if(cur.tiles[i].used)return;cur.tiles[i].used=true;cur.line.push(i);renderTiles();return}
   const tl=e.target.closest('[data-tl]');if(tl){if(checked)return;const j=+tl.dataset.tl;const i=cur.line[j];cur.line.splice(j,1);cur.tiles[i].used=false;renderTiles();return}
   const b=e.target.closest('[data-k]');if(!b)return;
   const k=b.dataset.k,v=b.dataset.v;
   if(k==='lang')on.lang=v;
-  else if(k==='opt'){on[v]=on[v]?0:1;save();settings();if(v==='snd'&&on.snd)tone(true);if(v==='vib'&&on.vib)buzz(true);if(v==='allOpen'){renderModes();if(typeof renderMap==='function')renderMap()}return}
+  else if(k==='opt'){on[v]=on[v]?0:1;save();settings();if(v==='snd'&&on.snd)tone(true);if(v==='vib'&&on.vib)buzz(true);if(v==='allOpen'){renderModes();X.mapPos=null;saveX()}return}
   else if(k==='theme'){on.theme=v;applyTheme();save();settings();return}
   else if(k==='t'){const c=tOn(v);if(c&&openT().filter(tOn).length===1)return;on.t[v]=c?0:1}
   else{if(on[k][v]&&Object.values(on[k]).filter(Boolean).length===1)return;on[k][v]=on[k][v]?0:1}

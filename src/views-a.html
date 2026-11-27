@@ -1,3 +1,17 @@
+  <section class="view" id="v-home" hidden>
+    <div class="hero" id="hHero"></div>
+    <div class="hstats" id="hStats"></div>
+    <h2>Программа дня</h2>
+    <div class="card hprog" id="hProg"></div>
+    <h2>Задания на сегодня</h2>
+    <div class="card" id="hQuests"></div>
+    <h2>Тропа 12 времён</h2>
+    <p class="note lead">Нажми на остановку — откроются тренировка и глава теории.</p>
+    <div class="map" id="hMap"></div>
+    <h2>Награды <small id="hAchN" class="mk"></small></h2>
+    <div class="achs" id="hAch"></div>
+    <p class="note">Никаких штрафов: урок можно закончить в любой момент, весь прогресс сохраняется сразу.</p>
+  </section>
   <section class="view" id="v-train">
     <div class="scroll-x" id="tsel" aria-label="Время"></div>
     <div class="scroll-x" id="modes" aria-label="Режим"></div>
@@ -36,7 +50,7 @@
       <p class="tip" id="tip">На iPhone: переключи клавиатуру на <b>English</b> и нажми микрофон <b>внизу клавиатуры</b> — продиктуй перевод.</p>
       <div class="row">
         <button class="main" id="go">Проверить</button>
-        <button id="hintBtn">Формула</button>
+        <button id="hintBtn">Подсказка</button>
         <button id="tClear" hidden>Сбросить</button>
         <button id="skip">Пропустить</button>
       </div>
@@ -71,7 +85,7 @@
       </div>
     </div>
     <div class="card big" id="wDoneP" hidden>
-      <div class="num">✓</div>
+      <div class="mascot big-m" id="wDoneM" data-mood="happy"></div>
       <p style="margin-bottom:6px"><b>План на сегодня выполнен!</b></p>
       <p id="wDoneT"></p>
       <div class="row" style="justify-content:center"><button class="main" id="wMore">Ещё 10 новых слов</button><button id="wFree">Свободная практика</button></div>
@@ -80,6 +94,7 @@
   </section>
 
   <section class="view" id="v-wlist" hidden>
+    <div class="scroll-x" id="wModes2"></div>
     <input type="search" id="wSearch" placeholder="Поиск: слово или перевод…" autocomplete="off">
     <details class="own" id="ownBox"><summary>Добавить свои слова</summary>
     <p class="note" style="margin-top:0">Вставь список, по одному слову на строку, в формате <b>word — перевод</b>. Например: <i>borrow — занимать</i>. Подойдут и разделители «-», «=», «:» или табуляция. Свои слова хранятся только на этом устройстве.</p>
