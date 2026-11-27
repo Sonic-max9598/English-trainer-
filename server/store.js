@@ -24,8 +24,18 @@ function fileStore(file) {
 
 function pgStore(url) {
   const { Pool } = require('pg');
-  const local = /@(localhost|127\.0\.0\.1)[:/]/.test(url) || !/@/.test(url);
-  const pool = new Pool({ connectionString: url, max: 5, ssl: local || process.env.PGSSL === '0' ? false : { rejectUnauthorized: false } });
+  /* Neon (or any hosted Postgres): TLS with a verified certificate. SSL params are taken out of the URL
+     because pg lets them override the ssl option below; channel binding is kept if the URL asked for it.
+     PGSSL=0 — no TLS (local server), PGSSL=noverify — TLS without checking the certificate. */
+  const u = new URL(url);
+  const binding = u.searchParams.get('channel_binding') === 'require';
+  for (const k of ['sslmode', 'channel_binding', 'uselibpqcompat', 'sslrootcert']) u.searchParams.delete(k);
+  const local = ['localhost', '127.0.0.1', '::1', ''].includes(u.hostname);
+  const ssl = local || process.env.PGSSL === '0' ? false : { rejectUnauthorized: process.env.PGSSL !== 'noverify', servername: u.hostname };
+  const pool = new Pool({ connectionString: u.toString(), max: 5, ssl, enableChannelBinding: binding,
+    connectionTimeoutMillis: 20000, idleTimeoutMillis: 30000 });
+  /* Neon closes idle connections and sleeps when unused: an idle client error must not crash the server */
+  pool.on('error', e => console.error('postgres idle client error:', e.message));
   const row = r => ({ id: r.id, name: r.name, data: r.data, updated: r.updated.toISOString() });
   return {
     kind: 'postgres',

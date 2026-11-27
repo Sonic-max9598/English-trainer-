@@ -1,7 +1,7 @@
 /* English Intensive — admin server (Render web service, no framework).
    Public API for the app (CORS):  GET /api/news · POST /api/sync
    Admin (HTTP Basic, password from ADMIN_PASSWORD): GET /admin · /admin/api/*
-   Env: PORT, ADMIN_PASSWORD, DATABASE_URL (Postgres; without it → server/data.json), CLASS_CODE (optional),
+   Env: PORT, ADMIN_PASSWORD, DATABASE_URL (Postgres, e.g. Neon; without it → server/data.json), CLASS_CODE (optional),
         ALLOWED_ORIGINS (comma list for the app; default * ), MAX_STUDENTS (default 2000). */
 const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto');
 const makeStore = require('./store');
@@ -164,6 +164,7 @@ const server = http.createServer(async (req, res) => {
 
 store.init().then(() => {
   server.listen(PORT, () => console.log(`admin server on :${PORT} · storage: ${store.kind}${ADMIN_PASSWORD ? '' : ' · ADMIN_PASSWORD is not set, /admin is off'}`));
+  if (store.kind === 'file' && process.env.RENDER) console.warn('DATABASE_URL is not set: data is kept in a file and will be lost on every restart. Add the Neon connection string in Render → Environment.');
 }).catch(e => { console.error('storage init failed:', e.message); process.exit(1) });
 const stop = () => server.close(() => store.close().finally(() => process.exit(0)));
 process.on('SIGTERM', stop); process.on('SIGINT', stop);

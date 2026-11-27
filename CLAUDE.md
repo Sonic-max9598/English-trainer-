@@ -9,7 +9,7 @@
 ## Проект
 - Приложение — `index.html` + `sw.js` (офлайн-кэш), `manifest.json`, `icons/`, `fonts/`. `index.html` и `sw.js` собираются из `src/` и `data/` командой `node build.js` (версия кэша считается по содержимому). Не правь их вручную.
 - Иконки: `node tools/make-icons.js && python3 tools/make-icons.py`.
-- Сервер админки — `server/` (Render, `render.yaml`): журнал класса и сообщение ученикам; в приложении — `src/cloud.js` (настройка «Учитель онлайн», данные в `tenses3x.cloud`). Адрес сервера задаётся при сборке: `API_URL=... node build.js`. Тесты сервера: `cd server && npm test`.
+- Сервер админки — `server/` (Render, `render.yaml`; база — Neon через `DATABASE_URL`): журнал класса и сообщение ученикам; в приложении — `src/cloud.js` (настройка «Учитель онлайн», данные в `tenses3x.cloud`). Адрес сервера задаётся при сборке: `API_URL=... node build.js`. Тесты сервера: `cd server && npm test`.
 - Тестовая сборка с отладочным доступом: `TEST=1 node build.js` → `test-build.html` (в .gitignore).
 
 ## Нельзя ломать
