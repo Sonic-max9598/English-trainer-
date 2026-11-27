@@ -21,7 +21,7 @@ console.log('mixed-tense sentences:',mixed.split('\n').length);
 let js=r('src/app.js')
   .replace('/*@TEACHER*/',()=>r('src/teacher.js'))
   .replace('/*@TENSES_META*/',()=>r('src/tenses-meta.js'))
-  .replace('/*@TENSE_TRAINER*/',()=>r('src/tense.js'))
+  .replace('/*@TENSE_TRAINER*/',()=>r('src/tense.js').replace('/*@MATCH*/',()=>r('src/match.js')))
   .replace('/*@WORDS*/',()=>r('src/words.js'))
   .replace('/*@GAME*/',()=>r('src/game.js'))
   .replace('/*@BOOK*/',()=>r('src/theory-tenses.js')+r('src/theory-book.js')+r('src/book.js'))

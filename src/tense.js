@@ -1,9 +1,11 @@
+/*@MATCH*/
 /* ===== answer normalisation (contractions, numbers) ===== */
 const NUMW=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty'];
 const NUMT={30:'thirty',40:'forty',50:'fifty',60:'sixty'};
 function norm(x){
   return x.toLowerCase().replace(/[’`‘ʻʼ]/g,"'")
    .replace(/\b(\d{1,2})\b/g,(m,d)=>NUMW[+d]||NUMT[+d]||m)
+   .replace(/\b(do|does|did|is|are|was|were|has|have|had|could|would|should)nt\b/g,'$1 not').replace(/\bwont\b/g,'will not').replace(/\bcant\b/g,'cannot')
    .replace(/\bcan't\b/g,'cannot').replace(/\bcan not\b/g,'cannot')
    .replace(/\bwon't\b/g,'will not')
    .replace(/\b(do|does|did|is|are|was|were|has|have|had|could|would|should)n't\b/g,'$1 not')
@@ -39,6 +41,32 @@ function syncOpened(){
 }
 const tName=t=>T[t].n;
 
+/* ===== grammar topics of a sentence: which tenses it uses ===== */
+const PP3="been|gone|done|seen|eaten|taken|given|written|known|left|met|found|made|got|gotten|told|heard|read|flown|woken|forgotten|come|become|begun|broken|chosen|driven|fallen|lost|paid|sent|slept|spent|stood|understood|won|bought|brought|caught|taught|thought|felt|kept|said|sold|put|cut|let|run|swum|sung|drunk|worn|torn|grown|thrown|shown|hidden|ridden|risen|spoken|stolen|built|held|led|meant|sat|shut|hurt|set";
+const ING_ADJ=new Set(['interesting','boring','amazing','exciting','surprising','relaxing','missing','tiring','annoying','confusing','frightening','shocking','charming','stunning','fascinating','challenging','disappointing','embarrassing','satisfying','terrifying','outstanding','willing','loving','caring','something','nothing','anything','everything','morning','evening','building','wedding','ceiling','king','ring','thing','spring','string','during','pudding','lightning','ongoing','upcoming','following','neighbouring','surrounding','amusing','pleasing','promising','worrying','depressing','refreshing','exhausting','thrilling','touching','striking','tempting','misleading','fitting','lasting','working class']);
+const ingV=w=>/ing$/.test(w)&&!ING_ADJ.has(w);
+function detectT(en){
+  const s0=' '+norm(en)+' ',out=new Set(),V3='((?!(?:need|feed|seed|speed|bleed|hundred|indeed|bed|red|shed|wed|sled)\\b)\\w+ed|'+PP3+')',SUBJ='(i|you|he|she|it|we|they|\\w+|the \\w+|my \\w+)';
+  const ing=(m,i)=>m&&ingV(m[i]);
+  /* future perfect (continuous) first, then hide it so "have been" inside it is not read as present perfect */
+  if(ing(s0.match(/ will (not )?have been (\w+ing) /),2)||ing(s0.match(new RegExp('^ will '+SUBJ+' have been (\\w+ing) ')),2)||/ will \w+ (\w+ )?have been \w+ing /.test(s0))out.add('fpc');
+  else if(new RegExp(' will (not )?have (already |just )?'+V3+' ').test(s0)||new RegExp(' will '+SUBJ+' have '+V3+' ').test(s0))out.add('fp');
+  const s=s0.replace(/ will (not )?have /g,' WH ').replace(/ will (\w+ )?(\w+ )?have /g,' WH ');
+  if(ing(s.match(/ had (not )?been (\w+ing) /),2)||ing(s.match(new RegExp('^ had '+SUBJ+' been (\\w+ing) ')),2))out.add('papc');
+  else if(new RegExp(' had (not |never |already |just |ever )?'+V3+' ').test(s)||new RegExp('^ had '+SUBJ+' (ever |already |just )?'+V3+' ').test(s))out.add('pap');
+  if(ing(s.match(/ (have|has) (not )?been (\w+ing) /),3)||ing(s.match(new RegExp(' (have|has) '+SUBJ+' been (\\w+ing) ')),3)||/ how long (have|has) \w+ (\w+ )?been \w+ing /.test(s))out.add('ppc');
+  else if((new RegExp(' (have|has) (not |never |already |just |ever |recently )?'+V3+' ').test(s)||new RegExp('^ (\\w+ )?(have|has) '+SUBJ+' (ever |already |just |not )?'+V3+' ').test(s))&&!/ (have|has) (got )?to /.test(s)&&!/ (i|you|we|they|he|she|it) (have|has) got /.test(s))out.add('pp');
+  if(ing(s.match(/ will (not )?be (\w+ing) /),2)||ing(s.match(new RegExp(' will '+SUBJ+' be (\\w+ing) ')),2))out.add('fc');
+  for(const m of s.matchAll(/ (am|is|are) (not |still |just |always |now )?(\w+ing) /g))if(ingV(m[3]))out.add('pc');
+  for(const m of s.matchAll(new RegExp('^ (\\w+ )?(am|is|are) '+SUBJ+' (still )?(\\w+ing) ','g')))if(ingV(m[5]))out.add('pc');
+  for(const m of s.matchAll(/ (was|were) (not |still |just )?(\w+ing) /g))if(ingV(m[3]))out.add('pac');
+  for(const m of s.matchAll(new RegExp('^ (\\w+ )?(was|were) '+SUBJ+' (still )?(\\w+ing) ','g')))if(ingV(m[5]))out.add('pac');
+  return out;
+}
+const tagsOf=(en,base)=>{const t=detectT(en);if(base)t.add(base);return[...t]};
+const allowedEn=en=>{for(const t of detectT(en))if(!tOpen(t))return false;return true};
+for(const b of BANK)b.tags=tagsOf(b.en,b.t);
+
 /* ===== tense trainer ===== */
 const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
 let cur=null,checked=false,auto=null;
@@ -58,9 +86,12 @@ function swapClauses(x){
 }
 const MIX=__MIXED__.split("\n").map((l,i)=>{const[k,ru,uz,en,alt,h,why]=l.split("|");const all=[en].concat(alt?alt.split(";"):[]);return{id:i,k,ru,uz,en,h,why,all:[...new Set(all.flatMap(swapClauses).map(norm))]}});
 let mixRecent=[];
+/* mixed sentences only from tenses that are already open */
+const mixOpen=()=>MIX.filter(x=>allowedEn(x.en));
 function pickMix(){
   {const f=gameForce('mix');if(f){const x=MIX.find(m=>m.en===f);if(x)return x}}
-  let pool=MIX.filter(x=>!mixRecent.includes(x.id));if(!pool.length)pool=MIX;
+  const okM=mixOpen();if(!okM.length)return null;
+  let pool=okM.filter(x=>!mixRecent.includes(x.id));if(!pool.length)pool=okM;
   const it=pick(pool);mixRecent.push(it.id);if(mixRecent.length>40)mixRecent.shift();return it;
 }
 const NAMES=/^(I|Akmal|Malika|Mom|Mum|Dad|Grandma|Tashkent|Samarkand|Bukhara|London|Moscow|Istanbul|England|English|Monday|Friday|September|March|May|June)$/;
@@ -71,7 +102,7 @@ function stats(){
 }
 function tPool(){
   const tf=on.tf&&tOpen(on.tf)?on.tf:null;
-  let pool=BANK.filter(x=>(tf?x.t===tf:tOn(x.t))&&on.f[x.f]);
+  let pool=BANK.filter(x=>(tf?x.t===tf:tOn(x.t))&&on.f[x.f]&&x.tags.every(tOpen));
   if(!pool.length)pool=BANK.filter(x=>tOpen(x.t)&&on.f[x.f]);
   if(!pool.length)pool=BANK.filter(x=>tOpen(x.t));
   return pool;
@@ -91,7 +122,9 @@ function pickItem(){
 }
 function exNow(){return run?'tr':ex}
 function nextMix(lang){
-  const it=pickMix(),M=MIXT[it.k];
+  const it=pickMix();
+  if(!it){ex='tr';on.ex='tr';save();renderModes();toast('<b>Смешанные времена пока закрыты</b><br>Откроются вместе с Past Continuous.');return next()}
+  const M=MIXT[it.k];
   cur={t:M[1][0],mix:it,lang,a:it.en,all:it.all,it,ex:'mix'};checked=false;
   $('card').dataset.kind='mix';
   $('task').innerHTML=`<span class="chip lang">${lang==='ru'?'RU':'UZ'}</span><span class="chip t">${M[0]}</span>`;
@@ -120,7 +153,8 @@ function next(){
   $('field').hidden=e!=='tr';$('tiles').hidden=e!=='tiles';$('chOpts').hidden=e!=='choose';$('tClear').hidden=e!=='tiles';
   if(e==='choose'){
     $('ru').textContent=it.en;$('mk').textContent=lang==='ru'?it.ru:it.uz;
-    const opts=shuf([t].concat(SIM[t].slice(0,3)));cur.opts=opts;
+    const others=SIM[t].filter(tOpen).concat(shuf(openT().filter(x=>x!==t&&!SIM[t].includes(x))));
+    const opts=shuf([t].concat(others.slice(0,3)));cur.opts=opts;
     $('chOpts').innerHTML=opts.map(o=>`<button data-ch="${o}">${tName(o)}</button>`).join('');
   }else{
     $('ru').textContent=lang==='ru'?it.ru:it.uz;
@@ -135,7 +169,8 @@ const AUX=['do','does','did','is','are','am','was','were','have','has','had','wi
 function buildTiles(it){
   const words=it.en.replace(/[.!?,:;]/g,'').split(/\s+/).filter(Boolean).map((w,i)=>i===0&&!NAMES.test(w)?w.toLowerCase():w);
   const low=new Set(words.map(w=>w.toLowerCase()));
-  const extra=shuf(AUX.filter(a=>!low.has(a))).slice(0,words.length>=6?2:1);
+  const auxOk=a=>a==='being'?false:['been','has','have'].includes(a)?tOpen('pp'):a==='had'?tOpen('pap'):true;
+  const extra=shuf(AUX.filter(a=>!low.has(a)&&auxOk(a))).slice(0,words.length>=6?2:1);
   cur.tiles=shuf(words.concat(extra)).map((w,i)=>({w,i,used:false}));cur.line=[];
   renderTiles();
 }
@@ -150,7 +185,9 @@ function check(){
   if(cur.ex==='tiles'){u=tileAnswer();if(!u)return}
   else{u=$('ans').value.trim();if(!u){$('ans').focus();return}}
   if(listening&&dict)dict.stop().catch(()=>{});
-  const good=variants(u).some(v=>cur.all.includes(v));
+  let good;
+  if(cur.ex==='tiles')good=variants(u).some(v=>cur.all.includes(v))||judge(u,cur.it).good;
+  else{const j=judge(u,cur.it);good=j.good;cur.note=j.note||''}
   finishAnswer(good);
 }
 function chooseAnswer(o){
@@ -168,8 +205,9 @@ function finishAnswer(good){
   if(good){st.ok++;st.streak++;if(!run&&st.streak>best.streak){best.streak=st.streak;save()}}else st.streak=0;
   if(run)onAnswer(good,{kind:'timer'});else if(cur.ex==='mix')onAnswer(good,{kind:'mix',id:cur.mix.en});else onAnswer(good,{kind:'tense',t:cur.t,f:cur.f,ex:cur.ex,id:cur.it.en});
   const fb=$('fb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
-  const h=document.createElement('b');h.textContent=good?'Верно!':(cur.ex==='choose'?'Это '+tName(cur.t):'Правильно так:');fb.appendChild(h);
+  const h=document.createElement('b');h.textContent=good?(cur.ex==='tr'&&norm($('ans').value)!==norm(cur.a)?'Верно! Вариант из ответов:':'Верно!'):(cur.ex==='choose'?'Это '+tName(cur.t):'Правильно так:');fb.appendChild(h);
   const a=document.createElement('div');a.className='ans';a.textContent=cur.a;fb.appendChild(a);
+  if(good&&cur.note){const n=document.createElement('div');n.className='fbnote';n.textContent=cur.note;fb.appendChild(n)}
   if(cur.ex==='mix'){const w=document.createElement('p');w.className='why';w.textContent=cur.mix.why;fb.appendChild(w)}
   else{const fm=document.createElement('code');fm.textContent=tName(cur.t)+' · '+T[cur.t].f[cur.f];fb.appendChild(fm)}
   if(!good&&!run){const tb=document.createElement('button');tb.className='say';tb.type='button';tb.innerHTML=BOOKIC+'<span>Глава в теории</span>';tb.dataset.chap=cur.ex==='mix'?'t-'+MIXT[cur.mix.k][1][0]:'t-'+cur.t;fb.appendChild(tb)}
@@ -200,7 +238,7 @@ function renderModes(){
   $('tsel').innerHTML=`<button class="tog" data-tf="" aria-pressed="${!tf}">Микс</button>`+STOPS.map(t=>tOpen(t)
     ?`<button class="tog" data-tf="${t}" aria-pressed="${tf===t}">${tName(t)}</button>`
     :`<button class="locked" data-tf="${t}" data-lock="1">${LOCK}${tName(t)}</button>`).join('');
-  $('modes').innerHTML=['tr','tiles','choose','mix'].map(k=>`<button class="tog" data-ex="${k}" aria-pressed="${!mode&&ex===k}">${EXN[k]}</button>`).join('')
+  $('modes').innerHTML=['tr','tiles','choose','mix'].filter(k=>k!=='mix'||mixOpen().length).map(k=>`<button class="tog" data-ex="${k}" aria-pressed="${!mode&&ex===k}">${EXN[k]}</button>`).join('')
     +'<span>Таймер</span>'+[1,3,5].map(n=>`<button class="tog" data-m="${n}" aria-pressed="${mode===n}">${n} мин</button>`).join('');
 }
 function setMode(n){
