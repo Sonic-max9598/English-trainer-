@@ -7,14 +7,18 @@ const mixed=r('data/mixed.txt').replace(/\r/g,'').replace(/\n+$/,'');
 // words: base list (+examples) then extra files by level; duplicates are skipped
 function words(){
   const ex={};for(const l of r('data/examples-base.txt').split('\n')){const i=l.indexOf('|');if(i>0)ex[l.slice(0,i)]=l.slice(i+1)}
-  const seen=new Set(),out=[];let dup=[],noEx=[];
+  const seen=new Set(),out=[];let dup=[],noEx=[],noDef=[];
+  /* data/defs-*.txt: word|simple English definition|natural example */
+  const DEFS={};for(const f of fs.readdirSync(path.join(__dirname,'data')).filter(f=>/^defs-.*\.txt$/.test(f)).sort())for(const l of r('data/'+f).split('\n')){const q=l.split('|');if(q.length>=3&&q[0].trim())DEFS[q[0].trim()]=[q[1].trim(),q[2].trim()]}
   const add=(l)=>{if(!l.trim())return;if(/^[@#]/.test(l)){out.push(l);return}
     const p=l.split('|');const k=p[0].trim();if(seen.has(k.toLowerCase())){dup.push(k);return}seen.add(k.toLowerCase());
-    if(p.length<4){if(ex[k])p[3]=ex[k];else noEx.push(k)}out.push(p.slice(0,4).join('|'))};
+    if(p.length<4){if(ex[k])p[3]=ex[k];else noEx.push(k)}
+    const d=DEFS[k];if(d){p[4]=d[0];p[5]=d[1]}else noDef.push(k);
+    out.push(p.slice(0,6).join('|'))};
   r('data/words-base.txt').split('\n').forEach(add);
   ls('data').filter(f=>/^words-\d.*\.txt$/.test(f)).forEach(f=>r('data/'+f).split('\n').forEach(add));
   const n=out.filter(l=>!/^[@#]/.test(l)).length;
-  console.log('words:',n,'duplicates skipped:',dup.length,'| without example:',noEx.length);
+  console.log('words:',n,'duplicates skipped:',dup.length,'| without example:',noEx.length,'| without definition:',noDef.length);
   return out.join('\n');
 }
 console.log('mixed-tense sentences:',mixed.split('\n').length);

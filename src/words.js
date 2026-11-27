@@ -117,8 +117,9 @@ function showIntro(w){
   if(!D.introduced.has(w.k)){D.introduced.add(w.k);dayRec().n++;saveX()}
   $('wTask').innerHTML=`<span class="chip f plus">Новое слово ${D.introIdx}/${D.block.length}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>`;
   const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);
-  $('wSub').innerHTML=`<b class="tr1">${esc(trw(w))}</b>`;
-  $('wEx').innerHTML=w.ex?`<p class="exs">${exHTML(w)}</p>`:'';
+  /* English first: a plain definition and a natural example, then the translation */
+  $('wSub').innerHTML=w.def?`<span class="wdef" lang="en" data-noi18n>${esc(w.def)}</span>`:'';
+  $('wEx').innerHTML=(w.ex?`<p class="exs" lang="en" data-noi18n>${exHTML(w)}</p>`:'')+`<p class="wtr"><b class="tr1">${esc(trw(w))}</b></p>`;
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
   $('wNextB').hidden=false;$('wNextB').textContent=D.introIdx<D.block.length?'Следующее слово':'Проверим себя';

@@ -606,3 +606,11 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
 .langsw{display:flex;padding:3px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);margin-right:6px}
 .langsw button{min-height:34px;min-width:44px;padding:0 10px;border:0;border-radius:999px;background:none;box-shadow:none;font-weight:900;font-size:14px;color:var(--mute)}
 .langsw button[aria-pressed=true]{background:var(--brand);color:var(--brand-ink,#fff)}
+
+/* ---------- dictionary: definition and example come first ---------- */
+.wdef{display:block;font-size:17px;line-height:1.45;color:var(--ink);font-weight:600;margin:2px 0 0}
+.wtr{margin:10px 0 0}
+.wtr .tr1{font-size:19px;color:var(--mute);font-weight:700}
+.wrow .wdef{font-size:15px;font-weight:500;margin:2px 0 0;color:var(--ink)}
+.wrow .wex{margin:3px 0 2px;font-size:14.5px;font-style:italic;color:var(--mute);line-height:1.4}
+.wrow span{display:block;margin-top:2px;font-weight:700}

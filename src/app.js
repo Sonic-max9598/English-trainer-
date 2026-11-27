@@ -302,7 +302,7 @@ const WD=[],LEVELS=[];
 {let lv='',th='';const LI={};WORDS_RAW.split('\n').forEach(l=>{l=l.trim();if(!l)return;
   if(l[0]==='@'){const[n,c]=l.slice(1).split('|');lv=n;if(!(n in LI)){LI[n]=LEVELS.length;LEVELS.push({n,c,th:[]})}return}
   if(l[0]==='#'){th=l.slice(1);const L=LEVELS[LI[lv]];if(!L.th.includes(th))L.th.push(th);return}
-  const[en,ru,uz,ex]=l.split('|');WD.push({k:en,en,ru,uz,ex,lv,th,o:WD.length})});
+  const[en,ru,uz,ex0,def,ex2]=l.split('|');WD.push({k:en,en,ru,uz,ex:ex2||ex0,ex0,def,lv,th,o:WD.length})});
   /* learning order: by level (A1 → C1), then file order */
   WD.sort((a,b)=>LI[a.lv]-LI[b.lv]||a.o-b.o)}
 const LVC=n=>{const L=LEVELS.find(x=>x.n===n);return L?L.c:''};
@@ -332,7 +332,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(trw(w))}</span></div></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<span>${esc(trw(w))}</span></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }

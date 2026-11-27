@@ -1,0 +1,260 @@
+family|a group of people who are related, such as parents and their children|Every Friday the whole family gets together at my grandparents' house for dinner.
+mother|a woman who has a child; your female parent|My mother still calls me every evening to ask whether I have eaten properly.
+father|a man who has a child; your male parent|My father taught me to drive when I was eighteen, and he was surprisingly patient.
+parents|your mother and father|My parents were worried when I decided to study abroad, but now they are proud of me.
+son|a boy or man in relation to his mother and father|Their son has just started university and is living away from home for the first time.
+daughter|a girl or woman in relation to her mother and father|Our neighbours' daughter plays the piano so well that we often stop to listen.
+brother|a boy or man who has the same parents as you|My older brother always lets me borrow his car when mine is being repaired.
+sister|a girl or woman who has the same parents as you|My sister lives in another city, but we talk on the phone almost every day.
+grandmother|the mother of your mother or father|My grandmother remembers every family recipe without ever writing anything down.
+grandfather|the father of your mother or father|My grandfather still walks to the market every morning, even though he is eighty.
+uncle|the brother of your mother or father, or your aunt's husband|My uncle came to the airport to meet us, even though our flight was three hours late.
+aunt|the sister of your mother or father, or your uncle's wife|My aunt always brings home-made sweets when she comes to visit us.
+husband|the man that a woman is married to|Her husband works abroad, so the family only sees him during the holidays.
+wife|the woman that a man is married to|He asked his wife to choose the restaurant because she always picks the best places.
+child|a young person who is not yet an adult|Every child in the village knows the old man who sells ice cream by the school.
+baby|a very young child who cannot walk or talk yet|The baby finally fell asleep after we drove around the block three times.
+friend|a person you know well and like, who is not part of your family|A good friend is someone who tells you the truth even when it is hard to hear.
+neighbour|a person who lives next to you or near you|Our neighbour looked after our cat while we were away on holiday.
+guest|a person you invite to your home or to an event|We had so many guests at the party that some of them had to sit on the floor.
+people|men, women and children; more than one person|Hundreds of people were waiting outside the stadium before the doors opened.
+man|an adult male person|The man who sold us the carpet gave us a discount because we paid in cash.
+woman|an adult female person|The woman at the front desk helped us find a cheaper hotel nearby.
+boy|a male child or a young man|The boy next door practises football against our wall every evening.
+girl|a female child or a young woman|The girl who won the competition had only been learning chess for a year.
+relative|a member of your family, especially one who does not live with you|Almost two hundred relatives came to the wedding, some from very far away.
+wedding|a ceremony at which two people get married, and the party after it|Uzbek weddings are famous for their huge meals and dancing that goes on all night.
+age|how old someone or something is|She started playing the violin at the age of five and now performs abroad.
+name|the word that a person, place or thing is called|I am terrible with names, so I always ask people to repeat theirs twice.
+house|a building where people live, usually one family|They sold their flat in the city and bought a house with a large garden.
+flat|a set of rooms for living in, on one floor of a building|We rent a small flat on the fifth floor, and the lift is often broken.
+room|a part of a building with its own walls, floor and door|The room was so small that we could hardly fit both suitcases inside.
+kitchen|the room where food is cooked|Everyone always ends up in the kitchen at parties because that is where the food is.
+bedroom|a room for sleeping in|My bedroom faces east, so the sun wakes me up early in summer.
+bathroom|a room with a bath or shower and often a toilet|We are having the bathroom repaired, so we have to shower at my sister's place.
+door|the thing you open and close to go into a building or room|Please close the door quietly when you leave, because the baby is asleep.
+window|an opening in a wall, covered with glass, that lets in light and air|I opened the window to let some fresh air into the stuffy room.
+wall|one of the sides of a room or building|We decided to paint one wall of the living room dark green.
+floor|the surface you walk on inside a building; also one level of a building|Our office is on the top floor, so we have a great view of the mountains.
+roof|the top part of a building that covers it|After the storm, we found that part of the roof had been damaged.
+table|a piece of furniture with a flat top and legs|We need a bigger table now that the whole family comes for dinner on Sundays.
+chair|a seat for one person, with a back and usually four legs|Grandpa has his favourite chair by the window, and nobody else sits in it.
+bed|a piece of furniture for sleeping on|I was so tired after the trip that I went straight to bed without eating.
+sofa|a long comfortable seat for two or more people|We fell asleep on the sofa while watching a film last night.
+carpet|a thick cloth that covers a floor|This hand-made carpet was a wedding gift from my grandmother.
+key|a small piece of metal used to open or lock a door|I had to wait outside for an hour because I had left my keys at work.
+light|something that makes it possible to see, like the sun or a lamp|Could you turn on the light? It is getting too dark to read.
+fridge|a machine that keeps food cold|There is nothing in the fridge except a bottle of water and some old cheese.
+cupboard|a piece of furniture with doors and shelves, used for storing things|The plates are in the cupboard above the sink, next to the glasses.
+mirror|a piece of glass in which you can see yourself|She looked in the mirror one last time before leaving for the interview.
+yard|an area next to a house, often with a fence or wall around it|The children spent the whole afternoon playing in the yard.
+garden|a piece of land next to a house where flowers or vegetables are grown|My parents grow tomatoes, cucumbers and herbs in their small garden.
+stairs|a set of steps inside a building that go from one floor to another|The lift was out of order, so we had to carry the sofa up the stairs.
+rent|money you pay regularly to use a flat, house or other property|The rent went up again this year, so we are thinking of moving.
+clean|not dirty|After three hours of hard work, the whole flat was finally clean.
+food|things that people and animals eat|The food at the wedding was so good that I went back for a second plate.
+bread|a food made from flour, water and yeast, baked in an oven|Nothing smells better than fresh bread straight from the tandir oven.
+water|the clear liquid that falls as rain and that we drink|Remember to drink plenty of water when it is this hot outside.
+tea|a hot drink made by pouring water onto dried leaves|We always offer guests a cup of green tea as soon as they arrive.
+coffee|a hot drink made from roasted brown beans|I cannot start work in the morning until I have had my first coffee.
+milk|the white liquid produced by cows and some other animals, which people drink|Could you pick up some milk on your way home? We have run out.
+meat|the flesh of an animal used as food|My brother stopped eating meat last year, so we now cook more vegetables.
+chicken|a farm bird kept for its eggs and meat; also its meat|We roasted a whole chicken with potatoes for Sunday lunch.
+fish|an animal that lives in water and swims; also its meat as food|My uncle caught a huge fish in the lake and cooked it for everyone.
+rice|small white or brown grains that are cooked and eaten|Good plov depends on choosing the right kind of rice.
+egg|an oval object laid by a bird, with a hard shell, often eaten as food|I usually have two boiled eggs and some bread for breakfast.
+cheese|a solid food made from milk|She brought back several kinds of cheese from her trip to Europe.
+butter|a soft yellow food made from cream, spread on bread or used in cooking|Spread a thin layer of butter on the bread before you add the jam.
+oil|a thick liquid from plants or animals, used in cooking|Heat the oil in the pan until it is very hot before adding the onions.
+salt|a white substance used to give food more flavour|The soup tastes a bit bland — I think it needs a little more salt.
+sugar|a sweet substance, often white, added to food and drinks|I am trying to cut down on sugar, so I drink my tea without it now.
+fruit|the sweet part of a plant that contains seeds and can be eaten|The markets are full of cheap fresh fruit at the end of summer.
+vegetables|plants or parts of plants that are eaten as food, like carrots or onions|The doctor told him to eat more vegetables and less fried food.
+apple|a round fruit with red, green or yellow skin|She cut the apple into small pieces so that her little son could eat it.
+potato|a round vegetable that grows under the ground|We fried some potatoes with onions because there was nothing else in the fridge.
+onion|a round vegetable with a strong smell and taste|Cutting onions always makes me cry, no matter how fast I work.
+carrot|a long orange vegetable|You cannot make proper plov without plenty of yellow carrots.
+tomato|a soft round red fruit eaten in salads or cooked as a vegetable|Tomatoes from our village taste much better than the ones in the supermarket.
+soup|a liquid food made by boiling meat, fish or vegetables in water|A bowl of hot soup is exactly what you need on a cold winter evening.
+breakfast|the first meal of the day|I never have time for breakfast, so I usually buy something on the way to work.
+lunch|a meal eaten in the middle of the day|We had a quick lunch at the café near the office before the meeting.
+dinner|the main meal of the day, usually eaten in the evening|Dinner will be ready in ten minutes, so please wash your hands.
+hungry|wanting or needing food|I skipped lunch, so by six o'clock I was incredibly hungry.
+delicious|having a very pleasant taste|The samsa from that little bakery is so delicious that there is always a queue.
+sweet|tasting of sugar|Melons from this region are famous for being incredibly sweet.
+spicy|having a strong, hot taste because of spices|This dish is too spicy for me — my mouth is on fire!
+cook|to prepare food by heating it|My dad loves to cook on Sundays, and he always makes far too much.
+time|what is measured in minutes, hours, days and years|Time flies when you are having fun with good friends.
+day|a period of 24 hours; also the time when it is light|We spent the whole day walking around the old city.
+night|the time when it is dark and most people sleep|The streets are quiet at night, except for a few taxis.
+morning|the early part of the day, from when the sun rises until midday|I study English for half an hour every morning before work.
+evening|the part of the day between the afternoon and the night|In the evening, the whole family sits together and drinks tea.
+week|a period of seven days|I go to the gym three times a week, usually after work.
+month|one of the twelve periods that a year is divided into|We moved into our new flat last month and are still unpacking.
+year|a period of twelve months|This year I want to read at least one book in English every month.
+today|on this day|I cannot meet you today because I have to finish an important report.
+tomorrow|on the day after today|The shop will be closed tomorrow because of the national holiday.
+yesterday|on the day before today|Yesterday it rained so heavily that half the streets were flooded.
+hour|a period of 60 minutes|The train journey from Tashkent to Samarkand takes about two hours.
+minute|a period of 60 seconds|Could you wait a minute? I just need to find my keys.
+now|at this moment|I am busy now, but I can call you back in half an hour.
+soon|in a short time from now|The rain should stop soon, so let's wait inside for a while.
+late|after the usual or expected time|The bus was late again, so I missed the beginning of the lesson.
+early|before the usual or expected time|We left early to avoid the traffic on the way to the airport.
+always|at all times; every time|She always smiles, even when she is having a difficult day.
+often|many times|I often listen to podcasts on the bus to practise my English.
+sometimes|on some occasions but not always|Sometimes I cook dinner, and sometimes we just order something.
+never|not at any time|I have never been to the sea, but I hope to go next summer.
+already|before now, or sooner than expected|I have already finished my homework, so can I go out now?
+still|continuing until now|It is almost midnight, but the neighbours are still making a lot of noise.
+again|one more time|I failed my driving test, so I will have to take it again next month.
+weekend|Saturday and Sunday|This weekend we are planning to go to the mountains if the weather is good.
+holiday|a time when you do not work or go to school; a trip for pleasure|We spent our summer holiday by a lake in the mountains.
+birthday|the day of the year on which a person was born|My friends surprised me with a cake on my birthday.
+season|one of the four parts of the year: spring, summer, autumn and winter|Autumn is my favourite season because the weather is warm but not too hot.
+head|the top part of the body, with the eyes, mouth and brain|I hit my head on the low door of the old house.
+face|the front part of the head|You could see from her face that she was nervous before the exam.
+eye|one of the two parts of the face you see with|She has beautiful dark eyes, just like her mother.
+ear|one of the two parts of the head you hear with|He whispered the secret in my ear so that nobody else could hear.
+nose|the part of the face you smell and breathe with|My nose turns red whenever I spend too long in the cold.
+mouth|the part of the face used for eating and speaking|Don't speak with your mouth full — it's rude.
+tooth|one of the hard white things in your mouth used for biting|I broke a tooth on a nut and had to go to the dentist.
+hair|the thin threads that grow on the head|She has decided to cut her long hair short for the summer.
+hand|the part at the end of the arm, with fingers|Raise your hand if you know the answer to the question.
+arm|the long part of the body between the shoulder and the hand|He broke his arm playing football and couldn't write for a month.
+leg|one of the long parts of the body you stand and walk on|After the long hike, my legs ached for two days.
+back|the part of the body from the neck to the bottom, behind you|Sitting at a computer all day has given me back pain.
+heart|the part of the body that pumps blood|My heart was beating fast as I waited for the exam results.
+body|the whole physical structure of a person or animal|Regular exercise keeps both your body and your mind healthy.
+doctor|a person whose job is to treat people who are ill|You should see a doctor if the pain does not go away in a few days.
+medicine|a substance that you take to treat an illness|Take this medicine twice a day after meals until you feel better.
+pain|the unpleasant feeling when part of your body hurts|I felt a sharp pain in my knee when I tried to run.
+ill|not healthy; sick|She was ill for a week, so she missed several important classes.
+healthy|physically strong and not ill|My grandmother has stayed healthy by walking every day and eating well.
+tired|feeling that you need to rest or sleep|I was so tired after the long journey that I fell asleep immediately.
+sleep|the natural state of rest when your eyes are closed|Most adults need seven to eight hours of sleep a night.
+rest|a period of time when you relax or sleep|After working all week, I just want a quiet day of rest.
+cold|having a low temperature; also a common illness that makes you sneeze|I caught a cold after walking home in the rain without a jacket.
+fever|a high body temperature that is a sign of illness|The child had a high fever, so we called the doctor at night.
+weather|the conditions in the air, like sun, rain, wind or temperature|The weather changed suddenly, and it started to snow in April.
+sun|the star that gives the Earth light and heat|The sun was so strong that we had to sit in the shade.
+rain|water that falls from clouds in drops|We got caught in the rain and arrived at the party completely wet.
+snow|soft white pieces of frozen water that fall from the sky|The children were excited to see the first snow of the winter.
+wind|air that moves quickly outside|A strong wind blew my umbrella inside out.
+cloud|a white or grey mass in the sky made of tiny drops of water|Dark clouds were gathering over the mountains, so we went back early.
+sky|the space above the Earth where you see clouds, the sun and stars|On a clear night in the desert, the sky is full of stars.
+tree|a tall plant with a wooden trunk and branches|An old walnut tree gives shade to the whole yard.
+flower|the coloured part of a plant that grows from a stem|He bought her a bunch of flowers to apologize for being late.
+grass|a common plant with thin green leaves that covers the ground|We sat on the grass in the park and had a picnic.
+river|a large natural stream of water flowing to the sea or a lake|The river is very cold even in summer because the water comes from the mountains.
+lake|a large area of water surrounded by land|We rented a small boat and spent the afternoon on the lake.
+sea|the large area of salt water that covers much of the Earth|I have always dreamed of living in a house by the sea.
+mountain|a very high hill|We climbed the mountain early in the morning to see the sunrise.
+forest|a large area of land covered with trees|It is easy to get lost in the forest if you leave the path.
+desert|a large dry area with very little rain and few plants|Crossing the desert by car takes a whole day.
+animal|a living creature that is not a plant or a person|Our farm has many animals, including cows, sheep and chickens.
+dog|an animal often kept as a pet or to guard houses|Our dog barks at every stranger who walks past the gate.
+cat|a small furry animal often kept as a pet|The cat likes to sleep in the sun on the windowsill.
+horse|a large animal that people ride or use for pulling|In the village, my grandfather still uses a horse to plough the field.
+bird|an animal with feathers and wings that can usually fly|Every morning a small bird sings outside my bedroom window.
+summer|the warmest season of the year|In summer the temperature in Tashkent can go above forty degrees.
+winter|the coldest season of the year|We spend long winter evenings drinking tea and playing board games.
+spring|the season after winter, when plants start to grow|In spring the hills turn green and covered in red poppies.
+autumn|the season after summer, when leaves fall from trees|In autumn the streets are covered with yellow leaves.
+air|the mixture of gases around the Earth that we breathe|The air in the mountains is so fresh compared to the city.
+fire|heat and flames from something that is burning|We sat around the fire and told stories until midnight.
+earth|the planet we live on; also soil|Plant the seeds in rich earth and water them every day.
+yes|a word used to agree or say that something is true|"Are you coming to the party?" "Yes, I'll be there at eight."
+no|a word used to refuse, disagree or say something is not true|"Do you need any help?" "No, thanks, I can manage on my own."
+please|a polite word used when you ask for something|Could you speak a little more slowly, please?
+thank you|words used to show you are grateful|Thank you for helping me move all that heavy furniture.
+sorry|a word you say when you have done something wrong or feel sad for someone|I'm sorry I forgot your birthday — let me take you out for dinner.
+hello|a word used when you meet someone or answer the phone|She said hello to everyone in the room before sitting down.
+goodbye|a word used when you leave someone|It was hard to say goodbye to my family at the airport.
+here|in, at or to this place|Wait here while I go and get the car.
+there|in, at or to that place|Put the boxes over there, next to the door.
+this|used for a person or thing that is near you|This is the best book I have read all year.
+that|used for a person or thing that is not near you|Who is that man standing by the gate?
+these|plural of this|These shoes are comfortable, but they are a bit too expensive.
+those|plural of that|Those mountains in the distance are covered with snow all year.
+and|a word used to join words or ideas|We bought bread, cheese and grapes for the picnic.
+or|a word used to show a choice|Would you like tea or coffee after dinner?
+with|together with someone or something; having something|I went to the cinema with my cousins last night.
+without|not having or using something|I can't start the day without a cup of tea.
+for|used to show who will get or use something; also how long|I bought these flowers for my mother.
+from|showing where someone or something starts or comes from|This parcel came all the way from Korea.
+to|in the direction of; until|We are driving to Bukhara this weekend.
+in|inside; during|The keys are in the top drawer of my desk.
+on|touching a surface; on a particular day|Your phone is on the kitchen table.
+under|below something|The cat is hiding under the bed again.
+at|in a particular place or time|Let's meet at the bus stop at seven o'clock.
+about|on the subject of; approximately|We talked about our plans for the summer.
+before|earlier than|Wash your hands before you sit down to eat.
+after|later than|After the film we went for a walk along the river.
+up|towards a higher place|We walked up the hill to see the view of the city.
+down|towards a lower place|Be careful when you walk down the old stone steps.
+out|away from the inside of a place|She went out to buy some bread before the shop closed.
+not|used to make a sentence negative|I am not ready yet — give me five more minutes.
+too|also; or more than is needed|This tea is too hot to drink right now.
+more|a larger amount or number|Could I have a little more rice, please?
+less|a smaller amount|I'm trying to spend less time on my phone in the evenings.
+most|the largest number or amount; almost all|Most people in our street have lived here for years.
+other|different from the one already mentioned|One sock is here, but where is the other one?
+another|one more; a different one|Could I have another cup of tea? It's really good.
+something|a thing that is not named or not known|There's something strange about the way he's been acting lately.
+nothing|not anything|There was nothing interesting on TV, so we went for a walk.
+everything|all things|Everything was ready when the guests arrived.
+someone|a person who is not named or known|Someone left a bag on the bus, so I gave it to the driver.
+everyone|every person|Everyone in the class passed the exam this time.
+nobody|no person|Nobody knew the answer, so the teacher explained it again.
+here you are|words you say when you give something to someone|"Could I see your passport?" "Here you are."
+OK|all right; used to agree|"Shall we meet at six?" "OK, see you then."
+one|the number 1|I only have one brother, but I have four sisters.
+two|the number 2|We waited two hours for the delayed flight.
+three|the number 3|The meeting lasted three hours, and nothing was decided.
+four|the number 4|There are four seasons in a year.
+five|the number 5|The shop is just five minutes' walk from here.
+six|the number 6|I wake up at six every morning, even at the weekend.
+seven|the number 7|There are seven days in a week.
+eight|the number 8|The film starts at eight, so we should leave at seven.
+nine|the number 9|Our class has only nine students, so the teacher knows everyone well.
+ten|the number 10|I learn ten new words every day.
+eleven|the number 11|The last bus leaves at eleven, so don't be late.
+twelve|the number 12|There are twelve months in a year.
+twenty|the number 20|My grandmother has twenty grandchildren.
+thirty|the number 30|It was thirty degrees in the shade yesterday.
+hundred|the number 100|More than a hundred people came to the opening of the new library.
+thousand|the number 1,000|Thousands of tourists visit Samarkand every year.
+first|coming before all others|This is my first time travelling abroad alone.
+second|coming after the first; also a very short unit of time|She came second in the race, just one second behind the winner.
+third|coming after the second|Our flat is on the third floor.
+half|one of two equal parts|I ate half of the melon and saved the rest for later.
+o'clock|used after a number to say the exact hour|The shop opens at nine o'clock every morning.
+Monday|the day of the week after Sunday|I always feel a bit tired on Monday mornings.
+Tuesday|the day of the week after Monday|We have English lessons every Tuesday and Thursday.
+Wednesday|the day of the week after Tuesday|The meeting has been moved to Wednesday afternoon.
+Thursday|the day of the week after Wednesday|On Thursday evenings I play football with my colleagues.
+Friday|the day of the week after Thursday|On Friday the whole family goes to my grandparents' house.
+Saturday|the day of the week after Friday|We clean the flat on Saturday morning and relax in the afternoon.
+Sunday|the day of the week after Saturday|On Sunday we usually have a big family lunch.
+January|the first month of the year|In January the mountains around Tashkent are covered with snow.
+June|the sixth month of the year|School ends in June, and the long summer holiday begins.
+date|a particular day of the month or year; also a romantic meeting|What's the date today? I need to write it on the form.
+calendar|a list of the days, weeks and months of a year|I marked my exam date on the calendar so I wouldn't forget.
+clock|a device that shows the time, usually on a wall|The kitchen clock is ten minutes fast, so don't trust it.
+noon|twelve o'clock in the middle of the day|The museum is open from nine until noon on Saturdays.
+midnight|twelve o'clock at night|We stayed up until midnight to welcome the new year.
+tonight|this evening or night|Are you free tonight? There's a good film on at the cinema.
+later|at a time after now|I'm busy at the moment, so I'll call you back later.
+home|the place where you live|After a long day at work, I just want to go home and relax.
+lamp|a device that gives light|I need a brighter lamp on my desk for reading at night.
+shelf|a flat board on a wall or in a cupboard for putting things on|The dictionaries are on the top shelf of the bookcase.
+box|a container with flat sides, often made of cardboard|We packed all our books into boxes before moving.
+cup|a small container with a handle for drinking hot drinks|She offered me a cup of tea as soon as I came in.
+glass|a container for drinking, made of glass; also the hard clear material|Could I have a glass of water, please?
+plate|a flat dish that you eat food from|He put a huge plate of plov in front of each guest.
+spoon|a tool with a round end used for eating soup or stirring|You need a spoon for this soup — it's too thin for bread.
+fork|a tool with points used for eating|In many restaurants, they give you a fork and a knife for every dish.
+knife|a tool with a sharp blade for cutting|Be careful with that knife — it's very sharp.
+bottle|a container with a narrow neck for liquids|Always take a bottle of water with you when you go hiking.
+towel|a piece of cloth used for drying your body|The hotel gave us clean towels every morning.
