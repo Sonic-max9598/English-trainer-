@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Журнал класса</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%224%22 fill=%22%232f66d0%22/%3E%3Cpath d=%22M4 5h8M4 8h8M4 11h5%22 stroke=%22white%22 stroke-width=%221.6%22/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:Nunito;font-weight:500 900;font-display:swap;src:url(/fonts/nunito-cyr.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Nunito;font-weight:500 900;font-display:swap;src:url(/fonts/nunito-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2212}
+:root{
+  color-scheme:light;
+  --paper:#edf3f9;--sheet:#ffffff;--rule:#dbe5ef;--ink:#1a2a3c;--mute:#566779;
+  --brand:#2f66d0;--brand-ink:#fff;--brand-soft:#e2ecff;
+  --plus:#24924a;--plus-soft:#d3efdc;--red:#d9434a;--red-soft:#fde6e6;--amber:#f0a01c;
+  --font:Nunito,ui-rounded,system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--paper:#0d1b30;--sheet:#15233b;--rule:#283b5c;--ink:#eaf1fb;--mute:#a0b1c9;
+  --brand:#6f9bff;--brand-ink:#0a1530;--brand-soft:#1c2f58;--plus:#46cf7b;--plus-soft:#153a29;--red:#ff6b70;--red-soft:#43222e;--amber:#ffc04d}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--paper:#0d1b30;--sheet:#15233b;--rule:#283b5c;--ink:#eaf1fb;--mute:#a0b1c9;
+  --brand:#6f9bff;--brand-ink:#0a1530;--brand-soft:#1c2f58;--plus:#46cf7b;--plus-soft:#153a29;--red:#ff6b70;--red-soft:#43222e;--amber:#ffc04d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 16px/1.5 var(--font);-webkit-text-size-adjust:100%}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.1;font-weight:900;margin:0;letter-spacing:-.01em}
+h2{font-size:20px;font-weight:800;margin:0 0 10px}
+p{margin:0}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px;margin-bottom:22px}
+.top p{color:var(--mute);margin-top:4px}
+button{font:inherit;font-weight:800;border:0;border-radius:14px;padding:10px 16px;cursor:pointer;background:var(--brand-soft);color:var(--brand)}
+button.main{background:var(--brand);color:var(--brand-ink)}
+button:disabled{opacity:.55;cursor:default}
+button:focus-visible,textarea:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.news{background:var(--sheet);border:1px solid var(--rule);border-radius:20px;padding:18px;margin-bottom:28px}
+.news p{color:var(--mute);font-size:14px;margin-bottom:10px}
+textarea{width:100%;font:inherit;color:inherit;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:12px;resize:vertical;min-height:84px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:10px}
+.msg{color:var(--mute);font-size:14px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
+.bar h2{margin:0 auto 0 0}
+input[type=search],select{font:inherit;color:inherit;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:8px 12px;min-width:0}
+input[type=search]{flex:1 1 180px;max-width:280px}
+/* the register */
+.reg{background:var(--sheet);border:1px solid var(--rule);border-radius:20px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{font-size:13px;font-weight:700;color:var(--mute);text-align:left;padding:12px 14px;border-bottom:2px solid var(--rule);white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.who b{display:block;font-weight:800}
+.who small{color:var(--mute);font-size:13px}
+.idle .who b{color:var(--mute)}
+.marks{display:grid;grid-template-columns:repeat(14,14px);gap:3px}
+.marks i{width:14px;height:20px;border-radius:4px;background:var(--rule)}
+.marks i.a1{background:var(--plus-soft);box-shadow:inset 0 -6px 0 var(--plus)}
+.marks i.a2{background:var(--plus-soft);box-shadow:inset 0 -12px 0 var(--plus)}
+.marks i.a3{background:var(--plus)}
+.marks i.today{outline:2px solid var(--brand);outline-offset:1px}
+.acc-lo{color:var(--red);font-weight:800}
+.del{background:transparent;color:var(--mute);padding:6px 8px;font-weight:700;font-size:13px}
+.del:hover{color:var(--red)}
+.del.c{color:var(--red);background:var(--red-soft)}
+.empty{padding:36px 18px;color:var(--mute);max-width:60ch}
+.empty b{color:var(--ink);display:block;margin-bottom:6px;font-size:18px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;color:var(--mute);font-size:13px;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend .marks{grid-template-columns:14px}
+.err{background:var(--red-soft);color:var(--red);border-radius:14px;padding:12px 14px;margin-bottom:16px;font-weight:700}
+@media (max-width:760px){
+  .reg{background:transparent;border:0;border-radius:0}
+  table,tbody,tr,td{display:block}
+  thead{display:none}
+  tr{background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:12px 14px;margin-bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+  td{border:0;padding:0}
+  td.n{text-align:left}
+  td.who,td.mk{grid-column:1/-1}
+  td.n::before,td.mk::before{content:attr(data-l);display:block;font-size:12px;color:var(--mute);font-weight:700}
+  td.act{grid-column:1/-1;text-align:right}
+}
+@media (prefers-reduced-motion:no-preference){.marks i{transition:transform .15s}.marks i:hover{transform:scaleY(1.15)}}
+</style>
+</head>
+<body>
+<main>
+  <div class="top">
+    <div><h1>Журнал класса</h1><p id="sub">English Intensive · загружаю…</p></div>
+    <button id="reload">Обновить</button>
+  </div>
+  <div class="err" id="err" hidden></div>
+
+  <section class="news" aria-labelledby="newsH">
+    <h2 id="newsH">Сообщение ученикам</h2>
+    <p>Появится на главном экране приложения у всех, кто открыл его с интернетом. Пустое поле — убрать сообщение.</p>
+    <label for="newsTa" hidden>Текст сообщения</label>
+    <textarea id="newsTa" maxlength="1000" placeholder="Например: к пятнице пройдите урок Present Perfect и 20 новых слов."></textarea>
+    <div class="row"><button class="main" id="newsSave">Опубликовать</button><span class="msg" id="newsMsg"></span></div>
+  </section>
+
+  <div class="bar">
+    <h2 id="regH">Ученики</h2>
+    <input type="search" id="q" placeholder="Найти по имени" aria-label="Найти по имени">
+    <select id="sort" aria-label="Сортировка">
+      <option value="seen">Недавно заходили</option>
+      <option value="name">По имени</option>
+      <option value="xp">Больше опыта</option>
+      <option value="streak">Длиннее серия</option>
+      <option value="acc">Меньше точность</option>
+    </select>
+  </div>
+  <div class="reg" id="reg"></div>
+  <div class="legend" id="legend" hidden>
+    <span><span class="marks"><i></i></span>не занимался</span>
+    <span><span class="marks"><i class="a1"></i></span>до 10 ответов</span>
+    <span><span class="marks"><i class="a2"></i></span>до 30</span>
+    <span><span class="marks"><i class="a3"></i></span>30 и больше</span>
+  </div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+const H={'Content-Type':'application/json','X-Admin':'1'};
+let ALL=[],NOW=new Date();
+const ymd=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function ago(iso){const m=Math.round((NOW-new Date(iso))/60000);
+  if(m<2)return'только что';if(m<60)return m+' мин назад';const h=Math.round(m/60);if(h<24)return h+' ч назад';
+  const d=Math.round(h/24);return d===1?'вчера':d+' дн. назад'}
+function marks(days){let s='';const t=new Date(NOW);
+  for(let i=13;i>=0;i--){const d=new Date(t);d.setDate(t.getDate()-i);const k=ymd(d),v=days&&days[k],n=v?v[1]:0;
+    const c=n>=30?'a3':n>=10?'a2':n>0?'a1':'';
+    s+=`<i class="${c}${i===0?' today':''}" title="${d.toLocaleDateString('ru-RU',{day:'numeric',month:'short'})}: ${n?n+' отв., верно '+v[0]:'не занимался'}"></i>`}
+  return `<div class="marks" role="img" aria-label="Активность за 14 дней">${s}</div>`}
+function render(){
+  const q=$('q').value.trim().toLowerCase(),sort=$('sort').value;
+  let list=ALL.filter(s=>!q||s.name.toLowerCase().includes(q));
+  const by={seen:(a,b)=>b.updated.localeCompare(a.updated),name:(a,b)=>a.name.localeCompare(b.name,'ru'),
+    xp:(a,b)=>b.data.xp-a.data.xp,streak:(a,b)=>b.data.streak-a.data.streak,acc:(a,b)=>(a.data.acc??101)-(b.data.acc??101)};
+  list.sort(by[sort]);
+  $('regH').textContent=ALL.length?`Ученики: ${ALL.length}`:'Ученики';
+  $('legend').hidden=!ALL.length;
+  if(!ALL.length){$('reg').innerHTML=`<div class="empty"><b>Пока никого нет</b>Попросите учеников открыть в приложении Настройки → «Учитель онлайн», ввести имя и включить «Отправлять прогресс учителю». Они появятся здесь после первого занятия с интернетом.</div>`;return}
+  if(!list.length){$('reg').innerHTML=`<div class="empty"><b>Никого не нашли</b>Проверьте написание имени.</div>`;return}
+  $('reg').innerHTML=`<table><thead><tr><th>Ученик</th><th>14 дней</th><th class="n">Серия</th><th class="n">Опыт</th><th class="n">Точность</th><th class="n">Слова</th><th class="n">Времена</th><th class="n">Теория</th><th></th></tr></thead><tbody>`+
+    list.map(s=>{const d=s.data,idle=NOW-new Date(s.updated)>7*864e5;
+      return `<tr class="${idle?'idle':''}"><td class="who"><b>${esc(s.name)}</b><small>${ago(s.updated)}${d.ui==='uz'?' · узбекский':''}</small></td>
+      <td class="mk" data-l="Активность за 14 дней">${marks(d.days)}</td>
+      <td class="n" data-l="Серия">${d.streak} дн.</td>
+      <td class="n" data-l="Опыт">${d.xp} XP · ур. ${d.lv}</td>
+      <td class="n${d.acc!=null&&d.acc<60?' acc-lo':''}" data-l="Точность">${d.acc==null?'—':d.acc+'%'}</td>
+      <td class="n" data-l="Слова выучено">${d.words}</td>
+      <td class="n" data-l="Времена открыты">${d.tenses}/12</td>
+      <td class="n" data-l="Глав прочитано">${d.read}/31</td>
+      <td class="act"><button class="del" data-del="${esc(s.id)}">Удалить</button></td></tr>`}).join('')+`</tbody></table>`;
+}
+function fail(e){$('err').hidden=false;$('err').textContent='Не удалось связаться с сервером: '+e+'. Проверьте интернет и нажмите «Обновить».'}
+async function load(){
+  $('err').hidden=true;
+  try{
+    const [r,n]=await Promise.all([fetch('/admin/api/students',{headers:H}),fetch('/admin/api/news',{headers:H})]);
+    if(!r.ok||!n.ok)throw new Error('код '+(r.ok?n.status:r.status));
+    const j=await r.json(),news=await n.json();
+    ALL=j.students;NOW=new Date(j.now);
+    $('sub').textContent='English Intensive · '+(j.classCode?'вход по коду класса':'код класса не задан — подключиться может любой')+(j.storage==='file'?' · данные в файле (без базы)':'');
+    if(document.activeElement!==$('newsTa'))$('newsTa').value=news.text||'';
+    $('newsMsg').textContent=news.updated?'Опубликовано '+ago(news.updated):'Сообщения нет';
+    render();
+  }catch(e){fail(e.message)}
+}
+$('q').addEventListener('input',render);$('sort').addEventListener('change',render);
+$('reload').addEventListener('click',load);
+$('newsSave').addEventListener('click',async()=>{const b=$('newsSave');b.disabled=true;
+  try{const r=await fetch('/admin/api/news',{method:'PUT',headers:H,body:JSON.stringify({text:$('newsTa').value})});
+    if(!r.ok)throw new Error('код '+r.status);const n=await r.json();
+    $('newsMsg').textContent=n.text?'Опубликовано. Ученики увидят его при следующем открытии.':'Сообщение убрано.'}
+  catch(e){$('newsMsg').textContent='Не опубликовано: '+e.message}finally{b.disabled=false}});
+$('reg').addEventListener('click',async e=>{const b=e.target.closest('[data-del]');if(!b)return;
+  if(!b.classList.contains('c')){b.classList.add('c');b.textContent='Точно удалить?';setTimeout(()=>{b.classList.remove('c');b.textContent='Удалить'},4000);return}
+  b.disabled=true;
+  try{const r=await fetch('/admin/api/students/'+encodeURIComponent(b.dataset.del),{method:'DELETE',headers:H});if(!r.ok)throw new Error('код '+r.status);
+    ALL=ALL.filter(s=>s.id!==b.dataset.del);render()}catch(e){fail(e.message)}});
+load();setInterval(()=>{if(document.visibilityState==='visible')load()},60000);
+</script>
+</body>
+</html>

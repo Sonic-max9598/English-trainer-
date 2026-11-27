@@ -1,0 +1,35 @@
+# Render Blueprint: admin server + Postgres. Render → New → Blueprint → this repository.
+# On first deploy Render asks for ADMIN_PASSWORD and CLASS_CODE (sync: false = entered by hand, not stored in git).
+services:
+  - type: web
+    name: english-intensive-admin
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: cd server && npm ci --omit=dev
+    startCommand: node server/server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
+    buildFilter:
+      paths: ["server/**", "fonts/**", "render.yaml"]
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CLASS_CODE
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://sonic-max9598.github.io
+      - key: DATABASE_URL
+        fromDatabase:
+          name: english-intensive-db
+          property: connectionString
+
+databases:
+  - name: english-intensive-db
+    plan: free
+    region: frankfurt
+    databaseName: english_intensive
+    ipAllowList: []
