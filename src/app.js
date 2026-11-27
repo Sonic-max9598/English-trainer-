@@ -181,7 +181,7 @@ r15|I bought ___ two kilos of apples.|-|Я купил два килограмм�
 r15|___ Akmal's car is new.|-|Машина Акмала новая.|Akmalning mashinasi yangi.`.split('\n').map((l,i)=>{const[r,en,a,ru,uz]=l.split('|');return{id:i,r,en,a,ru,uz}});
 if(!prog.art)prog.art={};
 let aCur=null,aDone=false,aRecent=[],artFilter=null,aAuto=null,aSt={ok:0,all:0,streak:0};
-let sec=['art','words'].includes(on.sec)?on.sec:'tense',curTab='home';
+let sec=['art','words','verbs'].includes(on.sec)?on.sec:'tense',curTab='home';
 const capS=s=>s.replace(/(^|[.!?]\s+)([a-z])/g,(m,p,c)=>p+c.toUpperCase());
 const fullA=it=>capS(it.en.replace('___ ',it.a==='-'?'':it.a+' '));
 function recordArt(r,good){
@@ -267,8 +267,8 @@ function showTab(v){
   curTab=v;
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   document.body.dataset.tab=v;
-  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
-  const id=v==='train'?(sec==='art'?'v-art':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
+  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова',verbs:'Глаголы'}[sec];
+  const id=v==='train'?(sec==='art'?'v-art':sec==='verbs'?'v-verbs':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(v==='home')renderHome();
@@ -276,6 +276,7 @@ function showTab(v){
   if(id==='v-book'){renderBook();if(toBook&&X.book.cur&&!bookNoRestore){const y=X.book.pos[X.book.cur]||0;requestAnimationFrame(()=>window.scrollTo({top:y}))}}
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
+  if(id==='v-verbs'){if(!vCur||vMode==='list')vNext();else vModes()}
   if(id==='v-wlist'){wModes();renderWList()}
 }
 document.querySelectorAll('#aOpts button').forEach(b=>b.addEventListener('click',()=>aAnswer(b.dataset.a)));
@@ -313,6 +314,7 @@ try{const x=JSON.parse(localStorage.getItem('tenses3words')||'null');if(x&&x.W&&
 const saveW=()=>{if(noSave)return;try{localStorage.setItem('tenses3words',JSON.stringify(WS))}catch(e){}};
 const IV=[0,3,7,15,35,80,200];
 /*@WORDS*/
+/*@VERBS*/
 function renderWList(){
   const all=allWords(),q=$('wSearch').value.trim().toLowerCase();
   const lvs=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]);

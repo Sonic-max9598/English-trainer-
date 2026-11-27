@@ -1,0 +1,136 @@
+be|was/were|been|быть|bo'lmoq
+have|had|had|иметь|ega bo'lmoq
+do|did|done|делать|qilmoq
+say|said|said|сказать|aytmoq
+go|went|gone|идти, ехать|bormoq
+get|got|got/gotten|получать|olmoq
+make|made|made|делать, создавать|yasamoq
+know|knew|known|знать|bilmoq
+think|thought|thought|думать|o'ylamoq
+take|took|taken|брать|olmoq
+see|saw|seen|видеть|ko'rmoq
+come|came|come|приходить|kelmoq
+give|gave|given|давать|bermoq
+find|found|found|находить|topmoq
+tell|told|told|рассказывать|aytib bermoq
+become|became|become|становиться|bo'lib qolmoq
+leave|left|left|уходить, оставлять|ketmoq, qoldirmoq
+feel|felt|felt|чувствовать|his qilmoq
+put|put|put|класть|qo'ymoq
+bring|brought|brought|приносить|olib kelmoq
+begin|began|begun|начинать|boshlamoq
+keep|kept|kept|хранить, держать|saqlamoq
+hold|held|held|держать|ushlab turmoq
+write|wrote|written|писать|yozmoq
+stand|stood|stood|стоять|turmoq
+hear|heard|heard|слышать|eshitmoq
+let|let|let|позволять|ruxsat bermoq
+mean|meant|meant|значить|anglatmoq
+set|set|set|устанавливать|o'rnatmoq
+meet|met|met|встречать|uchrashmoq
+run|ran|run|бежать|yugurmoq
+pay|paid|paid|платить|to'lamoq
+sit|sat|sat|сидеть|o'tirmoq
+speak|spoke|spoken|говорить|gapirmoq
+lie|lay|lain|лежать|yotmoq
+lead|led|led|вести|boshqarmoq
+read|read|read|читать|o'qimoq
+grow|grew|grown|расти|o'smoq
+lose|lost|lost|терять|yo'qotmoq
+fall|fell|fallen|падать|yiqilmoq
+send|sent|sent|отправлять|yubormoq
+build|built|built|строить|qurmoq
+understand|understood|understood|понимать|tushunmoq
+draw|drew|drawn|рисовать|chizmoq
+break|broke|broken|ломать|sindirmoq
+spend|spent|spent|тратить|sarflamoq
+cut|cut|cut|резать|kesmoq
+rise|rose|risen|подниматься|ko'tarilmoq
+drive|drove|driven|водить машину|haydamoq
+buy|bought|bought|покупать|sotib olmoq
+wear|wore|worn|носить (одежду)|kiymoq
+choose|chose|chosen|выбирать|tanlamoq
+throw|threw|thrown|бросать|otmoq
+catch|caught|caught|ловить|ushlamoq
+win|won|won|побеждать|yutmoq
+forget|forgot|forgotten|забывать|unutmoq
+sell|sold|sold|продавать|sotmoq
+fight|fought|fought|драться, бороться|urishmoq
+teach|taught|taught|учить, преподавать|o'rgatmoq
+eat|ate|eaten|есть|yemoq
+drink|drank|drunk|пить|ichmoq
+sleep|slept|slept|спать|uxlamoq
+sing|sang|sung|петь|kuylamoq
+fly|flew|flown|летать|uchmoq
+swim|swam|swum|плавать|suzmoq
+ride|rode|ridden|ездить верхом|minmoq
+hit|hit|hit|ударять|urmoq
+shoot|shot|shot|стрелять; снимать|otmoq
+steal|stole|stolen|красть|o'g'irlamoq
+wake|woke|woken|просыпаться|uyg'onmoq
+hide|hid|hidden|прятать|yashirmoq
+hang|hung|hung|вешать|osmoq
+shake|shook|shaken|трясти|silkitmoq
+bite|bit|bitten|кусать|tishlamoq
+blow|blew|blown|дуть|puflamoq
+burn|burnt/burned|burnt/burned|гореть, жечь|yonmoq
+dig|dug|dug|копать|qazimoq
+feed|fed|fed|кормить|boqmoq
+forgive|forgave|forgiven|прощать|kechirmoq
+freeze|froze|frozen|замерзать|muzlamoq
+hurt|hurt|hurt|причинять боль|og'ritmoq
+lend|lent|lent|давать взаймы|qarzga bermoq
+light|lit|lit|зажигать|yoqmoq
+ring|rang|rung|звонить|jiringlamoq
+shine|shone|shone|светить|porlamoq
+shut|shut|shut|закрывать|yopmoq
+sink|sank|sunk|тонуть|cho'kmoq
+smell|smelt/smelled|smelt/smelled|пахнуть, нюхать|hidlamoq
+spread|spread|spread|распространять|tarqatmoq
+stick|stuck|stuck|приклеивать|yopishtirmoq
+strike|struck|struck|ударять, бастовать|zarba bermoq
+swing|swung|swung|качаться|tebranmoq
+tear|tore|torn|рвать|yirtmoq
+bend|bent|bent|сгибать|egmoq
+bet|bet|bet|спорить на деньги|garov o'ynamoq
+bleed|bled|bled|кровоточить|qon ketmoq
+cost|cost|cost|стоить|turmoq (narx)
+deal|dealt|dealt|иметь дело|shug'ullanmoq
+dream|dreamt/dreamed|dreamt/dreamed|мечтать, видеть сон|orzu qilmoq
+learn|learnt/learned|learnt/learned|учить, узнавать|o'rganmoq
+spell|spelt/spelled|spelt/spelled|писать по буквам|harflab aytmoq
+spill|spilt/spilled|spilt/spilled|проливать|to'kmoq
+lay|laid|laid|класть, накрывать|yotqizmoq
+beat|beat|beaten|бить, побеждать|urmoq, yengmoq
+bear|bore|born/borne|выносить; рождать|chidamoq
+arise|arose|arisen|возникать|paydo bo'lmoq
+awake|awoke|awoken|пробуждаться|uyg'onmoq
+bind|bound|bound|связывать|bog'lamoq
+breed|bred|bred|разводить|ko'paytirmoq
+broadcast|broadcast|broadcast|транслировать|efirga uzatmoq
+creep|crept|crept|ползти|emaklamoq
+flee|fled|fled|убегать, спасаться|qochmoq
+forbid|forbade|forbidden|запрещать|taqiqlamoq
+foresee|foresaw|foreseen|предвидеть|oldindan ko'rmoq
+grind|ground|ground|молоть|yanchmoq
+kneel|knelt/kneeled|knelt/kneeled|становиться на колени|tiz cho'kmoq
+leap|leapt/leaped|leapt/leaped|прыгать|sakramoq
+mistake|mistook|mistaken|ошибаться, путать|adashmoq
+overcome|overcame|overcome|преодолевать|yengib o'tmoq
+quit|quit|quit|бросать, увольняться|tashlamoq
+seek|sought|sought|искать|izlamoq
+sew|sewed|sewn/sewed|шить|tikmoq
+shrink|shrank|shrunk|сжиматься|kirishmoq
+slide|slid|slid|скользить|sirpanmoq
+spin|spun|spun|вращать|aylantirmoq
+spit|spat|spat|плевать|tupurmoq
+split|split|split|раскалывать|bo'lmoq
+sting|stung|stung|жалить|chaqmoq
+stink|stank|stunk|вонять|sasimoq
+swear|swore|sworn|клясться; ругаться|qasam ichmoq
+sweep|swept|swept|подметать|supurmoq
+upset|upset|upset|расстраивать|xafa qilmoq
+weep|wept|wept|плакать|yig'lamoq
+wind|wound|wound|заводить, наматывать|o'ramoq
+withdraw|withdrew|withdrawn|снимать (деньги)|yechib olmoq
+undertake|undertook|undertaken|предпринимать|o'z zimmasiga olmoq

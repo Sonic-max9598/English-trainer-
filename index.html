@@ -586,6 +586,39 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
 }
 .fbnote{font-size:14px;color:var(--mute);margin-top:4px}
 
+/* ---------- irregular verbs ---------- */
+.sec{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sec button{font-size:15px;gap:5px;padding:0 4px}
+@media(max-width:430px){.sec button svg{display:none}}
+.vgroups button{min-width:52px;display:inline-flex;align-items:baseline;gap:5px;font-weight:800}
+.vgroups button small{font-weight:600;font-size:12px;opacity:.75}
+.vgroups button.vdone:not([aria-pressed=true]){background:var(--ok-soft);border-color:transparent;color:var(--plus)}
+/* the three forms side by side: the infinitive is given, V2 and V3 are slots to fill */
+.vform{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:4px 0 8px}
+.vslot{display:flex;flex-direction:column;gap:4px;padding:10px 10px 8px;border-radius:16px;background:var(--bg);border:2px solid var(--line);transition:border-color .2s,background .2s;cursor:text}
+.vslot small{font-size:11.5px;font-weight:700;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vslot b{font-size:clamp(20px,5.6vw,26px);font-weight:900;line-height:1.15;overflow-wrap:anywhere}
+.vslot.v1{background:var(--brand-soft);border-color:transparent}
+.vslot.v1 b{color:var(--brand)}
+.vslot input{width:100%;border:0;background:none;padding:0;font:800 clamp(19px,5.4vw,25px) var(--font);color:var(--ink);-webkit-text-fill-color:var(--ink);caret-color:var(--brand);min-height:32px}
+.vslot input:focus{outline:none}
+.vslot:focus-within{border-color:var(--brand);background:var(--surface)}
+.vslot input::placeholder{color:var(--line);-webkit-text-fill-color:var(--line);opacity:1}
+.vslot.ok{border-color:var(--plus);background:var(--ok-soft)}
+.vslot.no{border-color:var(--minus);background:var(--no-soft)}
+.vtr{font-size:18px;font-weight:700;color:var(--ink);margin:2px 0 0}
+.vline{letter-spacing:.01em}
+.vgh{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;margin:22px 2px 8px}
+.vgh b{font-size:18px}.vgh span{color:var(--mute);font-size:14px}.vgh button{min-height:40px;font-size:14px}
+.vtab{background:var(--surface);border-radius:var(--r,18px);box-shadow:var(--shadow);overflow:hidden}
+.vrow{display:grid;grid-template-columns:10px repeat(3,minmax(0,1fr));column-gap:8px;align-items:baseline;padding:9px 12px;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:0}
+.vrow i{width:8px;height:8px;border-radius:50%;background:var(--line);align-self:center}
+.vrow.mid i{background:var(--amber)}.vrow.on i{background:var(--plus)}
+.vrow b{font-size:16px;font-weight:800;overflow-wrap:anywhere}
+.vrow span{grid-column:2/-1;color:var(--mute);font-size:14px}
+#vProg{grid-template-columns:repeat(2,minmax(0,1fr))}
+
 </style>
 <script>try{var s=JSON.parse(localStorage.getItem('tenses3')||'null');if(s&&s.on&&s.on.theme&&s.on.theme!=='auto')document.documentElement.setAttribute('data-theme',s.on.theme)}catch(e){}</script>
 </head>
@@ -602,6 +635,7 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
       <button data-sec="tense" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Времена</button>
       <button data-sec="art" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l4-12 4 12M5.5 15h5M15 9h5M17.5 9v10"/></svg>Артикли</button>
       <button data-sec="words" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>Слова</button>
+      <button data-sec="verbs" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4M10 12h4M17 12h4"/><path d="M6 9l3 3-3 3M13 9l3 3-3 3"/></svg>Глаголы</button>
     </div>
     <div class="lbar" id="lbar" hidden><div class="lsegs" id="lsegs"></div><span class="lcombo" id="lcombo" hidden>×2</span><span class="lxp" id="lxp">0 XP</span><button id="lend" aria-label="Завершить урок" title="Завершить урок"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
   </header>
@@ -671,6 +705,26 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
     </div>
   </section>
 
+  <section class="view" id="v-verbs" hidden>
+    <div class="scroll-x" id="vModes"></div>
+    <div class="daybar" id="vProg"></div>
+    <div class="scroll-x vgroups" id="vGroups" aria-label="Группы по 10 глаголов"></div>
+    <div id="vDrill">
+      <div class="card" id="vcard">
+        <div class="task" id="vTask"></div>
+        <div class="vform">
+          <div class="vslot v1"><small>V1</small><b id="vV1"></b></div>
+          <label class="vslot" id="vS2"><small>V2</small><input id="vIn2" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="next"></label>
+          <label class="vslot" id="vS3"><small>V3</small><input id="vIn3" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go"></label>
+        </div>
+        <p class="mk vtr" id="vTr"></p>
+        <div class="row"><button class="main" id="vGo">Проверить</button></div>
+        <div class="fb" id="vFb"></div>
+      </div>
+      <p class="note">Напиши вторую и третью форму. Если форм две (learnt / learned), подойдёт любая. Глаголы, в которых ошибаешься, возвращаются чаще; глагол выучен после трёх верных ответов подряд.</p>
+    </div>
+    <div id="vList" hidden><div id="vListBody"></div></div>
+  </section>
   <section class="view" id="v-words" hidden>
     <div class="scroll-x" id="wModes"></div>
     <div class="daybar" id="wDay"></div>
@@ -829,7 +883,7 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
 </nav>
 <script>
 {
-const APP_VER="3b2c54b";
+const APP_VER="181ef08";
 /* ===== teacher mascot: original character, two variants ('m' — teacher, 'f' — teacher with a red bow) =====
    One SVG holds every pose; CSS shows the right parts by data-mood on the wrapper:
    idle · happy (correct answer) · cheer (after a mistake) · think (theory). No ids, so many copies can live on a page. */
@@ -1580,7 +1634,7 @@ r15|I bought ___ two kilos of apples.|-|Я купил два килограмм�
 r15|___ Akmal's car is new.|-|Машина Акмала новая.|Akmalning mashinasi yangi.`.split('\n').map((l,i)=>{const[r,en,a,ru,uz]=l.split('|');return{id:i,r,en,a,ru,uz}});
 if(!prog.art)prog.art={};
 let aCur=null,aDone=false,aRecent=[],artFilter=null,aAuto=null,aSt={ok:0,all:0,streak:0};
-let sec=['art','words'].includes(on.sec)?on.sec:'tense',curTab='home';
+let sec=['art','words','verbs'].includes(on.sec)?on.sec:'tense',curTab='home';
 const capS=s=>s.replace(/(^|[.!?]\s+)([a-z])/g,(m,p,c)=>p+c.toUpperCase());
 const fullA=it=>capS(it.en.replace('___ ',it.a==='-'?'':it.a+' '));
 function recordArt(r,good){
@@ -1666,8 +1720,8 @@ function showTab(v){
   curTab=v;
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   document.body.dataset.tab=v;
-  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
-  const id=v==='train'?(sec==='art'?'v-art':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
+  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова',verbs:'Глаголы'}[sec];
+  const id=v==='train'?(sec==='art'?'v-art':sec==='verbs'?'v-verbs':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(v==='home')renderHome();
@@ -1675,6 +1729,7 @@ function showTab(v){
   if(id==='v-book'){renderBook();if(toBook&&X.book.cur&&!bookNoRestore){const y=X.book.pos[X.book.cur]||0;requestAnimationFrame(()=>window.scrollTo({top:y}))}}
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
+  if(id==='v-verbs'){if(!vCur||vMode==='list')vNext();else vModes()}
   if(id==='v-wlist'){wModes();renderWList()}
 }
 document.querySelectorAll('#aOpts button').forEach(b=>b.addEventListener('click',()=>aAnswer(b.dataset.a)));
@@ -1934,6 +1989,84 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='Enter'&&wDone){wNext();e.preventDefault()}
 });
 
+/* ===== irregular verbs: list, groups of 10 by frequency, V2/V3 drill with spaced repetition ===== */
+const IRREG="be|was/were|been|быть|bo'lmoq\nhave|had|had|иметь|ega bo'lmoq\ndo|did|done|делать|qilmoq\nsay|said|said|сказать|aytmoq\ngo|went|gone|идти, ехать|bormoq\nget|got|got/gotten|получать|olmoq\nmake|made|made|делать, создавать|yasamoq\nknow|knew|known|знать|bilmoq\nthink|thought|thought|думать|o'ylamoq\ntake|took|taken|брать|olmoq\nsee|saw|seen|видеть|ko'rmoq\ncome|came|come|приходить|kelmoq\ngive|gave|given|давать|bermoq\nfind|found|found|находить|topmoq\ntell|told|told|рассказывать|aytib bermoq\nbecome|became|become|становиться|bo'lib qolmoq\nleave|left|left|уходить, оставлять|ketmoq, qoldirmoq\nfeel|felt|felt|чувствовать|his qilmoq\nput|put|put|класть|qo'ymoq\nbring|brought|brought|приносить|olib kelmoq\nbegin|began|begun|начинать|boshlamoq\nkeep|kept|kept|хранить, держать|saqlamoq\nhold|held|held|держать|ushlab turmoq\nwrite|wrote|written|писать|yozmoq\nstand|stood|stood|стоять|turmoq\nhear|heard|heard|слышать|eshitmoq\nlet|let|let|позволять|ruxsat bermoq\nmean|meant|meant|значить|anglatmoq\nset|set|set|устанавливать|o'rnatmoq\nmeet|met|met|встречать|uchrashmoq\nrun|ran|run|бежать|yugurmoq\npay|paid|paid|платить|to'lamoq\nsit|sat|sat|сидеть|o'tirmoq\nspeak|spoke|spoken|говорить|gapirmoq\nlie|lay|lain|лежать|yotmoq\nlead|led|led|вести|boshqarmoq\nread|read|read|читать|o'qimoq\ngrow|grew|grown|расти|o'smoq\nlose|lost|lost|терять|yo'qotmoq\nfall|fell|fallen|падать|yiqilmoq\nsend|sent|sent|отправлять|yubormoq\nbuild|built|built|строить|qurmoq\nunderstand|understood|understood|понимать|tushunmoq\ndraw|drew|drawn|рисовать|chizmoq\nbreak|broke|broken|ломать|sindirmoq\nspend|spent|spent|тратить|sarflamoq\ncut|cut|cut|резать|kesmoq\nrise|rose|risen|подниматься|ko'tarilmoq\ndrive|drove|driven|водить машину|haydamoq\nbuy|bought|bought|покупать|sotib olmoq\nwear|wore|worn|носить (одежду)|kiymoq\nchoose|chose|chosen|выбирать|tanlamoq\nthrow|threw|thrown|бросать|otmoq\ncatch|caught|caught|ловить|ushlamoq\nwin|won|won|побеждать|yutmoq\nforget|forgot|forgotten|забывать|unutmoq\nsell|sold|sold|продавать|sotmoq\nfight|fought|fought|драться, бороться|urishmoq\nteach|taught|taught|учить, преподавать|o'rgatmoq\neat|ate|eaten|есть|yemoq\ndrink|drank|drunk|пить|ichmoq\nsleep|slept|slept|спать|uxlamoq\nsing|sang|sung|петь|kuylamoq\nfly|flew|flown|летать|uchmoq\nswim|swam|swum|плавать|suzmoq\nride|rode|ridden|ездить верхом|minmoq\nhit|hit|hit|ударять|urmoq\nshoot|shot|shot|стрелять; снимать|otmoq\nsteal|stole|stolen|красть|o'g'irlamoq\nwake|woke|woken|просыпаться|uyg'onmoq\nhide|hid|hidden|прятать|yashirmoq\nhang|hung|hung|вешать|osmoq\nshake|shook|shaken|трясти|silkitmoq\nbite|bit|bitten|кусать|tishlamoq\nblow|blew|blown|дуть|puflamoq\nburn|burnt/burned|burnt/burned|гореть, жечь|yonmoq\ndig|dug|dug|копать|qazimoq\nfeed|fed|fed|кормить|boqmoq\nforgive|forgave|forgiven|прощать|kechirmoq\nfreeze|froze|frozen|замерзать|muzlamoq\nhurt|hurt|hurt|причинять боль|og'ritmoq\nlend|lent|lent|давать взаймы|qarzga bermoq\nlight|lit|lit|зажигать|yoqmoq\nring|rang|rung|звонить|jiringlamoq\nshine|shone|shone|светить|porlamoq\nshut|shut|shut|закрывать|yopmoq\nsink|sank|sunk|тонуть|cho'kmoq\nsmell|smelt/smelled|smelt/smelled|пахнуть, нюхать|hidlamoq\nspread|spread|spread|распространять|tarqatmoq\nstick|stuck|stuck|приклеивать|yopishtirmoq\nstrike|struck|struck|ударять, бастовать|zarba bermoq\nswing|swung|swung|качаться|tebranmoq\ntear|tore|torn|рвать|yirtmoq\nbend|bent|bent|сгибать|egmoq\nbet|bet|bet|спорить на деньги|garov o'ynamoq\nbleed|bled|bled|кровоточить|qon ketmoq\ncost|cost|cost|стоить|turmoq (narx)\ndeal|dealt|dealt|иметь дело|shug'ullanmoq\ndream|dreamt/dreamed|dreamt/dreamed|мечтать, видеть сон|orzu qilmoq\nlearn|learnt/learned|learnt/learned|учить, узнавать|o'rganmoq\nspell|spelt/spelled|spelt/spelled|писать по буквам|harflab aytmoq\nspill|spilt/spilled|spilt/spilled|проливать|to'kmoq\nlay|laid|laid|класть, накрывать|yotqizmoq\nbeat|beat|beaten|бить, побеждать|urmoq, yengmoq\nbear|bore|born/borne|выносить; рождать|chidamoq\narise|arose|arisen|возникать|paydo bo'lmoq\nawake|awoke|awoken|пробуждаться|uyg'onmoq\nbind|bound|bound|связывать|bog'lamoq\nbreed|bred|bred|разводить|ko'paytirmoq\nbroadcast|broadcast|broadcast|транслировать|efirga uzatmoq\ncreep|crept|crept|ползти|emaklamoq\nflee|fled|fled|убегать, спасаться|qochmoq\nforbid|forbade|forbidden|запрещать|taqiqlamoq\nforesee|foresaw|foreseen|предвидеть|oldindan ko'rmoq\ngrind|ground|ground|молоть|yanchmoq\nkneel|knelt/kneeled|knelt/kneeled|становиться на колени|tiz cho'kmoq\nleap|leapt/leaped|leapt/leaped|прыгать|sakramoq\nmistake|mistook|mistaken|ошибаться, путать|adashmoq\novercome|overcame|overcome|преодолевать|yengib o'tmoq\nquit|quit|quit|бросать, увольняться|tashlamoq\nseek|sought|sought|искать|izlamoq\nsew|sewed|sewn/sewed|шить|tikmoq\nshrink|shrank|shrunk|сжиматься|kirishmoq\nslide|slid|slid|скользить|sirpanmoq\nspin|spun|spun|вращать|aylantirmoq\nspit|spat|spat|плевать|tupurmoq\nsplit|split|split|раскалывать|bo'lmoq\nsting|stung|stung|жалить|chaqmoq\nstink|stank|stunk|вонять|sasimoq\nswear|swore|sworn|клясться; ругаться|qasam ichmoq\nsweep|swept|swept|подметать|supurmoq\nupset|upset|upset|расстраивать|xafa qilmoq\nweep|wept|wept|плакать|yig'lamoq\nwind|wound|wound|заводить, наматывать|o'ramoq\nwithdraw|withdrew|withdrawn|снимать (деньги)|yechib olmoq\nundertake|undertook|undertaken|предпринимать|o'z zimmasiga olmoq".split('\n').map((l,i)=>{const[v1,v2,v3,ru,uz]=l.split('|');return{i,v1,v2,v3,ru,uz,g:Math.floor(i/10)}});
+const VG=Math.ceil(IRREG.length/10);
+X.iv=X.iv&&typeof X.iv==='object'?X.iv:{};/* v1 -> {b: correct in a row, n: due at counter, e: mistakes} */
+X.ivc=X.ivc||0;
+const VIV=[0,2,5,10,20,40];
+const vSt=v=>X.iv[v.v1];
+const vLearned=v=>{const s=vSt(v);return!!s&&s.b>=3};
+const forms=f=>f.split('/').map(x=>x.trim().toLowerCase());
+let vVals=null,vMode='drill',vGroup=null,vCur=null,vDone=false,vLast=null,vSes={ok:0,all:0};
+function vCurGroup(){if(vGroup!==null)return vGroup;for(let g=0;g<VG;g++)if(IRREG.filter(v=>v.g===g).some(v=>!vLearned(v)))return g;return VG-1}
+/* mistakes come back sooner and more often */
+function vPick(){
+  {const f=gameForce('verb');if(f){const v=IRREG.find(x=>x.v1===f);if(v)return v}}
+  const g=vCurGroup(),pool=IRREG.filter(v=>v.g===g||(vGroup===null&&v.g<g&&vSt(v)&&vSt(v).n<=X.ivc));
+  const alt=pool.length>1?pool.filter(v=>v.v1!==vLast):pool;
+  const due=alt.filter(v=>{const s=vSt(v);return s&&s.n<=X.ivc});
+  if(due.length){const w=due.map(v=>1+2*(vSt(v).e||0));let r=Math.random()*w.reduce((a,b)=>a+b,0);for(let i=0;i<due.length;i++){r-=w[i];if(r<=0)return due[i]}return due[0]}
+  const fresh=alt.filter(v=>!vSt(v));if(fresh.length)return fresh[0];
+  return alt.slice().sort((a,b)=>vSt(a).n-vSt(b).n)[0];
+}
+function vModes(){
+  $('vModes').innerHTML=`<button class="tog" data-vm="drill" aria-pressed="${vMode==='drill'}">Тренировка</button><button class="tog" data-vm="list" aria-pressed="${vMode==='list'}">Список</button>`;
+  const L=IRREG.filter(vLearned).length;
+  $('vProg').innerHTML=`<div class="dstat"><b>${L}</b><span>из ${IRREG.length} выучено</span></div><div class="dstat"><b>${vCurGroup()+1}</b><span>группа из ${VG}</span></div><div class="dbar"><i style="width:${L/IRREG.length*100}%"></i></div>`;
+  $('vGroups').innerHTML=`<button class="tog" data-vg="" aria-pressed="${vGroup===null}">По порядку</button>`+Array.from({length:VG},(_,g)=>{const vs=IRREG.filter(v=>v.g===g),l=vs.filter(vLearned).length;return `<button class="tog${l===vs.length?' vdone':''}" data-vg="${g}" aria-pressed="${vGroup===g}">${g+1}<small>${l}/${vs.length}</small></button>`}).join('');
+  $('vDrill').hidden=vMode!=='drill';$('vList').hidden=vMode!=='list';
+}
+function vNext(){
+  if(lessonGate('verbs'))return;
+  vModes();if(vMode==='list'){renderVList();return}
+  const v=vPick();vCur=v;vLast=v.v1;vDone=false;
+  const lang=on.lang==='uz'?'uz':on.lang==='ru'?'ru':pick(['ru','uz']);
+  const s=vSt(v);
+  $('vTask').innerHTML=`<span class="chip">Группа ${v.g+1}</span>${s?`<span class="chip">${dots(Math.min(s.b,5))}</span>`:'<span class="chip f plus">Новый глагол</span>'}${s&&s.e>=2?'<span class="chip f minus">Часто ошибаешься</span>':''}`;
+  $('vV1').textContent=v.v1;$('vTr').textContent=v[lang];
+  for(const k of ['2','3']){const i=$('vIn'+k);i.value='';i.disabled=false;i.className='';$('vS'+k).className='vslot'}
+  $('vFb').className='fb';$('vFb').innerHTML='';$('vGo').textContent='Проверить';
+  enter($('vcard'));$('vIn2').focus({preventScroll:true});
+}
+function vCheck(){
+  if(vDone){vNext();return}
+  const a2=$('vIn2').value.trim().toLowerCase(),a3=$('vIn3').value.trim().toLowerCase();
+  if(!a2){$('vIn2').focus();return}if(!a3){$('vIn3').focus();return}
+  const v=vCur,ok2=forms(v.v2).includes(a2),ok3=forms(v.v3).includes(a3),good=ok2&&ok3;vDone=true;
+  X.ivc++;const s=X.iv[v.v1]||{b:0,n:0,e:0};
+  if(good){s.b=Math.min(s.b+1,5);s.n=X.ivc+VIV[s.b]}else{s.b=0;s.e=(s.e||0)+1;s.n=X.ivc+2}
+  X.iv[v.v1]=s;saveX();
+  const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();
+  vSes.all++;if(good)vSes.ok++;
+  vVals=[$('vIn2').value,$('vIn3').value];
+  $('vS2').className='vslot '+(ok2?'ok':'no');$('vS3').className='vslot '+(ok3?'ok':'no');
+  const fb=$('vFb');fb.className='fb '+(good?'ok':'no');
+  fb.innerHTML=`<b>${good?(s.b>=3?'Верно! Глагол выучен.':'Верно!'):'Правильно так:'}</b><div class="ans vline">${esc(v.v1)} – ${esc(v.v2)} – ${esc(v.v3)}</div><div>${esc(v.ru)} · ${esc(v.uz)}</div>`+(good?'':'<div class="fbnote">Этот глагол будет попадаться чаще, пока не запомнится.</div>');
+  $('vGo').textContent='Дальше';
+  feedback($('vcard'),good);onAnswer(good,{kind:'verb',id:v.v1});vModes();
+  if(document.activeElement!==$('vIn2')&&document.activeElement!==$('vIn3'))$('vIn3').focus({preventScroll:true});
+  const id=vCur;if(good)setTimeout(()=>{if(vDone&&vCur===id)vNext()},1100);
+}
+function renderVList(){
+  let h='';for(let g=0;g<VG;g++){const vs=IRREG.filter(v=>v.g===g);
+    h+=`<div class="vgh"><b>Группа ${g+1}</b><span>${vs.filter(vLearned).length} из ${vs.length} выучено</span><button data-vtrain="${g}">Учить</button></div><div class="vtab">`+vs.map(v=>{const s=vSt(v);return `<div class="vrow${vLearned(v)?' on':s?' mid':''}"><i></i><b>${esc(v.v1)}</b><b>${esc(v.v2)}</b><b>${esc(v.v3)}</b><span>${esc(on.lang==='uz'?v.uz:v.ru)}</span></div>`}).join('')+'</div>'}
+  $('vListBody').innerHTML=h;
+}
+$('vGo').addEventListener('click',vCheck);
+/* after the check the fields stay focusable (disabling them would close the iPhone keyboard), edits are just undone */
+for(const k of ['2','3'])$('vIn'+k).addEventListener('input',()=>{if(vDone&&vVals)$('vIn'+k).value=vVals[+k-2]});
+$('vIn2').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();if(vDone)vNext();else $('vIn3').focus()}});
+$('vIn3').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();vCheck()}});
+document.addEventListener('click',e=>{
+  const m=e.target.closest('[data-vm]');if(m){vMode=m.dataset.vm;vNext();return}
+  const g=e.target.closest('[data-vg]');if(g){vGroup=g.dataset.vg===''?null:+g.dataset.vg;vMode='drill';vNext();return}
+  const t=e.target.closest('[data-vtrain]');if(t){vGroup=+t.dataset.vtrain;vMode='drill';vNext();window.scrollTo({top:0,behavior:'smooth'});return}
+});
+/* keep the keyboard open: buttons in the verb card never take focus from the inputs */
+const vKeep=e=>{if(e.target.closest('#vcard button'))e.preventDefault()};
+document.addEventListener('mousedown',vKeep);document.addEventListener('pointerdown',vKeep);
+
 function renderWList(){
   const all=allWords(),q=$('wSearch').value.trim().toLowerCase();
   const lvs=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]);
@@ -2047,13 +2180,13 @@ function onAnswer(good,info){
   if(!info||info.kind==='timer'){qRec().ans++;markActive();saveX();return}
   onActivity(isNewMaterial(info)?'new':'rev');
   for(const r of SR)r.wait--;
-  const kind=info.kind==='word'?'word':info.kind;
+  const kind=info.kind==='word'?'word':info.kind;const ownSR=info.kind==='word'||info.kind==='verb';/* these have their own repetition */
   const id=info.kind==='word'?{k:info.k,type:info.type}:info.id;
   const keyOf=v=>typeof v==='object'?v.k:v;
   if(!good){
-    if(info.kind!=='word')SR.push({kind,id,wait:3+Math.floor(Math.random()*3)});
-    if(info.kind!=='word'&&!X.errs.some(e=>e.kind===kind&&e.id===id)){X.errs.push({kind,id,due:tdy()+1});if(X.errs.length>150)X.errs.shift()}
-  }else if(info.kind!=='word'){const k=X.errs.findIndex(e=>e.kind===kind&&e.id===id&&e.due<=tdy());if(k>=0)X.errs.splice(k,1)}
+    if(!ownSR)SR.push({kind,id,wait:3+Math.floor(Math.random()*3)});
+    if(!ownSR&&!X.errs.some(e=>e.kind===kind&&e.id===id)){X.errs.push({kind,id,due:tdy()+1});if(X.errs.length>150)X.errs.shift()}
+  }else if(!ownSR){const k=X.errs.findIndex(e=>e.kind===kind&&e.id===id&&e.due<=tdy());if(k>=0)X.errs.splice(k,1)}
   combo=good?combo+1:0;
   const mult=combo>=10?3:combo>=5?2:1;
   const gain=good?10*mult:1;
@@ -2073,6 +2206,7 @@ function mistLabel(info){
   if(info.kind==='art'){const a=AB.find(x=>x.en===info.id);return a?fullA(a):''}
   if(info.kind==='mix'){const m=MIX.find(x=>x.en===info.id);return m?m.en:''}
   if(info.kind==='word'){const w=wGet(info.k);return w?bare(w.en)+' — '+w.ru:''}
+  if(info.kind==='verb'){const v=IRREG.find(x=>x.v1===info.id);return v?v.v1+' – '+v.v2+' – '+v.v3:''}
   return '';
 }
 function lessonBar(gain,mult){
@@ -2102,7 +2236,7 @@ function closeSummary(again,retry){
   LES[sec]=null;const N=les();
   if(retry)N.retry=mist.map(m=>({kind:m.kind,id:m.id}));
   lessonBar();
-  if(again||retry){wList=false;showTab('train');if(sec==='tense')next();else if(sec==='art')aNext();else wNext()}
+  if(again||retry){wList=false;showTab('train');if(sec==='tense')next();else if(sec==='art')aNext();else if(sec==='verbs')vNext();else wNext()}
 }
 
 /* --- quests --- */

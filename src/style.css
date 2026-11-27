@@ -568,3 +568,36 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
   #card.bad .fb,#wcard.bad .fb{animation:shake .38s ease}
 }
 .fbnote{font-size:14px;color:var(--mute);margin-top:4px}
+
+/* ---------- irregular verbs ---------- */
+.sec{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sec button{font-size:15px;gap:5px;padding:0 4px}
+@media(max-width:430px){.sec button svg{display:none}}
+.vgroups button{min-width:52px;display:inline-flex;align-items:baseline;gap:5px;font-weight:800}
+.vgroups button small{font-weight:600;font-size:12px;opacity:.75}
+.vgroups button.vdone:not([aria-pressed=true]){background:var(--ok-soft);border-color:transparent;color:var(--plus)}
+/* the three forms side by side: the infinitive is given, V2 and V3 are slots to fill */
+.vform{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:4px 0 8px}
+.vslot{display:flex;flex-direction:column;gap:4px;padding:10px 10px 8px;border-radius:16px;background:var(--bg);border:2px solid var(--line);transition:border-color .2s,background .2s;cursor:text}
+.vslot small{font-size:11.5px;font-weight:700;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vslot b{font-size:clamp(20px,5.6vw,26px);font-weight:900;line-height:1.15;overflow-wrap:anywhere}
+.vslot.v1{background:var(--brand-soft);border-color:transparent}
+.vslot.v1 b{color:var(--brand)}
+.vslot input{width:100%;border:0;background:none;padding:0;font:800 clamp(19px,5.4vw,25px) var(--font);color:var(--ink);-webkit-text-fill-color:var(--ink);caret-color:var(--brand);min-height:32px}
+.vslot input:focus{outline:none}
+.vslot:focus-within{border-color:var(--brand);background:var(--surface)}
+.vslot input::placeholder{color:var(--line);-webkit-text-fill-color:var(--line);opacity:1}
+.vslot.ok{border-color:var(--plus);background:var(--ok-soft)}
+.vslot.no{border-color:var(--minus);background:var(--no-soft)}
+.vtr{font-size:18px;font-weight:700;color:var(--ink);margin:2px 0 0}
+.vline{letter-spacing:.01em}
+.vgh{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;margin:22px 2px 8px}
+.vgh b{font-size:18px}.vgh span{color:var(--mute);font-size:14px}.vgh button{min-height:40px;font-size:14px}
+.vtab{background:var(--surface);border-radius:var(--r,18px);box-shadow:var(--shadow);overflow:hidden}
+.vrow{display:grid;grid-template-columns:10px repeat(3,minmax(0,1fr));column-gap:8px;align-items:baseline;padding:9px 12px;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:0}
+.vrow i{width:8px;height:8px;border-radius:50%;background:var(--line);align-self:center}
+.vrow.mid i{background:var(--amber)}.vrow.on i{background:var(--plus)}
+.vrow b{font-size:16px;font-weight:800;overflow-wrap:anywhere}
+.vrow span{grid-column:2/-1;color:var(--mute);font-size:14px}
+#vProg{grid-template-columns:repeat(2,minmax(0,1fr))}
