@@ -1,6 +1,6 @@
 /* ===== words: daily plan (reviews → new words in blocks of 10) + free practice ===== */
 let wTheme=null,wLevel=null,wCur=null,wDone=false,wLast=null,wAuto=null,wSes={ok:0,all:0};
-let wMode=on.wMode==='free'?'free':'day';
+let wMode=on.wMode==='free'?'free':'day',wList=false;
 const lvlOf=w=>{const s=WS.W[w.k];return s?s.b:0};
 const dots=b=>`<span class="lvl" title="Знание слова">${[1,2,3,4,5].map(i=>`<i class="${i<=b?'on':''}"></i>`).join('')}</span>`;
 const GOALS=[10,20,30,50,100];
@@ -9,7 +9,7 @@ const wGoal=()=>GOALS.includes(+on.wGoal)?+on.wGoal:30;
 /* extra state lives in its own key so the old ones keep their format */
 let X={wd:{},daily:{}};
 try{const x=JSON.parse(localStorage.getItem('tenses3x')||'null');if(x&&typeof x==='object')X=Object.assign(X,x)}catch(e){}
-const saveX=()=>{try{localStorage.setItem('tenses3x',JSON.stringify(X))}catch(e){}};
+const saveX=()=>{if(noSave)return;try{localStorage.setItem('tenses3x',JSON.stringify(X))}catch(e){}};
 const dayN=(d=new Date())=>Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
 const IVD=[0,1,1,3,7,14,30,60];
 const hash=s=>{let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)};
@@ -39,9 +39,9 @@ function newPool(){
 
 /* session state for the daily plan */
 const D={block:[],introIdx:0,test:[],retry:[],seen:new Set(),introduced:new Set(),skipRev:false,extra:0,blockOk:0,blockAll:0};
-const TYPES={tr:'Выбери перевод',en:'Выбери английское слово',write:'Напиши слово',audio:'Выбери на слух',gap:'Вставь слово'};
+const TYPES={tr:'Выбери перевод',en:'Выбери английское слово',write:'Напиши слово',gap:'Вставь слово'};
 function typeFor(w,isNew){
-  const t=['tr','en','audio'];if(gapOf(w))t.push('gap');if(!isNew)t.push('write','write');
+  const t=['tr','en','en'];if(gapOf(w))t.push('gap');if(!isNew)t.push('write','write');
   return pick(t);
 }
 function dayStats(){
@@ -52,11 +52,12 @@ function dayStats(){
   if(!$('wWarn').hidden)$('wWarnT').textContent=`Повторений накопилось ${due}. Может, уменьшить число новых слов в день, чтобы успевать?`;
 }
 function wModes(){
-  $('wModes').innerHTML=`<button class="tog" data-wm="day" aria-pressed="${wMode==='day'}">План дня</button><button class="tog" data-wm="free" aria-pressed="${wMode==='free'}">Свободная практика</button>`;
+  const h=`<button class="tog" data-wm="day" aria-pressed="${!wList&&wMode==='day'}">План дня</button><button class="tog" data-wm="free" aria-pressed="${!wList&&wMode==='free'}">Свободная практика</button><button class="tog" data-wm="list" aria-pressed="${wList}">Словарь</button>`;
+  $('wModes').innerHTML=h;$('wModes2').innerHTML=h;
   $('wDay').hidden=wMode!=='day';if(wMode!=='day')$('wWarn').hidden=true;
 }
 function wNext(){
-  clearTimeout(wAuto);stopSay();wModes();
+  clearTimeout(wAuto);wModes();
   if(lessonGate('words'))return;
   $('wDoneP').hidden=true;$('wcard').hidden=false;
   {const f=gameForce('word');if(f){const w=wGet(f.k||f);if(w){$('wFlt').hidden=true;showTask(w,f.type||'tr','free');return}}}
@@ -105,7 +106,7 @@ function dayNext(){
 }
 function showDone(){
   const r=dayRec();
-  $('wcard').hidden=true;$('wDoneP').hidden=false;
+  $('wcard').hidden=true;$('wDoneP').hidden=false;setMascot($('wDoneM'),'happy');
   $('wDoneT').innerHTML=`Новых слов: <b>${r.n}</b> · повторено: <b>${r.r}</b> · верно ${r.all?Math.round(r.ok/r.all*100):0}%`;
   if(typeof onWordsDone==='function')onWordsDone();
 }
@@ -116,18 +117,17 @@ function showIntro(w){
   if(!D.introduced.has(w.k)){D.introduced.add(w.k);dayRec().n++;saveX()}
   $('wTask').innerHTML=`<span class="chip f plus">Новое слово ${D.introIdx}/${D.block.length}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>`;
   const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);
-  const b=document.createElement('button');b.innerHTML=SPK;b.setAttribute('aria-label','Произношение');b.addEventListener('click',()=>say(bare(w.en)));q.appendChild(b);
   $('wSub').innerHTML=w.lv===OWNTH?`<b class="tr1">${esc(w.ru)}</b>`:`<b class="tr1">${esc(w.ru)}</b><span class="tr2">${esc(w.uz)}</span>`;
-  $('wEx').innerHTML=w.ex?`<button class="exs" data-say="${esc(w.ex)}">${SPK}<span>${exHTML(w)}</span></button>`:'';
+  $('wEx').innerHTML=w.ex?`<p class="exs">${exHTML(w)}</p>`:'';
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
   $('wNextB').hidden=false;$('wNextB').textContent=D.introIdx<D.block.length?'Следующее слово':'Проверим себя';
   enter($('wcard'));dayStats();onActivity('new');
-  if(on.voice)say(bare(w.en));
 }
 function exHTML(w){const g=gapOf(w);return g?esc(g.pre)+'<b>'+esc(g.hit)+'</b>'+esc(g.post):esc(w.ex)}
 function showTask(w,type,phase){
   const all=allWords(),lang=wLang(w),isNew=!WS.W[w.k];
+  if(type==='audio')type='tr';
   if(type==='gap'&&!gapOf(w))type='tr';
   if(type==='write'&&w.lv===OWNTH&&/[^a-z' -]/i.test(bare(w.en)))type='en';
   const key=type==='tr'?(x=>x[lang]):(x=>bare(x.en));
@@ -138,11 +138,9 @@ function showTask(w,type,phase){
   const ph=phase==='rev'?'<span class="chip">Повтор</span>':phase==='new'?'<span class="chip f plus">Мини-тест</span>':'';
   $('wTask').innerHTML=`${type==='tr'||type==='en'||type==='write'?chipLang(lang):''}${ph}<span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>${isNew?'':`<span class="chip">${dots(lvlOf(w))}</span>`}`;
   const q=$('wQ');q.innerHTML='';
-  const addSpk=(txt)=>{const b=document.createElement('button');b.innerHTML=SPK;b.setAttribute('aria-label','Произношение');b.addEventListener('click',()=>say(txt));q.appendChild(b)};
   $('wEx').innerHTML='';
-  if(type==='tr'){const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);addSpk(bare(w.en))}
+  if(type==='tr'){const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t)}
   else if(type==='en'||type==='write'){const t=document.createElement('span');t.className='wq-tr';t.textContent=w[lang];q.appendChild(t)}
-  else if(type==='audio'){const b=document.createElement('button');b.className='bigspk';b.innerHTML=SPK+'<span>Послушать ещё</span>';b.addEventListener('click',()=>say(bare(w.en)));q.appendChild(b)}
   else if(type==='gap'){const g=gapOf(w);$('wEx').innerHTML=`<p class="gapq">${esc(g.pre)}<span class="gap">?</span>${esc(g.post)}</p><p class="mk" style="margin:4px 0 0">${esc(w[lang])}</p>`}
   $('wSub').textContent=TYPES[type]+(type==='tr'&&lang==='uz'?' · Tarjimasini tanlang':'');
   const write=type==='write';
@@ -151,7 +149,6 @@ function showTask(w,type,phase){
   if(write){const i=$('wIn');i.value='';i.disabled=false;i.focus({preventScroll:true})}
   $('wFb').className='fb';$('wFb').innerHTML='';$('wNextB').hidden=true;$('wNextB').textContent='Дальше';
   enter($('wcard'));
-  if(type==='audio'||(type==='tr'&&on.voice))say(bare(w.en));
 }
 function lev(a,b){if(Math.abs(a.length-b.length)>1)return 2;const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return m[a.length][b.length]}
 const wnorm=s=>s.toLowerCase().replace(/[’`‘ʻʼ]/g,"'").replace(/^to /,'').replace(/[^a-z0-9' -]/g,'').replace(/\s+/g,' ').trim();
@@ -174,7 +171,7 @@ function wAnswer(i,forced,typo){
   pruneDaily();saveX();
   const d=today(),dd=prog.days[d]||(prog.days[d]=[0,0]);dd[1]++;if(good)dd[0]++;saveProg();
   wSes.all++;if(good)wSes.ok++;wStats();feedback($('wcard'),good);
-  if(!good&&wMode==='day'&&wCur.phase!=='free'){const alt=['tr','en','audio'].filter(x=>x!==wCur.type);D.retry.push({k:w.k,type:pick(alt),phase:wCur.phase==='rev'?'rev':'new',wait:3+Math.floor(Math.random()*3)})}
+  if(!good&&wMode==='day'&&wCur.phase!=='free'){const alt=['tr','en','gap'].filter(x=>x!==wCur.type);D.retry.push({k:w.k,type:pick(alt),phase:wCur.phase==='rev'?'rev':'new',wait:3+Math.floor(Math.random()*3)})}
   onAnswer(good,{kind:'word',k:w.k,type:wCur.type,phase:wCur.phase});
   if(wCur.type==='write'){$('wIn').disabled=true;$('wWriteRow').hidden=true}
   document.querySelectorAll('#wOpts button').forEach((b,j)=>{b.disabled=true;if(wCur.opts[j]===wCur.right)b.className='ok';else if(j===i)b.className='no'});
@@ -185,12 +182,10 @@ function wAnswer(i,forced,typo){
   const tr=document.createElement('div');tr.textContent=w.lv===OWNTH?w.ru:`${w.ru}  ·  ${w.uz}`;fb.appendChild(tr);
   if(w.ex&&wCur.type!=='gap'){const e=document.createElement('div');e.className='exl';e.textContent=w.ex;fb.appendChild(e)}
   const lv=document.createElement('div');lv.style.marginTop='6px';lv.innerHTML=`Знание: ${dots(Math.min(s.b,5))}${s.b>=4?' <b style="display:inline">выучено</b>':''}`;fb.appendChild(lv);
-  const sb=document.createElement('button');sb.className='say';sb.innerHTML=SPK+'<span>Послушать</span>';sb.addEventListener('click',()=>{clearTimeout(wAuto);say(bare(w.en))});fb.appendChild(sb);
   $('wNextB').hidden=false;
   if(wMode==='day')dayStats();
   const id=wCur;
-  if(on.voice&&wCur.type!=='audio'){const p=say(bare(w.en));if(good)p.then(()=>{if(wDone&&wCur===id)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},350)})}
-  else if(good)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},900);
+  if(good)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},1100);
 }
 function wStats(){
   $('wOk').textContent=wSes.ok;$('wAll').textContent=wSes.all;
@@ -217,9 +212,8 @@ $('wFree').addEventListener('click',()=>{wMode='free';on.wMode='free';save();wNe
 $('wWarnB').addEventListener('click',()=>{on.wGoal=10;save();wSettings();dayStats()});
 $('wSkipRev').addEventListener('click',()=>{D.skipRev=true;wNext()});
 document.addEventListener('click',e=>{
-  const m=e.target.closest('[data-wm]');if(m){wMode=m.dataset.wm;on.wMode=wMode;save();if(wMode==='day'){wLevel=null;wTheme=null}wNext();return}
+  const m=e.target.closest('[data-wm]');if(m){if(m.dataset.wm==='list'){wList=true;showTab('train');return}wList=false;wMode=m.dataset.wm;on.wMode=wMode;save();if(wMode==='day'){wLevel=null;wTheme=null}showTab('train');wNext();return}
   const g=e.target.closest('[data-wg]');if(g){on.wGoal=+g.dataset.wg;save();wSettings();if(sec==='words')dayStats();return}
-  const s=e.target.closest('[data-say]');if(s){say(s.dataset.say);return}
 });
 document.addEventListener('keydown',e=>{
   if($('v-words').hidden||e.target.closest('input,textarea'))return;

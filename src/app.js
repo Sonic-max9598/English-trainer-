@@ -1,3 +1,4 @@
+/*@TEACHER*/
 /*@TENSES_META*/
 const F={'+':'Утверждение','-':'Отрицание','?':'Вопрос'};
 const FC={'+':'plus','-':'minus','?':'q'};
@@ -7,7 +8,8 @@ const BANK=__TENSES__.split("\n").map((l,i)=>{const[t,f,ru,uz,en,alt,h]=l.split(
 let recent=[];
 let prog={cells:{},days:{}};
 try{const pv=JSON.parse(localStorage.getItem('tenses3prog')||'null');if(pv&&pv.cells)prog=pv}catch(e){}
-const saveProg=()=>{try{localStorage.setItem('tenses3prog',JSON.stringify(prog))}catch(e){}};
+let noSave=false;
+const saveProg=()=>{if(noSave)return;try{localStorage.setItem('tenses3prog',JSON.stringify(prog))}catch(e){}};
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
 function record(t,f,good){
   const k=t+f,c=prog.cells[k]||(prog.cells[k]=[0,0]);c[1]++;if(good)c[0]++;
@@ -17,10 +19,10 @@ function record(t,f,good){
 }
 const acc=k=>{const c=prog.cells[k];return c&&c[1]?c[0]/c[1]:null};
 
-let on={t:{past:1,pres:1,fut:1},f:{'+':1,'-':1,'?':1},lang:'mix',voice:1,slow:0,theme:'auto',snd:1,vib:1};
+let on={t:{past:1,pres:1,fut:1},f:{'+':1,'-':1,'?':1},lang:'mix',theme:'auto',snd:1,vib:1};
 let best={streak:0,1:0,3:0,5:0};
 try{const sv=JSON.parse(localStorage.getItem('tenses3')||'null');if(sv){if(sv.on&&sv.on.t)on=Object.assign(on,sv.on);if(sv.best&&typeof sv.best==='object')best=Object.assign(best,sv.best)}}catch(e){}
-const save=()=>{try{localStorage.setItem('tenses3',JSON.stringify({on,best}))}catch(e){}};
+const save=()=>{if(noSave)return;try{localStorage.setItem('tenses3',JSON.stringify({on,best}))}catch(e){}};
 
 const $=id=>document.getElementById(id);
 const pick=a=>a[Math.floor(Math.random()*a.length)];
@@ -46,32 +48,7 @@ function topToday(){const d=prog.days[today()]||[0,0];$('topToday').textContent=
 function applyTheme(){const t=on.theme||'auto';if(t==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t)}
 /*@TENSE_TRAINER*/
 
-/* speech */
-let tts=null;
-function say(text){
-  stopSay();
-  const rate=on.slow?0.75:1;
-  if(tts)return tts.speak(text,{rate,language:'en'}).catch(e=>{if(e&&e.code==='not_granted')tts=null});
-  const ss=window.speechSynthesis;
-  if(!ss||typeof SpeechSynthesisUtterance==='undefined')return Promise.resolve();
-  return new Promise(res=>{
-    try{
-      const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate*0.95;
-      const vs=ss.getVoices();const v=vs.find(x=>/^en[-_]US/i.test(x.lang))||vs.find(x=>/^en/i.test(x.lang));if(v)u.voice=v;
-      const done=()=>{clearTimeout(g);res()};const g=setTimeout(res,8000);
-      u.onend=done;u.onerror=done;ss.speak(u);
-    }catch(e){res()}
-  });
-}
-function stopSay(){
-  try{if(tts)tts.stop();else if(window.speechSynthesis)speechSynthesis.cancel()}catch(e){}
-}
-if(window.claude&&typeof window.claude.use==='function'){
-  window.claude.use('tts').then(t=>{if(t)tts=t}).catch(()=>{});
-}
-try{if(window.speechSynthesis)speechSynthesis.getVoices()}catch(e){}
-
-/* voice */
+/* voice input (dictation) */
 let dict=null,listening=false,base='';
 const mic=$('mic');
 mic.addEventListener('click',()=>{
@@ -89,7 +66,7 @@ if(window.claude&&typeof window.claude.use==='function'){
   }).catch(()=>{});
 }
 
-$('pFocus').addEventListener('click',()=>{on.focus=on.focus?0:1;save();renderProg();if(on.focus){showTab('train');if(sec==='words')wNext();else if(sec==='art')aNext();else if(!run)next()}});
+$('pFocus').addEventListener('click',()=>{on.focus=on.focus?0:1;save();renderProg();if(on.focus){wList=false;showTab('train');if(sec==='words')wNext();else if(sec==='art')aNext();else if(!run)next()}});
 $('pReset').addEventListener('click',()=>{if($('pReset').dataset.c){prog={cells:{},days:{}};saveProg();renderProg();$('pReset').textContent='Сброшено';delete $('pReset').dataset.c}else{$('pReset').dataset.c=1;$('pReset').textContent='Точно сбросить? Нажми ещё раз'}});
 /* ===== articles ===== */
 const RULES={
@@ -213,7 +190,7 @@ function recordArt(r,good){
 }
 function aStats(){$('aOk').textContent=aSt.ok;$('aAll').textContent=aSt.all;$('aSt').textContent=aSt.streak}
 function aNext(){
-  clearTimeout(aAuto);stopSay();
+  clearTimeout(aAuto);
   if(lessonGate('art'))return;
   let pool=AB.filter(x=>!artFilter||x.r===artFilter);
   const fresh=pool.filter(x=>!aRecent.includes(x.id));if(fresh.length)pool=fresh;
@@ -250,25 +227,22 @@ function aAnswer(v){
   r.innerHTML=`<span class="tag ${GT[ru.g][0]}">${GT[ru.g][1]}</span><b style="display:inline">${ru.n}</b>`;fb.appendChild(r);
   const e=document.createElement('p');e.style.margin='4px 0 0';e.textContent=ru.s;fb.appendChild(e);
   const row=document.createElement('div');row.className='row';row.style.marginTop='8px';
-  const sb=document.createElement('button');sb.className='say';sb.style.marginTop='0';sb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Послушать</span>';
-  sb.addEventListener('click',()=>{clearTimeout(aAuto);say(fullA(aCur))});
-  const tb=document.createElement('button');tb.className='say';tb.style.marginTop='0';tb.textContent='Правило подробно';
+  const tb=document.createElement('button');tb.className='say';tb.style.marginTop='0';tb.innerHTML=BOOKIC+'<span>Правило в теории</span>';
   const rid=aCur.r;tb.addEventListener('click',()=>{clearTimeout(aAuto);openRule(rid)});
-  row.append(sb,tb);fb.appendChild(row);
+  row.append(tb);fb.appendChild(row);
   $('aNextB').hidden=false;
   const id=aCur;
-  if(on.voice){const p=say(fullA(aCur));if(good)p.then(()=>{if(aDone&&aCur===id)aAuto=setTimeout(()=>{if(aDone&&aCur===id)aNext()},400)})}
-  else if(good)aAuto=setTimeout(()=>{if(aDone&&aCur===id)aNext()},1100);
+  if(good)aAuto=setTimeout(()=>{if(aDone&&aCur===id)aNext()},1300);
 }
 function renderRules(){
-  $('rules').innerHTML=Object.keys(RULES).map(k=>{const r=RULES[k];
+  const el=document.querySelector('#bookChap [data-rules]');if(!el)return;
+  el.innerHTML=Object.keys(RULES).map(k=>{const r=RULES[k];
     return `<div class="rule" id="rule-${k}"><h3><span class="tag ${GT[r.g][0]}">${GT[r.g][1]}</span>${r.n}</h3><p>${r.d}</p><ul>${r.ex.map(x=>`<li>${md(x)}</li>`).join('')}</ul><button data-rule="${k}">Тренировать это правило</button></div>`}).join('');
 }
 function openRule(k){
-  showTab('sheet');
+  openChapter('articles',{noRestore:1});
   const el=$('rule-'+k);if(!el)return;
-  el.scrollIntoView({behavior:'smooth',block:'start'});
-  el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),1600);
+  setTimeout(()=>{el.scrollIntoView({behavior:reduced()?'auto':'smooth',block:'start'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),1600)},60);
 }
 function renderArtProg(){
   const ks=Object.keys(RULES);
@@ -283,31 +257,32 @@ function renderArtProg(){
 function setSec(s){
   sec=s;on.sec=s;save();
   document.querySelectorAll('.sec button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.sec===s));
-  $('h1').textContent={tense:'Времена',art:'Артикли',words:'Слова'}[s];
-  $('navSheet').textContent={tense:'Формулы',art:'Теория',words:'Словарь'}[s];
   showTab(curTab);
 }
+const TABN={home:'Сегодня',book:'Теория',prog:'Прогресс',set:'Настройки'};
 function showTab(v){
+  if(curTab==='book'&&v!=='book')bookSave();
+  const toBook=v==='book'&&curTab!=='book';
   curTab=v;
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   document.body.dataset.tab=v;
-  $('h1').textContent=v==='home'?'Сегодня':{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
-  const id=v==='home'?'v-home':v==='train'&&sec!=='tense'?(sec==='art'?'v-art':'v-words'):v==='sheet'&&sec!=='tense'?(sec==='art'?'v-theory':'v-wlist'):'v-'+v;
+  $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова'}[sec];
+  const id=v==='train'?(sec==='art'?'v-art':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(v==='home')renderHome();
   lessonBar();
-  if(id==='v-sheet')sheet();
+  if(id==='v-book'){renderBook();if(toBook&&X.book.cur&&!bookNoRestore){const y=X.book.pos[X.book.cur]||0;requestAnimationFrame(()=>window.scrollTo({top:y}))}}
   if(id==='v-art'&&!aCur)aNext();
   if(id==='v-words'&&!wCur)wNext();
-  if(id==='v-wlist')renderWList();
+  if(id==='v-wlist'){wModes();renderWList()}
 }
 document.querySelectorAll('#aOpts button').forEach(b=>b.addEventListener('click',()=>aAnswer(b.dataset.a)));
 $('aNextB').addEventListener('click',aNext);
 $('aFltX').addEventListener('click',()=>{artFilter=null;aNext()});
 document.addEventListener('click',e=>{
   const sb=e.target.closest('.sec button');if(sb){setSec(sb.dataset.sec);return}
-  const rb=e.target.closest('[data-rule]');if(rb){artFilter=rb.dataset.rule;if(sec!=='art')setSec('art');showTab('train');aNext();window.scrollTo({top:0,behavior:'smooth'})}
+  const rb=e.target.closest('[data-rule]');if(rb){artFilter=rb.dataset.rule;if(sec!=='art')setSec('art');showTab('train');aNext();window.scrollTo({top:0})}
 });
 document.addEventListener('keydown',e=>{
   if($('v-art').hidden||e.target.closest('input'))return;
@@ -317,7 +292,7 @@ document.addEventListener('keydown',e=>{
 });
 /* ===== words ===== */
 const WORDS_RAW=__WORDS__;
-const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+const BOOKIC='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const WD=[],LEVELS=[];
@@ -330,11 +305,11 @@ const WD=[],LEVELS=[];
 const LVC=n=>{const L=LEVELS.find(x=>x.n===n);return L?L.c:''};
 const OWNTH='Мои слова';
 let OWN=[];try{const o=JSON.parse(localStorage.getItem('tenses3own')||'[]');if(Array.isArray(o))OWN=o.filter(x=>x&&typeof x.en==='string'&&typeof x.tr==='string')}catch(e){}
-const saveOwn=()=>{try{localStorage.setItem('tenses3own',JSON.stringify(OWN))}catch(e){}};
+const saveOwn=()=>{if(noSave)return;try{localStorage.setItem('tenses3own',JSON.stringify(OWN))}catch(e){}};
 const allWords=()=>WD.concat(OWN.map(o=>({k:'own:'+o.en.toLowerCase(),en:o.en,ru:o.tr,uz:o.tr,lv:OWNTH,th:OWNTH})));
 let WS={W:{},wc:0,ok:0,all:0};
 try{const x=JSON.parse(localStorage.getItem('tenses3words')||'null');if(x&&x.W&&typeof x.W==='object')WS=Object.assign(WS,x)}catch(e){}
-const saveW=()=>{try{localStorage.setItem('tenses3words',JSON.stringify(WS))}catch(e){}};
+const saveW=()=>{if(noSave)return;try{localStorage.setItem('tenses3words',JSON.stringify(WS))}catch(e){}};
 const IV=[0,3,7,15,35,80,200];
 /*@WORDS*/
 function renderWList(){
@@ -353,7 +328,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(w.lv===OWNTH?w.ru:w.ru+' · '+w.uz)}</span></div><button data-sk="${esc(w.k)}" aria-label="Произношение">${SPK}</button></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(w.lv===OWNTH?w.ru:w.ru+' · '+w.uz)}</span></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }
@@ -365,12 +340,11 @@ function renderWordsProg(){
    rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top2"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
 }
 $('wSearch').addEventListener('input',renderWList);
-$('wStudy').addEventListener('click',()=>{showTab('train');wNext();window.scrollTo({top:0,behavior:'smooth'})});
+$('wStudy').addEventListener('click',()=>{wList=false;showTab('train');wNext();window.scrollTo({top:0})});
 document.addEventListener('click',e=>{
   const lv=e.target.closest('[data-lv]');if(lv){wLevel=lv.dataset.lv||null;wTheme=wLevel===OWNTH?OWNTH:null;renderWList();return}
   const th=e.target.closest('[data-th]');if(th){wTheme=th.dataset.th||null;renderWList();return}
-  const sk=e.target.closest('[data-sk]');if(sk){const w=allWords().find(x=>x.k===sk.dataset.sk);if(w)say(w.en);return}
-  const wt=e.target.closest('[data-wlv]');if(wt){wLevel=wt.dataset.wlv;wTheme=wLevel===OWNTH?OWNTH:null;setSec('words');showTab('train');wNext();window.scrollTo({top:0,behavior:'smooth'})}
+  const wt=e.target.closest('[data-wlv]');if(wt){wLevel=wt.dataset.wlv;wTheme=wLevel===OWNTH?OWNTH:null;wMode='free';on.wMode='free';wList=false;setSec('words');showTab('train');wNext();window.scrollTo({top:0})}
 });
 $('ownAdd').addEventListener('click',()=>{
   const lines=$('ownTa').value.split('\n');let add=0,bad=0;
@@ -392,9 +366,11 @@ $('ownClear').addEventListener('click',()=>{const b=$('ownClear');
   if(wLevel===OWNTH){wLevel=null;wTheme=null}$('ownMsg').textContent='Твои слова удалены.';renderWList();
 });
 /*@GAME*/
+/*@BOOK*/
+/*@PWA*/
 /* keep the keyboard open: buttons in the card never take focus from the input */
 const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preventDefault();if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)e.preventDefault()};
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
-document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&cur.ex==='tr'&&!$('field').hidden)$('ans').focus({preventScroll:true});if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)$('wIn').focus({preventScroll:true})},true);
-applyTheme();topToday();renderModes();settings();sheet();renderRules();stats();aStats();wStats();wSettings();next();setSec(sec);
+document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&(cur.ex==='tr'||cur.ex==='mix')&&!$('field').hidden)$('ans').focus({preventScroll:true});if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)$('wIn').focus({preventScroll:true})},true);
+checkAch();applyTheme();topToday();renderModes();settings();stats();aStats();wStats();wSettings();next();setSec(sec);setMascot($('logoT'),'idle');teacherFirstRun();
