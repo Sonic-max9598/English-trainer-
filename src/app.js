@@ -4,6 +4,7 @@ const FC={'+':'plus','-':'minus','?':'q'};
 const L={ru:'Русский',uz:"O'zbekcha",mix:'Вперемешку'};
 // t|f|ru|uz|en|alts (;)|key words
 const BANK=__TENSES__.split("\n").map((l,i)=>{const[t,f,ru,uz,en,alt,h]=l.split("|");return{id:i,t,f,ru,uz,en,h,all:[en].concat(alt?alt.split(";"):[])}});
+/* topic tags are filled in once detectT() exists (see tense.js) */
 let recent=[];
 let prog={cells:{},days:{}};
 try{const pv=JSON.parse(localStorage.getItem('tenses3prog')||'null');if(pv&&pv.cells)prog=pv}catch(e){}
@@ -215,7 +216,7 @@ function aStats(){$('aOk').textContent=aSt.ok;$('aAll').textContent=aSt.all;$('a
 function aNext(){
   clearTimeout(aAuto);stopSay();
   if(lessonGate('art'))return;
-  let pool=AB.filter(x=>!artFilter||x.r===artFilter);
+  let pool=AB.filter(x=>(!artFilter||x.r===artFilter)&&allowedEn(fullA(x)));if(!pool.length)pool=AB.filter(x=>!artFilter||x.r===artFilter);
   const fresh=pool.filter(x=>!aRecent.includes(x.id));if(fresh.length)pool=fresh;
   let it;
   if(on.focus&&!artFilter){

@@ -16,7 +16,7 @@ function words(){
   console.log('words:',n,'duplicates skipped:',dup.length,dup.slice(0,40).join(', '),'| without example:',noEx.length,noEx.slice(0,10).join(', '));
   return out.join('\n');
 }
-let js=r('src/app.js').replace('/*@TENSES_META*/',()=>r('src/tenses-meta.js')).replace('/*@TENSE_TRAINER*/',()=>r('src/tense.js')).replace('/*@WORDS*/',()=>r('src/words.js')).replace('/*@GAME*/',()=>r('src/game.js')).replace('__TENSES__',JSON.stringify(tenses)).replace('__WORDS__',JSON.stringify(words()));
+let js=r('src/app.js').replace('/*@TENSES_META*/',()=>r('src/tenses-meta.js')).replace('/*@TENSE_TRAINER*/',()=>r('src/tense.js').replace('/*@MATCH*/',()=>r('src/match.js'))).replace('/*@WORDS*/',()=>r('src/words.js')).replace('/*@GAME*/',()=>r('src/game.js')).replace('__TENSES__',JSON.stringify(tenses)).replace('__WORDS__',JSON.stringify(words()));
 if(process.env.TEST)js+='\nwindow.__dbg=s=>eval(s);';
 const html=r('src/head.html').replace('/*@CSS*/',()=>r('src/style.css'))
   +r('src/body-top.html')+r('src/views-a.html')+r('src/art-theory.html')+r('src/views-b.html')+r('src/views-set.html')

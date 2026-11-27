@@ -41,7 +41,7 @@ function newPool(){
 const D={block:[],introIdx:0,test:[],retry:[],seen:new Set(),introduced:new Set(),skipRev:false,extra:0,blockOk:0,blockAll:0};
 const TYPES={tr:'Выбери перевод',en:'Выбери английское слово',write:'Напиши слово',audio:'Выбери на слух',gap:'Вставь слово'};
 function typeFor(w,isNew){
-  const t=['tr','en','audio'];if(gapOf(w))t.push('gap');if(!isNew)t.push('write','write');
+  const t=['tr','en','audio'];if(gapOf(w)&&allowedEn(w.ex))t.push('gap');if(!isNew)t.push('write','write');
   return pick(t);
 }
 function dayStats(){
@@ -128,7 +128,7 @@ function showIntro(w){
 function exHTML(w){const g=gapOf(w);return g?esc(g.pre)+'<b>'+esc(g.hit)+'</b>'+esc(g.post):esc(w.ex)}
 function showTask(w,type,phase){
   const all=allWords(),lang=wLang(w),isNew=!WS.W[w.k];
-  if(type==='gap'&&!gapOf(w))type='tr';
+  if(type==='gap'&&!(gapOf(w)&&allowedEn(w.ex)))type='tr';
   if(type==='write'&&w.lv===OWNTH&&/[^a-z' -]/i.test(bare(w.en)))type='en';
   const key=type==='tr'?(x=>x[lang]):(x=>bare(x.en));
   const right=key(w);

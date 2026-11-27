@@ -380,3 +380,18 @@ body.modal{overflow:hidden}
 h2 small{font-weight:600;font-size:14px}
 .mline{float:right;display:flex;align-items:center;gap:6px;margin:-4px -4px 4px 8px;font-weight:700;font-size:13px;color:var(--mute);max-width:50%}
 .mline .mascot.sm{width:38px;height:38px}
+
+/* ---------- fix: typed text vanished on iPhone ----------
+   WebKit can stop painting the text of a focused input while an ancestor runs a transform animation.
+   Cards that hold an input never move; their other children animate instead. */
+input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
+.field input,#wIn{color:var(--ink);-webkit-text-fill-color:var(--ink);caret-color:var(--brand)}
+.field input::placeholder{color:var(--mute);-webkit-text-fill-color:var(--mute);opacity:1}
+.field input:disabled{color:var(--ink);-webkit-text-fill-color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){
+  #card.enter,#card.good,#card.bad,#wcard.enter,#wcard.good,#wcard.bad{animation:none}
+  #card.enter>:not(.field),#wcard.enter>:not(.field){animation:enter .32s cubic-bezier(.2,.8,.2,1)}
+  #card.good .fb,#wcard.good .fb{animation:bounce .45s cubic-bezier(.3,1.6,.5,1)}
+  #card.bad .fb,#wcard.bad .fb{animation:shake .38s ease}
+}
+.fbnote{font-size:14px;color:var(--mute);margin-top:4px}
