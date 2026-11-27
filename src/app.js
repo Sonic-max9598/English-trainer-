@@ -269,7 +269,7 @@ function showTab(v){
   document.querySelectorAll('.nav button').forEach(b=>b.setAttribute('aria-selected',b.dataset.v===v));
   document.body.dataset.tab=v;
   $('h1').textContent=TABN[v]||{tense:'Времена',art:'Артикли',words:'Слова',verbs:'Глаголы'}[sec];
-  const id=v==='train'?(sec==='art'?'v-art':sec==='verbs'?'v-verbs':sec==='words'?(wList?'v-wlist':'v-words'):'v-train'):'v-'+v;
+  const id=v==='train'?(sec==='art'?'v-art':sec==='verbs'?'v-verbs':sec==='words'?(wList?'v-wlist':wView==='study'?'v-study':wView?'v-sets':'v-words'):'v-train'):'v-'+v;
   document.querySelectorAll('.view').forEach(x=>{const h=x.id!==id;if(!h&&x.hidden){x.classList.remove('vin');void x.offsetWidth;x.classList.add('vin')}x.hidden=h});
   if(v==='prog')renderProg();
   if(v==='home')renderHome();
@@ -279,6 +279,8 @@ function showTab(v){
   if(id==='v-words'&&!wCur)wNext();
   if(id==='v-verbs'){if(!vCur||vMode==='list')vNext();else vModes()}
   if(id==='v-wlist'){wModes();renderWList()}
+  if(id==='v-sets'){wModes();if(wView==='set'&&curSet)renderSet();else renderSets()}
+  if(id==='v-study')renderStudy();
 }
 document.querySelectorAll('#aOpts button').forEach(b=>b.addEventListener('click',()=>aAnswer(b.dataset.a)));
 $('aNextB').addEventListener('click',aNext);
@@ -316,6 +318,8 @@ const saveW=()=>{if(noSave)return;try{localStorage.setItem('tenses3words',JSON.s
 const IV=[0,3,7,15,35,80,200];
 /*@WORDS*/
 /*@VERBS*/
+/*@STUDY*/
+let wFilter='all',wShown=[];
 function renderWList(){
   const all=allWords(),q=$('wSearch').value.trim().toLowerCase();
   const lvs=LEVELS.map(L=>L.n).concat(OWN.length?[OWNTH]:[]);
@@ -324,7 +328,12 @@ function renderWList(){
   const L=LEVELS.find(x=>x.n===wLevel);
   $('wThemesH').hidden=!L;$('wThemes').hidden=!L;
   $('wThemes').innerHTML=L?[null].concat(L.th).map(t=>`<button data-th="${esc(t||'')}" aria-pressed="${wTheme===t}">${esc(t||'Все темы')}<small>${cnt(w=>w.lv===wLevel&&(!t||w.th===t))}</small></button>`).join(''):'';
-  const list=q?all.filter(w=>(w.en+' '+w.ru+' '+w.uz).toLowerCase().includes(q)):all.filter(w=>(!wLevel||w.lv===wLevel)&&(!wTheme||w.th===wTheme));
+  const st=w=>{const s=WS.W[w.k];return !s?'new':s.b>=4?'done':s.b<=1?'hard':'learn'};
+  const FL=[['all','Все'],['new','Новые'],['learn','Учу'],['done','Выучены'],['hard','Трудные']];
+  $('wFilt').innerHTML=FL.map(([k,n])=>`<button class="tog" data-wf="${k}" aria-pressed="${wFilter===k}">${n}</button>`).join('');
+  let list=q?all.filter(w=>(w.en+' '+w.ru+' '+w.uz+' '+(w.def||'')).toLowerCase().includes(q)):all.filter(w=>(!wLevel||w.lv===wLevel)&&(!wTheme||w.th===wTheme));
+  if(wFilter!=='all')list=list.filter(w=>st(w)===wFilter);
+  wShown=list;
   const title=wLevel?(wLevel===OWNTH?OWNTH:wLevel+' · '+LVC(wLevel))+(wTheme&&wTheme!==OWNTH?' · '+wTheme:''):'Все слова';
   $('wListH').textContent=q?'Поиск':title;
   const Ln=list.filter(w=>lvlOf(w)>=4).length,P=list.filter(w=>{const b=lvlOf(w);return b>0&&b<4}).length;
@@ -332,7 +341,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<span>${esc(trw(w))}</span></div></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(trw(w))}</span><p class="wlinks"><a href="${dictLink(w.en)}" target="_blank" rel="noopener">Открыть в Cambridge</a></p></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }
@@ -344,6 +353,8 @@ function renderWordsProg(){
    rows.map(r=>`<button class="ar" data-wlv="${esc(r.n)}"><div class="top2"><span>${esc(r.n)}${r.c?' <span class="note" style="font-size:13px">'+r.c+'</span>':''}</span><b>${r.l}/${r.t}</b></div><div class="tr"><i class="o" style="width:${r.l/r.t*100}%"></i><i style="width:${r.p/r.t*100}%;background:var(--amber)"></i></div></button>`).join('');
 }
 $('wSearch').addEventListener('input',renderWList);
+$('wStudyList').addEventListener('click',()=>openStudy($('wListH').textContent,wShown,'list:'+(wLevel||'all')+':'+(wTheme||'')+':'+wFilter));
+document.addEventListener('click',e=>{const f=e.target.closest('[data-wf]');if(f){wFilter=f.dataset.wf;renderWList();return}if(e.target.closest('[data-back-study]')){wView=ST.src&&ST.src.startsWith('my:')?'set':ST.src&&ST.src.startsWith('list')?'':'sets';if(!wView)wList=true;showTab('train')}});
 $('wStudy').addEventListener('click',()=>{wList=false;showTab('train');wNext();window.scrollTo({top:0})});
 document.addEventListener('click',e=>{
   const lv=e.target.closest('[data-lv]');if(lv){wLevel=lv.dataset.lv||null;wTheme=wLevel===OWNTH?OWNTH:null;renderWList();return}

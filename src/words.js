@@ -1,6 +1,6 @@
 /* ===== words: daily plan (reviews → new words in blocks of 10) + free practice ===== */
 let wTheme=null,wLevel=null,wCur=null,wDone=false,wLast=null,wAuto=null,wSes={ok:0,all:0};
-let wMode=on.wMode==='free'?'free':'day',wList=false;
+let wMode=on.wMode==='free'?'free':'day',wList=false,wView='';/* wView: '' | study | sets | set */
 const lvlOf=w=>{const s=WS.W[w.k];return s?s.b:0};
 const dots=b=>`<span class="lvl" title="Знание слова">${[1,2,3,4,5].map(i=>`<i class="${i<=b?'on':''}"></i>`).join('')}</span>`;
 const GOALS=[10,20,30,50,100];
@@ -52,8 +52,8 @@ function dayStats(){
   if(!$('wWarn').hidden)$('wWarnT').textContent=`Повторений накопилось ${due}. Может, уменьшить число новых слов в день, чтобы успевать?`;
 }
 function wModes(){
-  const h=`<button class="tog" data-wm="day" aria-pressed="${!wList&&wMode==='day'}">План дня</button><button class="tog" data-wm="free" aria-pressed="${!wList&&wMode==='free'}">Свободная практика</button><button class="tog" data-wm="list" aria-pressed="${wList}">Словарь</button>`;
-  $('wModes').innerHTML=h;$('wModes2').innerHTML=h;
+  const h=`<button class="tog" data-wm="day" aria-pressed="${!wList&&!wView&&wMode==='day'}">План дня</button><button class="tog" data-wm="free" aria-pressed="${!wList&&!wView&&wMode==='free'}">Свободная практика</button><button class="tog" data-wm="list" aria-pressed="${wList}">Словарь</button><button class="tog" data-wm="sets" aria-pressed="${!wList&&(wView==='sets'||wView==='set')}">Наборы</button>`;
+  $('wModes').innerHTML=h;$('wModes2').innerHTML=h;if($('wModes3'))$('wModes3').innerHTML=h;
   $('wDay').hidden=wMode!=='day';if(wMode!=='day')$('wWarn').hidden=true;
 }
 function wNext(){
@@ -119,7 +119,7 @@ function showIntro(w){
   const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);
   /* English first: a plain definition and a natural example, then the translation */
   $('wSub').innerHTML=w.def?`<span class="wdef" lang="en" data-noi18n>${esc(w.def)}</span>`:'';
-  $('wEx').innerHTML=(w.ex?`<p class="exs" lang="en" data-noi18n>${exHTML(w)}</p>`:'')+`<p class="wtr"><b class="tr1">${esc(trw(w))}</b></p>`;
+  $('wEx').innerHTML=(w.ex?`<p class="exs" lang="en" data-noi18n>${exHTML(w)}</p>`:'')+`<p class="wtr"><button class="trbtn" data-showtr>Показать перевод</button><b class="tr1 trh" hidden>${esc(trw(w))}</b></p>`;
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
   $('wNextB').hidden=false;$('wNextB').textContent=D.introIdx<D.block.length?'Следующее слово':'Проверим себя';
@@ -213,7 +213,7 @@ $('wFree').addEventListener('click',()=>{wMode='free';on.wMode='free';save();wNe
 $('wWarnB').addEventListener('click',()=>{on.wGoal=10;save();wSettings();dayStats()});
 $('wSkipRev').addEventListener('click',()=>{D.skipRev=true;wNext()});
 document.addEventListener('click',e=>{
-  const m=e.target.closest('[data-wm]');if(m){if(m.dataset.wm==='list'){wList=true;showTab('train');return}wList=false;wMode=m.dataset.wm;on.wMode=wMode;save();if(wMode==='day'){wLevel=null;wTheme=null}showTab('train');wNext();return}
+  const m=e.target.closest('[data-wm]');if(m){if(m.dataset.wm==='sets'){wList=false;wView='sets';showTab('train');return}wView='';if(m.dataset.wm==='list'){wList=true;showTab('train');return}wList=false;wMode=m.dataset.wm;on.wMode=wMode;save();if(wMode==='day'){wLevel=null;wTheme=null}showTab('train');wNext();return}
   const g=e.target.closest('[data-wg]');if(g){on.wGoal=+g.dataset.wg;save();wSettings();if(sec==='words')dayStats();return}
 });
 document.addEventListener('keydown',e=>{

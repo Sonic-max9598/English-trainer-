@@ -127,9 +127,23 @@
     <h2 id="wThemesH" hidden>Темы</h2>
     <div class="themes" id="wThemes" hidden></div>
     <h2 id="wListH">Все слова</h2>
+    <div class="scroll-x" id="wFilt" aria-label="Фильтр"></div>
     <div class="wsum" id="wSum"></div>
-    <div class="row" style="margin:8px 0 6px"><button class="main" id="wStudy">Учить</button></div>
+    <div class="row" style="margin:8px 0 6px"><button class="main" id="wStudyList">Учить этот список</button><button id="wStudy">Учить</button></div>
     <div id="wList"></div>
+  </section>
+
+  <section class="view" id="v-sets" hidden>
+    <div class="scroll-x" id="wModes3"></div>
+    <div id="setsBody"></div>
+  </section>
+
+  <section class="view" id="v-study" hidden>
+    <button class="link" data-back-study>← Назад</button>
+    <h2 id="sTitle" style="margin:4px 0 0"></h2>
+    <p class="mk" id="sMeta"></p>
+    <div class="scroll-x" id="sModes"></div>
+    <div id="sBody"></div>
   </section>
 
   <section class="view" id="v-art" hidden>
