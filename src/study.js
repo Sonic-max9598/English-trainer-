@@ -33,7 +33,7 @@ function renderCards(){
   if(!ST.order||ST.order.length!==ST.words.length)ST.order=order(ST.words);
   const w=ST.order[ST.i%ST.order.length];
   $('sBody').innerHTML=`<div class="flash${ST.flip?' on':''}" id="flash" role="button" tabindex="0" aria-label="Перевернуть карточку">
-     <div class="fface ffront"><b lang="en">${esc(bare(w.en))}</b>${known(w)?'<small class="kn">выучено</small>':''}<small>Нажми, чтобы перевернуть</small></div>
+     <div class="fface ffront"><b lang="en">${esc(bare(w.en))}</b>${spkBtn(bare(w.en))}${known(w)?'<small class="kn">выучено</small>':''}<small>Нажми, чтобы перевернуть</small></div>
      <div class="fface fback"><b class="fword" lang="en">${esc(bare(w.en))}</b>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<p class="ftr">${esc(trOf(w))}</p></div></div>
    <div class="fnav"><button data-fc="prev" aria-label="Назад">←</button><span>${ST.i%ST.order.length+1} / ${ST.order.length}</span><button data-fc="next" aria-label="Дальше">→</button></div>
    <div class="row"><button data-fc="again">Ещё учу</button><button class="main" data-fc="know">Знаю</button></div>
@@ -48,7 +48,7 @@ function renderLearn(){
   const bar=`<div class="sbar"><i style="width:${S.done/S.total*100}%"></i></div><p class="mk">Освоено ${S.done} из ${S.total}</p>`;
   if(it.st===0){
     const opts=shuf([w].concat(shuf(ST.words.filter(x=>x!==w&&trOf(x)!==trOf(w))).slice(0,3)));it.opts=opts;
-    $('sBody').innerHTML=bar+`<div class="card" id="scard"><p class="mk">Выбери перевод</p><div class="wq"><span lang="en">${esc(bare(w.en))}</span></div>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}<div class="wopts">${opts.map((o,i)=>`<button data-lo="${i}">${esc(trOf(o))}</button>`).join('')}</div><div class="fb" id="sFb"></div></div>`;
+    $('sBody').innerHTML=bar+`<div class="card" id="scard"><p class="mk">Выбери перевод</p><div class="wq"><span lang="en">${esc(bare(w.en))}</span>${spkBtn(bare(w.en))}</div>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}<div class="wopts">${opts.map((o,i)=>`<button data-lo="${i}">${esc(trOf(o))}</button>`).join('')}</div><div class="fb" id="sFb"></div></div>`;
   }else{
     $('sBody').innerHTML=bar+`<div class="card" id="scard"><p class="mk">Напиши по-английски</p><div class="wq"><span class="wq-tr">${esc(trOf(w))}</span></div>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}
       <div class="field"><input id="sIn" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="Слово по-английски…"></div>
@@ -73,8 +73,8 @@ function renderTest(){
   if(!ST.test)testInit();const T2=ST.test;
   if(T2.i>=T2.qs.length){$('sBody').innerHTML=`<div class="card big"><p>Результат теста</p><div class="num">${T2.ok} / ${T2.qs.length}</div>${T2.miss.length?`<div class="lsmist"><h3>Ошибки</h3><ul>${T2.miss.map(w=>`<li><b lang="en">${esc(bare(w.en))}</b> — ${esc(trOf(w))}</li>`).join('')}</ul></div>`:'<p>Без единой ошибки!</p>'}<div class="row" style="justify-content:center"><button class="main" data-test-again>Новый тест</button></div></div>`;if(T2.ok===T2.qs.length)celebrate();return}
   const q=T2.qs[T2.i],w=q.w,head=`<p class="mk">Вопрос ${T2.i+1} из ${T2.qs.length}</p>`;
-  if(q.t==='mc')$('sBody').innerHTML=`<div class="card" id="scard">${head}<div class="wq"><span lang="en">${esc(bare(w.en))}</span></div><div class="wopts">${q.opts.map((o,i)=>`<button data-to="${i}">${esc(trOf(o))}</button>`).join('')}</div><div class="fb" id="sFb"></div></div>`;
-  else if(q.t==='tf')$('sBody').innerHTML=`<div class="card" id="scard">${head}<p class="mk">Верно ли перевод?</p><div class="wq"><span lang="en">${esc(bare(w.en))}</span></div><p class="tfq">${esc(trOf(q.shown))}</p><div class="wopts"><button data-tt="1">Верно</button><button data-tt="0">Неверно</button></div><div class="fb" id="sFb"></div></div>`;
+  if(q.t==='mc')$('sBody').innerHTML=`<div class="card" id="scard">${head}<div class="wq"><span lang="en">${esc(bare(w.en))}</span>${spkBtn(bare(w.en))}</div><div class="wopts">${q.opts.map((o,i)=>`<button data-to="${i}">${esc(trOf(o))}</button>`).join('')}</div><div class="fb" id="sFb"></div></div>`;
+  else if(q.t==='tf')$('sBody').innerHTML=`<div class="card" id="scard">${head}<p class="mk">Верно ли перевод?</p><div class="wq"><span lang="en">${esc(bare(w.en))}</span>${spkBtn(bare(w.en))}</div><p class="tfq">${esc(trOf(q.shown))}</p><div class="wopts"><button data-tt="1">Верно</button><button data-tt="0">Неверно</button></div><div class="fb" id="sFb"></div></div>`;
   else{$('sBody').innerHTML=`<div class="card" id="scard">${head}<p class="mk">Напиши по-английски</p><div class="wq"><span class="wq-tr">${esc(trOf(w))}</span></div><div class="field"><input id="sIn" lang="en" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" placeholder="Слово по-английски…"></div><div class="row"><button class="main" id="sGo">Проверить</button><button id="sDunno">Не знаю</button></div><div class="fb" id="sFb"></div></div>`;setTimeout(()=>{const i=$('sIn');if(i)i.focus({preventScroll:true})},30)}
 }
 function testAnswer(good){
@@ -130,7 +130,7 @@ function renderSet(){
      <p class="note" style="margin:6px 0 0">Объяснение и пример на английском подтянутся из словаря dictionaryapi.dev, если есть интернет.</p></div>
    <details class="own"><summary>Импорт списком</summary><p class="note" style="margin-top:0">По одному слову на строку: <b>word — перевод</b> или просто <b>word</b>.</p>
      <textarea id="awBulk" rows="6" placeholder="achieve — достигать&#10;reluctant" autocapitalize="off" spellcheck="false"></textarea><div class="row"><button class="main" id="awImport">Импортировать</button></div><p class="note" id="awMsg"></p></details>
-   <div id="setList">${s.words.map((x,i)=>`<div class="wrow sw"><div><b lang="en">${esc(x.en)}</b>${x.def?`<p class="wdef" lang="en" data-noi18n>${esc(x.def)}</p>`:''}${x.ex?`<p class="wex" lang="en" data-noi18n>${esc(x.ex)}</p>`:''}${x.tr?`<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(x.tr)}</span>`:''}
+   <div id="setList">${s.words.map((x,i)=>`<div class="wrow sw"><div><b lang="en">${esc(x.en)}</b> ${spkBtn(x.en)}${x.def?`<p class="wdef" lang="en" data-noi18n>${esc(x.def)}</p>`:''}${x.ex?`<p class="wex" lang="en" data-noi18n>${esc(x.ex)}</p>`:''}${x.tr?`<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(x.tr)}</span>`:''}
      <p class="wlinks"><a href="${dictLink(x.en)}" target="_blank" rel="noopener">Открыть в Cambridge</a>${x.def?'':` · <button class="link" data-fetchdef="${i}">Найти объяснение</button>`} · <button class="link" data-delw="${i}">Удалить</button></p></div></div>`).join('')}</div>`;
 }
 async function fetchDef(en){

@@ -1,5 +1,5 @@
 /* English Intensive — offline cache. Built by build.js: the version and file list are filled in on every build. */
-const CACHE='english-intensive-7646e5e999';
+const CACHE='english-intensive-483052f66d';
 const FILES=["./","./index.html","./manifest.json","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./fonts/literata-cyr.woff2","./fonts/literata-lat.woff2","./fonts/nunito-cyr.woff2","./fonts/nunito-lat.woff2"];
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES.map(f=>new Request(f,{cache:'reload'})))));

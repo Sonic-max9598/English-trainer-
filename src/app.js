@@ -27,6 +27,7 @@ const save=()=>{if(noSave)return;try{localStorage.setItem('tenses3',JSON.stringi
 
 const $=id=>document.getElementById(id);
 /*@I18N*/
+/*@SPEECH*/
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 /* ---------- feedback: animation, sound, vibration ---------- */
 const reduced=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -231,10 +232,11 @@ function aAnswer(v){
   const row=document.createElement('div');row.className='row';row.style.marginTop='8px';
   const tb=document.createElement('button');tb.className='say';tb.style.marginTop='0';tb.innerHTML=BOOKIC+'<span>Правило в теории</span>';
   const rid=aCur.r;tb.addEventListener('click',()=>{clearTimeout(aAuto);openRule(rid)});
-  row.append(tb);fb.appendChild(row);
+  row.insertAdjacentHTML('beforeend',sayBtn(fullA(aCur)));row.append(tb);fb.appendChild(row);
   $('aNextB').hidden=false;
   const id=aCur;
-  if(good)aAuto=setTimeout(()=>{if(aDone&&aCur===id)aNext()},1300);
+  const go=()=>{if(aDone&&aCur===id)aNext()};
+  if(!readAnswer(fullA(aCur),good,go,400)&&good)aAuto=setTimeout(go,1300);
 }
 function renderRules(){
   const el=document.querySelector('#bookChap [data-rules]');if(!el)return;
@@ -341,7 +343,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b>${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(trw(w))}</span><p class="wlinks"><a href="${dictLink(w.en)}" target="_blank" rel="noopener">Открыть в Cambridge</a></p></div></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b> ${spkBtn(bare(w.en))}${w.def?`<p class="wdef" lang="en" data-noi18n>${esc(w.def)}</p>`:''}${w.ex?`<p class="wex" lang="en" data-noi18n>${esc(w.ex)}</p>`:''}<button class="trbtn" data-showtr>Показать перевод</button><span class="trh" hidden>${esc(trw(w))}</span><p class="wlinks"><a href="${dictLink(w.en)}" target="_blank" rel="noopener">Открыть в Cambridge</a></p></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }

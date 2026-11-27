@@ -210,13 +210,15 @@ function finishAnswer(good){
   if(good&&cur.note){const n=document.createElement('div');n.className='fbnote';n.textContent=cur.note;fb.appendChild(n)}
   if(cur.ex==='mix'){const w=document.createElement('p');w.className='why';w.textContent=cur.mix.why;fb.appendChild(w)}
   else{const fm=document.createElement('code');fm.textContent=tName(cur.t)+' · '+T[cur.t].f[cur.f];fb.appendChild(fm)}
+  {const sp=document.createElement('div');sp.innerHTML=sayBtn(cur.a);fb.appendChild(sp.firstChild)}
   if(!good&&!run){const tb=document.createElement('button');tb.className='say';tb.type='button';tb.innerHTML=BOOKIC+'<span>Глава в теории</span>';tb.dataset.chap=cur.ex==='mix'?'t-'+MIXT[cur.mix.k][1][0]:'t-'+cur.t;fb.appendChild(tb)}
   $('go').textContent='Дальше';$('go').hidden=false;
   if(cur.ex==='tiles')renderTiles();
   stats();
   const fresh=syncOpened();if(fresh)unlockToast(fresh);
   const id=cur;
-  if(good)auto=setTimeout(()=>{if(checked&&cur===id)next()},run?600:cur.ex==='mix'?2200:1100);
+  const go=()=>{if(checked&&cur===id)next()};
+  if(!readAnswer(cur.a,good,go,cur.ex==='mix'?1200:250)&&good)auto=setTimeout(go,run?600:cur.ex==='mix'?2200:1100);
 }
 function unlockToast(i){
   for(const t of GROUPS[i])if(on.t[t]===undefined)on.t[t]=1;save();
@@ -281,7 +283,7 @@ function settings(){
   $('setT').innerHTML=openT().map(k=>`<button class="tog" data-k="t" data-v="${k}" aria-pressed="${tOn(k)}">${tName(k)}</button>`).join('')
     +(openT().length<STOPS.length?`<p class="note" style="margin:6px 0 0;width:100%">Остальные времена открываются по очереди: ≥ 85% верных минимум на 30 ответах по предыдущему.</p>`:'');
   const sw=(v,t,d)=>`<div class="set-row"><button class="switch" data-k="opt" data-v="${v}" aria-pressed="${!!on[v]}"><span>${t}<small>${d}</small></span><i></i></button></div>`;
-  $('setV').innerHTML=sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
+  $('setV').innerHTML=sw('voice','Читать ответ вслух','Озвучка английского ответа после проверки')+sw('slow','Медленная озвучка','Скорость 0,75')+sw('snd','Звуки','Короткий тихий сигнал на верный и неверный ответ')+sw('vib','Вибрация','Если телефон поддерживает');
   $('setOpen').innerHTML=sw('allOpen','Открыть все времена сразу','Без очереди — для тех, кто уже знает основы');
   $('setTheme').innerHTML=[['auto','Как в системе'],['light','Светлая'],['dark','Тёмная']].map(([k,n])=>`<button class="tog" data-k="theme" data-v="${k}" aria-pressed="${(on.theme||'auto')===k}">${n}</button>`).join('');
   $('setFs').innerHTML=[[0,'Обычный'],[1,'Крупный'],[2,'Очень крупный']].map(([k,n])=>`<button class="tog" data-fs="${k}" aria-pressed="${bookFs()===k}">${n}</button>`).join('');

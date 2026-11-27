@@ -39,9 +39,9 @@ function newPool(){
 
 /* session state for the daily plan */
 const D={block:[],introIdx:0,test:[],retry:[],seen:new Set(),introduced:new Set(),skipRev:false,extra:0,blockOk:0,blockAll:0};
-const TYPES={tr:'Выбери перевод',en:'Выбери английское слово',write:'Напиши слово',gap:'Вставь слово'};
+const TYPES={audio:'Выбери на слух',tr:'Выбери перевод',en:'Выбери английское слово',write:'Напиши слово',gap:'Вставь слово'};
 function typeFor(w,isNew){
-  const t=['tr','en','en'];if(gapOf(w)&&allowedEn(w.ex))t.push('gap');if(!isNew)t.push('write','write');
+  const t=['tr','en','audio'];if(gapOf(w)&&allowedEn(w.ex))t.push('gap');if(!isNew)t.push('write','write');
   return pick(t);
 }
 function dayStats(){
@@ -116,19 +116,18 @@ function showIntro(w){
   wCur={w,type:'intro',phase:'intro'};wDone=true;
   if(!D.introduced.has(w.k)){D.introduced.add(w.k);dayRec().n++;saveX()}
   $('wTask').innerHTML=`<span class="chip f plus">Новое слово ${D.introIdx}/${D.block.length}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>`;
-  const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);
+  const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);q.insertAdjacentHTML('beforeend',spkBtn(bare(w.en)));
   /* English first: a plain definition and a natural example, then the translation */
   $('wSub').innerHTML=w.def?`<span class="wdef" lang="en" data-noi18n>${esc(w.def)}</span>`:'';
-  $('wEx').innerHTML=(w.ex?`<p class="exs" lang="en" data-noi18n>${exHTML(w)}</p>`:'')+`<p class="wtr"><button class="trbtn" data-showtr>Показать перевод</button><b class="tr1 trh" hidden>${esc(trw(w))}</b></p>`;
+  $('wEx').innerHTML=(w.ex?`<p class="exs" lang="en" data-noi18n>${exHTML(w)} ${spkBtn(w.ex)}</p>`:'')+`<p class="wtr"><button class="trbtn" data-showtr>Показать перевод</button><b class="tr1 trh" hidden>${esc(trw(w))}</b></p>`;
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
   $('wNextB').hidden=false;$('wNextB').textContent=D.introIdx<D.block.length?'Следующее слово':'Проверим себя';
-  enter($('wcard'));dayStats();onActivity('new');
+  enter($('wcard'));dayStats();onActivity('new');if(on.voice)say(bare(w.en));
 }
 function exHTML(w){const g=gapOf(w);return g?esc(g.pre)+'<b>'+esc(g.hit)+'</b>'+esc(g.post):esc(w.ex)}
 function showTask(w,type,phase){
   const all=allWords(),lang=wLang(w),isNew=!WS.W[w.k];
-  if(type==='audio')type='tr';
   if(type==='gap'&&!(gapOf(w)&&allowedEn(w.ex)))type='tr';
   if(type==='write'&&w.lv===OWNTH&&/[^a-z' -]/i.test(bare(w.en)))type='en';
   const key=type==='tr'?(x=>x[lang]):(x=>bare(x.en));
@@ -140,7 +139,8 @@ function showTask(w,type,phase){
   $('wTask').innerHTML=`${type==='tr'||type==='en'||type==='write'?chipLang(lang):''}${ph}<span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>${isNew?'':`<span class="chip">${dots(lvlOf(w))}</span>`}`;
   const q=$('wQ');q.innerHTML='';
   $('wEx').innerHTML='';
-  if(type==='tr'){const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t)}
+  if(type==='tr'){const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);q.insertAdjacentHTML('beforeend',spkBtn(bare(w.en)))}
+  else if(type==='audio'){q.innerHTML=`<button class="bigspk" type="button" data-say="${esc(bare(w.en))}">${SPK}<span>Послушать ещё</span></button>`}
   else if(type==='en'||type==='write'){const t=document.createElement('span');t.className='wq-tr';t.textContent=w[lang];q.appendChild(t)}
   else if(type==='gap'){const g=gapOf(w);$('wEx').innerHTML=`<p class="gapq">${esc(g.pre)}<span class="gap">?</span>${esc(g.post)}</p><p class="mk" style="margin:4px 0 0">${esc(w[lang])}</p>`}
   $('wSub').textContent=TYPES[type]+(type==='tr'&&lang==='uz'?' · Tarjimasini tanlang':'');
@@ -149,7 +149,7 @@ function showTask(w,type,phase){
   $('wField').hidden=!write;$('wWriteRow').hidden=!write;
   if(write){const i=$('wIn');i.value='';i.disabled=false;i.focus({preventScroll:true})}
   $('wFb').className='fb';$('wFb').innerHTML='';$('wNextB').hidden=true;$('wNextB').textContent='Дальше';
-  enter($('wcard'));
+  enter($('wcard'));if(type==='audio')setTimeout(()=>say(bare(w.en)),250);
 }
 function lev(a,b){if(Math.abs(a.length-b.length)>1)return 2;const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return m[a.length][b.length]}
 const wnorm=s=>s.toLowerCase().replace(/[’`‘ʻʼ]/g,"'").replace(/^to /,'').replace(/[^a-z0-9' -]/g,'').replace(/\s+/g,' ').trim();
@@ -186,7 +186,9 @@ function wAnswer(i,forced,typo){
   $('wNextB').hidden=false;
   if(wMode==='day')dayStats();
   const id=wCur;
-  if(good)wAuto=setTimeout(()=>{if(wDone&&wCur===id)wNext()},1100);
+  fb.insertAdjacentHTML('beforeend',sayBtn(bare(w.en)));
+  const go=()=>{if(wDone&&wCur===id)wNext()};
+  if(!(wCur.type!=='audio'&&readAnswer(bare(w.en),good,go,350))&&good)wAuto=setTimeout(go,1100);
 }
 function wStats(){
   $('wOk').textContent=wSes.ok;$('wAll').textContent=wSes.all;
