@@ -132,7 +132,7 @@ function nextMix(lang){
   $('fb').className='fb';$('fb').innerHTML='';
   $('go').textContent='Проверить';$('go').hidden=false;$('hintBtn').hidden=false;
   $('field').hidden=false;$('tiles').hidden=true;$('chOpts').hidden=true;$('tClear').hidden=true;
-  $('ru').textContent=lang==='ru'?it.ru:it.uz;$('mk').textContent='Слова: '+it.h;
+  $('ru').textContent=lang==='ru'?it.ru:it.uz;$('mk').textContent=tr('Слова:')+' '+hintTxt(it.h);
   const a=$('ans');a.value='';base='';a.focus({preventScroll:true});
   enter($('card'));
 }
@@ -158,7 +158,7 @@ function next(){
     $('chOpts').innerHTML=opts.map(o=>`<button data-ch="${o}">${tName(o)}</button>`).join('');
   }else{
     $('ru').textContent=lang==='ru'?it.ru:it.uz;
-    $('mk').textContent='Слова: '+it.h;
+    $('mk').textContent=tr('Слова:')+' '+hintTxt(it.h);
   }
   if(e==='tiles')buildTiles(it);
   if(e==='tr'){const a=$('ans');a.value='';base='';a.focus({preventScroll:true})}
@@ -295,7 +295,7 @@ function renderProg(){
   const cls=a=>a===null?'n':a>=.85?'g':a>=.6?'a':'r';
   const cell=(ok,all,tot)=>{const a=all?ok/all:null;return `<td class="${cls(a)}${tot?' tot':''}">${a===null?'—':Math.round(a*100)+'%'}<small>${all||0}</small></td>`};
   const sum=(arr)=>arr.reduce((s,k)=>{const c=prog.cells[k]||[0,0];return[s[0]+c[0],s[1]+c[1]]},[0,0]);
-  let h=`<tr><th class="rl"></th>${fs.map(f=>`<th>${f} ${F[f].slice(0,5)}.</th>`).join('')}<th>Итого</th></tr>`;
+  let h=`<tr><th class="rl"></th>${fs.map(f=>`<th>${f} ${tr(F[f]).slice(0,5)}.</th>`).join('')}<th>Итого</th></tr>`;
   for(const t of ks){const r=sum(fs.map(f=>t+f));h+=`<tr><th class="rl">${tName(t).replace(' Simple','').replace('Continuous','Cont.').replace('Perfect','Perf.')}</th>${fs.map(f=>{const c=prog.cells[t+f]||[0,0];return cell(c[0],c[1])}).join('')}${cell(r[0],r[1],1)}</tr>`}
   const all=sum(ks.flatMap(t=>fs.map(f=>t+f)));
   h+=`<tr><th class="rl">Итого</th>${fs.map(f=>{const r=sum(ks.map(t=>t+f));return cell(r[0],r[1],1)}).join('')}${cell(all[0],all[1],1)}</tr>`;

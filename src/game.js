@@ -83,7 +83,7 @@ function mistLabel(info){
   if(info.kind==='tense'){const b=BANK.find(x=>x.en===info.id);return b?b.en:''}
   if(info.kind==='art'){const a=AB.find(x=>x.en===info.id);return a?fullA(a):''}
   if(info.kind==='mix'){const m=MIX.find(x=>x.en===info.id);return m?m.en:''}
-  if(info.kind==='word'){const w=wGet(info.k);return w?bare(w.en)+' — '+w.ru:''}
+  if(info.kind==='word'){const w=wGet(info.k);return w?bare(w.en)+' — '+trw(w):''}
   if(info.kind==='verb'){const v=IRREG.find(x=>x.v1===info.id);return v?v.v1+' – '+v.v2+' – '+v.v3:''}
   return '';
 }

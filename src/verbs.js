@@ -30,7 +30,7 @@ function vNext(){
   if(lessonGate('verbs'))return;
   vModes();if(vMode==='list'){renderVList();return}
   const v=vPick();vCur=v;vLast=v.v1;vDone=false;
-  const lang=on.lang==='uz'?'uz':on.lang==='ru'?'ru':pick(['ru','uz']);
+  const lang=UI;
   const s=vSt(v);
   $('vTask').innerHTML=`<span class="chip">Группа ${v.g+1}</span>${s?`<span class="chip">${dots(Math.min(s.b,5))}</span>`:'<span class="chip f plus">Новый глагол</span>'}${s&&s.e>=2?'<span class="chip f minus">Часто ошибаешься</span>':''}`;
   $('vV1').textContent=v.v1;$('vTr').textContent=v[lang];
@@ -39,6 +39,7 @@ function vNext(){
   enter($('vcard'));$('vIn2').focus({preventScroll:true});
 }
 function vCheck(){
+  if(!vCur){vMode='drill';vNext();return}
   if(vDone){vNext();return}
   const a2=$('vIn2').value.trim().toLowerCase(),a3=$('vIn3').value.trim().toLowerCase();
   if(!a2){$('vIn2').focus();return}if(!a3){$('vIn3').focus();return}
@@ -51,7 +52,7 @@ function vCheck(){
   vVals=[$('vIn2').value,$('vIn3').value];
   $('vS2').className='vslot '+(ok2?'ok':'no');$('vS3').className='vslot '+(ok3?'ok':'no');
   const fb=$('vFb');fb.className='fb '+(good?'ok':'no');
-  fb.innerHTML=`<b>${good?(s.b>=3?'Верно! Глагол выучен.':'Верно!'):'Правильно так:'}</b><div class="ans vline">${esc(v.v1)} – ${esc(v.v2)} – ${esc(v.v3)}</div><div>${esc(v.ru)} · ${esc(v.uz)}</div>`+(good?'':'<div class="fbnote">Этот глагол будет попадаться чаще, пока не запомнится.</div>');
+  fb.innerHTML=`<b>${good?(s.b>=3?'Верно! Глагол выучен.':'Верно!'):'Правильно так:'}</b><div class="ans vline">${esc(v.v1)} – ${esc(v.v2)} – ${esc(v.v3)}</div><div>${esc(trw(v))}</div>`+(good?'':'<div class="fbnote">Этот глагол будет попадаться чаще, пока не запомнится.</div>');
   $('vGo').textContent='Дальше';
   feedback($('vcard'),good);onAnswer(good,{kind:'verb',id:v.v1});vModes();
   if(document.activeElement!==$('vIn2')&&document.activeElement!==$('vIn3'))$('vIn3').focus({preventScroll:true});
@@ -59,7 +60,7 @@ function vCheck(){
 }
 function renderVList(){
   let h='';for(let g=0;g<VG;g++){const vs=IRREG.filter(v=>v.g===g);
-    h+=`<div class="vgh"><b>Группа ${g+1}</b><span>${vs.filter(vLearned).length} из ${vs.length} выучено</span><button data-vtrain="${g}">Учить</button></div><div class="vtab">`+vs.map(v=>{const s=vSt(v);return `<div class="vrow${vLearned(v)?' on':s?' mid':''}"><i></i><b>${esc(v.v1)}</b><b>${esc(v.v2)}</b><b>${esc(v.v3)}</b><span>${esc(on.lang==='uz'?v.uz:v.ru)}</span></div>`}).join('')+'</div>'}
+    h+=`<div class="vgh"><b>Группа ${g+1}</b><span>${vs.filter(vLearned).length} из ${vs.length} выучено</span><button data-vtrain="${g}">Учить</button></div><div class="vtab">`+vs.map(v=>{const s=vSt(v);return `<div class="vrow${vLearned(v)?' on':s?' mid':''}"><i></i><b>${esc(v.v1)}</b><b>${esc(v.v2)}</b><b>${esc(v.v3)}</b><span>${esc(trw(v))}</span></div>`}).join('')+'</div>'}
   $('vListBody').innerHTML=h;
 }
 $('vGo').addEventListener('click',vCheck);

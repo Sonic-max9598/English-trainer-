@@ -26,6 +26,7 @@ try{const sv=JSON.parse(localStorage.getItem('tenses3')||'null');if(sv){if(sv.on
 const save=()=>{if(noSave)return;try{localStorage.setItem('tenses3',JSON.stringify({on,best}))}catch(e){}};
 
 const $=id=>document.getElementById(id);
+/*@I18N*/
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 /* ---------- feedback: animation, sound, vibration ---------- */
 const reduced=()=>window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -331,7 +332,7 @@ function renderWList(){
   $('wStudy').textContent=wLevel?'Учить: '+title:'Учить все слова по порядку';
   $('wStudy').hidden=!!q;
   const shown=list.slice(0,300);
-  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(w.lv===OWNTH?w.ru:w.ru+' · '+w.uz)}</span></div></div>`}).join('')
+  $('wList').innerHTML=shown.map(w=>{const b=lvlOf(w);return `<div class="wrow"><i class="d ${b>=4?'l2':b>0?'l1':''}"></i><div><b>${esc(w.en)}</b><span>${esc(trw(w))}</span></div></div>`}).join('')
     +(list.length>shown.length?`<p class="note">Показаны первые 300 из ${list.length}. Выбери уровень или тему, чтобы увидеть остальные.</p>`:'')
     ||'<p class="note">Ничего не найдено.</p>';
 }
@@ -376,4 +377,7 @@ const keepKb=e=>{if(e.target.closest('#card button')&&!$('card').hidden)e.preven
 document.addEventListener('mousedown',keepKb);
 document.addEventListener('pointerdown',keepKb);
 document.addEventListener('click',e=>{if(e.target.closest('#card button')&&!$('card').hidden&&cur&&(cur.ex==='tr'||cur.ex==='mix')&&!$('field').hidden)$('ans').focus({preventScroll:true});if(e.target.closest('#wcard button')&&wCur&&wCur.type==='write'&&!wDone)$('wIn').focus({preventScroll:true})},true);
+/* tasks are translated from the interface language */
+on.lang=UI;delete on.ui;X.ui=UI;
 checkAch();applyTheme();topToday();renderModes();settings();stats();aStats();wStats();wSettings();next();setSec(sec);setMascot($('logoT'),'idle');teacherFirstRun();
+renderLangSw();i18nStart();

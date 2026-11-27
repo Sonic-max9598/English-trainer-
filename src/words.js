@@ -117,7 +117,7 @@ function showIntro(w){
   if(!D.introduced.has(w.k)){D.introduced.add(w.k);dayRec().n++;saveX()}
   $('wTask').innerHTML=`<span class="chip f plus">Новое слово ${D.introIdx}/${D.block.length}</span><span class="chip">${w.lv===OWNTH?esc(OWNTH):esc(LVC(w.lv)+' · '+w.th)}</span>`;
   const q=$('wQ');q.innerHTML='';const t=document.createElement('span');t.textContent=bare(w.en);q.appendChild(t);
-  $('wSub').innerHTML=w.lv===OWNTH?`<b class="tr1">${esc(w.ru)}</b>`:`<b class="tr1">${esc(w.ru)}</b><span class="tr2">${esc(w.uz)}</span>`;
+  $('wSub').innerHTML=`<b class="tr1">${esc(trw(w))}</b>`;
   $('wEx').innerHTML=w.ex?`<p class="exs">${exHTML(w)}</p>`:'';
   $('wOpts').innerHTML='';$('wField').hidden=true;$('wWriteRow').hidden=true;
   $('wFb').className='fb';$('wFb').innerHTML='';
@@ -179,7 +179,7 @@ function wAnswer(i,forced,typo){
   const fb=$('wFb');fb.className='fb '+(good?'ok':'no');fb.innerHTML='';
   const h=document.createElement('b');h.textContent=good?(typo?'Верно, но с опечаткой:':'Верно!'):'Запомни:';fb.appendChild(h);
   const a=document.createElement('div');a.className='ans';a.textContent=bare(w.en);fb.appendChild(a);
-  const tr=document.createElement('div');tr.textContent=w.lv===OWNTH?w.ru:`${w.ru}  ·  ${w.uz}`;fb.appendChild(tr);
+  const tr=document.createElement('div');tr.textContent=trw(w);fb.appendChild(tr);
   if(w.ex&&wCur.type!=='gap'){const e=document.createElement('div');e.className='exl';e.textContent=w.ex;fb.appendChild(e)}
   const lv=document.createElement('div');lv.style.marginTop='6px';lv.innerHTML=`Знание: ${dots(Math.min(s.b,5))}${s.b>=4?' <b style="display:inline">выучено</b>':''}`;fb.appendChild(lv);
   $('wNextB').hidden=false;

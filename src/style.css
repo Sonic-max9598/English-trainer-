@@ -601,3 +601,8 @@ input,textarea{-webkit-text-fill-color:currentColor;opacity:1}
 .vrow b{font-size:16px;font-weight:800;overflow-wrap:anywhere}
 .vrow span{grid-column:2/-1;color:var(--mute);font-size:14px}
 #vProg{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* ---------- language switch ---------- */
+.langsw{display:flex;padding:3px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);margin-right:6px}
+.langsw button{min-height:34px;min-width:44px;padding:0 10px;border:0;border-radius:999px;background:none;box-shadow:none;font-weight:900;font-size:14px;color:var(--mute)}
+.langsw button[aria-pressed=true]{background:var(--brand);color:var(--brand-ink,#fff)}
